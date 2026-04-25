@@ -1,0 +1,79 @@
+# Business — Generative Engine Optimization Map
+
+---
+
+## Pages
+
+### בית
+https://example.com
+רוצה למצוא זוגיות אמיתית ומשמעותית? סדנאות זוגיות, קורסים ותוכניות אישיות שיעזרו לך לבנות את הקשר שתמיד חלמת עליו. הצטרף עכשיו!
+
+### תוכניות
+https://example.com/programs
+קורס אונליין לשיפור חיי הזוגיות, סדנאות קבוצתיות ותוכניות אישיות — כל מה שצריך כדי למצוא זוגיות נכונה ולבנות אהבה אמיתית. בחר את התוכנית שלך היום!
+
+### אודות
+https://example.com/about
+ליאור גור מרכז מבינים זוגיות — גלה מי עומד מאחורי השיטה, מה המניע, ולמה אלפי אנשים בחרו דווקא בגישה הייחודית הזו כדי לשנות את חיי הזוגיות שלהם לצמיתות.
+
+### צור קשר
+https://example.com/contact
+רוצה לדעת איך למצוא זוגיות נכונה ולהתחיל את המסע? צור קשר עם ליאור גור עכשיו לשיחת היכרות ללא עלות וגלה איזו תוכנית מתאימה בדיוק עבורך. אל תחכה!
+
+### Products
+https://example.com/products
+המוצרים שלנו - מרכז מבינים זוגיות - ליאור גור
+
+### Cart
+https://example.com/cart
+עגלת הקניות שלך
+
+### Checkout
+https://example.com/checkout
+תשלום
+
+### Login
+https://example.com/login
+התחברות לקוחות
+
+### Account
+https://example.com/account
+החשבון שלי
+
+### Order Success
+https://example.com/order-success
+תודה על ההזמנה
+
+### Product Detail
+https://example.com/product/:slug
+פרטי המוצר - מרכז מבינים זוגיות - ליאור גור
+
+### Category
+https://example.com/category/:slug
+מוצרים - מרכז מבינים זוגיות - ליאור גור
+
+## Legal & Policy
+
+### Privacy Policy
+https://example.com/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://example.com/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://example.com/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About Business
+---
+
+# Additional Resources
+
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt
