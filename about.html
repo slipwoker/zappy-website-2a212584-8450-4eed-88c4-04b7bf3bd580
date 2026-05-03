@@ -245,6 +245,373 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.about-profile-section {
+  position: relative;
+  background-color: #FBF7F1;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(231,195,138,0.14) 0, rgba(231,195,138,0) 28%),
+    radial-gradient(circle at 80% 30%, rgba(201,111,74,0.08) 0, rgba(201,111,74,0) 24%),
+    radial-gradient(circle at 50% 80%, rgba(126,151,97,0.06) 0, rgba(126,151,97,0) 22%);
+  color: var(--text-dark);
+  padding: 120px 24px 80px;
+  overflow: visible;
+  direction: rtl;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Decorative blobs */
+.about-profile-section .profile-bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.about-profile-section .profile-bg-blob--1 {
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(201,111,74,0.07) 0%, transparent 70%);
+  top: 10%;
+  inset-inline-end: -80px;
+}
+.about-profile-section .profile-bg-blob--2 {
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(122,132,106,0.08) 0%, transparent 70%);
+  bottom: 15%;
+  inset-inline-start: -60px;
+}
+
+/* Container */
+.about-profile-section .profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 64px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+/* =====================
+   RIGHT COLUMN: Text
+   ===================== */
+.about-profile-section .profile-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Eyebrow */
+.about-profile-section .profile-eyebrow {
+  display: inline-block;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(201,111,74,0.09);
+  border: 1px solid rgba(201,111,74,0.2);
+  border-radius: 999px;
+  padding: 5px 16px;
+  margin-bottom: 18px;
+  text-align: right;
+}
+
+/* H2 */
+.about-profile-section .profile-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: #6D4A3A;
+  margin: 0 0 20px 0;
+  text-align: right;
+}
+
+/* Decorative divider */
+.about-profile-section .profile-divider {
+  margin-bottom: 32px;
+  text-align: right;
+}
+.about-profile-section .profile-divider svg {
+  display: inline-block;
+}
+
+/* Bio blocks */
+.about-profile-section .profile-bio-block {
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border-light);
+}
+.about-profile-section .profile-bio-block:last-of-type {
+  border-bottom: none;
+}
+
+.about-profile-section .profile-bio-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #6D4A3A;
+  margin: 0 0 14px 0;
+  text-align: right;
+  position: relative;
+  padding-inline-end: 16px;
+}
+.about-profile-section .profile-bio-title::before {
+  content: '';
+  position: absolute;
+  inset-inline-end: 0;
+  top: 6px;
+  width: 4px;
+  height: 16px;
+  background: var(--primary);
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+.about-profile-section .profile-bio-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #7A5A48;
+  margin: 0 0 12px 0;
+  text-align: right;
+}
+.about-profile-section .profile-bio-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Closing belief statement */
+.about-profile-section .profile-belief {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 14px;
+  background: linear-gradient(135deg, rgba(201,111,74,0.06) 0%, rgba(215,199,180,0.12) 100%);
+  border: 1px solid rgba(201,111,74,0.15);
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin: 4px 0 28px 0;
+}
+.about-profile-section .profile-belief-icon {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.about-profile-section .profile-belief-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6D4A3A;
+  font-style: italic;
+  margin: 0;
+  text-align: right;
+}
+
+/* Specialties */
+.about-profile-section .profile-specialties {
+  margin-top: 4px;
+}
+
+.about-profile-section .profile-specialty-list {
+  list-style: none;
+  margin: 12px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-profile-section .profile-specialty-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #7A5A48;
+  text-align: right;
+  background: rgba(255,252,247,0.7);
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 10px 14px;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+.about-profile-section .profile-specialty-item:hover {
+  background: rgba(255,252,247,0.95);
+  box-shadow: 0 4px 14px rgba(147,104,66,0.09);
+}
+
+.about-profile-section .specialty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background: rgba(201,111,74,0.1);
+  border-radius: 50%;
+}
+
+/* =====================
+   LEFT COLUMN: Image
+   ===================== */
+.about-profile-section .profile-image-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-profile-section .profile-image-sticky {
+  position: sticky;
+  top: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Image frame */
+.about-profile-section .profile-image-frame {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 18px 42px rgba(147,104,66,0.18);
+}
+
+.about-profile-section .profile-image-accent-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 34px;
+  border: 2px solid rgba(201,111,74,0.15);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.about-profile-section .profile-photo {
+  display: block;
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 28px;
+}
+
+/* Name badge overlaid at bottom of image */
+.about-profile-section .profile-name-badge {
+  position: absolute;
+  bottom: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  background: linear-gradient(to top, rgba(46,42,39,0.78) 0%, rgba(46,42,39,0) 100%);
+  padding: 32px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  z-index: 3;
+}
+
+.about-profile-section .profile-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-light);
+  line-height: 1.3;
+  text-align: right;
+}
+
+.about-profile-section .profile-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(246,241,232,0.8);
+  line-height: 1.5;
+  text-align: right;
+}
+
+/* Pullquote */
+.about-profile-section .profile-pullquote {
+  background: rgba(255,252,247,0.94);
+  border-radius: 22px;
+  box-shadow: 0 10px 24px rgba(147,104,66,0.1);
+  padding: 26px 24px 22px;
+  border: 1px solid var(--border-light);
+  border-inline-start: 3px solid var(--primary);
+  margin: 0;
+  position: relative;
+}
+
+.about-profile-section .pullquote-mark {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.about-profile-section .pullquote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #6D4A3A;
+  font-style: italic;
+  margin: 0 0 14px 0;
+  text-align: right;
+}
+
+.about-profile-section .pullquote-attr {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: right;
+  letter-spacing: 0.01em;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 1024px) {
+  .about-profile-section .profile-container {
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+  }
+  .about-profile-section .profile-photo {
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-profile-section {
+    padding: 100px 16px 60px;
+  }
+  .about-profile-section .profile-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    direction: rtl;
+  }
+  /* On mobile: image column first (visual top), then text */
+  .about-profile-section .profile-image-col {
+    order: -1;
+  }
+  .about-profile-section .profile-image-sticky {
+    position: static;
+    top: auto;
+  }
+  .about-profile-section .profile-photo {
+    height: 320px;
+  }
+  .about-profile-section .profile-heading {
+    font-size: 28px;
+  }
+  .about-profile-section .profile-belief {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .about-profile-section .profile-bg-blob--1,
+  .about-profile-section .profile-bg-blob--2 {
+    display: none;
+  }
+}
+</style>
     <link rel="stylesheet" href="/styles.css">
 
     <style id="zappy-dropdown-submenu-styles">
@@ -820,9 +1187,9 @@
     <div class="about-story-text">
       <div class="about-story-label">הסיפור שלי</div>
 
-      <h1 class="about-story-h1" style="">ליאור גור&nbsp;<br>מרכז מבינים זוגיות</h1>
+      <h1 class="about-story-h1" >ליאור גור&nbsp;<br>מרכז מבינים זוגיות</h1>
 
-      <p class="about-story-body" style="">אני מאמין שכל אחד ואחת ראויים לזוגיות אמיתית, מעמיקה ומשמחת. במשך שנים אני מלווה אנשים בדרכם אל האהבה, דרך קורסים, סדנאות זוגיות, ליוויים אישיים ומפגשים קבוצתיים שמשלבים ידע פסיכולוגי, כנות מלאה ואמונה עמוקה ביכולתו של כל אדם לשנות את מציאות חייו. הגישה שלי בנויה על שלושה עמודים: הנגשה, פרקטיקה, והעצמה אישית. כי כשמבינים איך זוגיות עובדת, היא מתחילה לקרות.</p>
+      <p class="about-story-body" >אני מאמין שכל אחד ואחת ראויים לזוגיות אמיתית, מעמיקה ומשמחת. במשך שנים אני מלווה אנשים בדרכם אל האהבה, דרך קורסים, סדנאות זוגיות, ליוויים אישיים ומפגשים קבוצתיים שמשלבים ידע פסיכולוגי, כנות מלאה ואמונה עמוקה ביכולתו של כל אדם לשנות את מציאות חייו. הגישה שלי בנויה על שלושה עמודים: הנגשה, פרקטיקה, והעצמה אישית. כי כשמבינים איך זוגיות עובדת, היא מתחילה לקרות.</p>
 
       <div class="about-story-divider-line" aria-hidden="true"></div>
 
@@ -856,7 +1223,7 @@
     <div class="philosophy-header">
       <p><span class="philosophy-label" style="color: rgb(46, 42, 39) !important;">הערכים שמנחים אותנו</span>
       </p><h2 class="philosophy-title">העקרונות שעומדים בלב העבודה שלנו</h2>
-      <p class="philosophy-subtitle" style="">בכל קורס, סדנה ומפגש קבוצתי, אנחנו מחויבים לאותם עקרונות יסוד שהופכים שינוי אמיתי לאפשרי&nbsp; בזוגיות ובחיים.</p>
+      <p class="philosophy-subtitle" >בכל קורס, סדנה ומפגש קבוצתי, אנחנו מחויבים לאותם עקרונות יסוד שהופכים שינוי אמיתי לאפשרי&nbsp; בזוגיות ובחיים.</p>
     </div>
 
     <div class="philosophy-grid zappy-preserve-css-grid" id="zappy-auto-grid-1777837472859-ebqpv4" data-zappy-auto-grid="true" data-original-item-width="588" data-original-gap="24px" style="--zappy-grid-cols: 587.998px 588.007px; grid-template-columns: 587.998px 588.007px; display: grid; align-items: stretch !important;" data-zappy-explicit-columns="true">
@@ -883,7 +1250,7 @@
         </div>
         <div class="card-body">
           <h3 class="card-title">אחריות אישית</h3>
-          <p class="card-text" style="">זוגיות נכונה מתחילה בפנים. אנחנו מלמדים כיצד לקחת בעלות על הבחירות שלנו, על הדפוסים שלנו ועל הסיפורים שאנחנו מספרים לעצמנו, כי שינוי אמיתי נולד מאחריות, לא מאשמה.</p>
+          <p class="card-text" >זוגיות נכונה מתחילה בפנים. אנחנו מלמדים כיצד לקחת בעלות על הבחירות שלנו, על הדפוסים שלנו ועל הסיפורים שאנחנו מספרים לעצמנו, כי שינוי אמיתי נולד מאחריות, לא מאשמה.</p>
         </div>
       </article>
 
@@ -896,7 +1263,7 @@
         </div>
         <div class="card-body">
           <h3 class="card-title">בהירות</h3>
-          <p class="card-text" style="">בלבול בזוגיות מגיע לעיתים קרובות מחוסר בהירות פנימית. בסדנאות ובקורסים שלנו תלמדו לזהות מה אתם באמת רוצים, מה חשוב לכם, ואיך למצוא זוגיות נכונה שמתאימה לכם!, לא לסביבה.</p>
+          <p class="card-text" >בלבול בזוגיות מגיע לעיתים קרובות מחוסר בהירות פנימית. בסדנאות ובקורסים שלנו תלמדו לזהות מה אתם באמת רוצים, מה חשוב לכם, ואיך למצוא זוגיות נכונה שמתאימה לכם!, לא לסביבה.</p>
         </div>
       </article>
 
@@ -908,7 +1275,7 @@
         </div>
         <div class="card-body">
           <h3 class="card-title">אומץ</h3>
-          <p class="card-text" style="">לפתוח את הלב מחדש דורש אומץ. אנחנו יוצרים מרחב בטוח שבו אפשר להיות פגיעים, לנסות גישות חדשות ולצאת מאזורי הנוחות, כי רק מי שמעז לשנות, מצליח לבנות אהבה אמיתית.</p>
+          <p class="card-text" >לפתוח את הלב מחדש דורש אומץ. אנחנו יוצרים מרחב בטוח שבו אפשר להיות פגיעים, לנסות גישות חדשות ולצאת מאזורי הנוחות, כי רק מי שמעז לשנות, מצליח לבנות אהבה אמיתית.</p>
         </div>
       </article>
 
@@ -922,61 +1289,133 @@
   </div>
 </section>
 
-<section class="about-profile-section" data-layout-spec="אודות-profile" dir="rtl" id="about-profile-section">
-  <!-- Paper texture overlay -->
-  <div class="about-profile-texture" aria-hidden="true"></div>
+<section class="about-profile-section" data-layout-spec="אודות-profile" dir="rtl" data-zappy-section="true" id="about-profile-section">
 
-  <div class="about-profile-container">
-    <!-- START side: text content (right in RTL) -->
-    <div class="about-profile-text">
-      <p class="zappy-editable"><span class="about-profile-eyebrow" style="color: rgb(46, 42, 39) !important;">הגישה שלי</span>
-      </p><h2 class="about-profile-heading">ניסיון, תובנה, ולב פתוח לדרך</h2>
+  <!-- Decorative background blobs -->
+  <div class="profile-bg-blob profile-bg-blob--1" aria-hidden="true"></div>
+  <div class="profile-bg-blob profile-bg-blob--2" aria-hidden="true"></div>
 
-      <div class="about-profile-divider-line" aria-hidden="true"></div>
+  <div class="profile-container">
 
-      <div class="about-profile-bio">
-        <h3 class="about-profile-sub" style="color: rgb(46, 42, 39) !important;">הרקע שלי</h3>
-        <p style="">אני ליאור גור, מנחה ומאמן זוגיות עם למעלה מעשר שנות ניסיון בעבודה עם יחידים וזוגות. הדרך שלי לתחום הזוגיות החלה מסקרנות אמיתית לשאלה: מה גורם לאנשים לבחור את מי שהם בוחרים, ומדוע לפעמים הבחירות האלה לא מביאות אותם לאהבה שהם מחפשים?</p>
-        <p>השתלמתי בפסיכולוגיה חיובית, אימון אישי ומנהיגות רגשית, ושילבתי את הכלים האלה עם עבודה קלינית ועם מאות שעות של ליווי אישי בסדנאות זוגיות וקורסים קבוצתיים.</p>
+    <!-- RIGHT COLUMN: Text Content -->
+    <div class="profile-text-col">
+
+      <!-- Eyebrow -->
+      <span class="profile-eyebrow">הגישה שלי</span>
+
+      <!-- H2 -->
+      <h2 class="profile-heading">ניסיון, תובנה, ולב פתוח לדרך</h2>
+
+      <!-- Decorative divider -->
+      <div class="profile-divider" aria-hidden="true">
+        <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 120 8" fill="none" xmlns="http://www.w3.org/2000/svg" width="120" height="8">
+          <path d="M0 4 Q30 1 60 4 Q90 7 120 4" stroke="#C96F4A" stroke-width="1.5" fill="none" opacity="0.6"></path>
+          <circle cx="60" cy="4" r="2.5" fill="#C96F4A" opacity="0.5"></circle>
+        </svg>
       </div>
 
-      <div class="about-profile-bio">
-        <h3 class="about-profile-sub" style="color: rgb(46, 42, 39) !important;">סגנון ההנחיה שלי</h3>
-        <p style="">אני מאמין שהדרך לזוגיות נכונה אינה מתחילה בפרופיל הדייטינג, היא מתחילה בהבנה עמוקה של עצמך. בסדנאות ובקורסים שאני מעביר, אני משלב תובנות רגשיות עם כלים מעשיים: שיחות עומק, תרגולים קבוצתיים, ומפות חשיבה שמסייעות לכל משתתף לזהות את הדפוסים שמונעים ממנו להתקרב לאהבה.</p>
-        <p style="">הגישה שלי חמה אך ישירה. אני לא מציע קסמים, אני מציע מראה, כלים, ומרחב בטוח לצמיחה אמיתית.</p>
+      <!-- Bio Section 1: הסיפור שלי -->
+      <div class="profile-bio-block">
+        <h3 class="profile-bio-title">הסיפור שלי</h3>
+        <div class="profile-bio-content">
+<p>תמיד הייתי אדם זוגי. כזה שאוהב לאהוב, שרוצה להרגיש את הביחד בצורה הכי אמיתית שיש.</p>
+<p>אבל לאורך השנים מצאתי את עצמי שוב ושוב נפגע. קשרים שלא עבדו, פרידות, תחושת תסכול. והמחשבה שחזרה לי בראש הייתה: <em>אולי אני פשוט לא מספיק טוב.</em></p>
+<p>נכנסתי לקשר שהתדרדר. התעלפתי מלחצים, הלכתי לנוירולוגית, המצב הכלכלי קרס ואיבדתי שליטה על החיים שלי. חשבתי שחתונה תציל את זה — הייתי נשוי כמעט שנתיים, עד שלא יכולתי יותר.</p>
+<p>מצאתי את עצמי במקום הכי נמוך שהייתי בו. תחושת כישלון. אכזבה. למה זה צריך להיות כל כך קשה?</p>
+<p>באותו רגע הבנתי שיש לי שתי אפשרויות: להשלים עם זה — או לעצור ולהתחיל לבנות את עצמי מחדש. <strong>בחרתי לבנות.</strong></p>
+<p>התחלתי לשאול שאלות אחרות: מי באמת מתאימה לי? איך בונים זוגיות בצורה נכונה ובריאה? איך מנהלים קונפליקטים ולא בורחים מהם? לאט לאט דברים התחילו להתחבר. הבנתי שלא מדובר במזל — אלא בדרך פעולה.</p>
+<p>היום אני נשוי באושר לאשתי בטי כבר יותר מ-8 שנים. לא כי "מצאתי את האחת במקרה" — אלא כי למדתי איך לבחור נכון ואיך לבנות נכון.</p>
+</div>
       </div>
 
-      <div class="about-profile-bio">
-        <h3 class="about-profile-sub" style="color: rgb(46, 42, 39) !important;">תחומי ההתמחות שלי</h3>
-        <ul class="about-profile-list" style=""><li data-grid-item-index="0"><span class="about-list-icon" aria-hidden="true"><svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="cursor: pointer;"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"></path></svg></span><span>מציאת זוגיות נכונה ואיך למצוא זוגיות נכונה</span></li><li data-grid-item-index="1"><span class="about-list-icon" aria-hidden="true"><svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="cursor: pointer;"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"></path></svg></span><span>שיפור חיי הזוגיות הקיימת</span></li><li data-grid-item-index="2"><span class="about-list-icon" aria-hidden="true"><svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="cursor: pointer;"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"></path></svg></span><span>הנחיית קבוצות וסדנאות זוגיות</span></li><li data-grid-item-index="3"><span class="about-list-icon" aria-hidden="true"><svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="cursor: pointer;"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"></path></svg></span><span>פיתוח דפוסי קשר בריאים ומודעות עצמית</span></li><li data-grid-item-index="4"><span class="about-list-icon" aria-hidden="true"><svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="cursor: pointer;"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"></path></svg></span><span>קורסים אונליין לשיפור חיי הזוגיות</span></li></ul>
+      <!-- Bio Section 2: סגנון ההנחיה -->
+      <div class="profile-bio-block">
+        <h3 class="profile-bio-title">סגנון ההנחיה שלי</h3>
+        <div class="profile-bio-content">
+          <p>אני מאמין שהדרך לזוגיות נכונה אינה מתחילה בפרופיל הדייטינג, היא מתחילה בהבנה עמוקה של עצמך. בסדנאות ובקורסים שאני מעביר, אני משלב תובנות רגשיות עם כלים מעשיים: שיחות עומק, תרגולים קבוצתיים, ומפות חשיבה שמסייעות לכל משתתף לזהות את הדפוסים שמונעים ממנו להתקרב לאהבה.</p>
+          <p>הגישה שלי חמה אך ישירה. אני לא מציע קסמים, אני מציע מראה, כלים, ומרחב בטוח לצמיחה אמיתית.</p>
+          <p>אני עוזר לאנשים לבחור אהבה מתוך בהירות ולא מתוך פחד, כי כשאנחנו מבינים את עצמנו, אנחנו מסוגלים לבחור מתוך מקום שלם.</p>
+        </div>
+      </div>
+
+      <!-- Closing belief statement -->
+      <div class="profile-belief">
+        <svg data-element-type="icon" data-icon-type="svg" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="profile-belief-icon">
+          <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z" fill="#C96F4A" opacity="0.18"></path>
+        </svg>
+        <p class="profile-belief-text">אני מאמין שזוגיות היא אחת ההחלטות הכי משמעותיות בחיים — כזו שמשפיעה על כל תחום. והיא שווה את ההשקעה, את הפוקוס, ואת הדרך הנכונה. הדרך הזו חייבת להיות גם מנטאלית וגם פרקטית.</p>
+      </div>
+
+      <!-- Specialties -->
+      <div class="profile-specialties">
+        <h3 class="profile-bio-title">תחומי ההתמחות שלי</h3>
+        <ul class="profile-specialty-list">
+          <li class="profile-specialty-item">
+            <span class="specialty-icon" aria-hidden="true">
+              <svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z" fill="#C96F4A"></path></svg>
+            </span>
+            <span>מציאת זוגיות נכונה ואיך למצוא זוגיות נכונה</span>
+          </li>
+          <li class="profile-specialty-item">
+            <span class="specialty-icon" aria-hidden="true">
+              <svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z" fill="#C96F4A"></path></svg>
+            </span>
+            <span>שיפור חיי הזוגיות הקיימת</span>
+          </li>
+          <li class="profile-specialty-item">
+            <span class="specialty-icon" aria-hidden="true">
+              <svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z" fill="#C96F4A"></path></svg>
+            </span>
+            <span>הנחיית קבוצות וסדנאות זוגיות</span>
+          </li>
+          <li class="profile-specialty-item">
+            <span class="specialty-icon" aria-hidden="true">
+              <svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z" fill="#C96F4A"></path></svg>
+            </span>
+            <span>פיתוח דפוסי קשר בריאים ומודעות עצמית</span>
+          </li>
+          <li class="profile-specialty-item">
+            <span class="specialty-icon" aria-hidden="true">
+              <svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z" fill="#C96F4A"></path></svg>
+            </span>
+            <span>קורסים אונליין לשיפור חיי הזוגיות</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- END RIGHT COLUMN -->
+
+    <!-- LEFT COLUMN: Image + Pullquote -->
+    <div class="profile-image-col">
+
+      <!-- Sticky wrapper -->
+      <div class="profile-image-sticky">
+
+        <!-- Image frame -->
+        <div class="profile-image-frame">
+          <div class="profile-image-accent-ring" aria-hidden="true"></div>
+          <img alt="ליאור גור - מנחה ומאמן זוגיות, מרכז מבינים זוגיות" class="profile-photo" src="/assets/site-service-profile-image-1-1777838704357-zsaqxu.webp?v=1777838706260" data-placeholder="about-profile-image-1" data-context="Warm editorial lifestyle photograph of a thoughtful Israeli relationship coach in a calm, sunlit studio setting. The coach sits near a wooden table with an open notebook, a ceramic mug, and soft natural light streaming through a window. The atmosphere is intimate, grounded, and hopeful — evoking a sense of personal reflection and gentle guidance. Warm terracotta and cream tones, soft bokeh background." style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          <!-- Name badge -->
+          <div class="profile-name-badge">
+            <span class="profile-name">ליאור גור</span>
+            <span class="profile-title">מנחה ומאמן זוגיות, מרכז מבינים זוגיות</span>
+          </div>
+        </div>
+
+        <!-- Pullquote -->
+        <blockquote class="profile-pullquote">
+          <svg data-no-icon-edit="true" aria-hidden="true" class="pullquote-mark" width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 0C3.582 0 0 3.582 0 8c0 3.314 2.021 6.164 4.929 7.393L2 24h6l4-8.607C13.314 14.164 14 12.164 14 10V0H8zm18 0c-4.418 0-8 3.582-8 8 0 3.314 2.021 6.164 4.929 7.393L20 24h6l4-8.607C31.314 14.164 32 12.164 32 10V0h-6z" fill="#C96F4A" opacity="0.22"></path>
+          </svg>
+          <p class="pullquote-text">לא מצאתי את האהבה במקרה — למדתי איך לבחור נכון ואיך לבנות נכון. ואת אותה דרך אני מלמד היום.</p>
+          <footer class="pullquote-attr">— ליאור גור, מנחה ומאמן זוגיות</footer>
+        </blockquote>
+
       </div>
     </div>
+    <!-- END LEFT COLUMN -->
 
-    <!-- END side: image + pull-quote (left in RTL) -->
-    <div class="about-profile-visual">
-      <div class="about-profile-image-wrapper">
-        <div data-zappy-zoom-wrapper="true" data-element-id="img-1777837472817-48pkmah46" data-element-type="image" data-zappy-zoom-wrapper-width="438px" data-zappy-zoom-wrapper-height="600px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 438px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 600px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-card-slot-fill="1"><img data-placeholder="about-profile-image-1" data-context="Warm editorial lifestyle photograph of a thoughtful Israeli relationship coach in a calm, sunlit studio setting. The coach sits near a wooden table with an open notebook, a ceramic mug, and soft natural light streaming through a window. The atmosphere is intimate, grounded, and hopeful — evoking a sense of personal reflection and gentle guidance. Warm terracotta and cream tones, soft bokeh background." width="540" height="640" src="/assets/site-service-profile-image-1-1777838704357-zsaqxu.webp?v=1777838706260" alt="ליאור גור - מנחה ומאמן זוגיות, מרכז מבינים זוגיות" data-element-type="image" data-element-id="img-1777837472817-48pkmah46" style="object-position: 50% 50% !important; border-radius: 8px; object-fit: cover !important; width: 100% !important; height: 100% !important; max-width: none !important; display: block !important; margin: 0px !important; left: 0% !important; top: 0% !important; max-height: none !important;" data-zappy-object-position="50% 50%" data-zappy-zoom="1"></div>
-        <!-- Decorative corner accent -->
-        <div class="about-profile-corner-accent" aria-hidden="true"></div>
-      </div>
-
-      <!-- Pull-quote block -->
-      <blockquote class="about-profile-pullquote">
-        <div class="pullquote-mark" aria-hidden="true">“</div>
-        <p class="pullquote-text" style="">אני עוזר לאנשים לבחור אהבה מתוך בהירות ולא מתוך פחד, כי כשאנחנו מבינים את עצמנו, אנחנו מסוגלים לבחור מתוך מקום שלם.</p>
-        <footer class="pullquote-attribution">
-          <span class="pullquote-name">ליאור גור</span>
-          <span class="pullquote-role">מנחה ומאמן זוגיות, מרכז מבינים זוגיות</span>
-        </footer>
-      </blockquote>
-    </div>
-  </div>
-
-  <!-- Bottom divider: olive gradient dissolve -->
-  <div class="about-profile-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,64 L0,32 Q100,24 200,30 T400,26 Q500,30 600,22 T800,28 Q900,24 1000,30 T1200,26 L1200,64 Z" fill="#F6EEE4"></path>
-    </svg>
   </div>
 </section>
 
