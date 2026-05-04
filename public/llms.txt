@@ -7,65 +7,65 @@
 ## Pages
 
 ### בית
-https://example.com
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app
 רוצה למצוא זוגיות אמיתית ומשמעותית? סדנאות זוגיות, קורסים ותוכניות אישיות שיעזרו לך לבנות את הקשר שתמיד חלמת עליו. הצטרף עכשיו!
 
 ### תוכניות
-https://example.com/programs
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/programs
 קורס אונליין לשיפור חיי הזוגיות, סדנאות קבוצתיות ותוכניות אישיות — כל מה שצריך כדי למצוא זוגיות נכונה ולבנות אהבה אמיתית. בחר את התוכנית שלך היום!
 
 ### אודות
-https://example.com/about
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/about
 ליאור גור מרכז מבינים זוגיות — גלה מי עומד מאחורי השיטה, מה המניע, ולמה אלפי אנשים בחרו דווקא בגישה הייחודית הזו כדי לשנות את חיי הזוגיות שלהם לצמיתות.
 
 ### צור קשר
-https://example.com/contact
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/contact
 רוצה לדעת איך למצוא זוגיות נכונה ולהתחיל את המסע? צור קשר עם ליאור גור עכשיו לשיחת היכרות ללא עלות וגלה איזו תוכנית מתאימה בדיוק עבורך. אל תחכה!
 
 ### Products
-https://example.com/products
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/products
 המוצרים שלנו - מרכז מבינים זוגיות - ליאור גור
 
 ### Cart
-https://example.com/cart
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/cart
 עגלת הקניות שלך
 
 ### Checkout
-https://example.com/checkout
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/checkout
 תשלום
 
 ### Login
-https://example.com/login
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/login
 התחברות לקוחות
 
 ### Account
-https://example.com/account
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/account
 החשבון שלי
 
 ### Order Success
-https://example.com/order-success
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/order-success
 תודה על ההזמנה
 
 ### Product Detail
-https://example.com/product/:slug
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/product/:slug
 פרטי המוצר - מרכז מבינים זוגיות - ליאור גור
 
 ### Category
-https://example.com/category/:slug
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/category/:slug
 מוצרים - מרכז מבינים זוגיות - ליאור גור
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -75,38 +75,38 @@ Information about WCAG compliance and accessibility features.
 **Total active products: 5**
 
 ### התוכנית הפרונטלית למציאת זוגיות נכונה
-https://example.com/product/htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-0u4ekw
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/product/htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-0u4ekw
 - Price: 2900.00 ILS
 - Availability: In stock
 - Description: תהליך עומק מעשי קצר ופרקטי שמלמד איך לבחור נכון זוגיות, איך לא לחזור על אותם דפוסים שתוקעים את החיים שלך בלופ. עבודה על חשיבה, התנהלות בדייטים, זיהוי התאמה ויצירת חיבור אמיתי לפעול מתוך מודעות ולא מתוך אוטומט. מיועד למי שמוכן לעשות שינוי אמיתי, לא רק להבין, אלא לפעול אחרת. 📅 מתי: תוכנית במועדים שונים ימי חמישי 16:00-22:00, ימי שישי 9:00-14:00 תוכנית בזק של יומיים שתעשה לכם סדר בראש ותשמור לכם על הלב ❤️ מיקום: שנקר 1, הרצליה
-- Image: https://example.com/assets/product-1777837059721-sk7r3p.webp
+- Image: https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/assets/product-1777837059721-sk7r3p.webp
 
 ### המדריך החינמי – אהבה עצמית כבסיס לזוגיות
-https://example.com/product/hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-h6shw7
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/product/hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-h6shw7
 - Price: 0.00 ILS
 - Availability: In stock
 - Description: קורס דיגיטלי שנותן הבנה ראשונית ל-מה עוצר אותנו בחיים וגם בזוגיות, ואיך להתחיל לבנות ביטחון, אהבה, אמונה וערך עצמי מבפנים. גישה מיידית לאחר הרשמה, קורס דיגיטלי בקצב שלך, חוברת עבודה פרקטית מושקעת שתעזור לך לא רק לדעת אלא ממש לפעול וליישם 💰 מחיר: חינם
-- Image: https://example.com/assets/product-1777836531817-myvgxo.webp
+- Image: https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/assets/product-1777836531817-myvgxo.webp
 
 ### הקורס הדיגיטלי – "יציאה מתקיעות"
-https://example.com/product/hkvrs-hdygytly-ytsyah-mtkyavt-0eo8n8
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/product/hkvrs-hdygytly-ytsyah-mtkyavt-0eo8n8
 - Price: 369.00 ILS
 - Availability: In stock
 - Description: קורס דיגיטלי פרקטי למי שמרגיש תקוע בדייטים או בזוגיות. מלמד איך לשנות דפוסים, לקבל בהירות ולהתחיל לפעול אחרת, צעד אחרי צעד. כולל תרגילים, חוברת עבודה וכלים יישומיים לשינוי אמיתי. גישה מיידית לאחר ההרשמה, צפייה חופשית בקצב שלך, מכל מקום ובכל זמן 💰
-- Image: https://example.com/assets/product-1777836415518-65q08.webp
+- Image: https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/assets/product-1777836415518-65q08.webp
 
 ### מנוי קהילה חודשי
-https://example.com/product/mnvy-khylh-chvdshy-d9qcyo
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/product/mnvy-khylh-chvdshy-d9qcyo
 - Price: 129.00 ILS
 - Availability: In stock
 - Description: מסגרת קבועה שמאפשרת להישאר בתהליך ולא לחזור לאותם דפוסים לבד. כוללת הטבות לאירועים, חיבורים, תוכן וליווי מתמשך בתוך קהילה פעילה. הפעילות שוטפת לאורך החודש 📍 מיקום: אירועים פיזיים בהרצליה + פעילות דיגיטלית
 
 ### ערב "פיצה ובירה"
-https://example.com/product/arb-pytsh-vbyrh-6sxlu4
+https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/product/arb-pytsh-vbyrh-6sxlu4
 - Price: 120.00 ILS
 - Availability: In stock
 - Description: ערב חווייתי שמשלב שיחה פתוחה על זוגיות יחד עם מפגש חברתי קליל. כולל פיצה, בירה, שאלות ותשובות, ושיח אמיתי על הקשיים בדייטים ובמערכות יחסים. בסוף הערב יש חשיפה עדינה לתוכנית המלאה למי שרוצה להעמיק. מועדים משתנים 19:00-21:30 מיקום: שנקר 1, הרצליה
-- Image: https://example.com/assets/product-1777837346309-nww5c.webp
+- Image: https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/assets/product-1777837346309-nww5c.webp
 
 ---
 
@@ -131,8 +131,8 @@ A relationship coaching and personal development business focused on helping ind
 
 # Machine-readable feeds
 
-- Sitemap (XML): https://example.com/sitemap.xml
-- Robots: https://example.com/robots.txt
-- Flattened page text (for LLMs): https://example.com/llms-full.txt
-- Products (JSON): https://example.com/products.json
-- Products (Google Merchant RSS): https://example.com/product-feed.xml
+- Sitemap (XML): https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/sitemap.xml
+- Robots: https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/llms-full.txt
+- Products (JSON): https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/products.json
+- Products (Google Merchant RSS): https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/product-feed.xml

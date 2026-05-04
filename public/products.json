@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-04T15:28:53.097Z",
-  "base_url": "https://example.com",
+  "generated_at": "2026-05-04T15:29:14.980Z",
+  "base_url": "https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app",
   "currency": "ILS",
   "count": 5,
   "products": [
@@ -19,11 +19,11 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1777837059721-sk7r3p.webp"
+        "https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/assets/product-1777837059721-sk7r3p.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-0u4ekw",
+      "url": "https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/product/htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-0u4ekw",
       "categories": [],
       "updated_at": "2026-05-03T19:37:43.624Z"
     },
@@ -41,11 +41,11 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1777836531817-myvgxo.webp"
+        "https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/assets/product-1777836531817-myvgxo.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-h6shw7",
+      "url": "https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/product/hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-h6shw7",
       "categories": [],
       "updated_at": "2026-05-03T19:30:36.749Z"
     },
@@ -63,11 +63,11 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1777836415518-65q08.webp"
+        "https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/assets/product-1777836415518-65q08.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/hkvrs-hdygytly-ytsyah-mtkyavt-0eo8n8",
+      "url": "https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/product/hkvrs-hdygytly-ytsyah-mtkyavt-0eo8n8",
       "categories": [],
       "updated_at": "2026-05-03T19:28:28.022Z"
     },
@@ -87,7 +87,7 @@
       "images": [],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/mnvy-khylh-chvdshy-d9qcyo",
+      "url": "https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/product/mnvy-khylh-chvdshy-d9qcyo",
       "categories": [],
       "updated_at": "2026-05-03T19:44:01.288Z"
     },
@@ -105,11 +105,11 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1777837346309-nww5c.webp"
+        "https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/assets/product-1777837346309-nww5c.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/arb-pytsh-vbyrh-6sxlu4",
+      "url": "https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/product/arb-pytsh-vbyrh-6sxlu4",
       "categories": [],
       "updated_at": "2026-05-03T19:43:20.298Z"
     }
