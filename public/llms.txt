@@ -1,4 +1,6 @@
-# Business — Generative Engine Optimization Map
+# מרכז מבינים זוגיות - ליאור גור — Generative Engine Optimization Map
+
+> A relationship coaching and personal development business focused on helping individuals find the right partner and build meaningful relationships. The business offers courses, workshops, and group sessions on the topic of relationships and finding true love. The brand combines educational content with a personal, empowering approach, and sells related products through an integrated online store.
 
 ---
 
@@ -68,12 +70,69 @@ Information about WCAG compliance and accessibility features.
 
 ---
 
-# Business Context (for LLM understanding)
+## Products
 
-## About Business
+**Total active products: 5**
+
+### התוכנית הפרונטלית למציאת זוגיות נכונה
+https://example.com/product/htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-0u4ekw
+- Price: 2900.00 ILS
+- Availability: In stock
+- Description: תהליך עומק מעשי קצר ופרקטי שמלמד איך לבחור נכון זוגיות, איך לא לחזור על אותם דפוסים שתוקעים את החיים שלך בלופ. עבודה על חשיבה, התנהלות בדייטים, זיהוי התאמה ויצירת חיבור אמיתי לפעול מתוך מודעות ולא מתוך אוטומט. מיועד למי שמוכן לעשות שינוי אמיתי, לא רק להבין, אלא לפעול אחרת. 📅 מתי: תוכנית במועדים שונים ימי חמישי 16:00-22:00, ימי שישי 9:00-14:00 תוכנית בזק של יומיים שתעשה לכם סדר בראש ותשמור לכם על הלב ❤️ מיקום: שנקר 1, הרצליה
+- Image: https://example.com/assets/product-1777837059721-sk7r3p.webp
+
+### המדריך החינמי – אהבה עצמית כבסיס לזוגיות
+https://example.com/product/hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-h6shw7
+- Price: 0.00 ILS
+- Availability: In stock
+- Description: קורס דיגיטלי שנותן הבנה ראשונית ל-מה עוצר אותנו בחיים וגם בזוגיות, ואיך להתחיל לבנות ביטחון, אהבה, אמונה וערך עצמי מבפנים. גישה מיידית לאחר הרשמה, קורס דיגיטלי בקצב שלך, חוברת עבודה פרקטית מושקעת שתעזור לך לא רק לדעת אלא ממש לפעול וליישם 💰 מחיר: חינם
+- Image: https://example.com/assets/product-1777836531817-myvgxo.webp
+
+### הקורס הדיגיטלי – "יציאה מתקיעות"
+https://example.com/product/hkvrs-hdygytly-ytsyah-mtkyavt-0eo8n8
+- Price: 369.00 ILS
+- Availability: In stock
+- Description: קורס דיגיטלי פרקטי למי שמרגיש תקוע בדייטים או בזוגיות. מלמד איך לשנות דפוסים, לקבל בהירות ולהתחיל לפעול אחרת, צעד אחרי צעד. כולל תרגילים, חוברת עבודה וכלים יישומיים לשינוי אמיתי. גישה מיידית לאחר ההרשמה, צפייה חופשית בקצב שלך, מכל מקום ובכל זמן 💰
+- Image: https://example.com/assets/product-1777836415518-65q08.webp
+
+### מנוי קהילה חודשי
+https://example.com/product/mnvy-khylh-chvdshy-d9qcyo
+- Price: 129.00 ILS
+- Availability: In stock
+- Description: מסגרת קבועה שמאפשרת להישאר בתהליך ולא לחזור לאותם דפוסים לבד. כוללת הטבות לאירועים, חיבורים, תוכן וליווי מתמשך בתוך קהילה פעילה. הפעילות שוטפת לאורך החודש 📍 מיקום: אירועים פיזיים בהרצליה + פעילות דיגיטלית
+
+### ערב "פיצה ובירה"
+https://example.com/product/arb-pytsh-vbyrh-6sxlu4
+- Price: 120.00 ILS
+- Availability: In stock
+- Description: ערב חווייתי שמשלב שיחה פתוחה על זוגיות יחד עם מפגש חברתי קליל. כולל פיצה, בירה, שאלות ותשובות, ושיח אמיתי על הקשיים בדייטים ובמערכות יחסים. בסוף הערב יש חשיפה עדינה לתוכנית המלאה למי שרוצה להעמיק. מועדים משתנים 19:00-21:30 מיקום: שנקר 1, הרצליה
+- Image: https://example.com/assets/product-1777837346309-nww5c.webp
+
 ---
 
-# Additional Resources
+# Business Context (for LLM understanding)
 
-- **Sitemap**: https://example.com/sitemap.xml
-- **Robots.txt**: https://example.com/robots.txt
+## About מרכז מבינים זוגיות - ליאור גור
+A relationship coaching and personal development business focused on helping individuals find the right partner and build meaningful relationships. The business offers courses, workshops, and group sessions on the topic of relationships and finding true love. The brand combines educational content with a personal, empowering approach, and sells related products through an integrated online store.
+
+## Services/Products
+- קורסים בנושא זוגיות
+- סדנאות זוגיות
+- מפגשים בנושא מציאת זוגיות נכונה
+- מכירת מוצרים אונליין
+
+## Target Audience
+אנשים המחפשים זוגיות או רוצים לשפר את חיי הזוגיות שלהם
+
+## Industry
+חינוך, אימון אישי, זוגיות
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://example.com/sitemap.xml
+- Robots: https://example.com/robots.txt
+- Flattened page text (for LLMs): https://example.com/llms-full.txt
+- Products (JSON): https://example.com/products.json
+- Products (Google Merchant RSS): https://example.com/product-feed.xml

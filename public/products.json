@@ -1,0 +1,117 @@
+{
+  "@context": "https://schema.org",
+  "generated_at": "2026-05-04T10:42:28.333Z",
+  "base_url": "https://example.com",
+  "currency": "ILS",
+  "count": 5,
+  "products": [
+    {
+      "id": "3b94ef63-f044-4ddd-89c1-508d12e04b2d",
+      "slug": "htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-0u4ekw",
+      "name": "התוכנית הפרונטלית למציאת זוגיות נכונה",
+      "name_translations": {},
+      "description": "<p>תהליך עומק מעשי קצר ופרקטי שמלמד איך לבחור נכון זוגיות, איך לא לחזור על אותם דפוסים שתוקעים את החיים שלך בלופ. עבודה על חשיבה, התנהלות בדייטים, זיהוי התאמה ויצירת חיבור אמיתי לפעול מתוך מודעות ולא מתוך אוטומט. מיועד למי שמוכן לעשות שינוי אמיתי, לא רק להבין, אלא לפעול אחרת. 📅 מתי: תוכנית במועדים שונים ימי חמישי 16:00-22:00, ימי שישי 9:00-14:00 תוכנית בזק של יומיים שתעשה לכם סדר בראש ותשמור לכם על הלב ❤️ מיקום: שנקר 1, הרצליה</p>",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 2900,
+      "base_price": 2900,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://example.com/assets/product-1777837059721-sk7r3p.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://example.com/product/htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-0u4ekw",
+      "categories": [],
+      "updated_at": "2026-05-03T19:37:43.624Z"
+    },
+    {
+      "id": "ed424653-8a44-4224-8bf5-0c09531b7251",
+      "slug": "hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-h6shw7",
+      "name": "המדריך החינמי – אהבה עצמית כבסיס לזוגיות",
+      "name_translations": {},
+      "description": "<p>קורס דיגיטלי שנותן הבנה ראשונית ל-מה עוצר אותנו בחיים וגם בזוגיות, ואיך להתחיל לבנות ביטחון, אהבה, אמונה וערך עצמי מבפנים. גישה מיידית לאחר הרשמה, קורס דיגיטלי בקצב שלך, חוברת עבודה פרקטית מושקעת שתעזור לך לא רק לדעת אלא ממש לפעול וליישם 💰 מחיר: חינם</p>",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 0,
+      "base_price": 0,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://example.com/assets/product-1777836531817-myvgxo.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://example.com/product/hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-h6shw7",
+      "categories": [],
+      "updated_at": "2026-05-03T19:30:36.749Z"
+    },
+    {
+      "id": "6c6f530e-0c4a-4d9d-abbc-8714f247a582",
+      "slug": "hkvrs-hdygytly-ytsyah-mtkyavt-0eo8n8",
+      "name": "הקורס הדיגיטלי – \"יציאה מתקיעות\"",
+      "name_translations": {},
+      "description": "<p>קורס דיגיטלי פרקטי למי שמרגיש תקוע בדייטים או בזוגיות. מלמד איך לשנות דפוסים, לקבל בהירות ולהתחיל לפעול אחרת, צעד אחרי צעד. כולל תרגילים, חוברת עבודה וכלים יישומיים לשינוי אמיתי. גישה מיידית לאחר ההרשמה, צפייה חופשית בקצב שלך, מכל מקום ובכל זמן  💰 </p>",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 369,
+      "base_price": 369,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://example.com/assets/product-1777836415518-65q08.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://example.com/product/hkvrs-hdygytly-ytsyah-mtkyavt-0eo8n8",
+      "categories": [],
+      "updated_at": "2026-05-03T19:28:28.022Z"
+    },
+    {
+      "id": "ba07fb68-a214-48fa-a700-9e56485cd0ee",
+      "slug": "mnvy-khylh-chvdshy-d9qcyo",
+      "name": "מנוי קהילה חודשי",
+      "name_translations": {},
+      "description": "<p>מסגרת קבועה שמאפשרת להישאר בתהליך ולא לחזור לאותם דפוסים לבד. כוללת הטבות לאירועים, חיבורים, תוכן וליווי מתמשך בתוך קהילה פעילה. הפעילות שוטפת לאורך החודש 📍 מיקום: אירועים פיזיים בהרצליה + פעילות דיגיטלית</p>",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 129,
+      "base_price": 129,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://example.com/product/mnvy-khylh-chvdshy-d9qcyo",
+      "categories": [],
+      "updated_at": "2026-05-03T19:44:01.288Z"
+    },
+    {
+      "id": "2eee60c7-543a-4dc9-ab3b-358eae687605",
+      "slug": "arb-pytsh-vbyrh-6sxlu4",
+      "name": "ערב \"פיצה ובירה\"",
+      "name_translations": {},
+      "description": "<p>ערב חווייתי שמשלב שיחה פתוחה על זוגיות יחד עם מפגש חברתי קליל. כולל פיצה, בירה, שאלות ותשובות, ושיח אמיתי על הקשיים בדייטים ובמערכות יחסים. בסוף הערב יש חשיפה עדינה לתוכנית המלאה למי שרוצה להעמיק. מועדים משתנים 19:00-21:30 מיקום: שנקר 1, הרצליה</p>",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 120,
+      "base_price": 120,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://example.com/assets/product-1777837346309-nww5c.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://example.com/product/arb-pytsh-vbyrh-6sxlu4",
+      "categories": [],
+      "updated_at": "2026-05-03T19:43:20.298Z"
+    }
+  ]
+}
