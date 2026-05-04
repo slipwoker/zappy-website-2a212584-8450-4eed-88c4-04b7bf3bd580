@@ -54,10 +54,6 @@ https://example.com/product/:slug
 https://example.com/category/:slug
 מוצרים - מרכז מבינים זוגיות - ליאור גור
 
-### המוצר החינמי - מרכז מבינים זוגיות
-https://example.com/free-resource
-מרכז מבינים זוגיות - ליאור גור - המוצר החינמי - מרכז מבינים זוגיות
-
 ## Legal & Policy
 
 ### Privacy Policy
