@@ -5166,7 +5166,7 @@ Description: תנאי השימוש באתר - הזכויות והחובות של
 ## Product Catalog
 
 ### התוכנית הפרונטלית למציאת זוגיות נכונה
-URL: https://liorgur.com/product/htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-0u4ekw
+URL: https://liorgur.com/product/htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-hchwcm
 Price: 2900.00 ILS
 Availability: In stock
 
@@ -5202,11 +5202,11 @@ Availability: In stock
 ---
 
 ### ערב "פיצה ובירה"
-URL: https://liorgur.com/product/arb-pytsh-vbyrh-6sxlu4
+URL: https://liorgur.com/product/arb-pytsh-vbyrh-4thfik
 Price: 120.00 ILS
 Availability: In stock
 
-ערב חווייתי שמשלב שיחה פתוחה על זוגיות יחד עם מפגש חברתי קליל. כולל פיצה, בירה, שאלות ותשובות, ושיח אמיתי על הקשיים בדייטים ובמערכות יחסים. בסוף הערב יש חשיפה עדינה לתוכנית המלאה למי שרוצה להעמיק. מועדים משתנים 19:00-21:30 מיקום: שנקר 1, הרצליה
+ערב חווייתי שמשלב שיחה פתוחה על זוגיות יחד עם מפגש חברתי קליל, תרגול דייטים - איך לעשות את זה נכון. כולל פיצה, בירה, שאלות ותשובות, ושיח אמיתי על הקשיים בדייטים ובמערכות יחסים. בסוף הערב יש חשיפה לתוכנית המלאה למי שרוצה להעמיק. מועדים משתנים 19:00-21:30 מיקום: שנקר 1, הרצליה
 
 ---
 

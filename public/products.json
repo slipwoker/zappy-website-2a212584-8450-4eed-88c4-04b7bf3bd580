@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-21T10:13:47.486Z",
+  "generated_at": "2026-05-21T10:14:39.492Z",
   "base_url": "https://liorgur.com",
   "currency": "ILS",
   "count": 5,
   "products": [
     {
       "id": "3b94ef63-f044-4ddd-89c1-508d12e04b2d",
-      "slug": "htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-0u4ekw",
+      "slug": "htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-hchwcm",
       "name": "התוכנית הפרונטלית למציאת זוגיות נכונה",
       "name_translations": {},
       "description": "<p>תהליך עומק מעשי קצר ופרקטי שמלמד איך לבחור נכון זוגיות, איך לא לחזור על אותם דפוסים שתוקעים את החיים שלך בלופ. עבודה על חשיבה, התנהלות בדייטים, זיהוי התאמה ויצירת חיבור אמיתי לפעול מתוך מודעות ולא מתוך אוטומט. מיועד למי שמוכן לעשות שינוי אמיתי, לא רק להבין, אלא לפעול אחרת. 📅 מתי: תוכנית במועדים שונים ימי חמישי 16:00-22:00, ימי שישי 9:00-14:00 תוכנית בזק של יומיים שתעשה לכם סדר בראש ותשמור לכם על הלב ❤️ מיקום: שנקר 1, הרצליה</p>",
@@ -23,9 +23,9 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://liorgur.com/product/htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-0u4ekw",
+      "url": "https://liorgur.com/product/htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-hchwcm",
       "categories": [],
-      "updated_at": "2026-05-03T19:37:43.624Z"
+      "updated_at": "2026-05-21T10:14:31.276Z"
     },
     {
       "id": "ed424653-8a44-4224-8bf5-0c09531b7251",
@@ -95,10 +95,10 @@
     },
     {
       "id": "2eee60c7-543a-4dc9-ab3b-358eae687605",
-      "slug": "arb-pytsh-vbyrh-6sxlu4",
+      "slug": "arb-pytsh-vbyrh-4thfik",
       "name": "ערב \"פיצה ובירה\"",
       "name_translations": {},
-      "description": "<p>ערב חווייתי שמשלב שיחה פתוחה על זוגיות יחד עם מפגש חברתי קליל. כולל פיצה, בירה, שאלות ותשובות, ושיח אמיתי על הקשיים בדייטים ובמערכות יחסים. בסוף הערב יש חשיפה עדינה לתוכנית המלאה למי שרוצה להעמיק. מועדים משתנים 19:00-21:30 מיקום: שנקר 1, הרצליה</p>",
+      "description": "<p>ערב חווייתי שמשלב שיחה פתוחה על זוגיות יחד עם מפגש חברתי קליל, תרגול דייטים - איך לעשות את זה נכון. כולל פיצה, בירה, שאלות ותשובות, ושיח אמיתי על הקשיים בדייטים ובמערכות יחסים. בסוף הערב יש חשיפה לתוכנית המלאה למי שרוצה להעמיק. מועדים משתנים 19:00-21:30 מיקום: שנקר 1, הרצליה</p>",
       "short_description": null,
       "sku": null,
       "brand": null,
@@ -111,9 +111,9 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://liorgur.com/product/arb-pytsh-vbyrh-6sxlu4",
+      "url": "https://liorgur.com/product/arb-pytsh-vbyrh-4thfik",
       "categories": [],
-      "updated_at": "2026-05-03T19:43:20.298Z"
+      "updated_at": "2026-05-21T10:14:08.615Z"
     }
   ]
 }
