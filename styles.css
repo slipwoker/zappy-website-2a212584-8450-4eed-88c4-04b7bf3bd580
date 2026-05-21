@@ -6515,7 +6515,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
     radial-gradient(circle at 85% 70%, rgba(201,111,74,0.09) 0%, rgba(201,111,74,0) 32%),
     linear-gradient(180deg, #FFFDF9 0%, #F6EEE4 100%);
   color: var(--text-dark);
-  padding: 48px 24px 100px;
+  padding: 16px 24px 100px;
   direction: rtl;
 }
 
