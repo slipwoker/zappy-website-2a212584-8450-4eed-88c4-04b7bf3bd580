@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-04T15:29:14.980Z",
+  "generated_at": "2026-05-21T09:45:13.324Z",
   "base_url": "https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app",
   "currency": "ILS",
   "count": 5,
@@ -51,15 +51,15 @@
     },
     {
       "id": "6c6f530e-0c4a-4d9d-abbc-8714f247a582",
-      "slug": "hkvrs-hdygytly-ytsyah-mtkyavt-0eo8n8",
+      "slug": "hkvrs-hdygytly-ytsyah-mtkyavt-9reup0",
       "name": "הקורס הדיגיטלי – \"יציאה מתקיעות\"",
       "name_translations": {},
-      "description": "<p>קורס דיגיטלי פרקטי למי שמרגיש תקוע בדייטים או בזוגיות. מלמד איך לשנות דפוסים, לקבל בהירות ולהתחיל לפעול אחרת, צעד אחרי צעד. כולל תרגילים, חוברת עבודה וכלים יישומיים לשינוי אמיתי. גישה מיידית לאחר ההרשמה, צפייה חופשית בקצב שלך, מכל מקום ובכל זמן  💰 </p>",
+      "description": "<p>קורס דיגיטלי פרקטי למי שמרגיש תקוע בדייטים או בזוגיות. מלמד איך לשנות דפוסים, לקבל בהירות ולהתחיל לפעול אחרת, צעד אחרי צעד. כולל תרגילים, חוברת עבודה וכלים יישומיים לשינוי אמיתי. גישה מיידית לאחר ההרשמה, צפייה חופשית בקצב שלך, מכל מקום ובכל זמן 💰</p>",
       "short_description": null,
       "sku": null,
       "brand": null,
-      "price": 369,
-      "base_price": 369,
+      "price": 396.99,
+      "base_price": 396.99,
       "sale_price": null,
       "currency": "ILS",
       "images": [
@@ -67,9 +67,9 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/product/hkvrs-hdygytly-ytsyah-mtkyavt-0eo8n8",
+      "url": "https://merkaz-mevinim-zugiyut-lior-gu.zappy5.app/product/hkvrs-hdygytly-ytsyah-mtkyavt-9reup0",
       "categories": [],
-      "updated_at": "2026-05-03T19:28:28.022Z"
+      "updated_at": "2026-05-21T09:44:42.210Z"
     },
     {
       "id": "ba07fb68-a214-48fa-a700-9e56485cd0ee",
