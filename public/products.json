@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-21T10:12:53.583Z",
+  "generated_at": "2026-05-21T10:13:47.486Z",
   "base_url": "https://liorgur.com",
   "currency": "ILS",
   "count": 5,
@@ -73,10 +73,10 @@
     },
     {
       "id": "ba07fb68-a214-48fa-a700-9e56485cd0ee",
-      "slug": "mnvy-khylh-chvdshy-rsljqh",
+      "slug": "mnvy-khylh-chvdshy-7htw4r",
       "name": "מנוי קהילה חודשי",
       "name_translations": {},
-      "description": "<p>מסגרת קבועה שמאפשרת להישאר בתהליך ולא לחזור לאותם דפוסים לבד. כוללת הטבות לאירועים, חיבורים, תוכן וליווי מתמשך בתוך קהילה פעילה. הפעילות שוטפת לאורך החודש 📍 מיקום: אירועים פיזיים בהרצליה + פעילות דיגיטלית</p>",
+      "description": "<p>מסגרת קבועה שמאפשרת להישאר בתהליך ולא לחזור לאותם דפוסים לבד. כוללת הטבות לאירועים, חיבורים, תוכן וליווי , מתמשך בתוך קהילה פעילה. פעילות שוטפת לאורך החודש 📍 מיקום: אירועים פרונטליים בהרצליה + פעילות דיגיטלית, קורסים דיגיטליים זומים וכדומה</p>",
       "short_description": null,
       "sku": null,
       "brand": null,
@@ -89,9 +89,9 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://liorgur.com/product/mnvy-khylh-chvdshy-rsljqh",
+      "url": "https://liorgur.com/product/mnvy-khylh-chvdshy-7htw4r",
       "categories": [],
-      "updated_at": "2026-05-21T10:12:22.713Z"
+      "updated_at": "2026-05-21T10:13:16.375Z"
     },
     {
       "id": "2eee60c7-543a-4dc9-ab3b-358eae687605",
