@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-21T10:14:39.492Z",
+  "generated_at": "2026-05-21T10:15:02.184Z",
   "base_url": "https://liorgur.com",
   "currency": "ILS",
   "count": 5,
@@ -29,7 +29,7 @@
     },
     {
       "id": "ed424653-8a44-4224-8bf5-0c09531b7251",
-      "slug": "hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-h6shw7",
+      "slug": "hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-fueral",
       "name": "המדריך החינמי – אהבה עצמית כבסיס לזוגיות",
       "name_translations": {},
       "description": "<p>קורס דיגיטלי שנותן הבנה ראשונית ל-מה עוצר אותנו בחיים וגם בזוגיות, ואיך להתחיל לבנות ביטחון, אהבה, אמונה וערך עצמי מבפנים. גישה מיידית לאחר הרשמה, קורס דיגיטלי בקצב שלך, חוברת עבודה פרקטית מושקעת שתעזור לך לא רק לדעת אלא ממש לפעול וליישם 💰 מחיר: חינם</p>",
@@ -45,13 +45,13 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://liorgur.com/product/hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-h6shw7",
+      "url": "https://liorgur.com/product/hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-fueral",
       "categories": [],
-      "updated_at": "2026-05-03T19:30:36.749Z"
+      "updated_at": "2026-05-21T10:14:57.688Z"
     },
     {
       "id": "6c6f530e-0c4a-4d9d-abbc-8714f247a582",
-      "slug": "hkvrs-hdygytly-ytsyah-mtkyavt-9reup0",
+      "slug": "hkvrs-hdygytly-ytsyah-mtkyavt-okg88a",
       "name": "הקורס הדיגיטלי – \"יציאה מתקיעות\"",
       "name_translations": {},
       "description": "<p>קורס דיגיטלי פרקטי למי שמרגיש תקוע בדייטים או בזוגיות. מלמד איך לשנות דפוסים, לקבל בהירות ולהתחיל לפעול אחרת, צעד אחרי צעד. כולל תרגילים, חוברת עבודה וכלים יישומיים לשינוי אמיתי. גישה מיידית לאחר ההרשמה, צפייה חופשית בקצב שלך, מכל מקום ובכל זמן 💰</p>",
@@ -67,9 +67,9 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://liorgur.com/product/hkvrs-hdygytly-ytsyah-mtkyavt-9reup0",
+      "url": "https://liorgur.com/product/hkvrs-hdygytly-ytsyah-mtkyavt-okg88a",
       "categories": [],
-      "updated_at": "2026-05-21T09:44:42.210Z"
+      "updated_at": "2026-05-21T10:14:49.362Z"
     },
     {
       "id": "ba07fb68-a214-48fa-a700-9e56485cd0ee",
