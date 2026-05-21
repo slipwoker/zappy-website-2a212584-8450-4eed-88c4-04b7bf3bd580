@@ -2227,8 +2227,8 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   --text-muted: #6F655D;
   --border-light: #E7DDD0;
   --border-dark: #4B433C;
-  background-color: #5C4033;
-  color: var(--text-light);
+  background-color: #F6F1E8;
+  color: var(--text-dark);
   font-family: 'Rubik', sans-serif;
   direction: rtl;
   padding: 3.5rem 0 0;
@@ -19189,6 +19189,86 @@ main,
     font-size: 12px;
     padding: 6px 12px;
   }
+}
+
+.site-footer,
+.site-footer p,
+.site-footer span,
+.site-footer h1,
+.site-footer h2,
+.site-footer h3,
+.site-footer h4,
+.site-footer h5,
+.site-footer h6,
+.site-footer li,
+.site-footer a,
+.site-footer .brand-tagline,
+.site-footer .footer-heading,
+.site-footer .footer-copyright,
+.site-footer .contact-text,
+.site-footer .footer-links a,
+.site-footer .footer-contact li,
+.site-footer .footer-contact span,
+.site-footer .footer-contact a,
+.site-footer .footer-legal a,
+.site-footer .footer-bottom p,
+.site-footer .footer-bottom span:not(.separator) {
+  color: var(--background-color) !important;
+}
+
+.site-footer a:hover,
+.site-footer .footer-contact a:hover,
+.site-footer .footer-legal a:hover {
+  color: var(--primary-color) !important;
+}
+
+.site-footer .footer-social a,
+.site-footer .footer-social i {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-social a:hover {
+  color: var(--primary-color) !important;
+}
+
+.site-footer .contact-list a {
+  color: var(--background-color) !important;
+}
+
+.site-footer .contact-list li {
+  color: var(--background-color) !important;
+}
+
+.site-footer .contact-list span {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-legal a {
+  color: var(--background-color) !important;
+}
+
+.site-footer .copyright p {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-description {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-bottom a {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-bottom p {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-bottom span:not(.separator) {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-legal .separator {
+  color: var(--background-color) !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
