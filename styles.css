@@ -2216,7 +2216,6 @@ html[lang="ar"] .nav-cta-btn {
 main { margin-top: 0 !important; padding-top: 0 !important; }
 
 
-/* Footer Styles */
 .site-footer {
   --primary: #C96F4A;
   --secondary: #D7C7B4;
@@ -2228,8 +2227,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   --text-muted: #6F655D;
   --border-light: #E7DDD0;
   --border-dark: #4B433C;
-
-  background-color: var(--bg-dark);
+  background-color: #5C4033;
   color: var(--text-light);
   font-family: 'Rubik', sans-serif;
   direction: rtl;
