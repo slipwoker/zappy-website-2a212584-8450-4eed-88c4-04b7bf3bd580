@@ -17542,6 +17542,34 @@ main,
     font-size: 0.9rem;
   }
 }
+/* Batch: הסתרת אלמנטי חנות — עגלה, לוגין, תפריט קטלוג, מגירה, ודרופדאון מוצרים */
+/* הסתרת אייקוני עגלה ולוגין מהניווט */
+.nav-ecommerce-icons.nav-icons-left { display: none !important; }
+.nav-ecommerce-icons.nav-icons-right { display: none !important; }
+
+/* הסתרת תפריט קטלוג */
+#zappy-catalog-menu { display: none !important; }
+
+/* הסתרת מגירת עגלת קניות */
+.cart-drawer-overlay, .cart-drawer, #cart-drawer, #cart-drawer-overlay { display: none !important; }
+
+/* הסתרת dropdown של מוצרים בתפריט */
+.zappy-products-dropdown .sub-menu { display: none !important; }
+/* Batch: הסתרת אלמנטי חנות — גרסה חזקה יותר */
+/* הסתרת אייקוני עגלה ולוגין מהניווט - גישה חזקה */
+.nav-ecommerce-icons.nav-icons-left { display: none !important; visibility: hidden !important; width: 0 !important; height: 0 !important; overflow: hidden !important; }
+.nav-ecommerce-icons.nav-icons-left * { display: none !important; }
+.nav-ecommerce-icons.nav-icons-right { display: none !important; visibility: hidden !important; width: 0 !important; height: 0 !important; overflow: hidden !important; }
+.nav-ecommerce-icons.nav-icons-right * { display: none !important; }
+
+/* הסתרת תפריט קטלוג */
+#zappy-catalog-menu { display: none !important; }
+
+/* הסתרת מגירת עגלת קניות */
+.cart-drawer-overlay, .cart-drawer, #cart-drawer, #cart-drawer-overlay { display: none !important; }
+
+/* הסתרת dropdown של מוצרים בתפריט */
+.zappy-products-dropdown .sub-menu { display: none !important; }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
