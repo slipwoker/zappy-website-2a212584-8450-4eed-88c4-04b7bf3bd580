@@ -72,7 +72,7 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 5**
+**Total active products: 4**
 
 ### התוכנית הפרונטלית למציאת זוגיות נכונה
 https://liorgur.com/product/htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-hchwcm
@@ -95,19 +95,12 @@ https://liorgur.com/product/hkvrs-hdygytly-ytsyah-mtkyavt-okg88a
 - Description: קורס דיגיטלי פרקטי למי שמרגיש תקוע בדייטים או בזוגיות. מלמד איך לשנות דפוסים, לקבל בהירות ולהתחיל לפעול אחרת, צעד אחרי צעד. כולל תרגילים, חוברת עבודה וכלים יישומיים לשינוי אמיתי. גישה מיידית לאחר ההרשמה, צפייה חופשית בקצב שלך, מכל מקום ובכל זמן 💰
 - Image: https://liorgur.com/assets/product-1777836415518-65q08.webp
 
-### מנוי קהילה חודשי
-https://liorgur.com/product/mnvy-khylh-chvdshy-1m2vcb
-- Price: 129.00 ILS
+### מנוי למועדון מבינים זוגיות
+https://liorgur.com/product/mnvy-lmvadvn-mbynym-zvgyvt-cw6eet
+- Price: 177.00 ILS
 - Availability: In stock
 - Description: מסגרת קבועה שמאפשרת להישאר בתהליך ולא לחזור לאותם דפוסים לבד. כוללת הטבות לאירועים, חיבורים, תוכן וליווי , מתמשך בתוך קהילה פעילה. פעילות שוטפת לאורך החודש 📍 מיקום: אירועים פרונטליים בהרצליה + פעילות דיגיטלית, קורסים דיגיטליים זומים וכדומה
 - Image: https://liorgur.com/assets/product-1779358669246-uz41le.webp
-
-### ערב "פיצה ובירה"
-https://liorgur.com/product/arb-pytsh-vbyrh-5w27hn
-- Price: 120.00 ILS
-- Availability: In stock
-- Description: ערב חווייתי שמשלב שיחה פתוחה על זוגיות יחד עם מפגש חברתי קליל, תרגול דייטים - איך לעשות את זה נכון. כולל פיצה, בירה, שאלות ותשובות, ושיח אמיתי על הקשיים בדייטים ובמערכות יחסים. בסוף הערב יש חשיפה לתוכנית המלאה למי שרוצה להעמיק. מועדים משתנים 19:00-21:30 מיקום: שנקר 1, הרצליה
-- Image: https://liorgur.com/assets/product-1777837346309-nww5c.webp
 
 ---
 

@@ -1,9 +1,9 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-15T15:50:31.265Z",
+  "generated_at": "2026-06-16T15:43:54.734Z",
   "base_url": "https://liorgur.com",
   "currency": "ILS",
-  "count": 5,
+  "count": 4,
   "products": [
     {
       "id": "3b94ef63-f044-4ddd-89c1-508d12e04b2d",
@@ -73,15 +73,15 @@
     },
     {
       "id": "ba07fb68-a214-48fa-a700-9e56485cd0ee",
-      "slug": "mnvy-khylh-chvdshy-1m2vcb",
-      "name": "מנוי קהילה חודשי",
+      "slug": "mnvy-lmvadvn-mbynym-zvgyvt-cw6eet",
+      "name": "מנוי למועדון מבינים זוגיות",
       "name_translations": {},
       "description": "<p>מסגרת קבועה שמאפשרת להישאר בתהליך ולא לחזור לאותם דפוסים לבד. כוללת הטבות לאירועים, חיבורים, תוכן וליווי , מתמשך בתוך קהילה פעילה. פעילות שוטפת לאורך החודש 📍 מיקום: אירועים פרונטליים בהרצליה + פעילות דיגיטלית, קורסים דיגיטליים זומים וכדומה</p>",
       "short_description": null,
       "sku": null,
       "brand": null,
-      "price": 129,
-      "base_price": 129,
+      "price": 177,
+      "base_price": 177,
       "sale_price": null,
       "currency": "ILS",
       "images": [
@@ -89,31 +89,9 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://liorgur.com/product/mnvy-khylh-chvdshy-1m2vcb",
+      "url": "https://liorgur.com/product/mnvy-lmvadvn-mbynym-zvgyvt-cw6eet",
       "categories": [],
-      "updated_at": "2026-05-21T10:17:58.531Z"
-    },
-    {
-      "id": "2eee60c7-543a-4dc9-ab3b-358eae687605",
-      "slug": "arb-pytsh-vbyrh-5w27hn",
-      "name": "ערב \"פיצה ובירה\"",
-      "name_translations": {},
-      "description": "<p>ערב חווייתי שמשלב שיחה פתוחה על זוגיות יחד עם מפגש חברתי קליל, תרגול דייטים - איך לעשות את זה נכון. כולל פיצה, בירה, שאלות ותשובות, ושיח אמיתי על הקשיים בדייטים ובמערכות יחסים. בסוף הערב יש חשיפה לתוכנית המלאה למי שרוצה להעמיק. מועדים משתנים 19:00-21:30 מיקום: שנקר 1, הרצליה</p>",
-      "short_description": null,
-      "sku": null,
-      "brand": null,
-      "price": 120,
-      "base_price": 120,
-      "sale_price": null,
-      "currency": "ILS",
-      "images": [
-        "https://liorgur.com/assets/product-1777837346309-nww5c.webp"
-      ],
-      "in_stock": true,
-      "stock_status": "in_stock",
-      "url": "https://liorgur.com/product/arb-pytsh-vbyrh-5w27hn",
-      "categories": [],
-      "updated_at": "2026-05-21T10:15:12.707Z"
+      "updated_at": "2026-06-16T15:43:23.634Z"
     }
   ]
 }
