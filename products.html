@@ -403,47 +403,120 @@
         </div>
       </div>
     </nav>
-  <main class="page-container ecommerce-page">
-    
-        <section class="products-section">
-          <h1 id="products-page-title">המוצרים שלנו</h1>
-          <div class="products-toolbar" id="products-toolbar" style="display:none;">
-            <button class="sidebar-toggle-btn" id="sidebar-toggle-btn" style="display:none;" aria-label="סינון">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h4"></path></svg>
-              <span>סינון</span>
-            </button>
-            <div class="toolbar-left">
-              <span class="products-count" id="products-count"></span>
-            </div>
-            <div class="toolbar-right">
-              <div class="sort-control" id="sort-control" style="display:none;">
-                <select id="sort-select" aria-label="מיון">
-                </select>
-              </div>
-              <div class="view-toggle" id="view-toggle" style="display:none;">
-                <button class="view-btn active" data-view="grid" aria-label="תצוגת רשת">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
-                </button>
-                <button class="view-btn" data-view="list" aria-label="תצוגת רשימה">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg>
-                </button>
-              </div>
+  <main>
+    <!-- Hero Section for Products Page -->
+    <section class="programs-intro-section" dir="rtl">
+      <div class="programs-intro-container">
+        <div class="programs-intro-grid">
+          <div class="programs-intro-text">
+            <span class="programs-intro-eyebrow">המוצרים שלנו</span>
+            <h1 class="programs-intro-h1">כלים פרקטיים שמובילים לשינוי אמיתי</h1>
+            <p class="programs-intro-body">בחרנו לרכז עבורכם מגוון מוצרים דיגיטליים ופרונטליים — קורסים, סדנאות, מפגשי קבוצה ומדריכים — כל אחד מהם נבנה מתוך ניסיון של מאות מפגשים עם אנשים שרצו לשנות את חייהם הזוגיים. כל מוצר נותן לכם כלים, תובנות ודרך ברורה קדימה.</p>
+            <div class="programs-intro-cta-row">
+              <a href="#products-grid" class="btn-primary">לכל המוצרים</a>
+              <a href="/contact" class="btn-ghost">דברו איתנו</a>
             </div>
           </div>
-          <div class="products-layout" id="products-layout">
-            <aside class="product-sidebar" id="product-sidebar" style="display:none;"></aside>
-            <div class="products-main">
-              <div class="product-grid" id="zappy-product-grid">
-                <div class="loading-products">טוען מוצרים...</div>
+          <div class="programs-intro-image-col">
+            <div class="programs-intro-image-frame">
+              <img width="600" height="480" src="/assets/site-programs-intro-image-1.webp" alt="קבוצה קטנה בסדנת זוגיות של מרכז מבינים זוגיות">
+              <div class="programs-intro-image-badge">
+                <span class="badge-icon">✦</span>
+                <span class="badge-text">קורסים · סדנאות · מפגשי קבוצה</span>
               </div>
             </div>
+            <div class="programs-intro-image-accent" aria-hidden="true"></div>
           </div>
-        </section>
+        </div>
+      </div>
+      <div class="programs-intro-divider-wrapper">
+        <svg aria-hidden="true" viewBox="0 0 1200 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,72 L0,36 Q80,22 160,32 T320,28 Q420,34 520,24 T700,30 Q820,36 920,22 T1100,28 Q1150,32 1200,26 L1200,72 Z" fill="#FFFDF9"></path>
+        </svg>
+      </div>
+    </section>
 
-
-
-
-      
+    <!-- Products Grid Section -->
+    <section class="plans-section" dir="rtl" lang="he" id="products-grid">
+      <div class="plans-container">
+        <div class="plans-header">
+          <h2 class="plans-title">המוצרים שלנו</h2>
+          <p class="plans-subtitle">בחרו את המוצר שמתאים לכם — כל אחד עם לינק רכישה ישיר</p>
+        </div>
+        <div class="plans-grid">
+          <article class="plan-card" aria-label="התוכנית הפרונטלית למציאת זוגיות נכונה">
+            <div class="plan-card-image-wrap">
+              <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27300%27%3E%3Cdefs%3E%3ClinearGradient id=%27grad%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 style=%27stop-color:%23C96F4A;stop-opacity:1%27 /%3E%3Cstop offset=%27100%25%27 style=%27stop-color:%23D7C7B4;stop-opacity:1%27 /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27url(%23grad)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27Arial, sans-serif%27 font-size=%2716%27 fill=%27white%27 text-anchor=%27middle%27 dy=%27.3em%27 font-weight=%27500%27%3Eליווי אישי%3C/text%3E%3C/svg%3E" alt="ליווי אישי אחד על אחד — זוגיות נכונה" class="plan-card-img">
+              <span class="plan-badge">ליווי אישי</span>
+            </div>
+            <div class="plan-card-body">
+              <h3 class="plan-card-title">התוכנית הפרונטלית למציאת זוגיות נכונה</h3>
+              <p class="plan-card-desc">תוכנית מקיפה ואינטנסיבית בהנחיית ליאור גור אישית — לאנשים שמוכנים לעשות שינוי אמיתי ולמצוא זוגיות נכונה בפרק זמן ממוקד.</p>
+              <div class="plan-card-footer">
+                <span class="plan-price">₪2,900</span>
+                <a href="https://pay.grow.link/c5e444497486107216b9b03ed029ee94-MzI0NTA0OA" target="_blank" rel="noopener noreferrer" class="plan-btn" aria-label="לרכישת התוכנית הפרונטלית">לרכישה</a>
+              </div>
+            </div>
+          </article>
+          <article class="plan-card" aria-label="ערב פיצה ובירה — מדברים זוגיות">
+            <div class="plan-card-image-wrap">
+              <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27300%27%3E%3Cdefs%3E%3ClinearGradient id=%27grad%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 style=%27stop-color:%237A846A;stop-opacity:1%27 /%3E%3Cstop offset=%27100%25%27 style=%27stop-color:%23D7C7B4;stop-opacity:1%27 /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27url(%23grad)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27Arial, sans-serif%27 font-size=%2716%27 fill=%27white%27 text-anchor=%27middle%27 dy=%27.3em%27 font-weight=%27500%27%3Eאירוע%3C/text%3E%3C/svg%3E" alt="ערב קליל עם פיצה ובירה, שיח על זוגיות" class="plan-card-img">
+              <span class="plan-badge">אירוע</span>
+            </div>
+            <div class="plan-card-body">
+              <h3 class="plan-card-title">ערב פיצה ובירה — מדברים זוגיות</h3>
+              <p class="plan-card-desc">ערב קליל, כיפי ומעשיר — שיח אמיתי על זוגיות, הכרות עם אנשים מרתקים, ותובנות שתיקחו הביתה. בלי לחץ, בלי מחויבות.</p>
+              <div class="plan-card-footer">
+                <span class="plan-price">₪120</span>
+                <a href="https://pay.grow.link/8029b84d060aa023fe91d7acad7cbe50-MzI0NDQ1NQ" target="_blank" rel="noopener noreferrer" class="plan-btn" aria-label="לרכישת כרטיס לערב פיצה ובירה">לרכישה</a>
+              </div>
+            </div>
+          </article>
+          <article class="plan-card" aria-label="מנוי קהילה חודשי">
+            <div class="plan-card-image-wrap">
+              <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27300%27%3E%3Cdefs%3E%3ClinearGradient id=%27grad%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 style=%27stop-color:%23C96F4A;stop-opacity:1%27 /%3E%3Cstop offset=%27100%25%27 style=%27stop-color:%237A846A;stop-opacity:1%27 /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27url(%23grad)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27Arial, sans-serif%27 font-size=%2716%27 fill=%27white%27 text-anchor=%27middle%27 dy=%27.3em%27 font-weight=%27500%27%3Eקהילה%3C/text%3E%3C/svg%3E" alt="קהילה חמה של אנשים שמחפשים אהבה" class="plan-card-img">
+              <span class="plan-badge">קהילה</span>
+            </div>
+            <div class="plan-card-body">
+              <h3 class="plan-card-title">מנוי קהילה חודשי</h3>
+              <p class="plan-card-desc">הצטרפו לקהילה חמה של אנשים שמחפשים אהבה אמיתית — תכנים בלעדיים, מפגשים חודשיים ותמיכה מתמשכת לאורך הדרך.</p>
+              <div class="plan-card-footer">
+                <span class="plan-price">₪129 <span class="plan-price-period">/ חודש</span></span>
+                <a href="https://pay.grow.link/ede61963ed849c9ee989b6a7c7c7f0df-MzI0NzA2NQ" target="_blank" rel="noopener noreferrer" class="plan-btn" aria-label="הצטרפות למנוי קהילה חודשי">לרכישה</a>
+              </div>
+            </div>
+          </article>
+          <article class="plan-card plan-card--free" aria-label="המדריך החינמי – אהבה עצמית כבסיס לזוגיות">
+            <div class="plan-card-image-wrap">
+              <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27300%27%3E%3Cdefs%3E%3ClinearGradient id=%27grad%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 style=%27stop-color:%23D7C7B4;stop-opacity:1%27 /%3E%3Cstop offset=%27100%25%27 style=%27stop-color:%23F6F1E8;stop-opacity:1%27 /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27url(%23grad)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27Arial, sans-serif%27 font-size=%2716%27 fill=%27%232E2A27%27 text-anchor=%27middle%27 dy=%27.3em%27 font-weight=%27500%27%3Eחינמי%3C/text%3E%3C/svg%3E" alt="אהבה עצמית — אישה עם ספר באור חם" class="plan-card-img">
+              <span class="plan-badge plan-badge--free">חינמי</span>
+            </div>
+            <div class="plan-card-body">
+              <h3 class="plan-card-title">המדריך החינמי – אהבה עצמית כבסיס לזוגיות</h3>
+              <p class="plan-card-desc">מדריך דיגיטלי מתנה — הצעד הראשון להבנת עצמך ולבניית הבסיס לזוגיות בריאה. ללא עלות, ללא התחייבות.</p>
+              <div class="plan-card-footer">
+                <span class="plan-price plan-price--free">חינם</span>
+                <a href="https://stop-comparing.landy-ai.com" target="_blank" rel="noopener noreferrer" class="plan-btn plan-btn--free" aria-label="קבלת המדריך החינמי">לרכישה</a>
+              </div>
+            </div>
+          </article>
+          <article class="plan-card" aria-label="הקורס הדיגיטלי – יציאה מתקיעות">
+            <div class="plan-card-image-wrap">
+              <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27300%27%3E%3Cdefs%3E%3ClinearGradient id=%27grad%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 style=%27stop-color:%232E2A27;stop-opacity:1%27 /%3E%3Cstop offset=%27100%25%27 style=%27stop-color:%237A846A;stop-opacity:1%27 /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27url(%23grad)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27Arial, sans-serif%27 font-size=%2716%27 fill=%27white%27 text-anchor=%27middle%27 dy=%27.3em%27 font-weight=%27500%27%3Eקורס דיגיטלי%3C/text%3E%3C/svg%3E" alt="קורס דיגיטלי — אדם לומד על מחשב בבית חם" class="plan-card-img">
+              <span class="plan-badge">קורס דיגיטלי</span>
+            </div>
+            <div class="plan-card-body">
+              <h3 class="plan-card-title">הקורס הדיגיטלי – יציאה מתקיעות</h3>
+              <p class="plan-card-desc">קורס אונליין מעשי שמוביל אתכם צעד אחר צעד מהתקיעות לתנועה — כלים רגשיים ומעשיים שעובדים בחיים האמיתיים.</p>
+              <div class="plan-card-footer">
+                <span class="plan-price">₪396.99</span>
+                <a href="https://pay.grow.link/3e6cb5c2eade1cf93d10c849e1b35243-MzI0NDU0OQ" target="_blank" rel="noopener noreferrer" class="plan-btn" aria-label="לרכישת הקורס הדיגיטלי">לרכישה</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="site-footer" dir="rtl">
   <div class="footer-inner">
