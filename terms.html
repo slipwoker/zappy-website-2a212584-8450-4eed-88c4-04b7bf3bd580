@@ -715,7 +715,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
 
     
   
-<script>window.ZAPPY_WEBSITE_ID = "2a212584-8450-4eed-88c4-04b7bf3bd580";window.ZAPPY_API_BASE = "https://api.zappy5.com"</script>
+<script>window.ZAPPY_WEBSITE_ID = "2a212584-8450-4eed-88c4-04b7bf3bd580";window.ZAPPY_API_BASE = (window.location.pathname.includes('/preview') ? "https://api.zappy5.com" : "https://api.zappy5.com");</script>
     <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
     <svg style="display:block !important" class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -785,12 +785,12 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
     
   
     <main>
-    <section class="legal-page-content terms-conditions">
+    <section class="legal-page-content terms-conditions" id="legal-page-content">
   <div class="container">
         <h1>תקנון ותנאי שימוש – מרכז "מבינים זוגיות"</h1>
         
-        <div class="last-updated">
-            <strong>עדכון אחרון:</strong> 25.4.2026
+        <div class="last-updated" style>
+            <strong>עדכון אחרון:</strong> 15.7.2026
         </div>
 
         <h2>1. כללי</h2>
@@ -837,7 +837,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       <!-- Column 1: Company Info -->
       <div class="footer-col footer-brand">
         <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות - ליאור גור" class="logo" data-element-type="image" data-element-id="img-1777841668422-p8269wj5w" data-zappy-footer-image="true" decoding="async" width="35" height="35" />
-        <p class="brand-tagline">מרכז מבינים זוגיות מציע ליווי אישי, קורסים וסדנאות לחיזוק הזוגיות, צמיחה אישית והעמקה רגשית.</p>
+        <p class="brand-tagline" style>מרכז מבינים זוגיות מציע ליווי אישי, קורסים וסדנאות לחיזוק הזוגיות, צמיחה אישית והעמקה רגשית.</p>
         <div class="footer-social">
           <a href="https://facebook.com/gur.lior.9" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="https://instagram.com/lior.gur?igsh=MWNuM2tmaHJvMzR1OQ==" aria-label="Instagram"><i class="fab fa-instagram" data-element-type="icon" data-element-id="icon-1777841668421-0soql6nom" data-icon-type="fontawesome"></i></a>
@@ -861,7 +861,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
         <ul class="footer-contact">
           <li>
             <span class="contact-icon"><i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1777841668421-rlmppdxyr" data-icon-type="fontawesome"></i></span>
-            <span class="contact-text"><a href="/cdn-cgi/l/email-protection#643f0611170d0a0117173b0109050d0839">
+            <span class="contact-text"><a href="/cdn-cgi/l/email-protection#643f0611170d0a0117173b0109050d0839" style>
 
 serviceliorgur@gmail.com
 
@@ -869,7 +869,7 @@ serviceliorgur@gmail.com
           </li>
           <li>
             <span class="contact-icon"><i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1777841668421-bzjrl8oky" data-icon-type="fontawesome"></i></span>
-            <span class="contact-text"><a href="tel:055-727-7650">055-727-7650</a></span>
+            <span class="contact-text"><a href="tel:055-727-7650" style>055-727-7650</a></span>
           </li>
           <li><a href="/" style="display:flex;align-items:flex-start;gap:inherit"><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
             <span class="contact-text">שנקר 1, הרצליה, ישראל</span></a></li>
@@ -907,7 +907,6 @@ serviceliorgur@gmail.com
   </button>
   <div class="zappy-qv-content" id="zappy-qv-content"></div>
 </div>
-  <a href="https://wa.me/[whatsapp_handle]" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 
     <script src="/script.js"></script>
 
