@@ -73,6 +73,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://liorgur.com/club</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://liorgur.com/privacy</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
