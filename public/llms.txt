@@ -72,14 +72,7 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 4**
-
-### התוכנית הפרונטלית למציאת זוגיות נכונה
-https://liorgur.com/product/htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-hchwcm
-- Price: 2900.00 ILS
-- Availability: In stock
-- Description: תהליך עומק מעשי קצר ופרקטי שמלמד איך לבחור נכון זוגיות, איך לא לחזור על אותם דפוסים שתוקעים את החיים שלך בלופ. עבודה על חשיבה, התנהלות בדייטים, זיהוי התאמה ויצירת חיבור אמיתי לפעול מתוך מודעות ולא מתוך אוטומט. מיועד למי שמוכן לעשות שינוי אמיתי, לא רק להבין, אלא לפעול אחרת. 📅 מתי: תוכנית במועדים שונים ימי חמישי 16:00-22:00, ימי שישי 9:00-14:00 תוכנית בזק של יומיים שתעשה לכם סדר בראש ותשמור לכם על הלב ❤️ מיקום: שנקר 1, הרצליה
-- Image: https://liorgur.com/assets/product-1777837059721-sk7r3p.webp
+**Total active products: 3**
 
 ### המדריך החינמי – אהבה עצמית כבסיס לזוגיות
 https://liorgur.com/product/hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-fueral

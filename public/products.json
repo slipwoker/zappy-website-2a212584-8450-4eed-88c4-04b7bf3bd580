@@ -1,32 +1,10 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-16T09:35:38.644Z",
+  "generated_at": "2026-07-16T09:38:25.184Z",
   "base_url": "https://liorgur.com",
   "currency": "ILS",
-  "count": 4,
+  "count": 3,
   "products": [
-    {
-      "id": "3b94ef63-f044-4ddd-89c1-508d12e04b2d",
-      "slug": "htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-hchwcm",
-      "name": "התוכנית הפרונטלית למציאת זוגיות נכונה",
-      "name_translations": {},
-      "description": "<p>תהליך עומק מעשי קצר ופרקטי שמלמד איך לבחור נכון זוגיות, איך לא לחזור על אותם דפוסים שתוקעים את החיים שלך בלופ. עבודה על חשיבה, התנהלות בדייטים, זיהוי התאמה ויצירת חיבור אמיתי לפעול מתוך מודעות ולא מתוך אוטומט. מיועד למי שמוכן לעשות שינוי אמיתי, לא רק להבין, אלא לפעול אחרת. 📅 מתי: תוכנית במועדים שונים ימי חמישי 16:00-22:00, ימי שישי 9:00-14:00 תוכנית בזק של יומיים שתעשה לכם סדר בראש ותשמור לכם על הלב ❤️ מיקום: שנקר 1, הרצליה</p>",
-      "short_description": null,
-      "sku": null,
-      "brand": null,
-      "price": 2900,
-      "base_price": 2900,
-      "sale_price": null,
-      "currency": "ILS",
-      "images": [
-        "https://liorgur.com/assets/product-1777837059721-sk7r3p.webp"
-      ],
-      "in_stock": true,
-      "stock_status": "in_stock",
-      "url": "https://liorgur.com/product/htvknyt-hprvntlyt-lmtsyat-zvgyvt-nkvnh-hchwcm",
-      "categories": [],
-      "updated_at": "2026-05-21T10:14:31.276Z"
-    },
     {
       "id": "ed424653-8a44-4224-8bf5-0c09531b7251",
       "slug": "hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-fueral",
