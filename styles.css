@@ -17570,6 +17570,330 @@ main,
 
 /* הסתרת dropdown של מוצרים בתפריט */
 .zappy-products-dropdown .sub-menu { display: none !important; }
+
+/* AI-generated section */
+.zappy-relationship-club {
+  background: #F6F1E8;
+  font-family: system-ui, sans-serif;
+  color: #2c2416;
+  padding: 0;
+  margin: 0;
+  direction: rtl;
+}
+
+/* Hero Block */
+.zappy-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 30px 50px;
+  flex-wrap: wrap;
+}
+.zappy-hero-content {
+  flex: 1 1 400px;
+}
+.zappy-hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #C96F4A;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+.zappy-hero-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #4a3f2f;
+  margin: 0 0 28px;
+}
+.zappy-hero-image {
+  flex: 1 1 350px;
+  text-align: center;
+}
+.zappy-hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
+/* CTA Buttons */
+.zappy-cta-button {
+  display: inline-block;
+  background: var(--primary, #C96F4A);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 16px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(201,111,74,0.35);
+  border: none;
+  cursor: pointer;
+}
+.zappy-cta-button:hover {
+  background: #b85a38;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(201,111,74,0.45);
+}
+.zappy-cta-button--secondary {
+  background: #7A846A;
+  box-shadow: 0 4px 14px rgba(122,132,106,0.35);
+}
+.zappy-cta-button--secondary:hover {
+  background: #667255;
+  box-shadow: 0 8px 22px rgba(122,132,106,0.45);
+}
+.zappy-cta-button--large {
+  font-size: 1.25rem;
+  padding: 20px 44px;
+}
+
+/* Section Titles */
+.zappy-section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c2416;
+  margin: 0 0 40px;
+}
+
+/* Benefits Block */
+.zappy-benefits {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 30px;
+}
+.zappy-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 28px;
+}
+.zappy-benefit-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(201,111,74,0.15);
+}
+.zappy-benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+}
+.zappy-benefit-icon {
+  margin-bottom: 18px;
+}
+.zappy-benefit-icon-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.zappy-benefit-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #C96F4A;
+  margin: 0 0 10px;
+}
+.zappy-benefit-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5c5142;
+  margin: 0;
+}
+
+/* Offer Block */
+.zappy-offer {
+  background: linear-gradient(135deg, #F6F1E8 0%, #EDE3D3 100%);
+  padding: 60px 30px;
+}
+.zappy-offer-card {
+  max-width: 650px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 44px 36px;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  border: 1px solid rgba(201,111,74,0.2);
+}
+.zappy-offer-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c2416;
+  margin: 0 0 16px;
+}
+.zappy-offer-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4a3f2f;
+  margin: 0 0 24px;
+}
+.zappy-offer-text strong {
+  color: #C96F4A;
+}
+.zappy-offer-highlight {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.zappy-offer-price {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #C96F4A;
+}
+.zappy-offer-period {
+  font-size: 1.1rem;
+  color: #7a6e5d;
+}
+
+/* FAQ Block */
+.zappy-faq {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 30px;
+}
+.zappy-faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.zappy-faq-item {
+  background: #fff;
+  border: 1px solid rgba(201,111,74,0.25);
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.zappy-faq-item:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+.zappy-faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c2416;
+  text-align: right;
+  font-family: system-ui, sans-serif;
+  transition: background 0.2s ease;
+}
+.zappy-faq-question:hover {
+  background: rgba(201,111,74,0.05);
+}
+.zappy-faq-chevron {
+  font-size: 1.3rem;
+  color: #C96F4A;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+.zappy-faq-item.active .zappy-faq-chevron {
+  transform: rotate(180deg);
+}
+.zappy-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.25s ease;
+}
+.zappy-faq-item.active .zappy-faq-answer {
+  max-height: 500px;
+  opacity: 1;
+  padding-bottom: 20px;
+}
+.zappy-faq-answer-inner {
+  padding: 0 24px 0 28px;
+  border-right: 3px solid #C96F4A;
+  margin-right: 24px;
+  line-height: 1.7;
+  color: #4a3f2f;
+  font-size: 0.95rem;
+}
+.zappy-faq-answer-inner p {
+  margin: 0;
+}
+
+/* Final CTA */
+.zappy-final-cta {
+  text-align: center;
+  padding: 60px 30px 80px;
+  background: linear-gradient(180deg, #F6F1E8 0%, #EDE3D3 100%);
+}
+.zappy-final-cta-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c2416;
+  margin: 0 0 28px;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .zappy-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px 30px;
+  }
+  .zappy-hero-title {
+    font-size: 2rem;
+  }
+  .zappy-hero-subtitle {
+    font-size: 1.05rem;
+  }
+  .zappy-section-title {
+    font-size: 1.6rem;
+    margin-bottom: 28px;
+  }
+  .zappy-benefits {
+    padding: 40px 20px;
+  }
+  .zappy-offer {
+    padding: 40px 20px;
+  }
+  .zappy-offer-card {
+    padding: 28px 20px;
+  }
+  .zappy-offer-title {
+    font-size: 1.5rem;
+  }
+  .zappy-faq {
+    padding: 40px 20px;
+  }
+  .zappy-faq-question {
+    font-size: 1rem;
+    padding: 16px 18px;
+  }
+  .zappy-final-cta {
+    padding: 40px 20px 60px;
+  }
+  .zappy-final-cta-title {
+    font-size: 1.4rem;
+  }
+  .zappy-cta-button {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+  .zappy-cta-button--large {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
