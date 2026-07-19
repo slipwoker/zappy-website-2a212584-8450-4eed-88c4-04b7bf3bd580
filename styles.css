@@ -20335,6 +20335,10 @@ main,
     font-size: 0.8rem;
   }
 }
+
+.blog-section {
+  padding-top: 40px !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
