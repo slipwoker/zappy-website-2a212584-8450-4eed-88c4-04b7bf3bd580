@@ -607,14 +607,14 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:alt" content="מועדון מבינים זוגיות - ליווי מתמשך ליציאה מתקיעות בזוגיות" />
+    <meta property="og:image:alt" content="מועדון מבינים זוגיות , ליווי מתמשך ליציאה מתקיעות בזוגיות" />
     <meta property="og:locale" content="en_US" />
     <!-- Twitter Card Meta Tags -->
     
     
     
     
-    <meta name="twitter:image:alt" content="מועדון מבינים זוגיות - ליווי מתמשך ליציאה מתקיעות בזוגיות" /><style id="zappy-ai-page-styles">.club-hero-section {
+    <meta name="twitter:image:alt" content="מועדון מבינים זוגיות , ליווי מתמשך ליציאה מתקיעות בזוגיות" /><style id="zappy-ai-page-styles">.club-hero-section {
     position: relative;
     overflow: visible;
     background: linear-gradient(180deg, #FFFDF9 0%, #F6EEE4 100%);
@@ -1904,7 +1904,7 @@
               }
             }
             
-            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
+            /* Menu Group styling (non-clickable parent) , TOP LEVEL ONLY with ultra-specific selector */
             .nav-menu > li > .menu-group-title,
             #navMenu > li > .menu-group-title {
               display: inline-block !important;
@@ -1949,7 +1949,7 @@
               pointer-events: auto !important;
             }
             
-            /* Nested dropdown menu styles - using more specific selectors */
+            /* Nested dropdown menu styles , using more specific selectors */
             .nav-menu .sub-menu,
             nav .sub-menu,
             .navbar .sub-menu {
@@ -1973,7 +1973,7 @@
               pointer-events: none; /* Prevent interaction when hidden */
             }
             
-            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
+            /* RTL (Hebrew/Arabic) submenu positioning , align to right instead of left */
             [dir="rtl"] .nav-menu .sub-menu,
             [dir="rtl"] nav .sub-menu,
             [dir="rtl"] .navbar .sub-menu,
@@ -1987,7 +1987,7 @@
               right: 0;
             }
             
-            /* Show submenu on parent hover - more specific selectors */
+            /* Show submenu on parent hover , more specific selectors */
             .nav-menu li:hover > .sub-menu,
             nav li:hover > .sub-menu,
             .navbar li:hover > .sub-menu {
@@ -2027,7 +2027,7 @@
               background-color: #f5f5f5;
             }
             
-            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
+            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only , must come AFTER submenu styles */
             .nav-menu > li > .menu-group-title,
             #navMenu > li > .menu-group-title {
               display: inline-block !important;
@@ -2069,7 +2069,7 @@
                 border-radius: 0 !important;
               }
               
-              /* Expanded state — no internal scroll; parent navMenu scrolls */
+              /* Expanded state , no internal scroll; parent navMenu scrolls */
               .sub-menu.mobile-expanded {
                 max-height: none !important;
                 overflow-y: visible !important;
@@ -2114,7 +2114,7 @@
                 background-color: transparent !important;
               }
               
-              /* Parent item wrapper - flex layout with relative positioning for absolute toggle */
+              /* Parent item wrapper , flex layout with relative positioning for absolute toggle */
               .nav-menu li:has(.sub-menu),
               nav li:has(.sub-menu),
               .navbar li:has(.sub-menu) {
@@ -2125,7 +2125,7 @@
                 min-height: 44px !important;
               }
               
-              /* Parent link - takes full width since toggle is absolute (not a flex child) */
+              /* Parent link , takes full width since toggle is absolute (not a flex child) */
               .nav-menu li:has(.sub-menu) > a,
               nav li:has(.sub-menu) > a,
               .navbar li:has(.sub-menu) > a,
@@ -2163,7 +2163,7 @@
                 visibility: hidden !important;
               }
               
-              /* Toggle arrow button - flex child that stretches to match nav-link height */
+              /* Toggle arrow button , flex child that stretches to match nav-link height */
               .mobile-submenu-toggle {
                 display: flex !important;
                 align-items: center !important;
@@ -2209,7 +2209,7 @@
           
           <script id="zappy-mobile-menu-script">
             // Mobile menu toggle for nested submenus (including Menu Groups)
-            // Uses separate toggle button - link navigates, arrow toggles submenu
+            // Uses separate toggle button , link navigates, arrow toggles submenu
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
@@ -2219,7 +2219,7 @@
                   document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
                     menu.classList.remove('mobile-expanded');
                   });
-                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
+                  console.log('[MOBILE MENU] Desktop mode , cleanup done');
                   return;
                 }
                 
@@ -2254,7 +2254,7 @@
                   
                   console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
                   
-                  // Handle toggle button click - only toggles submenu
+                  // Handle toggle button click , only toggles submenu
                   toggleBtn.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
@@ -2277,7 +2277,7 @@
                     console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
                   });
                   
-                  // Parent link navigates normally - no preventDefault
+                  // Parent link navigates normally , no preventDefault
                 });
               }
               
@@ -2440,7 +2440,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות - ליאור גור" class="logo" decoding="async" width="35" height="35" />
+        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות , ליאור גור" class="logo" decoding="async" width="35" height="35" />
       </a>
     </div><ul class="nav-menu" id="navMenu"><li><a href="/club" class="nav-link">מועדון מבינים זוגיות</a></li><li><a href="/articles" class>מאמרים</a></li><li><a href="/about">אודות</a></li><li class="menu-item-has-children zappy-products-dropdown">
       <a href="/products">
@@ -2522,7 +2522,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
-        // Transparent navbar - check body background
+        // Transparent navbar , check body background
         const bodyBg = window.getComputedStyle(document.body).backgroundColor;
         console.log('[Navbar] Navbar transparent, using body background:', bodyBg);
         bgColor = bodyBg;
@@ -2538,10 +2538,10 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
       
       // Mobile button colors are set by Claude's AI-generated CSS (same as .nav-menu a)
-      // No dynamic color overrides needed - colors come from the generated navbar CSS
+      // No dynamic color overrides needed , colors come from the generated navbar CSS
       console.log('[Navbar] Mobile button colors preserved from Claude CSS (luminance:', luminance.toFixed(2) + ')');
       
-      // FIX ICON SIZES - Ensure SVGs are properly sized and visible
+      // FIX ICON SIZES , Ensure SVGs are properly sized and visible
       // INJECT CRITICAL CSS TO OVERRIDE ANY CONFLICTING RULES
       const criticalCSS = document.createElement('style');
       criticalCSS.id = 'zappy-mobile-nav-fix';
@@ -2619,10 +2619,10 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           .phone-header-btn svg {
             width: 24px !important;
             height: 24px !important;
-            /* Don't force display - let JavaScript control hamburger/close toggle */
+            /* Don't force display , let JavaScript control hamburger/close toggle */
           }
           
-          /* Reset nav-cta-container on mobile - remove desktop box-shadow/padding */
+          /* Reset nav-cta-container on mobile , remove desktop box-shadow/padding */
           /* that creates a visible ghost box when CTA button is hidden */
           .nav-cta-container {
             box-shadow: none !important;
@@ -2645,7 +2645,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
             bottom: 0 !important;
           }
           
-          /* Hide desktop language switcher on mobile - hamburger menu handles it */
+          /* Hide desktop language switcher on mobile , hamburger menu handles it */
           /* High specificity to override stored CSS */
           .lang-switcher,
           .nav-cta-container .lang-switcher,
@@ -2705,7 +2705,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           mobileToggle.style.removeProperty('z-index');
           mobileToggle.style.removeProperty('left');
           mobileToggle.style.removeProperty('right');
-          console.log('[Navbar] Desktop viewport - cleared mobile toggle inline positioning');
+          console.log('[Navbar] Desktop viewport , cleared mobile toggle inline positioning');
         }
       }
       
@@ -2739,7 +2739,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           phoneBtn.style.removeProperty('z-index');
           phoneBtn.style.removeProperty('left');
           phoneBtn.style.removeProperty('right');
-          console.log('[Navbar] Desktop viewport - cleared phone button inline positioning');
+          console.log('[Navbar] Desktop viewport , cleared phone button inline positioning');
         }
       }
     } else {
@@ -2779,7 +2779,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     const newToggle = mobileToggle.cloneNode(true);
     mobileToggle.parentNode.replaceChild(newToggle, mobileToggle);
     
-    // Toggle menu on button click - use newToggle now
+    // Toggle menu on button click , use newToggle now
     newToggle.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
@@ -2906,7 +2906,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
 </script>
   
-  <main class="blog-page ai-generated-page"><section class="club-hero-section" data-layout-spec="מועדון מבינים זוגיות - ליווי מתמשך ליציאה מתקיעות בזוגיות-hero" data-hero-type="fullscreen-scrim">
+  <main class="blog-page ai-generated-page"><section class="club-hero-section" data-layout-spec="מועדון מבינים זוגיות , ליווי מתמשך ליציאה מתקיעות בזוגיות-hero" data-hero-type="fullscreen-scrim">
     <div class="club-hero-section__container">
         <div class="club-hero-section__text">
             <span class="club-hero-section__eyebrow">ליווי מתמשך מבית מבינים זוגיות</span>
@@ -2937,7 +2937,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     </div>
 </section>
 
-<section class="club-about-section" data-layout-spec="מועדון מבינים זוגיות - ליווי מתמשך ליציאה מתקיעות בזוגיות-about">
+<section class="club-about-section" data-layout-spec="מועדון מבינים זוגיות , ליווי מתמשך ליציאה מתקיעות בזוגיות-about">
   <div class="club-about-container">
     <!-- Right Column: Explanation (right in RTL) -->
     <div class="club-about-explanation">
@@ -2979,7 +2979,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   </div>
 </section>
 
-<section class="club-features-section" data-layout-spec="מועדון מבינים זוגיות - ליווי מתמשך ליציאה מתקיעות בזוגיות-features" dir="rtl">
+<section class="club-features-section" data-layout-spec="מועדון מבינים זוגיות , ליווי מתמשך ליציאה מתקיעות בזוגיות-features" dir="rtl">
   <div class="club-features-container">
     <div class="club-features-header">
       <h2>הדרך שלך לצאת מהתקיעות ולהתחיל לנוע</h2>
@@ -3063,7 +3063,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   </div>
 </section>
 
-<section class="club-journey-section" data-layout-spec="מועדון מבינים זוגיות - ליווי מתמשך ליציאה מתקיעות בזוגיות-journey">
+<section class="club-journey-section" data-layout-spec="מועדון מבינים זוגיות , ליווי מתמשך ליציאה מתקיעות בזוגיות-journey">
   <div class="club-journey-section__container">
     <!-- Header Area -->
     <div class="club-journey-section__header">
@@ -3101,7 +3101,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <!-- Image Tile between Step 2 and Step 3 -->
       <div class="club-journey-section__image-tile">
-        <img data-context="A warm, intimate close-up of a handwritten journal on a wooden desk, next to a steaming ceramic cup of tea, soft morning light filtering through a window, cozy and reflective atmosphere, representing calm learning and self-discovery in relationship coaching." width="600" height="400" src="/assets/image-section-journey-club-journey-image-1.webp" alt="מחברת אישית וכוס תה חם - רגע של הרהור ולמידה" loading="lazy" decoding="async" fetchpriority="low" />
+        <img data-context="A warm, intimate close-up of a handwritten journal on a wooden desk, next to a steaming ceramic cup of tea, soft morning light filtering through a window, cozy and reflective atmosphere, representing calm learning and self-discovery in relationship coaching." width="600" height="400" src="/assets/image-section-journey-club-journey-image-1.webp" alt="מחברת אישית וכוס תה חם , רגע של הרהור ולמידה" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
 
       <!-- Connector -->
@@ -3151,7 +3151,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   <div class="club-journey-section__transition-band" aria-hidden="true"></div>
 </section>
 
-<section class="club-testimonials-section" data-layout-spec="מועדון מבינים זוגיות - ליווי מתמשך ליציאה מתקיעות בזוגיות-testimonials">
+<section class="club-testimonials-section" data-layout-spec="מועדון מבינים זוגיות , ליווי מתמשך ליציאה מתקיעות בזוגיות-testimonials">
   <div class="club-testimonials-container">
     <!-- Heading Group -->
     <div class="club-testimonials-heading">
@@ -3209,7 +3209,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   </div>
 </section>
 
-<section class="club-cta-section" data-layout-spec="מועדון מבינים זוגיות - ליווי מתמשך ליציאה מתקיעות בזוגיות-cta">
+<section class="club-cta-section" data-layout-spec="מועדון מבינים זוגיות , ליווי מתמשך ליציאה מתקיעות בזוגיות-cta">
   <div class="club-cta-bg-glow" aria-hidden="true"></div>
   <div class="club-cta-bg-grain" aria-hidden="true"></div>
   <div class="club-cta-container">

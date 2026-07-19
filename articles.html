@@ -617,7 +617,7 @@
               }
             }
             
-            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
+            /* Menu Group styling (non-clickable parent) , TOP LEVEL ONLY with ultra-specific selector */
             .nav-menu > li > .menu-group-title,
             #navMenu > li > .menu-group-title {
               display: inline-block !important;
@@ -662,7 +662,7 @@
               pointer-events: auto !important;
             }
             
-            /* Nested dropdown menu styles - using more specific selectors */
+            /* Nested dropdown menu styles , using more specific selectors */
             .nav-menu .sub-menu,
             nav .sub-menu,
             .navbar .sub-menu {
@@ -686,7 +686,7 @@
               pointer-events: none; /* Prevent interaction when hidden */
             }
             
-            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
+            /* RTL (Hebrew/Arabic) submenu positioning , align to right instead of left */
             [dir="rtl"] .nav-menu .sub-menu,
             [dir="rtl"] nav .sub-menu,
             [dir="rtl"] .navbar .sub-menu,
@@ -700,7 +700,7 @@
               right: 0;
             }
             
-            /* Show submenu on parent hover - more specific selectors */
+            /* Show submenu on parent hover , more specific selectors */
             .nav-menu li:hover > .sub-menu,
             nav li:hover > .sub-menu,
             .navbar li:hover > .sub-menu {
@@ -740,7 +740,7 @@
               background-color: #f5f5f5;
             }
             
-            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
+            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only , must come AFTER submenu styles */
             .nav-menu > li > .menu-group-title,
             #navMenu > li > .menu-group-title {
               display: inline-block !important;
@@ -782,7 +782,7 @@
                 border-radius: 0 !important;
               }
               
-              /* Expanded state — no internal scroll; parent navMenu scrolls */
+              /* Expanded state , no internal scroll; parent navMenu scrolls */
               .sub-menu.mobile-expanded {
                 max-height: none !important;
                 overflow-y: visible !important;
@@ -827,7 +827,7 @@
                 background-color: transparent !important;
               }
               
-              /* Parent item wrapper - flex layout with relative positioning for absolute toggle */
+              /* Parent item wrapper , flex layout with relative positioning for absolute toggle */
               .nav-menu li:has(.sub-menu),
               nav li:has(.sub-menu),
               .navbar li:has(.sub-menu) {
@@ -838,7 +838,7 @@
                 min-height: 44px !important;
               }
               
-              /* Parent link - takes full width since toggle is absolute (not a flex child) */
+              /* Parent link , takes full width since toggle is absolute (not a flex child) */
               .nav-menu li:has(.sub-menu) > a,
               nav li:has(.sub-menu) > a,
               .navbar li:has(.sub-menu) > a,
@@ -876,7 +876,7 @@
                 visibility: hidden !important;
               }
               
-              /* Toggle arrow button - flex child that stretches to match nav-link height */
+              /* Toggle arrow button , flex child that stretches to match nav-link height */
               .mobile-submenu-toggle {
                 display: flex !important;
                 align-items: center !important;
@@ -922,7 +922,7 @@
           
           <script id="zappy-mobile-menu-script">
             // Mobile menu toggle for nested submenus (including Menu Groups)
-            // Uses separate toggle button - link navigates, arrow toggles submenu
+            // Uses separate toggle button , link navigates, arrow toggles submenu
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
@@ -932,7 +932,7 @@
                   document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
                     menu.classList.remove('mobile-expanded');
                   });
-                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
+                  console.log('[MOBILE MENU] Desktop mode , cleanup done');
                   return;
                 }
                 
@@ -967,7 +967,7 @@
                   
                   console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
                   
-                  // Handle toggle button click - only toggles submenu
+                  // Handle toggle button click , only toggles submenu
                   toggleBtn.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
@@ -990,7 +990,7 @@
                     console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
                   });
                   
-                  // Parent link navigates normally - no preventDefault
+                  // Parent link navigates normally , no preventDefault
                 });
               }
               
@@ -1153,7 +1153,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות - ליאור גור" class="logo" decoding="async" width="35" height="35" />
+        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות , ליאור גור" class="logo" decoding="async" width="35" height="35" />
       </a>
     </div><ul class="nav-menu" id="navMenu"><li><a href="/club" class="nav-link">מועדון מבינים זוגיות</a></li><li><a href="/articles" class>מאמרים</a></li><li><a href="/about">אודות</a></li><li class="menu-item-has-children zappy-products-dropdown">
       <a href="/products">
@@ -1235,7 +1235,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
-        // Transparent navbar - check body background
+        // Transparent navbar , check body background
         const bodyBg = window.getComputedStyle(document.body).backgroundColor;
         console.log('[Navbar] Navbar transparent, using body background:', bodyBg);
         bgColor = bodyBg;
@@ -1251,10 +1251,10 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
       
       // Mobile button colors are set by Claude's AI-generated CSS (same as .nav-menu a)
-      // No dynamic color overrides needed - colors come from the generated navbar CSS
+      // No dynamic color overrides needed , colors come from the generated navbar CSS
       console.log('[Navbar] Mobile button colors preserved from Claude CSS (luminance:', luminance.toFixed(2) + ')');
       
-      // FIX ICON SIZES - Ensure SVGs are properly sized and visible
+      // FIX ICON SIZES , Ensure SVGs are properly sized and visible
       // INJECT CRITICAL CSS TO OVERRIDE ANY CONFLICTING RULES
       const criticalCSS = document.createElement('style');
       criticalCSS.id = 'zappy-mobile-nav-fix';
@@ -1332,10 +1332,10 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           .phone-header-btn svg {
             width: 24px !important;
             height: 24px !important;
-            /* Don't force display - let JavaScript control hamburger/close toggle */
+            /* Don't force display , let JavaScript control hamburger/close toggle */
           }
           
-          /* Reset nav-cta-container on mobile - remove desktop box-shadow/padding */
+          /* Reset nav-cta-container on mobile , remove desktop box-shadow/padding */
           /* that creates a visible ghost box when CTA button is hidden */
           .nav-cta-container {
             box-shadow: none !important;
@@ -1358,7 +1358,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
             bottom: 0 !important;
           }
           
-          /* Hide desktop language switcher on mobile - hamburger menu handles it */
+          /* Hide desktop language switcher on mobile , hamburger menu handles it */
           /* High specificity to override stored CSS */
           .lang-switcher,
           .nav-cta-container .lang-switcher,
@@ -1418,7 +1418,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           mobileToggle.style.removeProperty('z-index');
           mobileToggle.style.removeProperty('left');
           mobileToggle.style.removeProperty('right');
-          console.log('[Navbar] Desktop viewport - cleared mobile toggle inline positioning');
+          console.log('[Navbar] Desktop viewport , cleared mobile toggle inline positioning');
         }
       }
       
@@ -1452,7 +1452,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           phoneBtn.style.removeProperty('z-index');
           phoneBtn.style.removeProperty('left');
           phoneBtn.style.removeProperty('right');
-          console.log('[Navbar] Desktop viewport - cleared phone button inline positioning');
+          console.log('[Navbar] Desktop viewport , cleared phone button inline positioning');
         }
       }
     } else {
@@ -1492,7 +1492,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     const newToggle = mobileToggle.cloneNode(true);
     mobileToggle.parentNode.replaceChild(newToggle, mobileToggle);
     
-    // Toggle menu on button click - use newToggle now
+    // Toggle menu on button click , use newToggle now
     newToggle.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
@@ -1641,7 +1641,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         </div>
         <div class="blog-card-content">
           <h3 class="blog-card-title">למה אנחנו חוזרים שוב ושוב לאותם דפוסים בדייטים?</h3>
-          <p class="blog-card-excerpt">יש אנשים שמחליפים בני זוג, אפליקציות, ערים — אבל הדפוס נשאר אותו דפוס. שוב הם נמשכים למי שלא פנוי, שוב מתלהבים מהר מדי, שוב נעלמים כשמתחיל להיות קרוב. איך מזהים את הדפוס שחוזר על עצמו ומתחילים לשנות אותו באמת?</p>
+          <p class="blog-card-excerpt">יש אנשים שמחליפים בני זוג, אפליקציות, ערים , אבל הדפוס נשאר אותו דפוס. שוב הם נמשכים למי שלא פנוי, שוב מתלהבים מהר מדי, שוב נעלמים כשמתחיל להיות קרוב. איך מזהים את הדפוס שחוזר על עצמו ומתחילים לשנות אותו באמת?</p>
           <a href="#article-section" class="blog-card-link" aria-label="קרא עוד: למה אנחנו חוזרים שוב ושוב לאותם דפוסים בדייטים?" style="color: #FFFFFF;">לקריאה</a>
         </div>
       </article>
@@ -1651,9 +1651,9 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <img data-placeholder="blog-self-love-2" data-context="Gentle illustration of self-love as daily actions, warm morning light, cozy bedroom scene" src="/assets/image-1784474278540-cawf0b.webp?v=1784474278540" alt="אהבה עצמית כפעולה" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low" />
         </div>
         <div class="blog-card-content">
-          <h3 class="blog-card-title">אהבה עצמית היא לא מחשבה יפה — היא פעולה</h3>
-          <p class="blog-card-excerpt">הרבה אנשים מדברים על אהבה עצמית כאילו מדובר בתחושה נעימה. אבל אהבה עצמית אמיתית נמדדת בפעולות — ללכת לישון בזמן, להפסיק קשר שמקטין, לעמוד במילה שלי לעצמי. כשבוחרים בעצמנו בפעולות קטנות, מגיעים לזוגיות ממקום יציב ובריא יותר.</p>
-          <a href="#self-love-article" class="blog-card-link" aria-label="קרא עוד: אהבה עצמית היא לא מחשבה יפה — היא פעולה" style="color: #FFFFFF;">לקריאה</a>
+          <h3 class="blog-card-title">אהבה עצמית היא לא מחשבה יפה , היא פעולה</h3>
+          <p class="blog-card-excerpt">הרבה אנשים מדברים על אהבה עצמית כאילו מדובר בתחושה נעימה. אבל אהבה עצמית אמיתית נמדדת בפעולות , ללכת לישון בזמן, להפסיק קשר שמקטין, לעמוד במילה שלי לעצמי. כשבוחרים בעצמנו בפעולות קטנות, מגיעים לזוגיות ממקום יציב ובריא יותר.</p>
+          <a href="#self-love-article" class="blog-card-link" aria-label="קרא עוד: אהבה עצמית היא לא מחשבה יפה , היא פעולה" style="color: #FFFFFF;">לקריאה</a>
         </div>
       </article>
 
@@ -1662,9 +1662,9 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <img data-placeholder="blog-values-3" data-context="Compass illustration with inner values as directions, warm earthy colors, spiritual concept" src="/assets/image-1784474301482-ib406w.webp?v=1784474301482" alt="ערכים פנימיים כמצפן" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low" />
         </div>
         <div class="blog-card-content">
-          <h3 class="blog-card-title">ערכים פנימיים — המצפן הכי חשוב בבחירת זוגיות</h3>
-          <p class="blog-card-excerpt">הרבה אנשים יודעים להגיד מה הם רוצים בזוגיות. מישהו שיהיה חכם. יפה. מצחיק. יציב. שאפתן. רגיש. משפחתי. מושך. עם כימיה טובה. אבל פחות אנשים יודעים להגיד מהם הערכים הפנימיים שלהם, ואיך הם אמורים להשפיע על הבחירה הזוגית. ערכים פנימיים הם התכונות, העקרונות והדברים שהכי חשוב לי לחיות לפיהם. לדוגמה: כנות. עומק. חופש. משפחתיות. יציבות. התפתחות. רוך. מחויבות. יצירתיות. בריאות. נתינה. אמונה. אחריות. כשאני לא מכיר את הערכים שלי, אני עלול לבחור לפי ריגוש רגעי, משיכה, לחץ חברתי או פחד להישאר לבד. אבל כשאני מכיר את הערכים שלי, יש לי מצפן. אני יכול לשאול: האם האדם שמולי מתאים לחיים שאני רוצה לבנות? האם אנחנו מכבדים דברים דומים? האם יש בינינו דרך משותפת? האם אני יכול להיות עצמי לידו? האם הקשר הזה מקרב אותי או מרחיק אותי מהאדם שאני רוצה להיות? ערכים פנימיים לא צריכים להישאר רק בראש. הם צריכים להופיע בחיים. אם בריאות היא ערך - איפה היא מופיעה בשבוע שלי? אם זוגיות היא ערך - אילו פעולות אני עושה כדי לקדם אותה? אם עומק הוא ערך - האם אני מייצר שיחות עמוקות או נשאר רק ברמה שטחית? אם חופש הוא ערך - האם אני בוחר קשר שמאפשר לי לנשום? אחד התרגילים הפשוטים והחזקים הוא לבחור שלושה ערכים מרכזיים, ואז לשאול: מה פעולה אחת השבוע שמבטאת כל ערך? כי אושר לא מגיע רק מלדעת מה חשוב לי. אושר מגיע כשאני מתחיל לחיות לפי מה שחשוב לי. וזוגיות בריאה מתחילה כשאני מפסיק לבחור רק לפי מה שמרגש אותי, ומתחיל לבחור גם לפי מה שנכון לי.</p>
-          <a href="#values-compass-section" class="blog-card-link" aria-label="קרא עוד: ערכים פנימיים — המצפן הכי חשוב בבחירת זוגיות" style="color: #FFFFFF;">לקריאה</a>
+          <h3 class="blog-card-title">ערכים פנימיים , המצפן הכי חשוב בבחירת זוגיות</h3>
+          <p class="blog-card-excerpt">הרבה אנשים יודעים להגיד מה הם רוצים בזוגיות. מישהו שיהיה חכם. יפה. מצחיק. יציב. שאפתן. רגיש. משפחתי. מושך. עם כימיה טובה. אבל פחות אנשים יודעים להגיד מהם הערכים הפנימיים שלהם, ואיך הם אמורים להשפיע על הבחירה הזוגית. ערכים פנימיים הם התכונות, העקרונות והדברים שהכי חשוב לי לחיות לפיהם. לדוגמה: כנות. עומק. חופש. משפחתיות. יציבות. התפתחות. רוך. מחויבות. יצירתיות. בריאות. נתינה. אמונה. אחריות. כשאני לא מכיר את הערכים שלי, אני עלול לבחור לפי ריגוש רגעי, משיכה, לחץ חברתי או פחד להישאר לבד. אבל כשאני מכיר את הערכים שלי, יש לי מצפן. אני יכול לשאול: האם האדם שמולי מתאים לחיים שאני רוצה לבנות? האם אנחנו מכבדים דברים דומים? האם יש בינינו דרך משותפת? האם אני יכול להיות עצמי לידו? האם הקשר הזה מקרב אותי או מרחיק אותי מהאדם שאני רוצה להיות? ערכים פנימיים לא צריכים להישאר רק בראש. הם צריכים להופיע בחיים. אם בריאות היא ערך , איפה היא מופיעה בשבוע שלי? אם זוגיות היא ערך , אילו פעולות אני עושה כדי לקדם אותה? אם עומק הוא ערך , האם אני מייצר שיחות עמוקות או נשאר רק ברמה שטחית? אם חופש הוא ערך , האם אני בוחר קשר שמאפשר לי לנשום? אחד התרגילים הפשוטים והחזקים הוא לבחור שלושה ערכים מרכזיים, ואז לשאול: מה פעולה אחת השבוע שמבטאת כל ערך? כי אושר לא מגיע רק מלדעת מה חשוב לי. אושר מגיע כשאני מתחיל לחיות לפי מה שחשוב לי. וזוגיות בריאה מתחילה כשאני מפסיק לבחור רק לפי מה שמרגש אותי, ומתחיל לבחור גם לפי מה שנכון לי.</p>
+          <a href="#values-compass-section" class="blog-card-link" aria-label="קרא עוד: ערכים פנימיים , המצפן הכי חשוב בבחירת זוגיות" style="color: #FFFFFF;">לקריאה</a>
         </div>
       </article>
 
@@ -1674,7 +1674,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         </div>
         <div class="blog-card-content">
           <h3 class="blog-card-title">למה אני יודע מה נכון לעשות בזוגיות ועדיין לא מצליח לעשות את זה?</h3>
-          <p class="blog-card-excerpt">הרבה פנויים ופנויות כבר יודעים מה נכון — אבל בפועל, משהו לא משתנה. הבעיה היא לא חוסר ידע, אלא הפער בין להבין לבין ליישם. איך מתחילים לפעול אחרת גם כשהרגש מופעל?</p>
+          <p class="blog-card-excerpt">הרבה פנויים ופנויות כבר יודעים מה נכון , אבל בפועל, משהו לא משתנה. הבעיה היא לא חוסר ידע, אלא הפער בין להבין לבין ליישם. איך מתחילים לפעול אחרת גם כשהרגש מופעל?</p>
           <a href="#knowledge-gap-article" class="blog-card-link" aria-label="קרא עוד: למה אני יודע מה נכון לעשות בזוגיות ועדיין לא מצליח לעשות את זה?" style="color: #FFFFFF;">לקריאה</a>
         </div>
       </article>
@@ -1684,9 +1684,9 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <img data-placeholder="blog-ego-5" data-context="Abstract illustration of ego and comparison dissolving into freedom, soft watercolor style" src="/assets/image-1784474354826-wca6hj.webp?v=1784474354826" alt="השוואתיות, אגו וזוגיות" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low" />
         </div>
         <div class="blog-card-content">
-          <h3 class="blog-card-title">השוואתיות, אגו וזוגיות — איך הם מנהלים אותנו בלי שנשים לב?</h3>
-          <p class="blog-card-excerpt">השוואתיות היא אחת המלכודות הכי שקטות בעולם הזוגיות. מתי בפעם האחרונה עצרתם לשאול מה באמת חשוב לכם — בלי קשר למה שאחרים עושים? כשאהבה עצמית עולה, האגו יורד, וזו התחלה של חופש אמיתי.</p>
-          <a href="#comparison-article" class="blog-card-link" aria-label="קרא עוד: השוואתיות, אגו וזוגיות — איך הם מנהלים אותנו בלי שנשים לב?" style="color: #FFFFFF;">לקריאה</a>
+          <h3 class="blog-card-title">השוואתיות, אגו וזוגיות , איך הם מנהלים אותנו בלי שנשים לב?</h3>
+          <p class="blog-card-excerpt">השוואתיות היא אחת המלכודות הכי שקטות בעולם הזוגיות. מתי בפעם האחרונה עצרתם לשאול מה באמת חשוב לכם , בלי קשר למה שאחרים עושים? כשאהבה עצמית עולה, האגו יורד, וזו התחלה של חופש אמיתי.</p>
+          <a href="#comparison-article" class="blog-card-link" aria-label="קרא עוד: השוואתיות, אגו וזוגיות , איך הם מנהלים אותנו בלי שנשים לב?" style="color: #FFFFFF;">לקריאה</a>
         </div>
       </article>
 
@@ -1706,9 +1706,9 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <img data-placeholder="blog-confidence-7" data-context="A person sitting confidently in a cozy café, warm golden hour lighting, soft watercolor style, terracotta and cream tones" src="/assets/image-1784474408022-livagq.webp?v=1784474408022" alt="ביטחון עצמי בדייטים" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low" />
         </div>
         <div class="blog-card-content">
-          <h3 class="blog-card-title">ביטחון עצמי בדייטים — למה זה לא אומר להיות בטוח בהכול?</h3>
-          <p class="blog-card-excerpt">הרבה אנשים חושבים שביטחון עצמי הוא תכונה כללית — או שיש לי או שאין לי. אבל בפועל, ביטחון עצמי הוא הרבה יותר מדויק: היכולת לסמוך על עצמי בתחום מסוים. אפשר להיות בטוח בעבודה ועדיין חסר ביטחון בדייטים — וזה לגמרי בסדר.</p>
-          <a href="#confidence-article" class="blog-card-link" aria-label="קרא עוד: ביטחון עצמי בדייטים — למה זה לא אומר להיות בטוח בהכול?" style="color: #FFFFFF;">לקריאה</a>
+          <h3 class="blog-card-title">ביטחון עצמי בדייטים , למה זה לא אומר להיות בטוח בהכול?</h3>
+          <p class="blog-card-excerpt">הרבה אנשים חושבים שביטחון עצמי הוא תכונה כללית , או שיש לי או שאין לי. אבל בפועל, ביטחון עצמי הוא הרבה יותר מדויק: היכולת לסמוך על עצמי בתחום מסוים. אפשר להיות בטוח בעבודה ועדיין חסר ביטחון בדייטים , וזה לגמרי בסדר.</p>
+          <a href="#confidence-article" class="blog-card-link" aria-label="קרא עוד: ביטחון עצמי בדייטים , למה זה לא אומר להיות בטוח בהכול?" style="color: #FFFFFF;">לקריאה</a>
         </div>
       </article>
 
@@ -1717,9 +1717,9 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <img data-placeholder="blog-self-discipline-8" data-context="A couple sitting on a park bench at golden hour sunset, warm and intimate atmosphere, soft watercolor style, terracotta and cream tones, self-discipline and love theme" src="/assets/image-1784474429868-axzrgw.webp?v=1784474429868" alt="משמעת עצמית ואהבה עצמית בזוגיות" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low" />
         </div>
         <div class="blog-card-content">
-          <h3 class="blog-card-title">משמעת עצמית היא אהבה עצמית — גם בזוגיות</h3>
-          <p class="blog-card-excerpt">משמעת עצמית נשמעת כמו מילה קשה — לחץ, נוקשות, חיים בלי הנאה. אבל אפשר להסתכל עליה אחרת: היכולת לעשות את מה שנכון לי, גם כשלא בא לי. זה אחד הביטויים הכי עמוקים של אהבה עצמית — לבחור במה שהאני העתידי שלי יודה לי עליו.</p>
-          <a href="#self-discipline-article" class="blog-card-link" aria-label="קרא עוד: משמעת עצמית היא אהבה עצמית — גם בזוגיות" style="color: #FFFFFF;">לקריאה</a>
+          <h3 class="blog-card-title">משמעת עצמית היא אהבה עצמית , גם בזוגיות</h3>
+          <p class="blog-card-excerpt">משמעת עצמית נשמעת כמו מילה קשה , לחץ, נוקשות, חיים בלי הנאה. אבל אפשר להסתכל עליה אחרת: היכולת לעשות את מה שנכון לי, גם כשלא בא לי. זה אחד הביטויים הכי עמוקים של אהבה עצמית , לבחור במה שהאני העתידי שלי יודה לי עליו.</p>
+          <a href="#self-discipline-article" class="blog-card-link" aria-label="קרא עוד: משמעת עצמית היא אהבה עצמית , גם בזוגיות" style="color: #FFFFFF;">לקריאה</a>
         </div>
       </article>
 
@@ -1728,15 +1728,15 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <img data-placeholder="blog-dating-interview-9" data-context="A person sitting in a café feeling relaxed instead of tense, soft watercolor style, warm cream and terracotta tones, dating without pressure, authentic connection" src="/assets/image-1784474452357-j7vg50.webp?v=1784474452357" alt="למה דייטים מרגישים כמו ראיון עבודה" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low" />
         </div>
         <div class="blog-card-content">
-          <h3 class="blog-card-title">למה דייטים מרגישים כמו ראיון עבודה — ואיך יוצאים מזה?</h3>
+          <h3 class="blog-card-title">למה דייטים מרגישים כמו ראיון עבודה , ואיך יוצאים מזה?</h3>
           <p class="blog-card-excerpt">הרבה פנויים ופנויות מרגישים שדייט מרגיש כמו מבחן. יושבים אחד מול השני, שואלים שאלות, מנסים להרשים, מרגישים ששופטים אותם. איך עוברים מראיון עבודה לשיחה אמיתית?</p>
-          <a href="#dating-interview-article" class="blog-card-link" aria-label="קרא עוד: למה דייטים מרגישים כמו ראיון עבודה — ואיך יוצאים מזה?" style="color: #FFFFFF;">לקריאה</a>
+          <a href="#dating-interview-article" class="blog-card-link" aria-label="קרא עוד: למה דייטים מרגישים כמו ראיון עבודה , ואיך יוצאים מזה?" style="color: #FFFFFF;">לקריאה</a>
         </div>
       </article>
 
       <article class="blog-card">
         <div class="blog-card-image-wrapper">
-          <img data-placeholder="blog-healthy-choice-10" data-context="A warm watercolor illustration of a person looking at two paths - one with fireworks and excitement, the other calm and steady with a warm glow, representing choosing healthy love over just exciting love, terracotta and cream tones" src="/assets/image-1784474473758-jcnacq.webp?v=1784474473758" alt="איך לבחור זוגיות בריאה" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low" />
+          <img data-placeholder="blog-healthy-choice-10" data-context="A warm watercolor illustration of a person looking at two paths , one with fireworks and excitement, the other calm and steady with a warm glow, representing choosing healthy love over just exciting love, terracotta and cream tones" src="/assets/image-1784474473758-jcnacq.webp?v=1784474473758" alt="איך לבחור זוגיות בריאה" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low" />
         </div>
         <div class="blog-card-content">
           <h3 class="blog-card-title">איך לבחור זוגיות בריאה ולא רק זוגיות מרגשת?</h3>
@@ -1760,26 +1760,26 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     <div class="article-content">
       <header class="article-header">
         <h1 id="article-main-heading" class="article-title">למה אנחנו חוזרים שוב ושוב לאותם דפוסים בדייטים?</h1>
-        <p class="article-subtitle">יש אנשים שמחליפים בני זוג, אפליקציות, ערים — אבל הדפוס נשאר אותו דפוס. שוב הם נמשכים למי שלא פנוי, שוב מתלהבים מהר מדי, שוב נעלמים כשמתחיל להיות קרוב. איך מזהים את הדפוס שחוזר על עצמו ומתחילים לשנות אותו באמת?</p>
+        <p class="article-subtitle">יש אנשים שמחליפים בני זוג, אפליקציות, ערים , אבל הדפוס נשאר אותו דפוס. שוב הם נמשכים למי שלא פנוי, שוב מתלהבים מהר מדי, שוב נעלמים כשמתחיל להיות קרוב. איך מזהים את הדפוס שחוזר על עצמו ומתחילים לשנות אותו באמת?</p>
       </header>
 
       <div class="article-body">
         <section class="article-section-block">
           <h2 class="article-h2">הדפוס שמנהל אותנו מאחורי הקלעים</h2>
-          <p class="article-p">זה קורה כמעט בלי לשים לב. אנחנו יוצאים לדייט, מתמלאים בהתרגשות, מדמיינים עתיד משותף, ואז — בדיוק באותה נקודה — משהו משתבש. או שהוא פתאום נהיה מרוחק, או שהיא אומרת שהיא "לא מוכנה לקשר", או שאנחנו בעצמנו מוצאים תירוץ למה זה לא זה. השחקנים מתחלפים, התסריט נשאר.</p>
-          <p class="article-p">הפסיכולוגיה קוראת לזה "קומפולסיית חזרה" — הנטייה הלא-מודעת לשחזר מערכות יחסים מוקדמות, במיוחד כאלה שלא נפתרו, בתקווה שהפעם נצליח לתקן. אלא שבדרך כלל, בלי מודעות, אנחנו פשוט משחזרים את אותו הכאב.</p>
+          <p class="article-p">זה קורה כמעט בלי לשים לב. אנחנו יוצאים לדייט, מתמלאים בהתרגשות, מדמיינים עתיד משותף, ואז , בדיוק באותה נקודה , משהו משתבש. או שהוא פתאום נהיה מרוחק, או שהיא אומרת שהיא "לא מוכנה לקשר", או שאנחנו בעצמנו מוצאים תירוץ למה זה לא זה. השחקנים מתחלפים, התסריט נשאר.</p>
+          <p class="article-p">הפסיכולוגיה קוראת לזה "קומפולסיית חזרה" , הנטייה הלא-מודעת לשחזר מערכות יחסים מוקדמות, במיוחד כאלה שלא נפתרו, בתקווה שהפעם נצליח לתקן. אלא שבדרך כלל, בלי מודעות, אנחנו פשוט משחזרים את אותו הכאב.</p>
         </section>
 
         <section class="article-section-block">
           <h2 class="article-h2">מאיפה הדפוס מגיע?</h2>
-          <p class="article-p">הדפוסים שלנו בזוגיות מתחילים להיווצר הרבה לפני הדייט הראשון. הם נטועים במערכות היחסים הראשונות שחווינו — לרוב עם ההורים או הדמויות המטפלות. ילד שלמד שאהבה מגיעה בתנאים, ימשוך בבגרותו בני זוג שמציבים תנאים. מי שגדל בבית שבו אינטימיות הייתה מלווה בכאוס, עלול לפרש שקט כשעמום, ולהימשך דווקא לדרמות.</p>
-          <p class="article-p">זה לא עניין של "אשמה" — המוח שלנו פשוט מעדיף את המוכר על פני הטוב. גם אם המוכר כואב, הוא לפחות צפוי. וצפוי מרגיש בטוח, גם כשהוא לא.</p>
+          <p class="article-p">הדפוסים שלנו בזוגיות מתחילים להיווצר הרבה לפני הדייט הראשון. הם נטועים במערכות היחסים הראשונות שחווינו , לרוב עם ההורים או הדמויות המטפלות. ילד שלמד שאהבה מגיעה בתנאים, ימשוך בבגרותו בני זוג שמציבים תנאים. מי שגדל בבית שבו אינטימיות הייתה מלווה בכאוס, עלול לפרש שקט כשעמום, ולהימשך דווקא לדרמות.</p>
+          <p class="article-p">זה לא עניין של "אשמה" , המוח שלנו פשוט מעדיף את המוכר על פני הטוב. גם אם המוכר כואב, הוא לפחות צפוי. וצפוי מרגיש בטוח, גם כשהוא לא.</p>
         </section>
 
         <section class="article-section-block">
           <h2 class="article-h2">איך מזהים את הדפוס?</h2>
-          <p class="article-p">זיהוי דפוס מתחיל בשאלה פשוטה אך מאתגרת: <strong>מה משותף לכל מערכות היחסים שלי?</strong> לא לשמות, לא לפרצופים — אלא לתחושות. איך הרגשתי בהתחלה? מתי התחילה הנפילה? איזה תפקיד לקחתי על עצמי — המציל, הנרדף, המתרחק?</p>
-          <p class="article-p">דרך יעילה היא לכתוב "ציר זמן זוגי" — לרשום כל מערכת יחסים משמעותית, ולצדה את נקודת השבירה. אחרי שלוש-ארבע רשומות, הדפוס מתחיל לזרוח מתוך הדף.</p>
+          <p class="article-p">זיהוי דפוס מתחיל בשאלה פשוטה אך מאתגרת: <strong>מה משותף לכל מערכות היחסים שלי?</strong> לא לשמות, לא לפרצופים , אלא לתחושות. איך הרגשתי בהתחלה? מתי התחילה הנפילה? איזה תפקיד לקחתי על עצמי , המציל, הנרדף, המתרחק?</p>
+          <p class="article-p">דרך יעילה היא לכתוב "ציר זמן זוגי" , לרשום כל מערכת יחסים משמעותית, ולצדה את נקודת השבירה. אחרי שלוש-ארבע רשומות, הדפוס מתחיל לזרוח מתוך הדף.</p>
         </section>
 
         <!-- Inline Image -->
@@ -1791,12 +1791,12 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         <section class="article-section-block">
           <h2 class="article-h2">לבנות מודעות שתאפשר בחירה אחרת</h2>
           <p class="article-p">מודעות היא לא נורה שנדלקת פעם אחת. היא שריר שצריך לאמן. ברגע שמזהים את הדפוס, אפשר להתחיל לשאול בזמן אמת: "האם אני נמשך לאדם הזה כי הוא באמת מתאים לי, או כי הוא מפעיל אצלי משהו מוכר?"</p>
-          <p class="article-p">השלב הבא הוא לתרגל בחירה אחרת. אם תמיד נמשכתי לאנשים לא פנויים רגשית, אולי כדאי לתת צ'אנס דווקא למי שמרגיש "משעמם" בהתחלה. המוח יצעק "זה לא זה!" — אבל הלב אולי יגלה משהו חדש.</p>
+          <p class="article-p">השלב הבא הוא לתרגל בחירה אחרת. אם תמיד נמשכתי לאנשים לא פנויים רגשית, אולי כדאי לתת צ'אנס דווקא למי שמרגיש "משעמם" בהתחלה. המוח יצעק "זה לא זה!" , אבל הלב אולי יגלה משהו חדש.</p>
         </section>
 
         <section class="article-section-block">
-          <h2 class="article-h2">התקווה — זה אפשרי לשנות</h2>
-          <p class="article-p">דפוסים הם לא גזירת גורל. הם הרגלים רגשיים, והרגלים אפשר לשנות. זה דורש אומץ, כנות עצמית, ולפעמים גם עזרה מקצועית — אבל כל צעד קטן של מודעות הוא צעד ענק לעבר אהבה אחרת. אהבה שלא משחזרת כאב, אלא יוצרת משהו חדש.</p>
+          <h2 class="article-h2">התקווה , זה אפשרי לשנות</h2>
+          <p class="article-p">דפוסים הם לא גזירת גורל. הם הרגלים רגשיים, והרגלים אפשר לשנות. זה דורש אומץ, כנות עצמית, ולפעמים גם עזרה מקצועית , אבל כל צעד קטן של מודעות הוא צעד ענק לעבר אהבה אחרת. אהבה שלא משחזרת כאב, אלא יוצרת משהו חדש.</p>
         </section>
       </div>
 
@@ -1818,18 +1818,18 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         <span class="badge-icon">✦</span>
         <span>מאמר מוביל</span>
       </div>
-      <h1 class="article-title">אהבה עצמית היא לא מחשבה יפה — היא פעולה</h1>
-      <p class="article-subtitle">הרבה אנשים מדברים על אהבה עצמית כאילו מדובר בתחושה נעימה. אבל אהבה עצמית אמיתית נמדדת בפעולות — ללכת לישון בזמן, להפסיק קשר שמקטין, לעמוד במילה שלי לעצמי. כשבוחרים בעצמנו בפעולות קטנות, מגיעים לזוגיות ממקום יציב ובריא יותר.</p>
+      <h1 class="article-title">אהבה עצמית היא לא מחשבה יפה , היא פעולה</h1>
+      <p class="article-subtitle">הרבה אנשים מדברים על אהבה עצמית כאילו מדובר בתחושה נעימה. אבל אהבה עצמית אמיתית נמדדת בפעולות , ללכת לישון בזמן, להפסיק קשר שמקטין, לעמוד במילה שלי לעצמי. כשבוחרים בעצמנו בפעולות קטנות, מגיעים לזוגיות ממקום יציב ובריא יותר.</p>
     </header>
 
     <div class="article-hero-image">
-      <img data-placeholder="self-love-hero" data-context="אישה יושבת בשקט, מחייכת לעצמה, יד על הלב, תאורה חמה ורכה, אווירה אינטימית של אהבה עצמית" src="/assets/image-1784461121378-xahwcw.webp?v=1784461121378" alt="אהבה עצמית - אישה מחבקת את עצמה" class="hero-img" decoding="async" />
+      <img data-placeholder="self-love-hero" data-context="אישה יושבת בשקט, מחייכת לעצמה, יד על הלב, תאורה חמה ורכה, אווירה אינטימית של אהבה עצמית" src="/assets/image-1784461121378-xahwcw.webp?v=1784461121378" alt="אהבה עצמית , אישה מחבקת את עצמה" class="hero-img" decoding="async" />
     </div>
 
     <div class="article-body">
-      <p class="intro-text">כשאנחנו מדברים על אהבה עצמית, קל להיסחף לדימויים רומנטיים של אמבטיות קצף ומדיטציות בוקר. אבל האמת היא שאהבה עצמית אמיתית הרבה פחות זוהרת — ויותר דורשת. היא נבנית במעשים קטנים, יומיומיים, שדורשים אומץ, משמעת ובעיקר בחירה חוזרת בעצמך.</p>
+      <p class="intro-text">כשאנחנו מדברים על אהבה עצמית, קל להיסחף לדימויים רומנטיים של אמבטיות קצף ומדיטציות בוקר. אבל האמת היא שאהבה עצמית אמיתית הרבה פחות זוהרת , ויותר דורשת. היא נבנית במעשים קטנים, יומיומיים, שדורשים אומץ, משמעת ובעיקר בחירה חוזרת בעצמך.</p>
       
-      <p class="intro-text">הנה 5 פעולות יומיומיות שיעזרו לך לטפח אהבה עצמית אמיתית — כזו שמגיעה מבפנים ומשנה את הדרך שבה את ניגשת לזוגיות ולחיים.</p>
+      <p class="intro-text">הנה 5 פעולות יומיומיות שיעזרו לך לטפח אהבה עצמית אמיתית , כזו שמגיעה מבפנים ומשנה את הדרך שבה את ניגשת לזוגיות ולחיים.</p>
 
       <div class="actions-grid">
         <div class="action-card">
@@ -1862,7 +1862,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
             <span class="card-icon">🧘‍♀️</span>
           </div>
           <h3 class="card-title">טיפוח הגוף</h3>
-          <p class="card-description">לישון מספיק, לאכול מזין, לזוז בהנאה. הגוף שלך הוא הבית הראשון שלך — לטפח אותו זו אהבה עצמית בפעולה.</p>
+          <p class="card-description">לישון מספיק, לאכול מזין, לזוז בהנאה. הגוף שלך הוא הבית הראשון שלך , לטפח אותו זו אהבה עצמית בפעולה.</p>
           <div class="card-image">
             <img data-placeholder="self-love-body-care" data-context="אישה מתרגלת יוגה בסלון מואר, אור בוקר רך, הבעה שלווה, צמחים ירוקים ברקע" src="/assets/image-1784461345331-2jxv3q.webp?v=1784461345331" alt="טיפוח הגוף" class="card-img" loading="lazy" decoding="async" fetchpriority="low" />
           </div>
@@ -1874,7 +1874,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
             <span class="card-icon">⏰</span>
           </div>
           <h3 class="card-title">ניהול זמן לעצמך</h3>
-          <p class="card-description">לפנות זמן למה שממלא אותך — קריאה, יצירה, שקט. הזמן שלך יקר, ולפנות אותו לעצמך זו הצהרה שאת חשובה.</p>
+          <p class="card-description">לפנות זמן למה שממלא אותך , קריאה, יצירה, שקט. הזמן שלך יקר, ולפנות אותו לעצמך זו הצהרה שאת חשובה.</p>
           <div class="card-image">
             <img data-placeholder="self-love-time-management" data-context="אישה יושבת עם כוס תה וספר, אור חם מחלון, אווירה רגועה של זמן אישי, שמיכה נעימה" src="/assets/image-1784461371112-n6mj1g.webp?v=1784461371112" alt="ניהול זמן לעצמך" class="card-img" loading="lazy" decoding="async" fetchpriority="low" />
           </div>
@@ -1894,7 +1894,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       </div>
 
       <div class="article-cta">
-        <p class="cta-text">אהבה עצמית היא לא יעד שמגיעים אליו, אלא דרך שבוחרים ללכת בה כל יום מחדש. כל פעולה קטנה של בחירה בעצמך — היא ניצחון.</p>
+        <p class="cta-text">אהבה עצמית היא לא יעד שמגיעים אליו, אלא דרך שבוחרים ללכת בה כל יום מחדש. כל פעולה קטנה של בחירה בעצמך , היא ניצחון.</p>
         <a href="#" class="cta-button" aria-label="קראי עוד על אהבה עצמית">
           <span>המשיכי לקרוא</span>
           <span class="cta-arrow">←</span>
@@ -1907,8 +1907,8 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 <section class="values-compass-section" aria-labelledby="values-compass-title">
   <div class="values-compass-container">
     <div class="values-compass-header">
-      <h2 id="values-compass-title" class="values-compass-title">ערכים פנימיים — המצפן הכי חשוב בבחירת זוגיות</h2>
-      <p class="values-compass-subtitle">הרבה אנשים יודעים להגיד מה הם רוצים בזוגיות — מישהו חכם, יפה, מצחיק, יציב. אבל פחות יודעים להגיד מהם הערכים הפנימיים שלהם. ערכים פנימיים הם התכונות והעקרונות שהכי חשוב לי לחיות לפיהם: כנות, עומק, חופש, משפחתיות, התפתחות. כשאני מכיר את הערכים שלי, יש לי מצפן.</p>
+      <h2 id="values-compass-title" class="values-compass-title">ערכים פנימיים , המצפן הכי חשוב בבחירת זוגיות</h2>
+      <p class="values-compass-subtitle">הרבה אנשים יודעים להגיד מה הם רוצים בזוגיות , מישהו חכם, יפה, מצחיק, יציב. אבל פחות יודעים להגיד מהם הערכים הפנימיים שלהם. ערכים פנימיים הם התכונות והעקרונות שהכי חשוב לי לחיות לפיהם: כנות, עומק, חופש, משפחתיות, התפתחות. כשאני מכיר את הערכים שלי, יש לי מצפן.</p>
     </div>
 
     <div class="values-compass-image-wrapper">
@@ -1918,7 +1918,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     <div class="values-compass-content">
       <div class="values-compass-section-block">
         <h3 class="values-compass-section-title">איך לזהות את 3 הערכים המרכזיים שלך</h3>
-        <p class="values-compass-text">הערכים הפנימיים שלנו הם כמו טביעת אצבע — ייחודיים לכל אחד. כדי לזהות את שלושת הערכים המרכזיים שלך, שאל את עצמך: מה הכי חשוב לי בחיים? אילו רגעים גרמו לי להרגיש הכי שלם? מה אני לא מוכן להתפשר עליו? כתוב את התשובות, חפש מילים חוזרות, ודרג את הערכים לפי סדר החשיבות. זהו הצעד הראשון בבניית מצפן פנימי.</p>
+        <p class="values-compass-text">הערכים הפנימיים שלנו הם כמו טביעת אצבע , ייחודיים לכל אחד. כדי לזהות את שלושת הערכים המרכזיים שלך, שאל את עצמך: מה הכי חשוב לי בחיים? אילו רגעים גרמו לי להרגיש הכי שלם? מה אני לא מוכן להתפשר עליו? כתוב את התשובות, חפש מילים חוזרות, ודרג את הערכים לפי סדר החשיבות. זהו הצעד הראשון בבניית מצפן פנימי.</p>
       </div>
 
       <div class="values-compass-section-block">
@@ -1928,7 +1928,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <div class="values-compass-section-block">
         <h3 class="values-compass-section-title">איך לחיות לפי הערכים ביום-יום</h3>
-        <p class="values-compass-text">הערכים אינם רק תיאוריה — הם מתממשים בבחירות היומיומיות. קבע הרגלים קטנים שמשקפים את הערכים: אם חופש חשוב לך, תכנן זמן אישי; אם משפחתיות במרכז, הקדש זמן איכות עם הקרובים. ככל שתחיה בהלימה לערכים שלך, כך תרגיש יותר סיפוק ושלווה בזוגיות.</p>
+        <p class="values-compass-text">הערכים אינם רק תיאוריה , הם מתממשים בבחירות היומיומיות. קבע הרגלים קטנים שמשקפים את הערכים: אם חופש חשוב לך, תכנן זמן אישי; אם משפחתיות במרכז, הקדש זמן איכות עם הקרובים. ככל שתחיה בהלימה לערכים שלך, כך תרגיש יותר סיפוק ושלווה בזוגיות.</p>
       </div>
     </div>
 
@@ -1978,18 +1978,18 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     <div class="kg-content">
       <!-- Introduction -->
       <div class="kg-intro kg-card">
-        <p class="kg-lead">הרבה פנויים ופנויות כבר יודעים מה נכון לעשות בזוגיות. הם קראו ספרים, שמעו הרצאות, קיבלו עצות מחברים — אבל בפועל, משהו לא משתנה. הם מוצאים את עצמם שוב ושוב באותם מצבים, חוזרים על אותן טעויות, ולמרות כל הידע — משהו תקוע.</p>
-        <p>הבעיה היא לא חוסר ידע. הבעיה היא הפער בין <strong>להבין</strong> לבין <strong>ליישם</strong>. הפער הזה הוא לא כישלון אישי — הוא תופעה אנושית מוכרת, שיש לה הסברים פסיכולוגיים עמוקים וגם דרכים מעשיות לגשר עליה.</p>
+        <p class="kg-lead">הרבה פנויים ופנויות כבר יודעים מה נכון לעשות בזוגיות. הם קראו ספרים, שמעו הרצאות, קיבלו עצות מחברים , אבל בפועל, משהו לא משתנה. הם מוצאים את עצמם שוב ושוב באותם מצבים, חוזרים על אותן טעויות, ולמרות כל הידע , משהו תקוע.</p>
+        <p>הבעיה היא לא חוסר ידע. הבעיה היא הפער בין <strong>להבין</strong> לבין <strong>ליישם</strong>. הפער הזה הוא לא כישלון אישי , הוא תופעה אנושית מוכרת, שיש לה הסברים פסיכולוגיים עמוקים וגם דרכים מעשיות לגשר עליה.</p>
       </div>
 
       <!-- Section 1: Why Emotion Overrides Logic -->
       <section class="kg-section">
         <h2 class="kg-section-title">למה הרגש משתלט על ההיגיון?</h2>
         <div class="kg-section-body">
-          <p>המוח שלנו בנוי משתי מערכות עיקריות: המערכת הרגשית (המוח הלימבי) והמערכת הרציונלית (קליפת המוח הקדם-מצחית). המערכת הרגשית מהירה פי כמה מהמערכת הרציונלית — היא מגיבה תוך אלפיות שנייה, עוד לפני שההיגיון מספיק "להדביק את הפער".</p>
-          <p>בזוגיות, כשאנחנו חווים פחד מדחייה, כעס, או חוסר ביטחון — המערכת הרגשית משתלטת. אנחנו מגיבים אוטומטית, גם אם אנחנו "יודעים" שזו לא התגובה הנכונה. הידע נמצא שם — אבל הוא לא מצליח להגיע להגה בזמן.</p>
+          <p>המוח שלנו בנוי משתי מערכות עיקריות: המערכת הרגשית (המוח הלימבי) והמערכת הרציונלית (קליפת המוח הקדם-מצחית). המערכת הרגשית מהירה פי כמה מהמערכת הרציונלית , היא מגיבה תוך אלפיות שנייה, עוד לפני שההיגיון מספיק "להדביק את הפער".</p>
+          <p>בזוגיות, כשאנחנו חווים פחד מדחייה, כעס, או חוסר ביטחון , המערכת הרגשית משתלטת. אנחנו מגיבים אוטומטית, גם אם אנחנו "יודעים" שזו לא התגובה הנכונה. הידע נמצא שם , אבל הוא לא מצליח להגיע להגה בזמן.</p>
           <div class="kg-highlight-box">
-            <p><strong>התובנה המרכזית:</strong> זה לא שאתם חלשים או חסרי משמעת. זה שהמוח שלכם מתוכנת להגיב רגשית לפני שהוא חושב. השינוי מתחיל כשמבינים את זה — ומפסיקים להאשים את עצמנו.</p>
+            <p><strong>התובנה המרכזית:</strong> זה לא שאתם חלשים או חסרי משמעת. זה שהמוח שלכם מתוכנת להגיב רגשית לפני שהוא חושב. השינוי מתחיל כשמבינים את זה , ומפסיקים להאשים את עצמנו.</p>
           </div>
         </div>
       </section>
@@ -1998,8 +1998,8 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <section class="kg-section">
         <h2 class="kg-section-title">איך דפוסים ישנים מפעילים אותנו אוטומטית?</h2>
         <div class="kg-section-body">
-          <p>כל אחד מאיתנו נושא עימו "תוכנות הפעלה" שנכתבו בילדות, במערכות יחסים קודמות, או בחוויות משמעותיות. דפוסים אלה פועלים כמו טייס אוטומטי — הם מפעילים תגובות אוטומטיות למצבים שמזכירים לנו חוויות עבר.</p>
-          <p>לדוגמה: אם חוויתם נטישה בעבר, כל סימן קטן של ריחוק מבן/בת הזוג עלול להפעיל אצלכם תגובת חרדה אוטומטית. אתם "יודעים" שאין סיבה אמיתית לדאגה — אבל הגוף כבר מגיב.</p>
+          <p>כל אחד מאיתנו נושא עימו "תוכנות הפעלה" שנכתבו בילדות, במערכות יחסים קודמות, או בחוויות משמעותיות. דפוסים אלה פועלים כמו טייס אוטומטי , הם מפעילים תגובות אוטומטיות למצבים שמזכירים לנו חוויות עבר.</p>
+          <p>לדוגמה: אם חוויתם נטישה בעבר, כל סימן קטן של ריחוק מבן/בת הזוג עלול להפעיל אצלכם תגובת חרדה אוטומטית. אתם "יודעים" שאין סיבה אמיתית לדאגה , אבל הגוף כבר מגיב.</p>
           <div class="kg-image-row">
             <img data-placeholder="article-patterns-1" data-context="Abstract illustration of intertwined roots or neural pathways in warm terracotta and cream colors, representing deep-rooted behavioral patterns. Clean, modern, professional style suitable for a psychology article." src="/assets/image-1784461188304-09gjop.webp?v=1784461188304" alt="המחשה של דפוסים מושרשים" class="kg-inline-image" loading="lazy" decoding="async" fetchpriority="low" />
           </div>
@@ -2009,15 +2009,15 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <!-- Section 3: 4 Practical Tools -->
       <section class="kg-section kg-tools-section">
         <h2 class="kg-section-title">4 כלים פרקטיים לגשר על הפער</h2>
-        <p class="kg-section-subtitle">הנה ארבעה כלים מעשיים שיכולים לעזור לכם לצמצם את הפער בין הידע ליישום — צעד אחר צעד.</p>
+        <p class="kg-section-subtitle">הנה ארבעה כלים מעשיים שיכולים לעזור לכם לצמצם את הפער בין הידע ליישום , צעד אחר צעד.</p>
         
         <div class="kg-tools-grid">
           <!-- Tool 1 -->
           <article class="kg-tool-card">
             <div class="kg-tool-number">01</div>
             <h3 class="kg-tool-title">מודעות רגשית</h3>
-            <p class="kg-tool-desc">לפני שמנסים לשנות התנהגות, צריך לזהות את הרגש שמפעיל אותה. שאלו את עצמכם ברגע האמת: "מה אני מרגיש עכשיו?" — פחד? כעס? בושה? עצם הזיהוי מחליש את האוטומט.</p>
-            <div class="kg-tool-tip">💡 <strong>טיפ:</strong> נסו לכתוב יומן רגשות קצר — 3 דקות ביום. זה מחזק את שריר המודעות.</div>
+            <p class="kg-tool-desc">לפני שמנסים לשנות התנהגות, צריך לזהות את הרגש שמפעיל אותה. שאלו את עצמכם ברגע האמת: "מה אני מרגיש עכשיו?" , פחד? כעס? בושה? עצם הזיהוי מחליש את האוטומט.</p>
+            <div class="kg-tool-tip">💡 <strong>טיפ:</strong> נסו לכתוב יומן רגשות קצר , 3 דקות ביום. זה מחזק את שריר המודעות.</div>
           </article>
 
           <!-- Tool 2 -->
@@ -2032,7 +2032,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <article class="kg-tool-card">
             <div class="kg-tool-number">03</div>
             <h3 class="kg-tool-title">ליווי חיצוני</h3>
-            <p class="kg-tool-desc">קשה לצאת מדפוסים לבד. מטפל זוגי, מאמן אישי, או אפילו חבר טוב שיודע לתת מראה — יכולים לעזור לכם לראות את מה שאתם לא רואים, ולתת דין וחשבון עדין.</p>
+            <p class="kg-tool-desc">קשה לצאת מדפוסים לבד. מטפל זוגי, מאמן אישי, או אפילו חבר טוב שיודע לתת מראה , יכולים לעזור לכם לראות את מה שאתם לא רואים, ולתת דין וחשבון עדין.</p>
             <div class="kg-tool-tip">💡 <strong>טיפ:</strong> גם מפגש אחד עם איש מקצוע יכול לפתוח דלתות שלא ידעתם שקיימות.</div>
           </article>
 
@@ -2040,8 +2040,8 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <article class="kg-tool-card">
             <div class="kg-tool-number">04</div>
             <h3 class="kg-tool-title">חמלה עצמית</h3>
-            <p class="kg-tool-desc">הביקורת העצמית היא האויבת הגדולה ביותר של השינוי. כשאתם נופלים חזרה לדפוס ישן, במקום להלקות את עצמכם — דברו לעצמכם כמו שהייתם מדברים לחבר טוב. בטוב, בהבנה, בעידוד.</p>
-            <div class="kg-tool-tip">💡 <strong>טיפ:</strong> חמלה עצמית אינה ויתור — היא התנאי ההכרחי לשינוי אמיתי.</div>
+            <p class="kg-tool-desc">הביקורת העצמית היא האויבת הגדולה ביותר של השינוי. כשאתם נופלים חזרה לדפוס ישן, במקום להלקות את עצמכם , דברו לעצמכם כמו שהייתם מדברים לחבר טוב. בטוב, בהבנה, בעידוד.</p>
+            <div class="kg-tool-tip">💡 <strong>טיפ:</strong> חמלה עצמית אינה ויתור , היא התנאי ההכרחי לשינוי אמיתי.</div>
           </article>
         </div>
       </section>
@@ -2050,7 +2050,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <section class="kg-section kg-closing">
         <h2 class="kg-section-title">השינוי מתחיל בצעד אחד</h2>
         <div class="kg-section-body">
-          <p>הפער בין ידע ליישום הוא לא גזירת גורל. הוא גשר שאפשר לבנות — צעד אחר צעד, לבנה אחר לבנה. זה מתחיל במודעות, ממשיך בפעולה קטנה, נעזר בליווי, ומושתת על חמלה.</p>
+          <p>הפער בין ידע ליישום הוא לא גזירת גורל. הוא גשר שאפשר לבנות , צעד אחר צעד, לבנה אחר לבנה. זה מתחיל במודעות, ממשיך בפעולה קטנה, נעזר בליווי, ומושתת על חמלה.</p>
           <p>אתם לא צריכים להיות מושלמים. אתם רק צריכים להתחיל.</p>
         </div>
         <div class="kg-cta-box">
@@ -2066,7 +2066,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         </div>
         <div class="kg-author-info">
           <h4 class="kg-author-name">צוות המרכז לזוגיות בריאה</h4>
-          <p class="kg-author-bio">אנחנו מלווים יחידים וזוגות בתהליכי צמיחה אישית וזוגית, מתוך אמונה ששינוי אמיתי מתחיל מבפנים — צעד אחד בכל פעם.</p>
+          <p class="kg-author-bio">אנחנו מלווים יחידים וזוגות בתהליכי צמיחה אישית וזוגית, מתוך אמונה ששינוי אמיתי מתחיל מבפנים , צעד אחד בכל פעם.</p>
         </div>
       </aside>
     </div>
@@ -2076,7 +2076,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 <section class="comparison-article" dir="rtl">
   <div class="comparison-article__container">
     <div class="comparison-article__header">
-      <h1 class="comparison-article__title">השוואתיות, אגו וזוגיות — איך הם מנהלים אותנו בלי שנשים לב?</h1>
+      <h1 class="comparison-article__title">השוואתיות, אגו וזוגיות , איך הם מנהלים אותנו בלי שנשים לב?</h1>
       <div class="comparison-article__meta">
         <span class="comparison-article__category">זוגיות ויחסים</span>
         <span class="comparison-article__separator">•</span>
@@ -2085,27 +2085,27 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     </div>
 
     <div class="comparison-article__hero">
-      <img data-placeholder="article-hero-comparison" data-context="Couple sitting on a couch, one looking at phone with social media, the other looking away thoughtfully, warm lighting, emotional distance concept" src="/assets/image-1784461210045-pbqdvw.webp?v=1784461210045" alt="זוגיות והשוואה - איור" class="comparison-article__hero-img" decoding="async" />
+      <img data-placeholder="article-hero-comparison" data-context="Couple sitting on a couch, one looking at phone with social media, the other looking away thoughtfully, warm lighting, emotional distance concept" src="/assets/image-1784461210045-pbqdvw.webp?v=1784461210045" alt="זוגיות והשוואה , איור" class="comparison-article__hero-img" decoding="async" />
     </div>
 
     <div class="comparison-article__content">
       <p class="comparison-article__lead">
-        השוואתיות היא אחת המלכודות הכי שקטות בעולם הזוגיות. מתי בפעם האחרונה עצרתם לשאול מה באמת חשוב לכם — בלי קשר למה שאחרים עושים?
+        השוואתיות היא אחת המלכודות הכי שקטות בעולם הזוגיות. מתי בפעם האחרונה עצרתם לשאול מה באמת חשוב לכם , בלי קשר למה שאחרים עושים?
       </p>
 
       <div class="comparison-article__text">
-        <p>אנחנו חיים בעידן שבו כל רגע מתועד, כל חופשה הופכת לסטורי, וכל ארוחת ערב רומנטית מקבלת פילטר. הרשתות החברתיות מגבירות את ההשוואה — אנחנו רואים זוגות מחייכים, טבעות נישואין נוצצות, בתים מעוצבים להפליא, וילדים מתוקתקים. אבל מה שאנחנו לא רואים זה את הריבים הקטנים, את הדמעות, את הרגעים שבהם הם תוהים אם עשו את הבחירה הנכונה.</p>
+        <p>אנחנו חיים בעידן שבו כל רגע מתועד, כל חופשה הופכת לסטורי, וכל ארוחת ערב רומנטית מקבלת פילטר. הרשתות החברתיות מגבירות את ההשוואה , אנחנו רואים זוגות מחייכים, טבעות נישואין נוצצות, בתים מעוצבים להפליא, וילדים מתוקתקים. אבל מה שאנחנו לא רואים זה את הריבים הקטנים, את הדמעות, את הרגעים שבהם הם תוהים אם עשו את הבחירה הנכונה.</p>
 
         <h2>איך האגו מונע מאיתנו לראות את האמת?</h2>
-        <p>האגו הוא אותו קול פנימי שאומר לנו: "מגיע לך יותר", "אתה טוב יותר ממה שיש לך עכשיו", "תראה מה יש לאחרים — ולך אין". הקול הזה לא נובע מחוסר אהבה לבן או בת הזוג, אלא מחוסר אהבה עצמית. כשאנחנו לא שלמים עם עצמנו, אנחנו מחפשים אישור חיצוני — והדרך הקלה ביותר היא להשוות.</p>
+        <p>האגו הוא אותו קול פנימי שאומר לנו: "מגיע לך יותר", "אתה טוב יותר ממה שיש לך עכשיו", "תראה מה יש לאחרים , ולך אין". הקול הזה לא נובע מחוסר אהבה לבן או בת הזוג, אלא מחוסר אהבה עצמית. כשאנחנו לא שלמים עם עצמנו, אנחנו מחפשים אישור חיצוני , והדרך הקלה ביותר היא להשוות.</p>
 
         <p>האגו גורם לנו להאמין שאם רק היה לנו מה שיש לאחרים, היינו מאושרים יותר. אבל האמת היא הפוכה: אושר אמיתי מגיע מבפנים, לא מהשוואה. כשאנחנו עסוקים בלהשוות, אנחנו מפסידים את הרגעים הקטנים והיפים שכבר קיימים במערכת היחסים שלנו.</p>
 
         <div class="comparison-article__highlight">
-          <p>"כשאהבה עצמית עולה, האגו יורד — וזו התחלה של חופש אמיתי."</p>
+          <p>"כשאהבה עצמית עולה, האגו יורד , וזו התחלה של חופש אמיתי."</p>
         </div>
 
-        <h2>הרשתות החברתיות — הזרקור שמגביר את ההשוואה</h2>
+        <h2>הרשתות החברתיות , הזרקור שמגביר את ההשוואה</h2>
         <p>האלגוריתמים של הרשתות החברתיות מתוכננים להציג לנו את החיים המושלמים של אחרים. כל גלילה מחזקת את התחושה שאנחנו לא מספיק טובים, שהזוגיות שלנו לא מספיק מרגשת, שהחיים שלנו משעממים. אבל חשוב לזכור: אנחנו משווים את חיינו האמיתיים לסרטון הערוך של מישהו אחר.</p>
 
         <p>ההשוואה הזו יוצרת פער כואב בין המציאות לציפיות. במקום ליהנות ממה שיש, אנחנו מתמקדים במה שאין. במקום לטפח את הקשר, אנחנו מבזבזים אנרגיה על קנאה ותסכול.</p>
@@ -2117,17 +2117,17 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <li><strong>תרגול הכרת תודה:</strong> כל ערב, רשמו שלושה דברים שאתם מעריכים בבן או בת הזוג.</li>
           <li><strong>הפחתת זמן מסך:</strong> הגבילו את השימוש ברשתות חברתיות לשעה ביום.</li>
           <li><strong>שיח פתוח:</strong> דברו עם בן או בת הזוג על התחושות שלכם, בלי האשמות.</li>
-          <li><strong>התמקדות בפנימיות:</strong> שאלו את עצמכם: "מה באמת חשוב לי?" — לא "מה יגרום לי להיראות טוב בעיני אחרים?"</li>
+          <li><strong>התמקדות בפנימיות:</strong> שאלו את עצמכם: "מה באמת חשוב לי?" , לא "מה יגרום לי להיראות טוב בעיני אחרים?"</li>
           <li><strong>פיתוח אהבה עצמית:</strong> ככל שתאהבו את עצמכם יותר, כך תזדקקו פחות לאישור חיצוני.</li>
         </ul>
 
         <h2>הקשר בין אהבה עצמית לאגו</h2>
-        <p>אהבה עצמית היא לא אנוכיות — היא הבסיס לכל מערכת יחסים בריאה. כשאנחנו אוהבים את עצמנו, אנחנו לא צריכים להוכיח כלום לאף אחד. אנחנו לא צריכים להשוות את הזוגיות שלנו לזו של אחרים, כי אנחנו יודעים שהערך שלנו לא נמדד בלייקים או בתגובות.</p>
+        <p>אהבה עצמית היא לא אנוכיות , היא הבסיס לכל מערכת יחסים בריאה. כשאנחנו אוהבים את עצמנו, אנחנו לא צריכים להוכיח כלום לאף אחד. אנחנו לא צריכים להשוות את הזוגיות שלנו לזו של אחרים, כי אנחנו יודעים שהערך שלנו לא נמדד בלייקים או בתגובות.</p>
 
-        <p>כשהאהבה העצמית עולה, האגו יורד. אנחנו מפסיקים להתגונן, מפסיקים להתווכח על דברים קטנים, ומתחילים לראות את בן או בת הזוג באמת — לא כהשתקפות של הערך העצמי שלנו, אלא כאדם שלם ועצמאי שאנחנו בוחרים לאהוב.</p>
+        <p>כשהאהבה העצמית עולה, האגו יורד. אנחנו מפסיקים להתגונן, מפסיקים להתווכח על דברים קטנים, ומתחילים לראות את בן או בת הזוג באמת , לא כהשתקפות של הערך העצמי שלנו, אלא כאדם שלם ועצמאי שאנחנו בוחרים לאהוב.</p>
 
         <div class="comparison-article__cta">
-          <p>החופש האמיתי מתחיל כשאנחנו מפסיקים להשוות ומתחילים לחיות. הזוגיות שלכם היא ייחודית — תפסיקו למדוד אותה לפי קנה המידה של אחרים.</p>
+          <p>החופש האמיתי מתחיל כשאנחנו מפסיקים להשוות ומתחילים לחיות. הזוגיות שלכם היא ייחודית , תפסיקו למדוד אותה לפי קנה המידה של אחרים.</p>
         </div>
       </div>
     </div>
@@ -2160,7 +2160,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   <div class="article-container">
     <!-- Hero Image -->
     <div class="article-hero">
-      <img data-placeholder="article-hero-1" data-context="Warm sunrise light through window casting soft shadows on an empty armchair with a knitted throw blanket, peaceful morning atmosphere, terracotta and cream tones" src="/assets/image-1784465027698-llj1ig.webp?v=1784465027698" alt="תמונת נושא - זוגיות בריאה" class="article-hero-img" decoding="async" />
+      <img data-placeholder="article-hero-1" data-context="Warm sunrise light through window casting soft shadows on an empty armchair with a knitted throw blanket, peaceful morning atmosphere, terracotta and cream tones" src="/assets/image-1784465027698-llj1ig.webp?v=1784465027698" alt="תמונת נושא , זוגיות בריאה" class="article-hero-img" decoding="async" />
     </div>
 
     <!-- Article Header -->
@@ -2233,7 +2233,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
     <!-- תוכן המאמר -->
     <article class="article-content">
-      <h1 class="article-title">ביטחון עצמי בדייטים — למה זה לא אומר להיות בטוח בהכול?</h1>
+      <h1 class="article-title">ביטחון עצמי בדייטים , למה זה לא אומר להיות בטוח בהכול?</h1>
       
       <p class="article-paragraph">
         הרבה אנשים חושבים שביטחון עצמי הוא תכונה כללית. או שיש לי ביטחון עצמי, או שאין לי. או שאני אדם בטוח, או שאני חסר ביטחון. אבל בפועל, ביטחון עצמי הוא הרבה יותר מדויק מזה. ביטחון עצמי הוא היכולת לסמוך על עצמי בתחום מסוים.
@@ -2243,14 +2243,14 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         יכול להיות שאדם בטוח מאוד בעבודה, אבל חסר ביטחון בדייטים. יכול להיות שמישהי מרגישה בטוחה עם חברות, אבל נלחצת כשהיא צריכה להיפתח רגשית. יכול להיות שאדם יודע להוביל צוות, אבל בדייט הוא מפחד לשאול שאלה אישית. יכול להיות שאתה סומך על עצמך להעביר הרצאה מול מאה אנשים, אבל לא סומך על עצמך כשצריך לנווט שיחה רגישה מול אדם אחד. וזה לגמרי בסדר.
       </p>
 
-      <h2 class="article-subtitle">בניית ביטחון — מהראיות, לא מהתחושה</h2>
+      <h2 class="article-subtitle">בניית ביטחון , מהראיות, לא מהתחושה</h2>
       
       <p class="article-paragraph">
         ביטחון עצמי נבנה מראיות. כלומר, מניסיונות שבהם פעלתי, למדתי, השתפרתי וראיתי שאני מסוגל. בדייטים, הרבה אנשים מחכים להרגיש ביטחון לפני שהם פועלים. אבל ברוב המקרים, הביטחון מגיע אחרי הפעולה, לא לפניה.
       </p>
       
       <p class="article-paragraph">
-        אני שולח הודעה — ובונה ראיה. אני יוצא לדייט — ובונה ראיה. אני אומר מה אני מרגיש — ובונה ראיה. אני שם גבול — ובונה ראיה. אני מתמודד עם דחייה ולא מתפרק — ובונה ראיה.
+        אני שולח הודעה , ובונה ראיה. אני יוצא לדייט , ובונה ראיה. אני אומר מה אני מרגיש , ובונה ראיה. אני שם גבול , ובונה ראיה. אני מתמודד עם דחייה ולא מתפרק , ובונה ראיה.
       </p>
 
       <h2 class="article-subtitle">מדרגות קטנות של אי־נוחות</h2>
@@ -2264,11 +2264,11 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       </p>
 
       <blockquote class="article-quote">
-        <p>"ביטחון עצמי הוא לא להרגיש שאני תמיד אצליח. ביטחון עצמי הוא לדעת שגם אם יהיה לא נוח — אני אוכל להתמודד."</p>
+        <p>"ביטחון עצמי הוא לא להרגיש שאני תמיד אצליח. ביטחון עצמי הוא לדעת שגם אם יהיה לא נוח , אני אוכל להתמודד."</p>
       </blockquote>
 
       <p class="article-paragraph article-summary">
-        ובסוף, ביטחון עצמי הוא לא להרגיש שאני תמיד אצליח. ביטחון עצמי הוא לדעת שגם אם יהיה לא נוח — אני אוכל להתמודד.
+        ובסוף, ביטחון עצמי הוא לא להרגיש שאני תמיד אצליח. ביטחון עצמי הוא לדעת שגם אם יהיה לא נוח , אני אוכל להתמודד.
       </p>
     </article>
 
@@ -2289,7 +2289,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   <div class="article-container">
     <!-- תמונת כותרת -->
     <div class="article-hero-image">
-      <img data-placeholder="article-hero-1" data-context="זוג יושב על ספסל בפארק בשקיעה, מדברים בפתיחות, אור חם ורך, אווירה אינטימית ורגועה" src="/assets/image-1784465123113-k5bvow.webp?v=1784465123113" alt="תמונת כותרת למאמר - זוגיות ואהבה עצמית" class="article-hero-img" decoding="async" />
+      <img data-placeholder="article-hero-1" data-context="זוג יושב על ספסל בפארק בשקיעה, מדברים בפתיחות, אור חם ורך, אווירה אינטימית ורגועה" src="/assets/image-1784465123113-k5bvow.webp?v=1784465123113" alt="תמונת כותרת למאמר , זוגיות ואהבה עצמית" class="article-hero-img" decoding="async" />
     </div>
 
     <!-- תאריך פרסום -->
@@ -2299,7 +2299,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     </div>
 
     <!-- כותרת המאמר -->
-    <h1 class="article-title">משמעת עצמית היא אהבה עצמית - גם בזוגיות</h1>
+    <h1 class="article-title">משמעת עצמית היא אהבה עצמית , גם בזוגיות</h1>
 
     <!-- תוכן המאמר -->
     <div class="article-content">
@@ -2314,7 +2314,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <h2 class="article-subtitle">מהי משמעת אמיתית?</h2>
       
       <p class="article-paragraph">
-        יש דברים שטבעי לנו לעשות, ולכן הם לא בהכרח דורשים מאיתנו משמעת. אם אני אוהב להתאמן, חדר כושר לא בהכרח בודק את המשמעת שלי. אבל אם קשה לי לישון בזמן, ושינה טובה היא הדבר שהכי נכון לי — שם נמצאת העבודה.
+        יש דברים שטבעי לנו לעשות, ולכן הם לא בהכרח דורשים מאיתנו משמעת. אם אני אוהב להתאמן, חדר כושר לא בהכרח בודק את המשמעת שלי. אבל אם קשה לי לישון בזמן, ושינה טובה היא הדבר שהכי נכון לי , שם נמצאת העבודה.
       </p>
       
       <p class="article-paragraph">
@@ -2338,7 +2338,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       </p>
       
       <p class="article-paragraph">
-        משמעת עצמית היא לא אויב של ההנאה — היא חברה של הצמיחה. היא המפתח לבניית מערכת יחסים יציבה, בריאה ומכבדת, קודם כל עם עצמנו, ואז גם עם הפרטנר שלנו.
+        משמעת עצמית היא לא אויב של ההנאה , היא חברה של הצמיחה. היא המפתח לבניית מערכת יחסים יציבה, בריאה ומכבדת, קודם כל עם עצמנו, ואז גם עם הפרטנר שלנו.
       </p>
     </div>
 
@@ -2373,7 +2373,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 <section class="article-section" dir="rtl">
   <div class="article-container">
     <div class="article-hero">
-      <img data-placeholder="article-hero-1" data-context="זוג יושב על ספסל בפארק שקוע בשיחה אמיתית, תאורת שקיעה חמה, אווירה רומנטית ונינוחה" src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%271200%27 height=%27600%27%3E%3Cdefs%3E%3ClinearGradient id=%27grad%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 style=%27stop-color:%23FF0083;stop-opacity:1%27 /%3E%3Cstop offset=%27100%25%27 style=%27stop-color:%23FF008320;stop-opacity:1%27 /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27url(%23grad)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27Arial, sans-serif%27 font-size=%2716%27 fill=%27white%27 text-anchor=%27middle%27 dy=%27.3em%27 font-weight=%27500%27%3EClick%20to%20add%20image%3C/text%3E%3C/svg%3E" alt="דייט אמיתי - זוג משוחח בפארק" class="article-hero-img" decoding="async" />
+      <img data-placeholder="article-hero-1" data-context="זוג יושב על ספסל בפארק שקוע בשיחה אמיתית, תאורת שקיעה חמה, אווירה רומנטית ונינוחה" src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%271200%27 height=%27600%27%3E%3Cdefs%3E%3ClinearGradient id=%27grad%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 style=%27stop-color:%23FF0083;stop-opacity:1%27 /%3E%3Cstop offset=%27100%25%27 style=%27stop-color:%23FF008320;stop-opacity:1%27 /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27url(%23grad)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27Arial, sans-serif%27 font-size=%2716%27 fill=%27white%27 text-anchor=%27middle%27 dy=%27.3em%27 font-weight=%27500%27%3EClick%20to%20add%20image%3C/text%3E%3C/svg%3E" alt="דייט אמיתי , זוג משוחח בפארק" class="article-hero-img" decoding="async" />
     </div>
 
     <div class="article-meta">
@@ -2381,41 +2381,41 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <span class="article-category">זוגיות ודייטים</span>
     </div>
 
-    <h1 class="article-title">למה דייטים מרגישים כמו ראיון עבודה — ואיך יוצאים מזה?</h1>
+    <h1 class="article-title">למה דייטים מרגישים כמו ראיון עבודה , ואיך יוצאים מזה?</h1>
 
     <div class="article-content">
       <p class="article-paragraph">
-        הרבה פנויים ופנויות מכירים את התחושה הזאת. יושבים מול מישהו בבית קפה, ושואלים את עצמם: "איך זה מרגיש כמו ראיון עבודה?" שואלים שאלות, עונים תשובות, מנסים לעשות רושם טוב, מרגישים ששופטים אתכם — ואחרי שעה קמים, משלמים, וכל אחד הולך לדרכו. איפה האנשים האמיתיים? איפה החיבור?
+        הרבה פנויים ופנויות מכירים את התחושה הזאת. יושבים מול מישהו בבית קפה, ושואלים את עצמם: "איך זה מרגיש כמו ראיון עבודה?" שואלים שאלות, עונים תשובות, מנסים לעשות רושם טוב, מרגישים ששופטים אתכם , ואחרי שעה קמים, משלמים, וכל אחד הולך לדרכו. איפה האנשים האמיתיים? איפה החיבור?
       </p>
 
       <p class="article-paragraph">
-        האמת היא שדייטים מרגישים כמו ראיון עבודה כי בטעות התייחסנו אליהם ככה. הגענו להתרשם, להעריך, לבחון התאמה — במקום להגיע לפגוש בן אדם.
+        האמת היא שדייטים מרגישים כמו ראיון עבודה כי בטעות התייחסנו אליהם ככה. הגענו להתרשם, להעריך, לבחון התאמה , במקום להגיע לפגוש בן אדם.
       </p>
 
       <p class="article-paragraph">
-        המבנה הקבוע של דייט — שני אנשים יושבים אחד מול השני, שואלים שאלות — מזמין ראיון. השאלות האופייניות ("מה אתה עושה?", "איפה את גרה?", "מה אתה מחפש?") מחזקות את התחושה שאנחנו צריכים להציג קורות חיים במקום להיות עצמנו.
+        המבנה הקבוע של דייט , שני אנשים יושבים אחד מול השני, שואלים שאלות , מזמין ראיון. השאלות האופייניות ("מה אתה עושה?", "איפה את גרה?", "מה אתה מחפש?") מחזקות את התחושה שאנחנו צריכים להציג קורות חיים במקום להיות עצמנו.
       </p>
 
       <h2 class="article-subtitle">אז איך יוצאים מזה? הנה 5 דרכים להפוך דייט מראיון עבודה לשיחה אמיתית:</h2>
 
       <p class="article-paragraph">
-        <strong>1. תשנו את הפורמט</strong> — במקום לשבת אחד מול השני, לכו להליכה, לכו לתערוכה, שבו על ספסל בפארק. תנועה משחררת. כשיושבים אחד מול השני עם שולחן, זה מרגיש כמו ועדה.
+        <strong>1. תשנו את הפורמט</strong> , במקום לשבת אחד מול השני, לכו להליכה, לכו לתערוכה, שבו על ספסל בפארק. תנועה משחררת. כשיושבים אחד מול השני עם שולחן, זה מרגיש כמו ועדה.
       </p>
 
       <p class="article-paragraph">
-        <strong>2. תביאו את עצמכם, לא את קורות החיים</strong> — במקום לספר מה אתם עושים, ספרו מה מעניין אתכם. במקום לשאול "מה אתה עושה?", שאלו "מה מרגש אותך?" או "מה גרם לך לחייך השבוע?"
+        <strong>2. תביאו את עצמכם, לא את קורות החיים</strong> , במקום לספר מה אתם עושים, ספרו מה מעניין אתכם. במקום לשאול "מה אתה עושה?", שאלו "מה מרגש אותך?" או "מה גרם לך לחייך השבוע?"
       </p>
 
       <p class="article-paragraph">
-        <strong>3. תוותרו על הצורך להרשים</strong> — הצורך להרשים הוא הדבר שהכי מרחיק. ברגע שאתם מפסיקים לנסות להיראות טוב, אתם מתחילים להיות נוכחים. ונוכחות היא הדבר הכי מושך.
+        <strong>3. תוותרו על הצורך להרשים</strong> , הצורך להרשים הוא הדבר שהכי מרחיק. ברגע שאתם מפסיקים לנסות להיראות טוב, אתם מתחילים להיות נוכחים. ונוכחות היא הדבר הכי מושך.
       </p>
 
       <p class="article-paragraph">
-        <strong>4. תגידו את האמת</strong> — אם אתם מתרגשים, תגידו. אם אתם מתביישים, תגידו. אם לא נעים לכם, תגידו. פגיעות מייצרת קרבה. ראיון עבודה מייצר מרחק.
+        <strong>4. תגידו את האמת</strong> , אם אתם מתרגשים, תגידו. אם אתם מתביישים, תגידו. אם לא נעים לכם, תגידו. פגיעות מייצרת קרבה. ראיון עבודה מייצר מרחק.
       </p>
 
       <p class="article-paragraph">
-        <strong>5. תבואו בלי ציפיות</strong> — הציפייה שכל דייט חייב להוביל לזוגיות הורסת את הדייט. במקום לצאת לדייט כדי "למצוא מישהו", צאו לפגוש בן אדם. ההבדל הוא עצום.
+        <strong>5. תבואו בלי ציפיות</strong> , הציפייה שכל דייט חייב להוביל לזוגיות הורסת את הדייט. במקום לצאת לדייט כדי "למצוא מישהו", צאו לפגוש בן אדם. ההבדל הוא עצום.
       </p>
 
       <blockquote class="article-quote">
@@ -2423,7 +2423,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       </blockquote>
 
       <p class="article-paragraph">
-        בסוף, דייט הוא לא ראיון — הוא הזדמנות להסתכל למישהו בעיניים ולגלות משהו אמיתי.
+        בסוף, דייט הוא לא ראיון , הוא הזדמנות להסתכל למישהו בעיניים ולגלות משהו אמיתי.
       </p>
     </div>
 
@@ -2453,7 +2453,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     
     <div class="article-content">
       <p class="article-paragraph">
-        כימיה היא דבר חשוב. משיכה היא דבר חשוב. התרגשות היא חלק יפה מהתחלה של קשר. אבל זוגיות בריאה לא יכולה להיבנות רק על ריגוש. הרבה אנשים מתבלבלים בין עוצמה רגשית לבין התאמה. הם מרגישים פרפרים, מתח, געגוע, חוסר ודאות, משיכה חזקה — ומפרשים את זה כסימן שזה "זה". לפעמים זה באמת חיבור. אבל לפעמים זו מערכת ההפעלה הישנה שלנו שמזהה משהו מוכר, לא בהכרח משהו בריא.
+        כימיה היא דבר חשוב. משיכה היא דבר חשוב. התרגשות היא חלק יפה מהתחלה של קשר. אבל זוגיות בריאה לא יכולה להיבנות רק על ריגוש. הרבה אנשים מתבלבלים בין עוצמה רגשית לבין התאמה. הם מרגישים פרפרים, מתח, געגוע, חוסר ודאות, משיכה חזקה , ומפרשים את זה כסימן שזה "זה". לפעמים זה באמת חיבור. אבל לפעמים זו מערכת ההפעלה הישנה שלנו שמזהה משהו מוכר, לא בהכרח משהו בריא.
       </p>
       
       <p class="article-paragraph">
@@ -2471,7 +2471,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       </p>
       
       <p class="article-paragraph">
-        וכדי לבחור טוב, אני צריך להכיר את עצמי, להבין את הערכים שלי, לזהות את הדפוסים שלי, וללמוד להקשיב לא רק למה שמרגש אותי — אלא גם למה שמיטיב איתי.
+        וכדי לבחור טוב, אני צריך להכיר את עצמי, להבין את הערכים שלי, לזהות את הדפוסים שלי, וללמוד להקשיב לא רק למה שמרגש אותי , אלא גם למה שמיטיב איתי.
       </p>
       
       <blockquote class="article-quote">

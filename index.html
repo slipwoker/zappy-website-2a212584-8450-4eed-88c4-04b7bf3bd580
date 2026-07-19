@@ -622,7 +622,7 @@
               }
             }
             
-            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
+            /* Menu Group styling (non-clickable parent) , TOP LEVEL ONLY with ultra-specific selector */
             .nav-menu > li > .menu-group-title,
             #navMenu > li > .menu-group-title {
               display: inline-block !important;
@@ -667,7 +667,7 @@
               pointer-events: auto !important;
             }
             
-            /* Nested dropdown menu styles - using more specific selectors */
+            /* Nested dropdown menu styles , using more specific selectors */
             .nav-menu .sub-menu,
             nav .sub-menu,
             .navbar .sub-menu {
@@ -691,7 +691,7 @@
               pointer-events: none; /* Prevent interaction when hidden */
             }
             
-            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
+            /* RTL (Hebrew/Arabic) submenu positioning , align to right instead of left */
             [dir="rtl"] .nav-menu .sub-menu,
             [dir="rtl"] nav .sub-menu,
             [dir="rtl"] .navbar .sub-menu,
@@ -705,7 +705,7 @@
               right: 0;
             }
             
-            /* Show submenu on parent hover - more specific selectors */
+            /* Show submenu on parent hover , more specific selectors */
             .nav-menu li:hover > .sub-menu,
             nav li:hover > .sub-menu,
             .navbar li:hover > .sub-menu {
@@ -745,7 +745,7 @@
               background-color: #f5f5f5;
             }
             
-            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
+            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only , must come AFTER submenu styles */
             .nav-menu > li > .menu-group-title,
             #navMenu > li > .menu-group-title {
               display: inline-block !important;
@@ -787,7 +787,7 @@
                 border-radius: 0 !important;
               }
               
-              /* Expanded state — no internal scroll; parent navMenu scrolls */
+              /* Expanded state , no internal scroll; parent navMenu scrolls */
               .sub-menu.mobile-expanded {
                 max-height: none !important;
                 overflow-y: visible !important;
@@ -832,7 +832,7 @@
                 background-color: transparent !important;
               }
               
-              /* Parent item wrapper - flex layout with relative positioning for absolute toggle */
+              /* Parent item wrapper , flex layout with relative positioning for absolute toggle */
               .nav-menu li:has(.sub-menu),
               nav li:has(.sub-menu),
               .navbar li:has(.sub-menu) {
@@ -843,7 +843,7 @@
                 min-height: 44px !important;
               }
               
-              /* Parent link - takes full width since toggle is absolute (not a flex child) */
+              /* Parent link , takes full width since toggle is absolute (not a flex child) */
               .nav-menu li:has(.sub-menu) > a,
               nav li:has(.sub-menu) > a,
               .navbar li:has(.sub-menu) > a,
@@ -881,7 +881,7 @@
                 visibility: hidden !important;
               }
               
-              /* Toggle arrow button - flex child that stretches to match nav-link height */
+              /* Toggle arrow button , flex child that stretches to match nav-link height */
               .mobile-submenu-toggle {
                 display: flex !important;
                 align-items: center !important;
@@ -927,7 +927,7 @@
           
           <script id="zappy-mobile-menu-script">
             // Mobile menu toggle for nested submenus (including Menu Groups)
-            // Uses separate toggle button - link navigates, arrow toggles submenu
+            // Uses separate toggle button , link navigates, arrow toggles submenu
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
@@ -937,7 +937,7 @@
                   document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
                     menu.classList.remove('mobile-expanded');
                   });
-                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
+                  console.log('[MOBILE MENU] Desktop mode , cleanup done');
                   return;
                 }
                 
@@ -972,7 +972,7 @@
                   
                   console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
                   
-                  // Handle toggle button click - only toggles submenu
+                  // Handle toggle button click , only toggles submenu
                   toggleBtn.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
@@ -995,7 +995,7 @@
                     console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
                   });
                   
-                  // Parent link navigates normally - no preventDefault
+                  // Parent link navigates normally , no preventDefault
                 });
               }
               
@@ -1159,7 +1159,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות - ליאור גור" class="logo" decoding="async" width="35" height="35" />
+        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות , ליאור גור" class="logo" decoding="async" width="35" height="35" />
       </a>
     </div><ul class="nav-menu" id="navMenu"><li><a href="/club" class="nav-link">מועדון מבינים זוגיות</a></li><li><a href="/articles" class>מאמרים</a></li><li><a href="/about">אודות</a></li><li class="menu-item-has-children zappy-products-dropdown">
       <a href="/products">
@@ -1241,7 +1241,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
-        // Transparent navbar - check body background
+        // Transparent navbar , check body background
         const bodyBg = window.getComputedStyle(document.body).backgroundColor;
         console.log('[Navbar] Navbar transparent, using body background:', bodyBg);
         bgColor = bodyBg;
@@ -1257,10 +1257,10 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
       
       // Mobile button colors are set by Claude's AI-generated CSS (same as .nav-menu a)
-      // No dynamic color overrides needed - colors come from the generated navbar CSS
+      // No dynamic color overrides needed , colors come from the generated navbar CSS
       console.log('[Navbar] Mobile button colors preserved from Claude CSS (luminance:', luminance.toFixed(2) + ')');
       
-      // FIX ICON SIZES - Ensure SVGs are properly sized and visible
+      // FIX ICON SIZES , Ensure SVGs are properly sized and visible
       // INJECT CRITICAL CSS TO OVERRIDE ANY CONFLICTING RULES
       const criticalCSS = document.createElement('style');
       criticalCSS.id = 'zappy-mobile-nav-fix';
@@ -1338,10 +1338,10 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           .phone-header-btn svg {
             width: 24px !important;
             height: 24px !important;
-            /* Don't force display - let JavaScript control hamburger/close toggle */
+            /* Don't force display , let JavaScript control hamburger/close toggle */
           }
           
-          /* Reset nav-cta-container on mobile - remove desktop box-shadow/padding */
+          /* Reset nav-cta-container on mobile , remove desktop box-shadow/padding */
           /* that creates a visible ghost box when CTA button is hidden */
           .nav-cta-container {
             box-shadow: none !important;
@@ -1364,7 +1364,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
             bottom: 0 !important;
           }
           
-          /* Hide desktop language switcher on mobile - hamburger menu handles it */
+          /* Hide desktop language switcher on mobile , hamburger menu handles it */
           /* High specificity to override stored CSS */
           .lang-switcher,
           .nav-cta-container .lang-switcher,
@@ -1424,7 +1424,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           mobileToggle.style.removeProperty('z-index');
           mobileToggle.style.removeProperty('left');
           mobileToggle.style.removeProperty('right');
-          console.log('[Navbar] Desktop viewport - cleared mobile toggle inline positioning');
+          console.log('[Navbar] Desktop viewport , cleared mobile toggle inline positioning');
         }
       }
       
@@ -1458,7 +1458,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           phoneBtn.style.removeProperty('z-index');
           phoneBtn.style.removeProperty('left');
           phoneBtn.style.removeProperty('right');
-          console.log('[Navbar] Desktop viewport - cleared phone button inline positioning');
+          console.log('[Navbar] Desktop viewport , cleared phone button inline positioning');
         }
       }
     } else {
@@ -1498,7 +1498,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     const newToggle = mobileToggle.cloneNode(true);
     mobileToggle.parentNode.replaceChild(newToggle, mobileToggle);
     
-    // Toggle menu on button click - use newToggle now
+    // Toggle menu on button click , use newToggle now
     newToggle.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
@@ -1644,7 +1644,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <p class="index-hero-body" style="color: rgb(246, 241, 232) !important;"><span style="color: #000000 !important">במועדון מבינים זוגיות אנחנו לא רק מלמדים, אנחנו מלווים. גישה אישית ומעשית שתעזור לכם להבין איך למשוך את האנשים המתאימים לחיים שלכם, במקום עוד דייט ריק וחסר כיוון.</span></p>
 
-      <h3 class="index-hero-reassurance" style="color: rgb(246, 241, 232) !important;"><span style="color: #000000 !important">סביבה חמה, נטולת שיפוטיות — המקום שבו לומדים באמת להכיר את עצמכם.</span></h3>
+      <h3 class="index-hero-reassurance" style="color: rgb(246, 241, 232) !important;"><span style="color: #000000 !important">סביבה חמה, נטולת שיפוטיות , המקום שבו לומדים באמת להכיר את עצמכם.</span></h3>
 
       <div class="index-hero-ctas">
         <a href="https://lets-go.landy-ai.com" class="index-hero-btn-primary" style="color: rgb(0, 0, 0) !important;" data-element-type="button" data-element-id="btn-1777902841421-tvvpzw545" data-native-element="true">בואו נדבר</a>
@@ -1699,7 +1699,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     <div class="index-services-header">
       <span class="index-services-eyebrow">הדרכים ללמוד ולצמוח</span>
       <h2 class="index-services-title">מה אנחנו מציעים</h2>
-      <p class="index-services-subtitle">כל פורמט נבנה כדי לפגוש אתכם בדיוק במקום שבו אתם נמצאים — כי לצאת לדייטים לא מספיק. צריך להבין מה עוצר אתכם, ללמוד איך לעשות את זה אחרת, ולבנות את הביטחון למשוך את האנשים שבאמת מתאימים לכם.</p>
+      <p class="index-services-subtitle">כל פורמט נבנה כדי לפגוש אתכם בדיוק במקום שבו אתם נמצאים , כי לצאת לדייטים לא מספיק. צריך להבין מה עוצר אתכם, ללמוד איך לעשות את זה אחרת, ולבנות את הביטחון למשוך את האנשים שבאמת מתאימים לכם.</p>
     </div>
 
     <!-- Main Layout: Cards + Image -->
@@ -1719,7 +1719,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <div class="index-services-card-content">
             <span class="index-services-card-tag">למידה מעמיקה</span>
             <h3 class="index-services-card-title">קורסים</h3>
-            <p class="index-services-card-text">מסלול לימוד מובנה ומעמיק שמלווה אתכם שלב אחר שלב — מהבנת עצמכם, דרך הגדרת מה אתם מחפשים, ועד לבניית זוגיות נכונה ומשמעותית. הקורסים משלבים תיאוריה עם כלים מעשיים שתוכלו ליישם מיד.</p>
+            <p class="index-services-card-text">מסלול לימוד מובנה ומעמיק שמלווה אתכם שלב אחר שלב , מהבנת עצמכם, דרך הגדרת מה אתם מחפשים, ועד לבניית זוגיות נכונה ומשמעותית. הקורסים משלבים תיאוריה עם כלים מעשיים שתוכלו ליישם מיד.</p>
             <a href="https://lets-go.landy-ai.com" class="index-services-card-link">לפרטים על הקורסים <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
           </div>
         </article>
@@ -1734,7 +1734,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <div class="index-services-card-content">
             <span class="index-services-card-tag">פריצת דרך</span>
             <h3 class="index-services-card-title">סדנאות זוגיות</h3>
-            <p class="index-services-card-text">מפגשים אינטנסיביים וממוקדים שמביאים תובנות עמוקות בזמן קצר. כל סדנה בנויה סביב נושא מרכזי — ביטחון עצמי, תקשורת, מציאת זוגיות נכונה — ומעניקה כלים שניתן לקחת הביתה ולהשתמש בהם מיד.</p>
+            <p class="index-services-card-text">מפגשים אינטנסיביים וממוקדים שמביאים תובנות עמוקות בזמן קצר. כל סדנה בנויה סביב נושא מרכזי , ביטחון עצמי, תקשורת, מציאת זוגיות נכונה , ומעניקה כלים שניתן לקחת הביתה ולהשתמש בהם מיד.</p>
             <a href="https://findyourlove.landy-ai.com" class="index-services-card-link">לפרטים על הסדנאות <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
           </div>
         </article>
@@ -1762,7 +1762,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <!-- Right: Editorial Image Tile -->
       <div class="index-services-image-tile">
         <div class="index-services-image-wrap">
-          <img data-placeholder="index-services-image-1" data-context="A warm, editorial-style photograph of a calm learning environment — a small intimate group of adults sitting in a cozy circle in a softly lit room, warm cream and terracotta tones, natural light from a window, people engaged in thoughtful conversation, books and notebooks on a wooden table, plants in the background, feeling of safety warmth and emotional growth, Israeli adults in their 30s-40s, relationship coaching workshop atmosphere" width="560" height="780" src="/assets/site-index-services-image-1.webp" alt="סביבת למידה חמה ואינטימית — מפגש קבוצתי בנושא זוגיות" loading="lazy" decoding="async" fetchpriority="low" />
+          <img data-placeholder="index-services-image-1" data-context="A warm, editorial-style photograph of a calm learning environment , a small intimate group of adults sitting in a cozy circle in a softly lit room, warm cream and terracotta tones, natural light from a window, people engaged in thoughtful conversation, books and notebooks on a wooden table, plants in the background, feeling of safety warmth and emotional growth, Israeli adults in their 30s-40s, relationship coaching workshop atmosphere" width="560" height="780" src="/assets/site-index-services-image-1.webp" alt="סביבת למידה חמה ואינטימית , מפגש קבוצתי בנושא זוגיות" loading="lazy" decoding="async" fetchpriority="low" />
           <div class="index-services-image-badge">
             <span class="index-services-badge-number">3</span>
             <span class="index-services-badge-text">פורמטים של למידה</span>
@@ -1788,11 +1788,11 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
   <div class="journey-container">
 
-    <!-- Title block - START aligned (right in RTL) -->
+    <!-- Title block , START aligned (right in RTL) -->
     <div class="journey-title-block">
       <span class="journey-eyebrow">המסע שלך</span>
       <h2 class="journey-heading">מבלבול לבהירות —<br />הדרך אל הזוגיות הנכונה</h2>
-      <p class="journey-intro">אהבה אמיתית לא מגיעה במקרה — היא נבנית מתוך הכרה עצמית, צמיחה פנימית ורכישת כלים אמיתיים לזוגיות. כאן נלמד יחד כיצד למצוא זוגיות נכונה, לא מתוך פחד, אלא מתוך בחירה מודעת ומיושבת.</p>
+      <p class="journey-intro">אהבה אמיתית לא מגיעה במקרה , היא נבנית מתוך הכרה עצמית, צמיחה פנימית ורכישת כלים אמיתיים לזוגיות. כאן נלמד יחד כיצד למצוא זוגיות נכונה, לא מתוך פחד, אלא מתוך בחירה מודעת ומיושבת.</p>
     </div>
 
     <!-- Steps + pull-quote layout -->
@@ -1820,7 +1820,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           </div>
           <div class="journey-step-content">
             <h3>הכרת הדפוסים שלי</h3>
-            <p>מגלים מה חוזר על עצמו בקשרים שלנו — אילו אמונות, פחדים ותגובות אוטומטיות מניעים את הבחירות הרומנטיות שלנו, ולמה.</p>
+            <p>מגלים מה חוזר על עצמו בקשרים שלנו , אילו אמונות, פחדים ותגובות אוטומטיות מניעים את הבחירות הרומנטיות שלנו, ולמה.</p>
           </div>
         </div>
       </article>
@@ -1839,7 +1839,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           </div>
           <div class="journey-step-content">
             <h3>חיזוק הערך העצמי</h3>
-            <p>בונים בסיס פנימי יציב — מחזקים את האמונה שאנחנו ראויים לאהבה אמיתית, ומפסיקים לחפש אישור מבחוץ כדי להרגיש שלמים.</p>
+            <p>בונים בסיס פנימי יציב , מחזקים את האמונה שאנחנו ראויים לאהבה אמיתית, ומפסיקים לחפש אישור מבחוץ כדי להרגיש שלמים.</p>
           </div>
         </div>
       </article>
@@ -1847,7 +1847,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <!-- Pull-quote panel -->
       <div class="journey-pullquote" role="blockquote">
         <div class="journey-pullquote-mark" aria-hidden="true">“</div>
-        <p class="journey-pullquote-text">הזוגיות הנכונה מתחילה ביחסים הנכונים עם עצמך. כשאתה מכיר את עצמך — אתה יודע מה לחפש.</p>
+        <p class="journey-pullquote-text">הזוגיות הנכונה מתחילה ביחסים הנכונים עם עצמך. כשאתה מכיר את עצמך , אתה יודע מה לחפש.</p>
         <cite class="journey-pullquote-cite">— ליאור גור, מרכז מבינים זוגיות</cite>
       </div>
 
@@ -1866,7 +1866,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           </div>
           <div class="journey-step-content">
             <h3>תקשורת ברורה ואמיתית</h3>
-            <p>לומדים לדבר את שפת הלב — כיצד לבטא צרכים, להקשיב בלי הגנתיות, וליצור קרבה אמיתית דרך שיחה פתוחה וכנה.</p>
+            <p>לומדים לדבר את שפת הלב , כיצד לבטא צרכים, להקשיב בלי הגנתיות, וליצור קרבה אמיתית דרך שיחה פתוחה וכנה.</p>
           </div>
         </div>
       </article>
@@ -1885,7 +1885,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           </div>
           <div class="journey-step-content">
             <h3>בחירה מתוך יישוב, לא פחד</h3>
-            <p>בוחרים שותף לחיים מתוך מקום של שלמות ובהירות — לא מתוך לחץ חברתי, בדידות או פחד מהחמצה. זו הזוגיות הנכונה שמחכה לך.</p>
+            <p>בוחרים שותף לחיים מתוך מקום של שלמות ובהירות , לא מתוך לחץ חברתי, בדידות או פחד מהחמצה. זו הזוגיות הנכונה שמחכה לך.</p>
           </div>
         </div>
       </article>
@@ -1931,7 +1931,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <article class="index-testimonials-card index-testimonials-card--featured">
         <div class="index-testimonials-quote-mark" aria-hidden="true">“</div>
         <blockquote class="index-testimonials-quote">
-          <p>הגעתי לליאור אחרי שנים של תחושה שמשהו אצלי פשוט לא עובד. כל הניסיונות להכיר מישהו נגמרו באותו מקום — בתסכול, בספק עצמי, ובשאלה “אולי זה אני?”. הקורס לא נתן לי רשימת טיפים. הוא עזר לי להבין מה אני באמת מחפש, ולמה עד עכשיו בחרתי בדפוסים שלא שירתו אותי. לראשונה בחיים הרגשתי שאני לא לבד עם הדברים האלה. יצאתי עם בהירות, עם תקווה, ועם כלים שאני ממשיכה להשתמש בהם כל יום. לא הייתי מאמינה שאפשר לשנות כל כך הרבה בזמן קצר כל כך.</p>
+          <p>הגעתי לליאור אחרי שנים של תחושה שמשהו אצלי פשוט לא עובד. כל הניסיונות להכיר מישהו נגמרו באותו מקום , בתסכול, בספק עצמי, ובשאלה “אולי זה אני?”. הקורס לא נתן לי רשימת טיפים. הוא עזר לי להבין מה אני באמת מחפש, ולמה עד עכשיו בחרתי בדפוסים שלא שירתו אותי. לראשונה בחיים הרגשתי שאני לא לבד עם הדברים האלה. יצאתי עם בהירות, עם תקווה, ועם כלים שאני ממשיכה להשתמש בהם כל יום. לא הייתי מאמינה שאפשר לשנות כל כך הרבה בזמן קצר כל כך.</p>
         </blockquote>
         <footer class="index-testimonials-author">
           <div class="index-testimonials-author-avatar">
@@ -1979,7 +1979,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <article class="index-testimonials-card index-testimonials-card--small">
         <div class="index-testimonials-quote-mark index-testimonials-quote-mark--small" aria-hidden="true">“</div>
         <blockquote class="index-testimonials-quote">
-          <p>אחרי הקורס האונליין של ליאור יצאתי לדייטים עם ביטחון אחר לגמרי. הבנתי מה אני מחפש ואיך להציג את עצמי בצורה אותנטית. פגשתי את בת הזוג שלי שלושה חודשים אחרי הקורס — ואני משוכנע שזה לא מקרי.</p>
+          <p>אחרי הקורס האונליין של ליאור יצאתי לדייטים עם ביטחון אחר לגמרי. הבנתי מה אני מחפש ואיך להציג את עצמי בצורה אותנטית. פגשתי את בת הזוג שלי שלושה חודשים אחרי הקורס , ואני משוכנע שזה לא מקרי.</p>
         </blockquote>
         <footer class="index-testimonials-author">
           <div class="index-testimonials-author-avatar">
@@ -2025,8 +2025,8 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     <div class="index-cta-inner">
       <span class="index-cta-label">מוכנים להתחיל?</span>
       <h2 class="index-cta-heading">צעד ראשון קטן יכול לשנות הכל</h2>
-      <p class="index-cta-body">די לצאת לעוד דייט בלי לדעת לאן זה הולך. דברו איתנו ונסייע לכם למצוא את הדרך הנכונה — עם כלים אמיתיים, ליווי אישי, והכי חשוב: עם הבנה שזה מתחיל מכם.</p>
-      <h3 class="index-cta-promise">כל פנייה מקבלת מענה אישי ומחושב — תמיד.</h3>
+      <p class="index-cta-body">די לצאת לעוד דייט בלי לדעת לאן זה הולך. דברו איתנו ונסייע לכם למצוא את הדרך הנכונה , עם כלים אמיתיים, ליווי אישי, והכי חשוב: עם הבנה שזה מתחיל מכם.</p>
+      <h3 class="index-cta-promise">כל פנייה מקבלת מענה אישי ומחושב , תמיד.</h3>
       <div class="index-cta-buttons">
         <a href="https://lets-go.landy-ai.com" class="index-cta-btn-primary">צרו קשר עכשיו</a>
         <a href="https://lets-go.landy-ai.com" class="index-cta-btn-secondary">שאלו אותי שאלה ראשונה</a>
@@ -2064,7 +2064,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <!-- Column 1: Company Info -->
       <div class="footer-col footer-brand">
-        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות - ליאור גור" class="logo" data-element-type="image" data-element-id="img-1777841668422-p8269wj5w" data-zappy-footer-image="true" decoding="async" width="35" height="35" />
+        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות , ליאור גור" class="logo" data-element-type="image" data-element-id="img-1777841668422-p8269wj5w" data-zappy-footer-image="true" decoding="async" width="35" height="35" />
         <p class="brand-tagline">מרכז מבינים זוגיות מציע ליווי אישי, קורסים וסדנאות לחיזוק הזוגיות, צמיחה אישית והעמקה רגשית.</p>
         <div class="footer-social">
           <a href="https://facebook.com/gur.lior.9" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -2110,7 +2110,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
-      <p class="footer-copyright">© 2026 מרכז מבינים זוגיות - ליאור גור. כל הזכויות שמורות.</p>
+      <p class="footer-copyright">© 2026 מרכז מבינים זוגיות , ליאור גור. כל הזכויות שמורות.</p>
       <div class="footer-legal">
         <a href="/privacy">מדיניות פרטיות</a>
         <span class="legal-sep">·</span>

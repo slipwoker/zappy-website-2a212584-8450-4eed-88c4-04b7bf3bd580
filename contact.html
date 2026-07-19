@@ -643,7 +643,7 @@
               }
             }
             
-            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
+            /* Menu Group styling (non-clickable parent) , TOP LEVEL ONLY with ultra-specific selector */
             .nav-menu > li > .menu-group-title,
             #navMenu > li > .menu-group-title {
               display: inline-block !important;
@@ -688,7 +688,7 @@
               pointer-events: auto !important;
             }
             
-            /* Nested dropdown menu styles - using more specific selectors */
+            /* Nested dropdown menu styles , using more specific selectors */
             .nav-menu .sub-menu,
             nav .sub-menu,
             .navbar .sub-menu {
@@ -712,7 +712,7 @@
               pointer-events: none; /* Prevent interaction when hidden */
             }
             
-            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
+            /* RTL (Hebrew/Arabic) submenu positioning , align to right instead of left */
             [dir="rtl"] .nav-menu .sub-menu,
             [dir="rtl"] nav .sub-menu,
             [dir="rtl"] .navbar .sub-menu,
@@ -726,7 +726,7 @@
               right: 0;
             }
             
-            /* Show submenu on parent hover - more specific selectors */
+            /* Show submenu on parent hover , more specific selectors */
             .nav-menu li:hover > .sub-menu,
             nav li:hover > .sub-menu,
             .navbar li:hover > .sub-menu {
@@ -766,7 +766,7 @@
               background-color: #f5f5f5;
             }
             
-            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
+            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only , must come AFTER submenu styles */
             .nav-menu > li > .menu-group-title,
             #navMenu > li > .menu-group-title {
               display: inline-block !important;
@@ -808,7 +808,7 @@
                 border-radius: 0 !important;
               }
               
-              /* Expanded state — no internal scroll; parent navMenu scrolls */
+              /* Expanded state , no internal scroll; parent navMenu scrolls */
               .sub-menu.mobile-expanded {
                 max-height: none !important;
                 overflow-y: visible !important;
@@ -853,7 +853,7 @@
                 background-color: transparent !important;
               }
               
-              /* Parent item wrapper - flex layout with relative positioning for absolute toggle */
+              /* Parent item wrapper , flex layout with relative positioning for absolute toggle */
               .nav-menu li:has(.sub-menu),
               nav li:has(.sub-menu),
               .navbar li:has(.sub-menu) {
@@ -864,7 +864,7 @@
                 min-height: 44px !important;
               }
               
-              /* Parent link - takes full width since toggle is absolute (not a flex child) */
+              /* Parent link , takes full width since toggle is absolute (not a flex child) */
               .nav-menu li:has(.sub-menu) > a,
               nav li:has(.sub-menu) > a,
               .navbar li:has(.sub-menu) > a,
@@ -902,7 +902,7 @@
                 visibility: hidden !important;
               }
               
-              /* Toggle arrow button - flex child that stretches to match nav-link height */
+              /* Toggle arrow button , flex child that stretches to match nav-link height */
               .mobile-submenu-toggle {
                 display: flex !important;
                 align-items: center !important;
@@ -948,7 +948,7 @@
           
           <script id="zappy-mobile-menu-script">
             // Mobile menu toggle for nested submenus (including Menu Groups)
-            // Uses separate toggle button - link navigates, arrow toggles submenu
+            // Uses separate toggle button , link navigates, arrow toggles submenu
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
@@ -958,7 +958,7 @@
                   document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
                     menu.classList.remove('mobile-expanded');
                   });
-                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
+                  console.log('[MOBILE MENU] Desktop mode , cleanup done');
                   return;
                 }
                 
@@ -993,7 +993,7 @@
                   
                   console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
                   
-                  // Handle toggle button click - only toggles submenu
+                  // Handle toggle button click , only toggles submenu
                   toggleBtn.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
@@ -1016,7 +1016,7 @@
                     console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
                   });
                   
-                  // Parent link navigates normally - no preventDefault
+                  // Parent link navigates normally , no preventDefault
                 });
               }
               
@@ -1181,7 +1181,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות - ליאור גור" class="logo" decoding="async" width="35" height="35" />
+        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות , ליאור גור" class="logo" decoding="async" width="35" height="35" />
       </a>
     </div><ul class="nav-menu" id="navMenu"><li><a href="/club" class="nav-link">מועדון מבינים זוגיות</a></li><li><a href="/articles" class>מאמרים</a></li><li><a href="/about">אודות</a></li><li class="menu-item-has-children zappy-products-dropdown">
       <a href="/products">
@@ -1263,7 +1263,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
-        // Transparent navbar - check body background
+        // Transparent navbar , check body background
         const bodyBg = window.getComputedStyle(document.body).backgroundColor;
         console.log('[Navbar] Navbar transparent, using body background:', bodyBg);
         bgColor = bodyBg;
@@ -1279,10 +1279,10 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
       
       // Mobile button colors are set by Claude's AI-generated CSS (same as .nav-menu a)
-      // No dynamic color overrides needed - colors come from the generated navbar CSS
+      // No dynamic color overrides needed , colors come from the generated navbar CSS
       console.log('[Navbar] Mobile button colors preserved from Claude CSS (luminance:', luminance.toFixed(2) + ')');
       
-      // FIX ICON SIZES - Ensure SVGs are properly sized and visible
+      // FIX ICON SIZES , Ensure SVGs are properly sized and visible
       // INJECT CRITICAL CSS TO OVERRIDE ANY CONFLICTING RULES
       const criticalCSS = document.createElement('style');
       criticalCSS.id = 'zappy-mobile-nav-fix';
@@ -1360,10 +1360,10 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           .phone-header-btn svg {
             width: 24px !important;
             height: 24px !important;
-            /* Don't force display - let JavaScript control hamburger/close toggle */
+            /* Don't force display , let JavaScript control hamburger/close toggle */
           }
           
-          /* Reset nav-cta-container on mobile - remove desktop box-shadow/padding */
+          /* Reset nav-cta-container on mobile , remove desktop box-shadow/padding */
           /* that creates a visible ghost box when CTA button is hidden */
           .nav-cta-container {
             box-shadow: none !important;
@@ -1386,7 +1386,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
             bottom: 0 !important;
           }
           
-          /* Hide desktop language switcher on mobile - hamburger menu handles it */
+          /* Hide desktop language switcher on mobile , hamburger menu handles it */
           /* High specificity to override stored CSS */
           .lang-switcher,
           .nav-cta-container .lang-switcher,
@@ -1446,7 +1446,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           mobileToggle.style.removeProperty('z-index');
           mobileToggle.style.removeProperty('left');
           mobileToggle.style.removeProperty('right');
-          console.log('[Navbar] Desktop viewport - cleared mobile toggle inline positioning');
+          console.log('[Navbar] Desktop viewport , cleared mobile toggle inline positioning');
         }
       }
       
@@ -1480,7 +1480,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           phoneBtn.style.removeProperty('z-index');
           phoneBtn.style.removeProperty('left');
           phoneBtn.style.removeProperty('right');
-          console.log('[Navbar] Desktop viewport - cleared phone button inline positioning');
+          console.log('[Navbar] Desktop viewport , cleared phone button inline positioning');
         }
       }
     } else {
@@ -1520,7 +1520,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     const newToggle = mobileToggle.cloneNode(true);
     mobileToggle.parentNode.replaceChild(newToggle, mobileToggle);
     
-    // Toggle menu on button click - use newToggle now
+    // Toggle menu on button click , use newToggle now
     newToggle.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
@@ -1654,7 +1654,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <!-- START column: text content -->
       <div class="contact-text-col">
         <h1 class="contact-h1">בואו נדבר על הדרך שלך לזוגיות</h1>
-        <p class="contact-intro">יש לך שאלות על קורס מתאים, סדנת זוגיות, או מפגש קבוצתי? כל שאלה מתקבלת בחום ובכבוד. אנחנו כאן כדי לעזור לך למצוא את המסגרת הנכונה עבורך — בלי לחץ ובלי מחויבות מראש.</p>
+        <p class="contact-intro">יש לך שאלות על קורס מתאים, סדנת זוגיות, או מפגש קבוצתי? כל שאלה מתקבלת בחום ובכבוד. אנחנו כאן כדי לעזור לך למצוא את המסגרת הנכונה עבורך , בלי לחץ ובלי מחויבות מראש.</p>
         <div class="contact-reassurances">
           <div class="contact-reassurance-item">
             <div class="reassurance-icon">
@@ -1665,7 +1665,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
             </div>
             <div class="reassurance-content">
               <h3 class="reassurance-h3">מענה אישי ואמיתי</h3>
-              <p class="reassurance-desc">כל פנייה מקבלת מענה אישי מליאור גור עצמו — לא טפסים אוטומטיים.</p>
+              <p class="reassurance-desc">כל פנייה מקבלת מענה אישי מליאור גור עצמו , לא טפסים אוטומטיים.</p>
             </div>
           </div>
           <div class="contact-reassurance-item">
@@ -1677,7 +1677,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
             </div>
             <div class="reassurance-content">
               <h3 class="reassurance-h3">תקשורת מכבדת ורגישה</h3>
-              <p class="reassurance-desc">אנחנו מאמינים שכל שיחה היא נקודת התחלה — נקשיב, לא נשפוט.</p>
+              <p class="reassurance-desc">אנחנו מאמינים שכל שיחה היא נקודת התחלה , נקשיב, לא נשפוט.</p>
             </div>
           </div>
           <div class="contact-reassurance-item">
@@ -1689,7 +1689,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
             </div>
             <div class="reassurance-content">
               <h3 class="reassurance-h3">צעד ראשון ללא לחץ</h3>
-              <p class="reassurance-desc">פנייה אלינו אינה מחייבת דבר — רק הזמנה לשיחה פתוחה על מה שמתאים לך.</p>
+              <p class="reassurance-desc">פנייה אלינו אינה מחייבת דבר , רק הזמנה לשיחה פתוחה על מה שמתאים לך.</p>
             </div>
           </div>
         </div>
@@ -1721,7 +1721,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     <div class="contact-form-section__header">
       <span class="contact-form-section__eyebrow">נשמח לשמוע ממך</span>
       <h2 class="contact-form-section__title">שלחו לנו הודעה ראשונה</h2>
-      <p class="contact-form-section__intro">בין אם אתם בתחילת הדרך לעצמאות רגשית, בין אם אתם מחפשים את הזוגיות הנכונה, ובין אם אתם רוצים לעמיק את הקשר הקיים — שתפו אותנו היכן אתם נמצאים עכשיו. כל מסע מתחיל בצעד קטן אחד.</p>
+      <p class="contact-form-section__intro">בין אם אתם בתחילת הדרך לעצמאות רגשית, בין אם אתם מחפשים את הזוגיות הנכונה, ובין אם אתם רוצים לעמיק את הקשר הקיים , שתפו אותנו היכן אתם נמצאים עכשיו. כל מסע מתחיל בצעד קטן אחד.</p>
     </div>
 
     <div class="contact-form-section__card card-default">
@@ -1791,7 +1791,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   <div class="contact-next-steps-container">
     <div class="contact-next-steps-header">
       <h2 class="contact-next-steps-title">מה קורה אחרי שאתם פונים אלינו?</h2>
-      <p class="contact-next-steps-subtitle">כל פנייה מקבלת התייחסות אישית ומלאה — כי כל אחד מגיע עם סיפור שונה ורצון אמיתי לשינוי</p>
+      <p class="contact-next-steps-subtitle">כל פנייה מקבלת התייחסות אישית ומלאה , כי כל אחד מגיע עם סיפור שונה ורצון אמיתי לשינוי</p>
     </div>
     <div class="contact-next-steps-grid">
       <article class="contact-next-step-card">
@@ -1803,7 +1803,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         </div>
         <div class="contact-next-step-content">
           <h3 class="contact-next-step-title">תגובה אישית ממני</h3>
-          <p class="contact-next-step-desc">בתוך 24–48 שעות תקבלו מענה אישי ממני — ליאור גור. לא בוט, לא מזכירה. אני קורא כל פנייה בעצמי ומגיב מהלב.</p>
+          <p class="contact-next-step-desc">בתוך 24–48 שעות תקבלו מענה אישי ממני , ליאור גור. לא בוט, לא מזכירה. אני קורא כל פנייה בעצמי ומגיב מהלב.</p>
         </div>
       </article>
       <article class="contact-next-step-card">
@@ -1817,7 +1817,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         </div>
         <div class="contact-next-step-content">
           <h3 class="contact-next-step-title">הבנת הצרכים שלכם</h3>
-          <p class="contact-next-step-desc">נקיים שיחה קצרה ומכוונת — כדי שאבין איפה אתם נמצאים עכשיו, מה אתם מחפשים, ומה עצר אתכם עד היום.</p>
+          <p class="contact-next-step-desc">נקיים שיחה קצרה ומכוונת , כדי שאבין איפה אתם נמצאים עכשיו, מה אתם מחפשים, ומה עצר אתכם עד היום.</p>
         </div>
       </article>
       <article class="contact-next-step-card">
@@ -1829,7 +1829,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         </div>
         <div class="contact-next-step-content">
           <h3 class="contact-next-step-title">המסלול המתאים לכם</h3>
-          <p class="contact-next-step-desc">יחד נמצא את הדרך הנכונה — קורס, סדנת זוגיות, מפגש קבוצתי, או ליווי אישי. לא תצטרכו להחליט לבד.</p>
+          <p class="contact-next-step-desc">יחד נמצא את הדרך הנכונה , קורס, סדנת זוגיות, מפגש קבוצתי, או ליווי אישי. לא תצטרכו להחליט לבד.</p>
         </div>
       </article>
     </div>
@@ -1845,7 +1845,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   <div class="contact-cta-inner">
     <div class="contact-cta-content">
       <h2 class="contact-cta-heading">שינוי אמיתי יכול להתחיל במסר אחד</h2>
-      <p class="contact-cta-text">אתה מוזמן להגיע בדיוק כפי שאתה — עם השאלות, עם הספקות, עם התקווה. כאן תמצא מקום חם ופתוח שבו אפשר לדבר בכנות על זוגיות, על מה שאתה מחפש, ועל הדרך להגיע אליו.</p>
+      <p class="contact-cta-text">אתה מוזמן להגיע בדיוק כפי שאתה , עם השאלות, עם הספקות, עם התקווה. כאן תמצא מקום חם ופתוח שבו אפשר לדבר בכנות על זוגיות, על מה שאתה מחפש, ועל הדרך להגיע אליו.</p>
       <a href="#contact-form" class="contact-cta-btn btn-primary">כתוב לי עכשיו</a>
     </div>
   </div>
@@ -1858,7 +1858,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <!-- Column 1: Company Info -->
       <div class="footer-col footer-brand">
-        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות - ליאור גור" class="logo" data-element-type="image" data-element-id="img-1777841668422-p8269wj5w" data-zappy-footer-image="true" decoding="async" width="35" height="35" />
+        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות , ליאור גור" class="logo" data-element-type="image" data-element-id="img-1777841668422-p8269wj5w" data-zappy-footer-image="true" decoding="async" width="35" height="35" />
         <p class="brand-tagline">מרכז מבינים זוגיות מציע ליווי אישי, קורסים וסדנאות לחיזוק הזוגיות, צמיחה אישית והעמקה רגשית.</p>
         <div class="footer-social">
           <a href="https://facebook.com/gur.lior.9" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -1904,7 +1904,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
-      <p class="footer-copyright">© 2026 מרכז מבינים זוגיות - ליאור גור. כל הזכויות שמורות.</p>
+      <p class="footer-copyright">© 2026 מרכז מבינים זוגיות , ליאור גור. כל הזכויות שמורות.</p>
       <div class="footer-legal">
         <a href="/privacy">מדיניות פרטיות</a>
         <span class="legal-sep">·</span>

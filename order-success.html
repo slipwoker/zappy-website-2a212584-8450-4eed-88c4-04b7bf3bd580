@@ -622,7 +622,7 @@
               }
             }
             
-            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
+            /* Menu Group styling (non-clickable parent) , TOP LEVEL ONLY with ultra-specific selector */
             .nav-menu > li > .menu-group-title,
             #navMenu > li > .menu-group-title {
               display: inline-block !important;
@@ -667,7 +667,7 @@
               pointer-events: auto !important;
             }
             
-            /* Nested dropdown menu styles - using more specific selectors */
+            /* Nested dropdown menu styles , using more specific selectors */
             .nav-menu .sub-menu,
             nav .sub-menu,
             .navbar .sub-menu {
@@ -691,7 +691,7 @@
               pointer-events: none; /* Prevent interaction when hidden */
             }
             
-            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
+            /* RTL (Hebrew/Arabic) submenu positioning , align to right instead of left */
             [dir="rtl"] .nav-menu .sub-menu,
             [dir="rtl"] nav .sub-menu,
             [dir="rtl"] .navbar .sub-menu,
@@ -705,7 +705,7 @@
               right: 0;
             }
             
-            /* Show submenu on parent hover - more specific selectors */
+            /* Show submenu on parent hover , more specific selectors */
             .nav-menu li:hover > .sub-menu,
             nav li:hover > .sub-menu,
             .navbar li:hover > .sub-menu {
@@ -745,7 +745,7 @@
               background-color: #f5f5f5;
             }
             
-            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
+            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only , must come AFTER submenu styles */
             .nav-menu > li > .menu-group-title,
             #navMenu > li > .menu-group-title {
               display: inline-block !important;
@@ -787,7 +787,7 @@
                 border-radius: 0 !important;
               }
               
-              /* Expanded state — no internal scroll; parent navMenu scrolls */
+              /* Expanded state , no internal scroll; parent navMenu scrolls */
               .sub-menu.mobile-expanded {
                 max-height: none !important;
                 overflow-y: visible !important;
@@ -832,7 +832,7 @@
                 background-color: transparent !important;
               }
               
-              /* Parent item wrapper - flex layout with relative positioning for absolute toggle */
+              /* Parent item wrapper , flex layout with relative positioning for absolute toggle */
               .nav-menu li:has(.sub-menu),
               nav li:has(.sub-menu),
               .navbar li:has(.sub-menu) {
@@ -843,7 +843,7 @@
                 min-height: 44px !important;
               }
               
-              /* Parent link - takes full width since toggle is absolute (not a flex child) */
+              /* Parent link , takes full width since toggle is absolute (not a flex child) */
               .nav-menu li:has(.sub-menu) > a,
               nav li:has(.sub-menu) > a,
               .navbar li:has(.sub-menu) > a,
@@ -881,7 +881,7 @@
                 visibility: hidden !important;
               }
               
-              /* Toggle arrow button - flex child that stretches to match nav-link height */
+              /* Toggle arrow button , flex child that stretches to match nav-link height */
               .mobile-submenu-toggle {
                 display: flex !important;
                 align-items: center !important;
@@ -927,7 +927,7 @@
           
           <script id="zappy-mobile-menu-script">
             // Mobile menu toggle for nested submenus (including Menu Groups)
-            // Uses separate toggle button - link navigates, arrow toggles submenu
+            // Uses separate toggle button , link navigates, arrow toggles submenu
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
@@ -937,7 +937,7 @@
                   document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
                     menu.classList.remove('mobile-expanded');
                   });
-                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
+                  console.log('[MOBILE MENU] Desktop mode , cleanup done');
                   return;
                 }
                 
@@ -972,7 +972,7 @@
                   
                   console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
                   
-                  // Handle toggle button click - only toggles submenu
+                  // Handle toggle button click , only toggles submenu
                   toggleBtn.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
@@ -995,7 +995,7 @@
                     console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
                   });
                   
-                  // Parent link navigates normally - no preventDefault
+                  // Parent link navigates normally , no preventDefault
                 });
               }
               
@@ -1160,7 +1160,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות - ליאור גור" class="logo" decoding="async" width="35" height="35" />
+        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות , ליאור גור" class="logo" decoding="async" width="35" height="35" />
       </a>
     </div><ul class="nav-menu" id="navMenu"><li><a href="/club" class="nav-link">מועדון מבינים זוגיות</a></li><li><a href="/articles" class>מאמרים</a></li><li><a href="/about">אודות</a></li><li class="menu-item-has-children zappy-products-dropdown">
       <a href="/products">
@@ -1235,7 +1235,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <!-- Column 1: Company Info -->
       <div class="footer-col footer-brand">
-        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות - ליאור גור" class="logo" data-element-type="image" data-element-id="img-1777841668422-p8269wj5w" data-zappy-footer-image="true" decoding="async" width="35" height="35" />
+        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות , ליאור גור" class="logo" data-element-type="image" data-element-id="img-1777841668422-p8269wj5w" data-zappy-footer-image="true" decoding="async" width="35" height="35" />
         <p class="brand-tagline">מרכז מבינים זוגיות מציע ליווי אישי, קורסים וסדנאות לחיזוק הזוגיות, צמיחה אישית והעמקה רגשית.</p>
         <div class="footer-social">
           <a href="https://facebook.com/gur.lior.9" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -1281,7 +1281,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
-      <p class="footer-copyright">© 2026 מרכז מבינים זוגיות - ליאור גור. כל הזכויות שמורות.</p>
+      <p class="footer-copyright">© 2026 מרכז מבינים זוגיות , ליאור גור. כל הזכויות שמורות.</p>
       <div class="footer-legal">
         <a href="/privacy">מדיניות פרטיות</a>
         <span class="legal-sep">·</span>
@@ -1347,7 +1347,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         // switched via ?lang. Derive the active language from the current URL
         // (path prefix on static pages, ?lang on courses pages) so search keeps
         // the language instead of dropping back to the site default. NOTE: the
-        // \ in the regex is intentional — this block lives in a template
+        // \ in the regex is intentional , this block lives in a template
         // literal that bakes the page, so a bare \/ would be dropped.
         var base = '/products';
         var activeLang = (function() {

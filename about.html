@@ -1009,7 +1009,7 @@
               }
             }
             
-            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
+            /* Menu Group styling (non-clickable parent) , TOP LEVEL ONLY with ultra-specific selector */
             .nav-menu > li > .menu-group-title,
             #navMenu > li > .menu-group-title {
               display: inline-block !important;
@@ -1054,7 +1054,7 @@
               pointer-events: auto !important;
             }
             
-            /* Nested dropdown menu styles - using more specific selectors */
+            /* Nested dropdown menu styles , using more specific selectors */
             .nav-menu .sub-menu,
             nav .sub-menu,
             .navbar .sub-menu {
@@ -1078,7 +1078,7 @@
               pointer-events: none; /* Prevent interaction when hidden */
             }
             
-            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
+            /* RTL (Hebrew/Arabic) submenu positioning , align to right instead of left */
             [dir="rtl"] .nav-menu .sub-menu,
             [dir="rtl"] nav .sub-menu,
             [dir="rtl"] .navbar .sub-menu,
@@ -1092,7 +1092,7 @@
               right: 0;
             }
             
-            /* Show submenu on parent hover - more specific selectors */
+            /* Show submenu on parent hover , more specific selectors */
             .nav-menu li:hover > .sub-menu,
             nav li:hover > .sub-menu,
             .navbar li:hover > .sub-menu {
@@ -1132,7 +1132,7 @@
               background-color: #f5f5f5;
             }
             
-            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
+            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only , must come AFTER submenu styles */
             .nav-menu > li > .menu-group-title,
             #navMenu > li > .menu-group-title {
               display: inline-block !important;
@@ -1174,7 +1174,7 @@
                 border-radius: 0 !important;
               }
               
-              /* Expanded state — no internal scroll; parent navMenu scrolls */
+              /* Expanded state , no internal scroll; parent navMenu scrolls */
               .sub-menu.mobile-expanded {
                 max-height: none !important;
                 overflow-y: visible !important;
@@ -1219,7 +1219,7 @@
                 background-color: transparent !important;
               }
               
-              /* Parent item wrapper - flex layout with relative positioning for absolute toggle */
+              /* Parent item wrapper , flex layout with relative positioning for absolute toggle */
               .nav-menu li:has(.sub-menu),
               nav li:has(.sub-menu),
               .navbar li:has(.sub-menu) {
@@ -1230,7 +1230,7 @@
                 min-height: 44px !important;
               }
               
-              /* Parent link - takes full width since toggle is absolute (not a flex child) */
+              /* Parent link , takes full width since toggle is absolute (not a flex child) */
               .nav-menu li:has(.sub-menu) > a,
               nav li:has(.sub-menu) > a,
               .navbar li:has(.sub-menu) > a,
@@ -1268,7 +1268,7 @@
                 visibility: hidden !important;
               }
               
-              /* Toggle arrow button - flex child that stretches to match nav-link height */
+              /* Toggle arrow button , flex child that stretches to match nav-link height */
               .mobile-submenu-toggle {
                 display: flex !important;
                 align-items: center !important;
@@ -1314,7 +1314,7 @@
           
           <script id="zappy-mobile-menu-script">
             // Mobile menu toggle for nested submenus (including Menu Groups)
-            // Uses separate toggle button - link navigates, arrow toggles submenu
+            // Uses separate toggle button , link navigates, arrow toggles submenu
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
@@ -1324,7 +1324,7 @@
                   document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
                     menu.classList.remove('mobile-expanded');
                   });
-                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
+                  console.log('[MOBILE MENU] Desktop mode , cleanup done');
                   return;
                 }
                 
@@ -1359,7 +1359,7 @@
                   
                   console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
                   
-                  // Handle toggle button click - only toggles submenu
+                  // Handle toggle button click , only toggles submenu
                   toggleBtn.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
@@ -1382,7 +1382,7 @@
                     console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
                   });
                   
-                  // Parent link navigates normally - no preventDefault
+                  // Parent link navigates normally , no preventDefault
                 });
               }
               
@@ -1547,7 +1547,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות - ליאור גור" class="logo" decoding="async" width="35" height="35" />
+        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות , ליאור גור" class="logo" decoding="async" width="35" height="35" />
       </a>
     </div><ul class="nav-menu" id="navMenu"><li><a href="/club" class="nav-link">מועדון מבינים זוגיות</a></li><li><a href="/articles" class>מאמרים</a></li><li><a href="/about">אודות</a></li><li class="menu-item-has-children zappy-products-dropdown">
       <a href="/products">
@@ -1629,7 +1629,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
-        // Transparent navbar - check body background
+        // Transparent navbar , check body background
         const bodyBg = window.getComputedStyle(document.body).backgroundColor;
         console.log('[Navbar] Navbar transparent, using body background:', bodyBg);
         bgColor = bodyBg;
@@ -1645,10 +1645,10 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
       
       // Mobile button colors are set by Claude's AI-generated CSS (same as .nav-menu a)
-      // No dynamic color overrides needed - colors come from the generated navbar CSS
+      // No dynamic color overrides needed , colors come from the generated navbar CSS
       console.log('[Navbar] Mobile button colors preserved from Claude CSS (luminance:', luminance.toFixed(2) + ')');
       
-      // FIX ICON SIZES - Ensure SVGs are properly sized and visible
+      // FIX ICON SIZES , Ensure SVGs are properly sized and visible
       // INJECT CRITICAL CSS TO OVERRIDE ANY CONFLICTING RULES
       const criticalCSS = document.createElement('style');
       criticalCSS.id = 'zappy-mobile-nav-fix';
@@ -1726,10 +1726,10 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           .phone-header-btn svg {
             width: 24px !important;
             height: 24px !important;
-            /* Don't force display - let JavaScript control hamburger/close toggle */
+            /* Don't force display , let JavaScript control hamburger/close toggle */
           }
           
-          /* Reset nav-cta-container on mobile - remove desktop box-shadow/padding */
+          /* Reset nav-cta-container on mobile , remove desktop box-shadow/padding */
           /* that creates a visible ghost box when CTA button is hidden */
           .nav-cta-container {
             box-shadow: none !important;
@@ -1752,7 +1752,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
             bottom: 0 !important;
           }
           
-          /* Hide desktop language switcher on mobile - hamburger menu handles it */
+          /* Hide desktop language switcher on mobile , hamburger menu handles it */
           /* High specificity to override stored CSS */
           .lang-switcher,
           .nav-cta-container .lang-switcher,
@@ -1812,7 +1812,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           mobileToggle.style.removeProperty('z-index');
           mobileToggle.style.removeProperty('left');
           mobileToggle.style.removeProperty('right');
-          console.log('[Navbar] Desktop viewport - cleared mobile toggle inline positioning');
+          console.log('[Navbar] Desktop viewport , cleared mobile toggle inline positioning');
         }
       }
       
@@ -1846,7 +1846,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           phoneBtn.style.removeProperty('z-index');
           phoneBtn.style.removeProperty('left');
           phoneBtn.style.removeProperty('right');
-          console.log('[Navbar] Desktop viewport - cleared phone button inline positioning');
+          console.log('[Navbar] Desktop viewport , cleared phone button inline positioning');
         }
       }
     } else {
@@ -1886,7 +1886,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     const newToggle = mobileToggle.cloneNode(true);
     mobileToggle.parentNode.replaceChild(newToggle, mobileToggle);
     
-    // Toggle menu on button click - use newToggle now
+    // Toggle menu on button click , use newToggle now
     newToggle.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
@@ -2039,7 +2039,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <div class="about-story-photo-frame">
         <div data-zappy-zoom-wrapper="true" data-element-id="img-1777837472817-oa1s241wl" data-element-type="image" data-zappy-zoom-wrapper-width="438px" data-zappy-zoom-wrapper-height="584px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 438px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 584px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img data-placeholder="about-story-image-1" data-context="Warm editorial portrait of Lior Gur, a male Israeli relationship coach in his 40s, seated in a cozy, softly lit room with warm cream and terracotta tones. He has an open, trustworthy smile, wearing casual-smart clothing. The background suggests a calm study or living space with warm natural light filtering through. Photographic style: editorial, intimate, warm-toned, shot on medium format. The image evokes safety, wisdom, and approachability." width="520" height="680" src="/assets/site-service-story-image-1-1777837496635-x1rmt8.webp?v=1777837498065" alt="ליאור גור, מנחה ומאמן זוגיות במרכז מבינים זוגיות" data-element-type="image" data-element-id="img-1777837472817-oa1s241wl" style="object-position: 50% 50% !important; border-radius: 8px; object-fit: cover !important; width: 100% !important; height: 100% !important; max-width: none !important; display: block !important; margin: 0px !important; position: absolute !important; left: 0% !important; top: 0% !important; max-height: none !important;" data-zappy-object-position="50% 50%" data-zappy-zoom="1" loading="lazy" decoding="async" fetchpriority="low" /></div>
       </div>
-      <div class="about-story-photo-caption">ליאור גור — מנחה, מאמן ומייסד מרכז מבינים זוגיות</div>
+      <div class="about-story-photo-caption">ליאור גור , מנחה, מאמן ומייסד מרכז מבינים זוגיות</div>
     </figure>
   </div>
 
@@ -2247,7 +2247,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         <!-- Image frame -->
         <div class="profile-image-frame">
           <div class="profile-image-accent-ring" aria-hidden="true"></div>
-          <div data-zappy-zoom-wrapper="true" data-element-id="img-1777839956192-cxvd04our" data-element-type="image" data-zappy-zoom-wrapper-width="380px" data-zappy-zoom-wrapper-height="380px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 380px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 380px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img alt="ליאור גור - מנחה ומאמן זוגיות, מרכז מבינים זוגיות" class="profile-photo" src="/assets/site-service-profile-image-1-1777841326622-pt92ja.webp?v=1777841328640" data-placeholder="about-profile-image-1" data-context="Warm editorial lifestyle photograph of a thoughtful Israeli relationship coach in a calm, sunlit studio setting. The coach sits near a wooden table with an open notebook, a ceramic mug, and soft natural light streaming through a window. The atmosphere is intimate, grounded, and hopeful — evoking a sense of personal reflection and gentle guidance. Warm terracotta and cream tones, soft bokeh background." style="width: 100% !important; height: 100% !important; object-fit: cover !important; object-position: 50% 50% !important; max-width: none !important; display: block !important; margin: 0px !important; left: 0% !important; top: 0% !important; max-height: none !important;" data-element-type="image" data-element-id="img-1777839956192-cxvd04our" data-zappy-object-position="50% 50%" data-zappy-zoom="1" loading="lazy" decoding="async" fetchpriority="low" /></div>
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1777839956192-cxvd04our" data-element-type="image" data-zappy-zoom-wrapper-width="380px" data-zappy-zoom-wrapper-height="380px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 380px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 380px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img alt="ליאור גור , מנחה ומאמן זוגיות, מרכז מבינים זוגיות" class="profile-photo" src="/assets/site-service-profile-image-1-1777841326622-pt92ja.webp?v=1777841328640" data-placeholder="about-profile-image-1" data-context="Warm editorial lifestyle photograph of a thoughtful Israeli relationship coach in a calm, sunlit studio setting. The coach sits near a wooden table with an open notebook, a ceramic mug, and soft natural light streaming through a window. The atmosphere is intimate, grounded, and hopeful , evoking a sense of personal reflection and gentle guidance. Warm terracotta and cream tones, soft bokeh background." style="width: 100% !important; height: 100% !important; object-fit: cover !important; object-position: 50% 50% !important; max-width: none !important; display: block !important; margin: 0px !important; left: 0% !important; top: 0% !important; max-height: none !important;" data-element-type="image" data-element-id="img-1777839956192-cxvd04our" data-zappy-object-position="50% 50%" data-zappy-zoom="1" loading="lazy" decoding="async" fetchpriority="low" /></div>
           <!-- Name badge -->
           <div class="profile-name-badge">
             <span class="profile-name" style="color: rgb(46, 42, 39) !important;">ליאור גור</span>
@@ -2355,7 +2355,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
     <div class="about-reviews-bridge">
       <hr class="about-reviews-divider" aria-hidden="true" />
-      <p class="about-reviews-bridge-text">כל אחת מהסיפורים האלה התחילה בצעד אחד קטן — פנייה. אם גם אתם מרגישים שהגיע הזמן לשינוי אמיתי בחיי הזוגיות שלכם, אנחנו כאן בשבילכם. <a href="/contact" class="about-reviews-bridge-link" style="color: rgb(46, 42, 39) !important;">דברו איתנו בדף יצירת הקשר</a> ונתחיל יחד.</p>
+      <p class="about-reviews-bridge-text">כל אחת מהסיפורים האלה התחילה בצעד אחד קטן , פנייה. אם גם אתם מרגישים שהגיע הזמן לשינוי אמיתי בחיי הזוגיות שלכם, אנחנו כאן בשבילכם. <a href="/contact" class="about-reviews-bridge-link" style="color: rgb(46, 42, 39) !important;">דברו איתנו בדף יצירת הקשר</a> ונתחיל יחד.</p>
     </div>
 
   </div>
@@ -2368,7 +2368,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <!-- Column 1: Company Info -->
       <div class="footer-col footer-brand">
-        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות - ליאור גור" class="logo" data-element-type="image" data-element-id="img-1777841668422-p8269wj5w" data-zappy-footer-image="true" decoding="async" width="35" height="35" />
+        <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות , ליאור גור" class="logo" data-element-type="image" data-element-id="img-1777841668422-p8269wj5w" data-zappy-footer-image="true" decoding="async" width="35" height="35" />
         <p class="brand-tagline">מרכז מבינים זוגיות מציע ליווי אישי, קורסים וסדנאות לחיזוק הזוגיות, צמיחה אישית והעמקה רגשית.</p>
         <div class="footer-social">
           <a href="https://facebook.com/gur.lior.9" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -2414,7 +2414,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
-      <p class="footer-copyright">© 2026 מרכז מבינים זוגיות - ליאור גור. כל הזכויות שמורות.</p>
+      <p class="footer-copyright">© 2026 מרכז מבינים זוגיות , ליאור גור. כל הזכויות שמורות.</p>
       <div class="footer-legal">
         <a href="/privacy">מדיניות פרטיות</a>
         <span class="legal-sep">·</span>
