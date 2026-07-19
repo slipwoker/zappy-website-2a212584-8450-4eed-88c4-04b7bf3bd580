@@ -20047,6 +20047,10 @@ main,
   line-height: 1.5 !important;
   min-width: 100px !important;
 }
+
+.blog-section .blog-card-link::after {
+  content: none !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
