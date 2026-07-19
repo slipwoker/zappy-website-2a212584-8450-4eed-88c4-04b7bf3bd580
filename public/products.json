@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-19T07:21:18.600Z",
+  "generated_at": "2026-07-19T07:24:20.958Z",
   "base_url": "https://liorgur.com",
   "currency": "ILS",
   "count": 3,
@@ -36,8 +36,8 @@
       "short_description": null,
       "sku": null,
       "brand": null,
-      "price": 396.99,
-      "base_price": 396.99,
+      "price": 397,
+      "base_price": 397,
       "sale_price": null,
       "currency": "ILS",
       "images": [
@@ -47,7 +47,7 @@
       "stock_status": "in_stock",
       "url": "https://liorgur.com/product/hkvrs-hdygytly-ytsyah-mtkyavt-okg88a",
       "categories": [],
-      "updated_at": "2026-05-21T10:14:49.362Z"
+      "updated_at": "2026-07-19T07:23:39.690Z"
     },
     {
       "id": "ba07fb68-a214-48fa-a700-9e56485cd0ee",
