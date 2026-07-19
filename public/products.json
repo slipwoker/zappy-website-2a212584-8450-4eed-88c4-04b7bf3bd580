@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-19T16:01:01.225Z",
+  "generated_at": "2026-07-19T16:21:04.334Z",
   "base_url": "https://liorgur.com",
   "currency": "ILS",
   "count": 3,
@@ -51,7 +51,7 @@
     },
     {
       "id": "ba07fb68-a214-48fa-a700-9e56485cd0ee",
-      "slug": "mnvy-lmvadvn-mbynym-zvgyvt-cw6eet",
+      "slug": "mnvy-lmvadvn-mbynym-zvgyvt-o7v7q6",
       "name": "מנוי למועדון מבינים זוגיות",
       "name_translations": {},
       "description": "<p>מסגרת קבועה שמאפשרת להישאר בתהליך ולא לחזור לאותם דפוסים לבד. כוללת הטבות לאירועים, חיבורים, תוכן וליווי , מתמשך בתוך קהילה פעילה. פעילות שוטפת לאורך החודש 📍 מיקום: אירועים פרונטליים בהרצליה + פעילות דיגיטלית, קורסים דיגיטליים זומים וכדומה</p>",
@@ -67,9 +67,9 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://liorgur.com/product/mnvy-lmvadvn-mbynym-zvgyvt-cw6eet",
+      "url": "https://liorgur.com/product/mnvy-lmvadvn-mbynym-zvgyvt-o7v7q6",
       "categories": [],
-      "updated_at": "2026-06-16T15:43:23.634Z"
+      "updated_at": "2026-07-19T16:19:54.739Z"
     }
   ]
 }
