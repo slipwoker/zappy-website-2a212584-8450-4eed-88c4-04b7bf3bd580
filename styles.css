@@ -20832,6 +20832,192 @@ main,
     max-height: 220px;
   }
 }
+
+/* AI-generated section */
+.article-section {
+  background-color: #2E2A27;
+  min-height: 100vh;
+  padding: 60px 20px 80px;
+  font-family: 'Rubik', system-ui, sans-serif;
+  direction: rtl;
+}
+
+.article-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* תמונת כותרת */
+.article-hero-image {
+  width: 100%;
+  margin-bottom: 32px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.article-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 450px;
+  object-fit: cover;
+}
+
+/* מטא דאטה */
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.article-date {
+  color: #C96F4A;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.article-category {
+  background-color: rgba(201, 111, 74, 0.15);
+  color: #C96F4A;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* כותרת ראשית */
+.article-title {
+  color: #C96F4A;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 36px;
+  text-align: right;
+}
+
+/* תוכן המאמר */
+.article-content {
+  color: #F6F1E8;
+  line-height: 1.85;
+  font-size: 1.1rem;
+}
+
+.article-paragraph {
+  margin-bottom: 24px;
+  text-align: right;
+  font-weight: 300;
+}
+
+.article-subtitle {
+  color: #C96F4A;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: right;
+  line-height: 1.4;
+}
+
+/* כפתור חזרה */
+.article-back-wrapper {
+  margin-top: 48px;
+  text-align: right;
+}
+
+.article-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gradient-primary, linear-gradient(180deg, #D47953 0%, #C96F4A 100%));
+  color: #F6F1E8;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(201, 111, 74, 0.3);
+}
+
+.article-back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 111, 74, 0.45);
+}
+
+.article-back-btn:focus-visible {
+  outline: 2px solid #F6F1E8;
+  outline-offset: 3px;
+}
+
+.btn-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.article-back-btn:hover .btn-arrow {
+  transform: translateX(-4px);
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  .article-section {
+    padding: 40px 16px 60px;
+  }
+
+  .article-title {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+  }
+
+  .article-subtitle {
+    font-size: 1.3rem;
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+
+  .article-content {
+    font-size: 1rem;
+  }
+
+  .article-paragraph {
+    margin-bottom: 20px;
+  }
+
+  .article-hero-img {
+    max-height: 280px;
+  }
+
+  .article-back-btn {
+    padding: 12px 22px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .article-title {
+    font-size: 1.5rem;
+  }
+
+  .article-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .article-meta {
+    gap: 10px;
+  }
+
+  .article-date {
+    font-size: 0.85rem;
+  }
+
+  .article-category {
+    font-size: 0.78rem;
+    padding: 3px 10px;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
