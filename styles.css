@@ -17894,6 +17894,25 @@ main,
     font-size: 1.1rem;
   }
 }
+
+.plans-section .plan-coupon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--background-color, var(--background, var(--bg-light, #2E2A27)));
+  color: #F6F1E8;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.plans-section .plan-coupon-badge strong {
+  color: var(--secondary-color, var(--secondary, #D7C7B4));
+  letter-spacing: 1px;
+  font-size: 15px;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
