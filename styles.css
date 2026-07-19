@@ -20037,6 +20037,16 @@ main,
     font-size: 1rem;
   }
 }
+
+.blog-section .blog-card-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 12px 28px !important;
+  line-height: 1.5 !important;
+  min-width: 100px !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
