@@ -10644,6 +10644,19 @@ async function loadRelatedProducts(currentProduct, t) {
 }
 /* ==ZAPPY E-COMMERCE JS END== */
 
+/* Added Component Script */
+// Optional: Add intersection observer for entrance animations
+document.addEventListener('DOMContentLoaded', () => {
+  const heroSection = document.querySelector('.zappy-hero-main');
+  if (heroSection) {
+    heroSection.style.opacity = '0';
+    heroSection.style.transition = 'opacity 0.6s ease';
+    requestAnimationFrame(() => {
+      heroSection.style.opacity = '1';
+    });
+  }
+});
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
