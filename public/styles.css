@@ -449,12 +449,248 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 }
 
 
+/* ZAPPY_SHARE_BAR_LAYOUT_ENSURE_V3
+   Blog / article share bars: row layout, reading column, orange secondary chips. */
+
+/* Share bars must stay a horizontal chip row. AI cosmetic CSS and leaked
+   mobile rules historically set flex-direction:column globally and left
+   <br> clusters between the label and icons. */
+.social-share-bar,
+[class*="__share-bar"] {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+.social-share-bar > br,
+[class*="__share-bar"] > br {
+  display: none !important;
+}
+
+/* Constrain share / back / hero / title to the same column as body copy
+   (AI pages often only set max-width on __body). */
+[class*="blog-article-section"] > [class*="__share-bar"],
+[class*="blog-article-section"] > .social-share-bar,
+[class*="blog-article-section"] > [class*="__back-container"],
+[class*="blog-article-section"] > [class*="__hero-figure"],
+[class*="blog-article-section"] > [class*="__article-header"],
+[class*="blog-article-section"] > header:not(.site-header):not(.sim-header),
+[class*="blog-article-section"] [class*="__container"] > [class*="__share-bar"],
+[class*="blog-article-section"] [class*="__container"] > .social-share-bar,
+[class*="blog-article-section"] [class*="__container"] > [class*="__back-container"],
+[class*="blog-article-section"] [class*="__container"] > [class*="__hero-figure"],
+[class*="blog-article-section"] [class*="__container"] > [class*="__article-header"] {
+  max-width: 800px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+[class*="blog-article-section"] [class*="__hero-figure"] img,
+[class*="blog-article-section"] [class*="__hero-img"] {
+  max-width: 100% !important;
+}
+
+/* Unify blog share chips to orange secondary outline (jewish-life canonical).
+   Overrides brand-colored inline styles, btn-primary fills, and display:none
+   on LinkedIn/X that made article share bars look inconsistent. */
+[class*="blog-article-section"] .social-share-bar,
+[class*="blog-article-section"] [class*="__share-bar"] {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 14px !important;
+}
+[class*="blog-article-section"] .social-share-bar a,
+[class*="blog-article-section"] .social-share-bar button,
+[class*="blog-article-section"] [class*="__share-bar"] a,
+[class*="blog-article-section"] [class*="__share-bar"] button,
+[class*="blog-article-section"] .share-copy,
+[class*="blog-article-section"] .share-linkedin,
+[class*="blog-article-section"] .share-twitter,
+[class*="blog-article-section"] .share-facebook,
+[class*="blog-article-section"] .share-whatsapp,
+[class*="blog-article-section"] [class*="__share-btn"],
+[class*="blog-article-section"] [class*="__share-icon"],
+[class*="blog-article-section"] .share-btn,
+[class*="blog-article-section"] .share-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 1.5px solid var(--secondary, #ff8a3d) !important;
+  color: var(--secondary, #ff8a3d) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-decoration: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+  outline: none !important;
+}
+[class*="blog-article-section"] .social-share-bar a svg,
+[class*="blog-article-section"] .social-share-bar button svg,
+[class*="blog-article-section"] [class*="__share-bar"] a svg,
+[class*="blog-article-section"] [class*="__share-bar"] button svg {
+  width: 18px !important;
+  height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+  color: inherit !important;
+  fill: currentColor;
+  stroke: currentColor;
+}
+[class*="blog-article-section"] .social-share-bar__label,
+[class*="blog-article-section"] [class*="__share-label"],
+[class*="blog-article-section"] .share-label {
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  color: var(--text-dark, #1a1a1a) !important;
+  white-space: nowrap !important;
+}
+
+
+/* ZAPPY_MOBILE_MENU_FULL_BLEED_V1 */
+/* Upgrade legacy half-width (50%/300px) hamburger drawer → full-bleed overlay.
+   High-specificity selectors beat baked RTL "left:auto;right:0" pins
+   (html[lang=he] .nav-menu) and the generator's non-!important width:50%. */
+@media (max-width: 768px) {
+  html body .navbar .nav-menu,
+  html body nav.navbar .nav-menu,
+  html body .navbar #navMenu,
+  html body #navMenu,
+  html body .navbar .nav-menu.active,
+  html body nav.navbar .nav-menu.active,
+  html body .navbar #navMenu.active,
+  html body #navMenu.active,
+  html body .navbar .nav-menu.open,
+  html body #navMenu.open,
+  html[dir="rtl"] body .navbar .nav-menu,
+  html[dir="rtl"] body .navbar #navMenu,
+  html[dir="rtl"] body .navbar .nav-menu.active,
+  html[dir="rtl"] body .navbar #navMenu.active,
+  html[lang="he"] body .navbar .nav-menu,
+  html[lang="he"] body .navbar #navMenu,
+  html[lang="he"] body .navbar .nav-menu.active,
+  html[lang="he"] body .navbar #navMenu.active,
+  html[lang="ar"] body .navbar .nav-menu,
+  html[lang="ar"] body .navbar #navMenu,
+  html[lang="ar"] body .navbar .nav-menu.active,
+  html[lang="ar"] body .navbar #navMenu.active,
+  [dir="rtl"] .navbar .nav-menu,
+  [dir="rtl"] .navbar #navMenu,
+  [dir="rtl"] .navbar .nav-menu.active,
+  [dir="rtl"] .navbar #navMenu.active {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+    height: calc(100vh - 70px) !important;
+    height: calc(100dvh - var(--zappy-mobile-menu-top, var(--total-header-height, var(--zappy-navbar-bottom, 70px)))) !important;
+    max-height: calc(100dvh - var(--zappy-mobile-menu-top, var(--total-header-height, var(--zappy-navbar-bottom, 70px)))) !important;
+  }
+  html body .navbar .nav-menu > li > a,
+  html body nav.navbar .nav-menu > li > a,
+  html body .navbar #navMenu > li > a,
+  html body #navMenu > li > a {
+    padding: 16px 24px !important;
+    font-weight: 600 !important;
+    font-size: 1.15rem !important;
+    box-sizing: border-box !important;
+  }
+}
+/* END ZAPPY_MOBILE_MENU_FULL_BLEED */
+
+
+/* ZAPPY_MOBILE_MENU_GROUP_TITLE_V1 */
+/* Menu-group titles: match open-drawer link padding + beat scrolled frosted-text. */
+@media (max-width: 768px) {
+  html body .navbar .nav-menu.active > li > .menu-group-title,
+  html body nav.navbar .nav-menu.active > li > .menu-group-title,
+  html body .navbar #navMenu.active > li > .menu-group-title,
+  html body #navMenu.active > li > .menu-group-title,
+  html body .navbar .nav-menu.open > li > .menu-group-title,
+  html body #navMenu.open > li > .menu-group-title,
+  html body .navbar.scrolled .nav-menu.active > li > .menu-group-title,
+  html body .navbar.scrolled #navMenu.active > li > .menu-group-title,
+  html body .navbar.scrolled .nav-menu.open > li > .menu-group-title,
+  html body .navbar.scrolled #navMenu.open > li > .menu-group-title,
+  html body .navbar.scrolled .nav-menu.active > li.menu-group-item > .menu-group-title,
+  html body .navbar.scrolled #navMenu.active > li.menu-group-item > .menu-group-title {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+    padding: 12px 16px !important;
+    min-height: 44px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    font-size: inherit !important;
+    color: var(--nav-text, var(--text-light, #fff7ed)) !important;
+  }
+  html body .navbar .nav-menu.active > li.menu-group-item,
+  html body .navbar #navMenu.active > li.menu-group-item,
+  html body .navbar .nav-menu.open > li.menu-group-item,
+  html body #navMenu.open > li.menu-group-item {
+    margin: 4px 0 !important;
+  }
+}
+/* END ZAPPY_MOBILE_MENU_GROUP_TITLE */
+
+
+/* ZAPPY_MULTI_QTY_STEPPER_FIX */
+.variant-multi-qty-row .quantity-selector {
+  display: inline-flex !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+  width: max-content !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+.variant-multi-qty-row .quantity-selector button {
+  flex: 0 0 40px !important;
+  width: 40px !important;
+  min-width: 40px !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+.variant-multi-qty-row .quantity-selector input {
+  width: 48px !important;
+  flex: 0 0 48px !important;
+  max-width: 48px !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+}
+.zappy-qv-multi-qty-row .zappy-qv-qty {
+  flex: 0 0 auto !important;
+  width: max-content !important;
+}
+.zappy-qv-multi-qty-row .zappy-qv-qty-input {
+  width: 48px !important;
+  flex: 0 0 48px !important;
+  max-width: 48px !important;
+  padding: 0 !important;
+}
+
+
 /* zappy-nav-child-indent */
 .zappy-products-dropdown .zappy-nav-child > a,
 .sub-menu .zappy-nav-child > a {
   padding-left: 28px !important;
-  font-size: 0.9em !important;
-  opacity: 0.85 !important;
+  font-size: .9em !important;
+  opacity: .85 !important;
 }
 [dir="rtl"] .zappy-products-dropdown .zappy-nav-child > a,
 [dir="rtl"] .sub-menu .zappy-nav-child > a,
@@ -493,9 +729,11 @@ nav .sub-menu.zappy-empty-submenu,
 }
 
 
-/* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
+/* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix-v2) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
+/* Mobile menu panel is FULL-BLEED (left+right:0) — V1's left:auto pin was for
+   the retired half-width drawer and must not return. */
 /* NOTE: Includes both html[dir="rtl"] AND [dir="rtl"] selectors as fallback */
 /* because some pages may be wrapped with <html lang="en"> (missing dir="rtl" on html) */
 /* but still have dir="rtl" on <body> or other ancestor elements */
@@ -536,7 +774,7 @@ nav .sub-menu.zappy-empty-submenu,
     right: auto !important;
   }
   
-  /* RTL Mobile Menu - slides from RIGHT */
+  /* RTL Mobile Menu panel — full-bleed (matches current overlay generator) */
   html[dir="rtl"] .navbar .nav-menu,
   html[dir="rtl"] nav .nav-menu,
   html[dir="rtl"] header .nav-menu,
@@ -549,8 +787,10 @@ nav .sub-menu.zappy-empty-submenu,
   [dir="rtl"] .nav-menu,
   html[lang="he"] .nav-menu,
   html[lang="ar"] .nav-menu {
-    left: auto !important;
+    left: 0 !important;
     right: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
   }
   
   /* RTL Mobile Menu Links - text align right */
@@ -571,7 +811,7 @@ nav .sub-menu.zappy-empty-submenu,
 
 /* ========== NAV CONTAINER MIN-HEIGHT FIX (nav-container-min-height-fix) ========== */
 /* On mobile, all nav children are position:absolute/fixed (out of flow), */
-/* so height:auto collapses to 0px. min-height ensures the navbar is visible. */
+/* so height:auto collapses to 0. min-height ensures the navbar is visible. */
 
 /* DEFENSIVE: Ensure CTA container is visible on desktop */
 /* This guards against CSS minifiers (CleanCSS level 2) that may pull */
@@ -641,24 +881,24 @@ nav .sub-menu.zappy-empty-submenu,
 .product-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; width: 100%; }
 .product-title-row h1 { flex: 1; min-width: 0; }
 .product-icon-actions { display: flex; gap: 8px; flex-shrink: 0; padding-top: 6px; }
-.icon-btn { width: 36px; height: 36px; border: none; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: color 0.2s; color: currentColor; padding: 0; }
+.icon-btn { width: 36px; height: 36px; border: none; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: color .2s; color: currentColor; padding: 0; }
 .icon-btn:hover { color: var(--primary-color, #ff0083); }
 .icon-btn.active { color: #e74c3c; }
 .icon-btn.active .heart-outline { display: none !important; }
 .icon-btn.active .heart-filled { display: block !important; }
-.profile-section, .addresses-section, .favorites-section, .orders-section { border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 12px; padding: 24px; margin-bottom: 24px; background: transparent; }
+.profile-section, .addresses-section, .favorites-section, .orders-section { border: 1px solid var(--border-color, rgba(128,128,128,.2)); border-radius: 12px; padding: 24px; margin-bottom: 24px; background: transparent; }
 .favorites-section h2 { font-size: 1.25rem; color: var(--text-color, #1f2937); margin-bottom: 20px; }
 .favorites-loading { text-align: center; padding: 20px; color: var(--text-secondary, #6b7280); }
 .favorites-empty { text-align: center; padding: 32px; color: var(--text-secondary, #6b7280); }
 .favorites-empty p { margin-bottom: 16px; }
 .favorites-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
-.favorite-card { background: transparent; border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 10px; overflow: hidden; transition: box-shadow 0.2s; position: relative; }
-.favorite-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.favorite-card { background: transparent; border: 1px solid var(--border-color, rgba(128,128,128,.2)); border-radius: 10px; overflow: hidden; transition: box-shadow .2s; position: relative; }
+.favorite-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.08); }
 .favorite-card-img { width: 100%; aspect-ratio: 1; object-fit: cover; }
 .favorite-card-body { padding: 12px; }
-.favorite-card-body h4 { font-size: 0.875rem; font-weight: 500; color: var(--text-color, #1f2937); margin: 0 0 6px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.favorite-price { font-weight: 600; color: var(--primary-color, #ff0083); font-size: 0.9rem; }
-.favorite-remove-btn { position: absolute; top: 8px; right: 8px; width: 28px; height: 28px; border-radius: 50%; border: none; background: rgba(255,255,255,0.9); color: #dc2626; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; transition: all 0.2s; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+.favorite-card-body h4 { font-size: .875rem; font-weight: 500; color: var(--text-color, #1f2937); margin: 0 0 6px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.favorite-price { font-weight: 600; color: var(--primary-color, #ff0083); font-size: .9rem; }
+.favorite-remove-btn { position: absolute; top: 8px; right: 8px; width: 28px; height: 28px; border-radius: 50%; border: none; background: rgba(255,255,255,.9); color: #dc2626; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; transition: all .2s; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
 .favorite-remove-btn:hover { background: #dc2626; color: white; }
 @media (max-width: 480px) { .favorites-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
 /* ========== END PRODUCT ICON STYLES ========== */
@@ -810,7 +1050,7 @@ nav .sub-menu.zappy-empty-submenu,
 
   /* The zoom wrapper's image is position:absolute (so it contributes 0 to the
      wrapper's intrinsic content width). Inserted-element parents that carry a
-     desktop pixel height can either collapse to 0px wide or preserve a stale
+     desktop pixel height can either collapse to 0 wide or preserve a stale
      desktop height after their child wrapper shrinks on mobile. Force them
      to fill the parent container and let the wrapper's aspect-ratio determine
      the real height, eliminating empty space before following text. */
@@ -898,7 +1138,7 @@ nav .sub-menu.zappy-empty-submenu,
     width: 36px !important;
     height: 36px !important;
     font-size: 16px !important;
-    background: rgba(255,255,255,0.9) !important;
+    background: rgba(255,255,255,.9) !important;
   }
   .zappy-carousel-js-init > .zappy-carousel-btn.zappy-carousel-right {
     left: auto !important;
@@ -1172,10 +1412,10 @@ section[data-hero-type] {
 
 
 /* ZAPPY_VARIANT_OPTION_STATES */
-.variant-option.disabled { opacity: 0.3; position: relative; }
+.variant-option.disabled { opacity: .3; position: relative; }
 .variant-option.disabled:not(.color-swatch)::after { content: ""; position: absolute; top: 50%; left: 4px; right: 4px; height: 1px; background: currentColor; transform: rotate(-12deg); pointer-events: none; }
 .variant-option.color-swatch.disabled::before { content: ""; position: absolute; top: 50%; left: 2px; right: 2px; height: 1.5px; background: currentColor; transform: rotate(-45deg); pointer-events: none; z-index: 1; }
-.variant-option.out-of-stock { opacity: 0.6; position: relative; }
+.variant-option.out-of-stock { opacity: .6; position: relative; }
 .variant-option.out-of-stock:not(.color-swatch)::after { content: ""; position: absolute; top: 50%; left: 4px; right: 4px; height: 1px; background: currentColor; transform: rotate(-12deg); pointer-events: none; }
 .variant-option.color-swatch.out-of-stock::before { content: ""; position: absolute; top: 50%; left: 2px; right: 2px; height: 1.5px; background: currentColor; transform: rotate(-45deg); pointer-events: none; z-index: 1; }
 
@@ -1276,7 +1516,7 @@ section[class*="hero"][data-zappy-bg-overlay-opacity] > .hero-bg-wrapper {
        push the menu off-screen). */
     position: fixed !important;
     top: var(--zappy-navbar-bottom, 70px) !important;
-    right: var(--ios-viewport-gap, 0px) !important;
+    right: var(--ios-viewport-gap, 0) !important;
   }
 }
 
@@ -1332,8 +1572,8 @@ html[dir="ltr"] .sub-menu .zappy-nav-child > a,
 html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
   padding-left: 28px !important;
   padding-right: 16px !important;
-  font-size: 0.9em !important;
-  opacity: 0.85 !important;
+  font-size: .9em !important;
+  opacity: .85 !important;
 }
 @media (max-width: 768px) {
   [dir="ltr"] .navbar .zappy-products-dropdown > .sub-menu .zappy-nav-child > a,
@@ -1406,7 +1646,7 @@ html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
    * a solid horizontal stripe slapped on top of the page. The preferences
    * modal — which doesn't use backdrop-filter — overrides this to a solid
    * white below so it doesn't render see-through against the page. */
-  --cc-bg: rgba(255, 255, 255, 0.96);
+  --cc-bg: rgba(255, 255, 255, .96);
   --cc-modal-bg: #ffffff;
   --cc-primary-color: #1f2937;
   --cc-secondary-color: #4b5563;
@@ -1454,9 +1694,9 @@ html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
   -webkit-backdrop-filter: saturate(180%) blur(12px);
   backdrop-filter: saturate(180%) blur(12px);
   border: none !important;
-  border-top: 1px solid rgba(201, 111, 74, 0.18) !important;
+  border-top: 1px solid rgba(201, 111, 74, .18) !important;
   border-radius: 0 !important;
-  box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 -1px 12px rgba(0, 0, 0, .04) !important;
   display: flex !important;
   align-items: center !important;
   min-height: 52px !important;
@@ -1517,7 +1757,7 @@ html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
   min-height: 0 !important;
   line-height: 1 !important;
   border-radius: 999px !important;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: background-color .15s ease, color .15s ease;
   cursor: pointer;
 }
 
@@ -1574,10 +1814,10 @@ html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
   font-weight: 400 !important;
   line-height: 1 !important;
   cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: background-color .15s ease, color .15s ease;
 }
 #zappy-cookie-banner .zappy-cookie-banner__close:hover {
-  background-color: rgba(0, 0, 0, 0.06) !important;
+  background-color: rgba(0, 0, 0, .06) !important;
   color: var(--cc-primary-color) !important;
 }
 #zappy-cookie-banner .zappy-cookie-banner__button:focus-visible,
@@ -1608,7 +1848,7 @@ html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
 #cc--main .pm-wrapper,
 #cc-main .pm-wrapper.pm--box,
 #cc--main .pm-wrapper.pm--box {
-  background: rgba(0, 0, 0, 0.32) !important;
+  background: rgba(0, 0, 0, .32) !important;
 }
 
 #cc-main #pm,
@@ -1623,8 +1863,8 @@ html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
   border-radius: 14px !important;
-  border: 1px solid rgba(0, 0, 0, 0.06) !important;
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.18) !important;
+  border: 1px solid rgba(0, 0, 0, .06) !important;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, .18) !important;
 }
 
 #cc-main .pm__header,
@@ -1757,6 +1997,7 @@ html[dir="ltr"] .service-detail.service-reverse .service-detail-content { order:
 /* ZAPPY_MOBILE_NAV_ICON_ALIGNMENT_FIX */
 /* ZAPPY_MOBILE_NAV_ICON_ALIGNMENT_FIX_V3 */
 /* ZAPPY_MOBILE_NAV_ICON_ALIGNMENT_FIX_V4 */
+/* ZAPPY_MOBILE_NAV_ICON_ALIGNMENT_FIX_V5 */
 /* The mobile hamburger / phone buttons are absolutely positioned. Keep the
    navbar itself as a non-collapsing containing block so auto-margin centering
    stays aligned even when generated mobile CSS moves every nav child out of flow. */
@@ -1764,6 +2005,67 @@ html[dir="ltr"] .service-detail.service-reverse .service-detail-content { order:
   .navbar,
   nav.navbar {
     min-height: 70px !important;
+  }
+
+  /* V5: Desktop .nav-search-box must stay hidden on mobile. AI/customization CSS
+     often force-shows it with higher specificity than the generator's plain
+     .nav-search-box { display:none } (e.g. .navbar .nav-ecommerce-icons.nav-icons-left
+     .nav-search-box { display:flex; background: cream }), which paints an empty
+     cream/white square left of the cart on RTL ecommerce navs. Beat that chain. */
+  html body .navbar .nav-search-box,
+  html body nav.navbar .nav-search-box,
+  html body .navbar .nav-ecommerce-icons .nav-search-box,
+  html body .navbar .nav-ecommerce-icons.nav-icons-left .nav-search-box,
+  html body .navbar .nav-container .nav-ecommerce-icons.nav-icons-left .nav-search-box {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    min-width: 0 !important;
+    max-width: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    pointer-events: none !important;
+  }
+
+  /* V5: Search-toggle SVG is frequently recolored to --nav-text (cream/white) by
+     AI customization at .navbar .nav-container .nav-ecommerce-icons.nav-icons-right
+     .nav-search-toggle svg, while the pill button itself keeps the correct
+     contrasting color from the luminance-aware pill rules. Inherit that color
+     with a selector that out-ranks the nav-text stroke paint so the icon stays
+     legible on light AND dark pills (no hardcoded text-dark). */
+  html body .navbar .nav-container .nav-ecommerce-icons.nav-icons-right .nav-search-toggle svg,
+  html body .navbar .nav-container .nav-ecommerce-icons.nav-icons-right .nav-search-toggle svg *,
+  html body .navbar .nav-ecommerce-icons.nav-icons-right .nav-search-toggle svg,
+  html body .navbar .nav-ecommerce-icons.nav-icons-right .nav-search-toggle svg * {
+    color: inherit !important;
+    stroke: currentColor !important;
+    fill: none !important;
+  }
+
+  /* V5: Keep the three mobile icon couples on one baseline — absolute groups +
+     hamburger all center against the same navbar box. */
+  html body .navbar .nav-ecommerce-icons.nav-icons-left,
+  html body .navbar .nav-ecommerce-icons.nav-icons-right,
+  html body .navbar .nav-icons-left,
+  html body .navbar .nav-icons-right {
+    top: 50% !important;
+    bottom: auto !important;
+    transform: translateY(-50%) !important;
+    align-items: center !important;
+  }
+  html body .navbar .nav-ecommerce-icons.nav-icons-right .nav-search-toggle,
+  html body .navbar .nav-search-toggle {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 9999px !important;
+    align-self: center !important;
   }
 
   /* E-commerce mobile navbar icon-group alignment.
@@ -1790,7 +2092,7 @@ html[dir="ltr"] .service-detail.service-reverse .service-detail-content { order:
   }
 
   /* Some generated RTL nav CSS sets both left:50% and right:50% on the
-     absolute .nav-brand. That collapses it to 0px wide, so the logo flows
+     absolute .nav-brand. That collapses it to 0 wide, so the logo flows
      left from the center instead of being centered on it. */
   .navbar .nav-brand,
   nav.navbar .nav-brand,
@@ -1882,7 +2184,7 @@ section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > [class*="hero-scri
 section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > [class*="bg-wrapper"] [class*="scrim"] {
   opacity: 1 !important;
   mix-blend-mode: normal !important;
-  background-image: linear-gradient(180deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.32) 62%, rgba(0,0,0,0.42) 100%), linear-gradient(to right, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.36) 36%, rgba(0,0,0,0.06) 78%) !important;
+  background-image: linear-gradient(180deg, rgba(0,0,0,.16) 0, rgba(0,0,0,.32) 62%, rgba(0,0,0,.42) 100%), linear-gradient(to right, rgba(0,0,0,.52) 0, rgba(0,0,0,.36) 36%, rgba(0,0,0,.06) 78%) !important;
   background-color: transparent !important;
 }
 html[dir="rtl"] section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > [class*="scrim"],
@@ -1890,7 +2192,7 @@ html[dir="rtl"] section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-ov
 html[dir="rtl"] section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > .hero-scrim,
 html[dir="rtl"] section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > [class*="hero-scrim"],
 html[dir="rtl"] section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > [class*="bg-wrapper"] [class*="scrim"] {
-  background-image: linear-gradient(180deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.32) 62%, rgba(0,0,0,0.42) 100%), linear-gradient(to left, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.36) 36%, rgba(0,0,0,0.06) 78%) !important;
+  background-image: linear-gradient(180deg, rgba(0,0,0,.16) 0, rgba(0,0,0,.32) 62%, rgba(0,0,0,.42) 100%), linear-gradient(to left, rgba(0,0,0,.52) 0, rgba(0,0,0,.36) 36%, rgba(0,0,0,.06) 78%) !important;
 }
 section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > img[data-hero-bg],
 section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > [class*="hero-bg"] img[data-hero-bg],
