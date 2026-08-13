@@ -10663,6 +10663,75 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+/* ZAPPY_CUSTOM_JS_START:81f0f28673c0 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function() {
+  // For the free product ("אהבה עצמית"), redirect "Add to Cart" to the signup page
+  var FREE_PRODUCT_ID = "ed424653-8a44-4224-8bf5-0c09531b7251";
+  var SIGNUP_URL = "https://self-love.vibepreview.com/login";
+
+  function handleFreeProduct() {
+    // Find the add-to-cart button
+    var btn = document.getElementById('add-to-cart-btn');
+    if (!btn) return;
+
+    // Determine if the current product is the free product.
+    // The product-container carries data-product-id; also check the detail section.
+    var container = document.querySelector('.product-detail-container, [data-product-id="' + FREE_PRODUCT_ID + '"]');
+    var isFree = false;
+    if (container) {
+      var pid = container.getAttribute('data-product-id');
+      if (pid === FREE_PRODUCT_ID) {
+        isFree = true;
+      }
+    }
+    // Fallback: check the price display is ₪0.00
+    var priceEl = document.getElementById('product-price-display');
+    if (priceEl && /0\s*\.?0*/.test(priceEl.textContent.replace(/[₪\s]/g, ''))) {
+      // price is 0 — likely free; only treat as free if price text is exactly "0" or "0.00"
+      var numeric = parseFloat(priceEl.textContent.replace(/[^\d.]/g, ''));
+      if (!isNaN(numeric) && numeric === 0) isFree = true;
+    }
+
+    if (isFree) {
+      // Replace click behavior: go straight to signup
+      btn.removeAttribute('onclick');
+      btn.onclick = function(e) {
+        e.preventDefault();
+        window.top.location.href = SIGNUP_URL;
+      };
+      // Also make it a proper link-style cursor and change label
+      btn.style.cursor = 'pointer';
+      if (!btn.getAttribute('data-relabeled')) {
+        btn.textContent = 'קבלו גישה לקורס';
+        btn.setAttribute('data-relabeled', 'true');
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', handleFreeProduct);
+  } else {
+    handleFreeProduct();
+  }
+
+  // Re-run after a short delay in case the product detail loads async
+  setTimeout(handleFreeProduct, 1500);
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:81f0f28673c0 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
