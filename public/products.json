@@ -1,10 +1,32 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-13T10:28:54.650Z",
+  "generated_at": "2026-08-13T10:41:44.177Z",
   "base_url": "https://liorgur.com",
   "currency": "ILS",
-  "count": 2,
+  "count": 3,
   "products": [
+    {
+      "id": "ed424653-8a44-4224-8bf5-0c09531b7251",
+      "slug": "hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-fueral",
+      "name": "המדריך החינמי – אהבה עצמית כבסיס לזוגיות",
+      "name_translations": {},
+      "description": "המדריך החינמי – אהבה עצמית כבסיס לזוגיות.\n\nגלו כיצד אהבה עצמית עמוקה ובריאה היא המפתח לזוגיות מספקת ואוהבת. המדריך כולל תרגילים מעשיים, תובנות מקצועיות וכלים לבניית מערכת יחסים חזקה יותר – החל מהקשר החשוב ביותר: הקשר עם עצמכם.\n\nלאחר ההרשמה תקבלו גישה מיידית לקורס.\n\n➡️ היכנסו לקורס כאן: https://self-love.vibepreview.com/login",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 0,
+      "base_price": 0,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://liorgur.com/assets/product-1777836531817-myvgxo.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://liorgur.com/product/hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-fueral",
+      "categories": [],
+      "updated_at": "2026-08-13T10:41:10.124Z"
+    },
     {
       "id": "6c6f530e-0c4a-4d9d-abbc-8714f247a582",
       "slug": "hkvrs-hdygytly-ytsyah-mtkyavt-okg88a",
