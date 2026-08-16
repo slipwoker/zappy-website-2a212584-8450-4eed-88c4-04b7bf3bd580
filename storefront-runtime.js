@@ -11845,8 +11845,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (toggle.__zappyMobileToggleBound) return;
       toggle.__zappyMobileToggleBound = true;
 
-      // Repair baked open-icon styles when the menu is actually closed.
-      if (!menuIsOpen(navMenu)) setClosedIcons(toggle);
+      // Always start closed. A save while the overlay was open bakes
+      // .nav-menu.active into HTML; repairing icons alone leaves the panel up.
+      closeMenu(navMenu);
+      setClosedIcons(toggle);
+      document.body.style.overflow = '';
 
       toggle.addEventListener('click', function(e) {
         e.preventDefault();
@@ -16677,12 +16680,12 @@ function fixContrast(){
   // declaration merging that was eating the standalone CSS injection.
   function ensureRuntimeCssInjected() {
     var existing = document.getElementById('zappy-ecom-routing-runtime-css');
-    if (existing && existing.getAttribute('data-v') === '31') return;
+    if (existing && existing.getAttribute('data-v') === '32') return;
     if (existing) existing.remove();
     var style = document.createElement('style');
     style.id = 'zappy-ecom-routing-runtime-css';
     style.setAttribute('data-zappy-runtime', 'ecom-routing');
-    style.setAttribute('data-v', '31');
+    style.setAttribute('data-v', '32');
     style.textContent =
       '@media (min-width: 769px){' +
         'html[dir="ltr"] .nav-container > .nav-brand,body[dir="ltr"] .nav-container > .nav-brand,html[dir="ltr"] .nav-right-group > .nav-brand,body[dir="ltr"] .nav-right-group > .nav-brand{order:-1!important}' +
@@ -16732,6 +16735,9 @@ function fixContrast(){
         '.zappy-products-dropdown>.sub-menu .zappy-nav-parent>a,.zappy-products-dropdown>.sub-menu .zappy-nav-parent>.menu-group-title{font-weight:700!important}' +
         '.zappy-products-dropdown>.sub-menu .zappy-nav-child>a,.zappy-products-dropdown>.sub-menu .zappy-nav-child>.menu-group-title{padding-left:36px!important;padding-right:16px!important;font-size:.94em!important;opacity:.85!important}' +
         'html[dir="rtl"] .zappy-products-dropdown>.sub-menu .zappy-nav-child>a,body[dir="rtl"] .zappy-products-dropdown>.sub-menu .zappy-nav-child>a,html[dir="rtl"] .zappy-products-dropdown>.sub-menu .zappy-nav-child>.menu-group-title,body[dir="rtl"] .zappy-products-dropdown>.sub-menu .zappy-nav-child>.menu-group-title{padding-left:16px!important;padding-right:36px!important}' +
+        '.navbar .nav-menu:not(.active):not(.open),nav.navbar .nav-menu:not(.active):not(.open),#navMenu:not(.active):not(.open){visibility:hidden!important;opacity:0!important;pointer-events:none!important}' +
+        '.navbar .nav-menu:not(.active):not(.open) *,nav.navbar .nav-menu:not(.active):not(.open) *,#navMenu:not(.active):not(.open) *{visibility:hidden!important;pointer-events:none!important}' +
+        '.navbar .nav-menu:not(.active):not(.open) .sub-menu,nav.navbar .nav-menu:not(.active):not(.open) .sub-menu,#navMenu:not(.active):not(.open) .sub-menu{display:none!important}' +
       '}';
     (document.head || document.documentElement).appendChild(style);
   }
@@ -18912,28 +18918,32 @@ function withConsent(category, callback) {
   [300, 1000, 2500].forEach(function(ms){ setTimeout(boot, ms); });
 })();
 
-/* ZAPPY_MOBILE_MENU_CLOSED_ICONS_V1 */
+/* ZAPPY_MOBILE_MENU_CLOSED_ICONS_V2 */
 (function(){
-  if (window.__zappyMobileMenuClosedIconsV1) return;
-  window.__zappyMobileMenuClosedIconsV1 = true;
-  function reset() {
-    var toggle = document.querySelector('.mobile-toggle, #mobileToggle');
-    if (!toggle) return;
+  if (window.__zappyMobileMenuClosedIconsV2) return;
+  window.__zappyMobileMenuClosedIconsV2 = true;
+  function closeBaked() {
     var menu = document.querySelector('#navMenu, .nav-menu, .navbar-menu');
-    var isOpen = !!(menu && (menu.classList.contains('active') || menu.classList.contains('open') || menu.style.display === 'block'));
-    if (isOpen) return;
-    toggle.classList.remove('active');
-    var hi = toggle.querySelector('.hamburger-icon');
-    var ci = toggle.querySelector('.close-icon');
-    if (hi) hi.style.setProperty('display', 'block', 'important');
-    if (ci) ci.style.setProperty('display', 'none', 'important');
+    if (menu) {
+      menu.classList.remove('active');
+      menu.classList.remove('open');
+      menu.style.removeProperty('display');
+    }
+    var toggle = document.querySelector('.mobile-toggle, #mobileToggle');
+    if (toggle) {
+      toggle.classList.remove('active');
+      if (toggle.setAttribute) toggle.setAttribute('aria-expanded', 'false');
+      var hi = toggle.querySelector('.hamburger-icon');
+      var ci = toggle.querySelector('.close-icon');
+      if (hi) hi.style.setProperty('display', 'block', 'important');
+      if (ci) ci.style.setProperty('display', 'none', 'important');
+    }
+    document.body.style.overflow = '';
   }
+  closeBaked();
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', reset);
-  } else {
-    reset();
+    document.addEventListener('DOMContentLoaded', closeBaked, { once: true });
   }
-  [50, 200, 500].forEach(function(ms){ setTimeout(reset, ms); });
 })();
 
 
@@ -19033,6 +19043,130 @@ function withConsent(category, callback) {
   }
   [50, 200, 800, 1600, 3200].forEach(function(ms){ setTimeout(function(){ wrapLegacyInit(); scrubOrphans(); }, ms); });
 })();
+
+
+
+/* ZAPPY_HOME_FEATURED_PRODUCTS_LAZY_V3 */
+async function zappyLoadFeaturedProductsPaged() {
+  var grid = document.getElementById('zappy-featured-products');
+  if (!grid) return;
+  var websiteId = window.ZAPPY_WEBSITE_ID;
+  if (!websiteId) return;
+  if (typeof zappyClearBakedPreviewEmptyStoreCta === 'function') {
+    zappyClearBakedPreviewEmptyStoreCta();
+  }
+  try {
+    if (typeof fetchAdditionalJsSettings === 'function') {
+      await Promise.race([
+        fetchAdditionalJsSettings(),
+        new Promise(function(resolve) { setTimeout(resolve, 3000); })
+      ]);
+    }
+  } catch (e) {}
+  var t = { noProducts: 'No products to display', noFeaturedProducts: 'No featured products yet. Check out all our products!', errorLoading: 'Error loading products' };
+  var PAGE_SIZE = 12;
+  var offset = 0;
+  var loadingMore = false;
+  var allLoaded = false;
+  var loadedIds = Object.create(null);
+  var observer = null;
+  var inFlight = null;
+  function removeSentinel() {
+    var el = grid.querySelector('[data-zappy-featured-lazy-sentinel]');
+    if (el && el.parentNode) el.parentNode.removeChild(el);
+    if (observer) { observer.disconnect(); observer = null; }
+  }
+  function ensureSentinel() {
+    var el = grid.querySelector('[data-zappy-featured-lazy-sentinel]');
+    if (!el) {
+      el = document.createElement('div');
+      el.setAttribute('data-zappy-featured-lazy-sentinel', '1');
+      el.className = 'zappy-featured-lazy-sentinel';
+      el.setAttribute('aria-hidden', 'true');
+      el.style.cssText = 'grid-column:1/-1;width:100%;height:1px;';
+      grid.appendChild(el);
+    }
+    if (typeof IntersectionObserver === 'function') {
+      if (observer) observer.disconnect();
+      observer = new IntersectionObserver(function(entries) {
+        for (var i = 0; i < entries.length; i++) {
+          if (entries[i].isIntersecting) { fetchPage(false); break; }
+        }
+      }, { root: null, rootMargin: '2500px 0px', threshold: 0 });
+      observer.observe(el);
+    } else {
+      setTimeout(function() { fetchPage(false); }, 0);
+    }
+  }
+  function fetchFeaturedJson(pageOffset) {
+    return fetch(buildApiUrlWithLang('/api/ecommerce/storefront/products?websiteId=' + websiteId + '&featured=true&limit=' + PAGE_SIZE + '&offset=' + pageOffset)).then(function(res) {
+      return res.json();
+    });
+  }
+  function startPrefetch(pageOffset) {
+    if (allLoaded) return;
+    if (inFlight && inFlight.offset === pageOffset) return;
+    var pendingPrefetch = { offset: pageOffset, promise: fetchFeaturedJson(pageOffset) };
+    inFlight = pendingPrefetch;
+    pendingPrefetch.promise.catch(function() {
+      if (inFlight === pendingPrefetch) inFlight = null;
+    });
+  }
+  async function fetchPage(replace) {
+    if (loadingMore || allLoaded) return;
+    loadingMore = true;
+    try {
+      var data;
+      var pending = (inFlight && inFlight.offset === offset) ? inFlight : { offset: offset, promise: fetchFeaturedJson(offset) };
+      inFlight = pending;
+      try {
+        data = await pending.promise;
+      } finally {
+        if (inFlight === pending) inFlight = null;
+      }
+      var pageItems = (data && data.success && Array.isArray(data.data)) ? data.data : [];
+      if (replace && !pageItems.length) {
+        if (data && data.success && typeof zappyHasAnyStorefrontProducts === 'function' && await zappyHasAnyStorefrontProducts() === false && typeof zappyRenderPreviewEmptyStoreCta === 'function') {
+          grid.innerHTML = zappyRenderPreviewEmptyStoreCta(t.noProducts, 'no-featured-products');
+        } else {
+          grid.innerHTML = '<div class="no-featured-products">' + t.noFeaturedProducts + '</div>';
+        }
+        allLoaded = true;
+        return;
+      }
+      var featuredList = pageItems.filter(function(p) {
+        if (!p || !p.id || loadedIds[p.id]) return false;
+        loadedIds[p.id] = true;
+        return true;
+      });
+      if (typeof additionalJsSortOutOfStockLast !== 'undefined' && additionalJsSortOutOfStockLast && typeof window.sortProductsOutOfStockLast === 'function') {
+        featuredList = window.sortProductsOutOfStockLast(featuredList);
+      }
+      if (featuredList.length && typeof renderProductGrid === 'function') {
+        renderProductGrid(grid, featuredList, t, true, undefined, !replace);
+      }
+      offset += pageItems.length;
+      var total = data && typeof data.total === 'number' ? data.total : null;
+      if (!pageItems.length || pageItems.length < PAGE_SIZE || (total != null && offset >= total)) {
+        allLoaded = true;
+        removeSentinel();
+      } else {
+        ensureSentinel();
+        startPrefetch(offset);
+      }
+    } catch (e) {
+      if (replace) {
+        grid.innerHTML = '<div class="empty-cart">' + t.errorLoading + '</div>';
+        allLoaded = true;
+      }
+    } finally {
+      loadingMore = false;
+    }
+  }
+  await fetchPage(true);
+}
+loadFeaturedProducts = zappyLoadFeaturedProductsPaged;
+window.loadFeaturedProducts = zappyLoadFeaturedProductsPaged;
 
 
 /* ZAPPY_CUSTOMER_DISCOUNT_CONFIG_FALLBACK_V3 */

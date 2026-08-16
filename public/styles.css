@@ -948,6 +948,29 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 /* END ZAPPY_MOBILE_MENU_FULL_BLEED */
 
 
+/* ZAPPY_CLOSED_MOBILE_NAV_HIDE_V1 */
+@media (max-width: 768px) {
+  .navbar .nav-menu:not(.active):not(.open),
+  nav.navbar .nav-menu:not(.active):not(.open),
+  #navMenu:not(.active):not(.open) {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  .navbar .nav-menu:not(.active):not(.open) *,
+  nav.navbar .nav-menu:not(.active):not(.open) *,
+  #navMenu:not(.active):not(.open) * {
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+  .navbar .nav-menu:not(.active):not(.open) .sub-menu,
+  nav.navbar .nav-menu:not(.active):not(.open) .sub-menu,
+  #navMenu:not(.active):not(.open) .sub-menu {
+    display: none !important;
+  }
+}
+
+
 /* ZAPPY_MOBILE_MENU_GROUP_TITLE_V1 */
 /* Menu-group titles: match open-drawer link padding + beat scrolled frosted-text. */
 @media (max-width: 768px) {
