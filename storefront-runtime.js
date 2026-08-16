@@ -10787,6 +10787,65 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 /* ZAPPY_CUSTOM_JS_END:c20159f0f45e */
 
+/* ZAPPY_CUSTOM_JS_START:18fdfff3d050 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function() {
+  // Map product IDs to their direct checkout/payment landing pages
+  var checkoutLinks = {
+    // מנוי למועדון מבינים זוגיות
+    "ba07fb68-a214-48fa-a700-9e56485cd0ee": "https://pay.grow.link/OTg4MzY~5006613bb87c95501d27a72333e109a9-MzU0ODkxMA",
+    // הקורס הדיגיטלי – יציאה מתקיעות
+    "6c6f530e-0c4a-4d9d-abbc-8714f247a582": "https://pay.grow.link/3e6cb5c2eade1cf93d10c849e1b35243-MzI0NDU0OQ",
+    // המדריך החינמי – אהבה עצמית
+    "ed424653-8a44-4224-8bf5-0c09531b7251": "https://self-love.vibepreview.com/login"
+  };
+
+  function bindHandler(btn) {
+    if (btn.dataset.zappyCheckoutBound) return;
+    btn.dataset.zappyCheckoutBound = "true";
+    btn.addEventListener("click", function(e) {
+      var card = btn.closest(".product-card") || btn.closest("[data-product-id]");
+      var pid = btn.getAttribute("data-product-id") || (card && card.getAttribute("data-product-id"));
+      var url = pid ? checkoutLinks[pid] : null;
+      if (url) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.href = url;
+      }
+      // No matching link → fall back to default add-to-cart behavior
+    });
+  }
+
+  function bindAll() {
+    document.querySelectorAll(".card-cart-btn").forEach(bindHandler);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", bindAll);
+  } else {
+    bindAll();
+  }
+
+  // Watch for dynamically rendered product cards (featured products load async)
+  var observer = new MutationObserver(function() {
+    bindAll();
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:18fdfff3d050 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
