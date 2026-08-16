@@ -10846,6 +10846,82 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 /* ZAPPY_CUSTOM_JS_END:18fdfff3d050 */
 
+/* ZAPPY_CUSTOM_JS_START:393c1cf3f995 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function() {
+  var CLUB_PRODUCT_ID = 'ba07fb68-a214-48fa-a700-9e56485cd0ee';
+  var PURCHASE_URL = 'https://pay.grow.link/OTg4MzY~5006613bb87c95501d27a72333e109a9-MzU0ODkxMA';
+
+  function fixClubCard() {
+    // Find the club membership card by its product-id
+    var card = document.querySelector('.featured-products-section .product-card[data-product-id="' + CLUB_PRODUCT_ID + '"]');
+    if (!card) return false;
+
+    // If already converted, skip
+    if (card.getAttribute('data-pay-link-converted') === 'true') return true;
+
+    var footer = card.querySelector('.product-card-footer');
+    if (!footer) return false;
+
+    // Remove the "add to cart" button so it doesn't add to internal cart
+    var cartBtn = footer.querySelector('.card-cart-btn');
+    if (cartBtn) cartBtn.remove();
+
+    // Build a "לרכישה" link styled like the plan-btn on the /products page
+    var buyLink = document.createElement('a');
+    buyLink.href = PURCHASE_URL;
+    buyLink.target = '_blank';
+    buyLink.rel = 'noopener noreferrer';
+    buyLink.className = 'plan-btn';
+    buyLink.setAttribute('aria-label', 'הצטרפות למועדון מבינים זוגיות');
+    buyLink.textContent = 'לרכישה';
+    buyLink.style.cssText =
+      'display:inline-flex;align-items:center;justify-content:center;' +
+      'background:#C96F4A;color:#fff;padding:10px 22px;border-radius:12px;' +
+      'text-decoration:none;font-weight:600;font-size:1rem;' +
+      'transition:background 0.2s ease;';
+
+    // Make the footer a flex row: price on one side, button on the other
+    footer.style.display = 'flex';
+    footer.style.alignItems = 'center';
+    footer.style.justifyContent = 'space-between';
+    footer.style.gap = '8px';
+
+    footer.appendChild(buyLink);
+    card.setAttribute('data-pay-link-converted', 'true');
+    return true;
+  }
+
+  // Run immediately
+  fixClubCard();
+
+  // Re-run periodically while products load, and watch for DOM changes
+  var attempts = 0;
+  var interval = setInterval(function() {
+    var done = fixClubCard();
+    attempts++;
+    if (done || attempts > 40) clearInterval(interval);
+  }, 400);
+
+  var observer = new MutationObserver(function() {
+    fixClubCard();
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:393c1cf3f995 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
