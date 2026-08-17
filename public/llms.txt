@@ -29,30 +29,6 @@ https://liorgur.com/product/:slug
 https://liorgur.com/category/:slug
 מוצרים - מרכז מבינים זוגיות - ליאור גור
 
-### מוצרים
-https://liorgur.com/products
-המוצרים שלנו - מרכז מבינים זוגיות - ליאור גור
-
-### עגלת קניות
-https://liorgur.com/cart
-עגלת הקניות שלך
-
-### תשלום
-https://liorgur.com/checkout
-תשלום
-
-### התחברות
-https://liorgur.com/login
-התחברות לקוחות
-
-### החשבון שלי
-https://liorgur.com/account
-החשבון שלי
-
-### ההזמנה התקבלה!
-https://liorgur.com/order-success
-תודה על ההזמנה
-
 ### צעד אחד קטן מפריד אותך מהזוגיות — מרכז מבינים זוגיות - ליאור גור
 https://liorgur.com/contact
 רוצה לדעת איך למצוא זוגיות נכונה ולהתחיל את המסע? צור קשר עם ליאור גור עכשיו לשיחת היכרות ללא עלות וגלה איזו תוכנית מתאימה בדיוק עבורך. אל תחכה!
@@ -73,30 +49,24 @@ Information about WCAG compliance and accessibility features.
 
 ---
 
-## Products
+## How to Contact Us
 
-**Total active products: 3**
+- Email: serviceliorgur@gmail.com
+- Phone: 055-722-3365
+- Phone (tel): tel:0557223365
+- Address: שנקר 1, הרצליה, ישראל
 
-### המדריך החינמי – אהבה עצמית כבסיס לזוגיות
-https://liorgur.com/product/hmdryk-hchynmy-ahbh-atsmyt-kbsys-lzvgyvt-fueral
-- Price: 0.00 ILS
-- Availability: In stock
-- Description: המדריך החינמי – אהבה עצמית כבסיס לזוגיות. גלו כיצד אהבה עצמית עמוקה ובריאה היא המפתח לזוגיות מספקת ואוהבת. המדריך כולל תרגילים מעשיים, תובנות מקצועיות וכלים לבניית מערכת יחסים חזקה יותר – החל מהקשר החשוב ביותר: הקשר עם עצמכם. לאחר ההרשמה תקבלו גישה מיידית לקורס. ➡️ היכנסו לקורס כאן: https://self-love.vibepreview.com/login
-- Image: https://liorgur.com/assets/product-1777836531817-myvgxo.webp
-
-### הקורס הדיגיטלי – "יציאה מתקיעות"
-https://liorgur.com/product/hkvrs-hdygytly-ytsyah-mtkyavt-okg88a
-- Price: 397.00 ILS
-- Availability: In stock
-- Description: קורס דיגיטלי פרקטי למי שמרגיש תקוע בדייטים או בזוגיות. מלמד איך לשנות דפוסים, לקבל בהירות ולהתחיל לפעול אחרת, צעד אחרי צעד. כולל תרגילים, חוברת עבודה וכלים יישומיים לשינוי אמיתי. גישה מיידית לאחר ההרשמה, צפייה חופשית בקצב שלך, מכל מקום ובכל זמן 💰
-- Image: https://liorgur.com/assets/product-1777836415518-65q08.webp
-
-### מנוי למועדון מבינים זוגיות
-https://liorgur.com/product/mnvy-lmvadvn-mbynym-zvgyvt-o7v7q6
-- Price: 177.00 ILS
-- Availability: In stock
-- Description: מסגרת קבועה שמאפשרת להישאר בתהליך ולא לחזור לאותם דפוסים לבד. כוללת הטבות לאירועים, חיבורים, תוכן וליווי , מתמשך בתוך קהילה פעילה. פעילות שוטפת לאורך החודש 📍 מיקום: אירועים פרונטליים בהרצליה + פעילות דיגיטלית, קורסים דיגיטליים זומים וכדומה
-- Image: https://liorgur.com/assets/product-1779358669246-uz41le.webp
+### Contact form
+- URL: https://liorgur.com/contact
+- Endpoint: https://liorgur.com/api/email/contact-form
+- Method: POST
+- Content-Type: application/json
+- Fields:
+  - `name` (text, required)
+  - `email` (email, required)
+  - `phone` (tel)
+  - `message` (textarea, required)
+  - `privacy_consent` (checkbox, required)
 
 ---
 
@@ -124,5 +94,3 @@ A relationship coaching and personal development business focused on helping ind
 - Sitemap (XML): https://liorgur.com/sitemap.xml
 - Robots: https://liorgur.com/robots.txt
 - Flattened page text (for LLMs): https://liorgur.com/llms-full.txt
-- Products (JSON): https://liorgur.com/products.json
-- Products (Google Merchant RSS): https://liorgur.com/product-feed.xml
