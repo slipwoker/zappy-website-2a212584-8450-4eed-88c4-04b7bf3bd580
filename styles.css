@@ -8321,6 +8321,10 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
     font-size: 13px;
   }
 }
+
+.club-journey-section .club-journey-section__container {
+  flex-direction: row-reverse !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
