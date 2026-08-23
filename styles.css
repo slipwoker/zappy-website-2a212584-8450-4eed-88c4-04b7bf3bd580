@@ -8064,7 +8064,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 64px;
 }
