@@ -2688,7 +2688,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     
   
   
-<script>window.ZAPPY_WEBSITE_ID = "2a212584-8450-4eed-88c4-04b7bf3bd580";window.ZAPPY_API_BASE = (window.location.pathname.includes('/preview') ? "https://api.zappy5.com" : "https://api.zappy5.com");</script>
+<script>window.ZAPPY_WEBSITE_ID = "2a212584-8450-4eed-88c4-04b7bf3bd580";window.ZAPPY_API_BASE = "https://api.zappy5.com"</script>
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
     <svg style="display:block !important" class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -3153,29 +3153,31 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 </script>
   
   <main class="blog-page ai-generated-page"><section class="club-hero-section" data-layout-spec="מועדון מבינים זוגיות , ליווי מתמשך ליציאה מתקיעות בזוגיות-hero" data-hero-type="fullscreen-scrim" id="club-hero-section">
-    <div class="club-hero-section__container">
-        <div class="club-hero-section__text">
-            <p><span class="club-hero-section__eyebrow">ליווי מתמשך מבית מבינים זוגיות</span>
-            </p><h1 class="club-hero-section__headline" style="">הכרויות הן לא הבעיה,<br>הדפוסים שלנו, כן.</h1>
-            <h3 class="club-hero-section__subtitle" style="">עוד דייטים לא ייצרו תוצאה שונה בלי בהירות פנימית. <br>מועדון מבינים זוגיות הוא ההזדמנות לייצר מסגרת עקבית, לעבוד על הדברים שחשובים באמת, עם סביבה תומכת, תרגול, מפגשים חודשיים ועוד.</h3>
-            <div class="club-hero-section__ctas">
-                <a href="https://pay.grow.link/ede61963ed849c9ee989b6a7c7c7f0df-MzI0NzA2NQ" class="club-hero-section__btn club-hero-section__btn--primary" data-element-type="button" data-element-id="btn-1785766034121-rrww6807u" data-native-element="true">הצטרפו עכשיו ב-₪177 לחודש</a>
-                <a href="#program-details" class="club-hero-section__btn club-hero-section__btn--outline" data-element-type="button" data-element-id="btn-1785766034121-ryvmwt35g" data-native-element="true">מה כוללת התוכנית?</a>
-            </div>
-            <p class="club-hero-section__reassurance" style="">מעל 500 גברים ונשים כבר מצאו את הדרך שלהם איתנו</p>
-        </div>
-        <div class="club-hero-section__media">
-            <div class="club-hero-section__image-frame">
-                <img data-hero-bg="true" data-context="A warm, softly lit editorial photo of a calm person in their 30s sitting at a wooden desk, journaling or reflecting thoughtfully, wearing neutral-toned clothing, warm indoor lighting with gentle shadows, intimate and hopeful atmosphere, suitable for a relationship coaching brand." width="600" height="400" src="/assets/image-section-hero-club-hero-image-1.webp" alt="אדם כותב ביומן בסביבה חמה ורגועה" class="club-hero-section__image" data-zappy-editable-image="true" data-hero-background="true" data-element-type="image" data-element-id="img-1785766034124-nivj8s5se" decoding="async">
-                <div class="club-hero-section__paper-texture"></div>
-            </div>
-            <div class="club-hero-section__note-card">
-                <span>בהירות.</span>
-                <span>תרגול.</span>
-                <span>תמיכה.</span>
-            </div>
-        </div>
+    <div class="club-hero-section__container" style="display: flex; flex-direction: row-reverse; align-items: center; gap: 60px;">
+    <!-- Text Column (Right in RTL layout) -->
+    <div class="club-hero-section__text">
+      <p><span class="club-hero-section__eyebrow">ליווי מתמשך מבית מבינים זוגיות</span> </p>
+      <h1 class="club-hero-section__headline">הכרויות הן לא הבעיה,<br>הדפוסים שלנו, כן.</h1>
+      <h3 class="club-hero-section__subtitle">עוד דייטים לא ייצרו תוצאה שונה בלי בהירות פנימית. <br>מועדון מבינים זוגיות הוא ההזדמנות לייצר מסגרת עקבית, לעבוד על הדברים שחשובים באמת, עם סביבה תומכת, תרגול, מפגשים חודשיים ועוד.</h3>
+      <div class="club-hero-section__ctas">
+        <a href="https://pay.grow.link/ede61963ed849c9ee989b6a7c7c7f0df-MzI0NzA2NQ" class="club-hero-section__btn club-hero-section__btn--primary" data-element-id="btn-1785766034121-rrww6807u">הצטרפו עכשיו ב-₪177 לחודש</a>
+        <a href="#program-details" class="club-hero-section__btn club-hero-section__btn--outline" data-element-id="btn-1785766034121-ryvmwt35g">מה כוללת התוכנית?</a>
+      </div>
+      <p class="club-hero-section__reassurance">מעל 500 גברים ונשים כבר מצאו את הדרך שלהם איתנו</p>
     </div>
+    <!-- Media Column (Left) -->
+    <div class="club-hero-section__media">
+      <div class="club-hero-section__image-frame">
+        <img width="600" height="400" src="/assets/image-section-hero-club-hero-image-1.webp" alt="אדם כותב ביומן בסביבה חמה ורגועה" class="club-hero-section__image" data-element-id="img-1785766034124-nivj8s5se" decoding="async">
+        <div class="club-hero-section__paper-texture"></div>
+      </div>
+      <div class="club-hero-section__note-card">
+        <span>בהירות.</span>
+        <span>תרגול.</span>
+        <span>תמיכה.</span>
+      </div>
+    </div>
+  </div>
     <div class="club-hero-section__divider-wrapper">
         <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0,80 L0,30 Q150,60 300,35 T600,40 Q750,55 900,35 T1200,40 L1200,80 Z" fill="var(--bg-light)"></path>
@@ -3225,17 +3227,17 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   </div>
 </section>
 
-<section class="club-features-section" data-layout-spec="מועדון מבינים זוגיות , ליווי מתמשך ליציאה מתקיעות בזוגיות-features" dir="rtl">
+<section class="club-features-section" data-layout-spec="מועדון מבינים זוגיות , ליווי מתמשך ליציאה מתקיעות בזוגיות-features" dir="rtl" id="zappy-section-2">
   <div class="club-features-container">
     <div class="club-features-header">
       <h2>הדרך שלך לצאת מהתקיעות ולהתחיל לנוע</h2>
       <p>המועדון שלנו מעניק לך ליווי מתמשך, כלים מעשיים וקהילה תומכת – כדי שהפעם לא תישארי לבד עם השאלות.</p>
     </div>
     
-    <div class="club-features-grid">
+    <div class="club-features-grid zappy-preserve-css-grid" id="zappy-auto-grid-1787477537644-l0dkn2" data-zappy-auto-grid="true" data-original-item-width="524" data-original-gap="32px" style="--zappy-grid-cols: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); display: grid; align-items: stretch !important;" data-zappy-explicit-columns="true">
       
       <!-- Card 1 -->
-      <article class="club-feature-card">
+      <article class="club-feature-card" data-grid-item-index="0">
         <div class="club-feature-icon">
           <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.3"></circle>
@@ -3249,7 +3251,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       </article>
 
       <!-- Card 2 -->
-      <article class="club-feature-card">
+      <article class="club-feature-card" data-grid-item-index="1">
         <div class="club-feature-icon">
           <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.3"></circle>
@@ -3266,7 +3268,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       </article>
 
       <!-- Card 3 -->
-      <article class="club-feature-card">
+      <article class="club-feature-card" data-grid-item-index="2">
         <div class="club-feature-icon">
           <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.3"></circle>
@@ -3283,7 +3285,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       </article>
 
       <!-- Card 4 -->
-      <article class="club-feature-card">
+      <article class="club-feature-card" data-grid-item-index="3">
         <div class="club-feature-icon">
           <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.3"></circle>
@@ -3295,7 +3297,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
             <path d="M34 34L30 30" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"></path>
           </svg>
         </div>
-        <h3>תחושת מועדון – לא הולכים לבד</h3>
+        <h3>ביחד – במקום לבד</h3>
         <p>את לא צריכה להתמודד לבד. בקהילה התומכת שלנו תפגשי נשים נוספות באותו המסע, תשתפי, תתחזקי ותגלי שאפשר אחרת – בעקביות, ביחד.</p>
       </article>
 
@@ -3315,7 +3317,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     <!-- Left Column: Image Card -->
     <div class="club-journey-section__media">
       <div class="club-journey-section__image-card card-default">
-        <img data-context="A warm, intimate flat-lay photo of a leather-bound journal, a steaming ceramic cup of herbal tea, a pair of reading glasses, and a soft wool throw blanket, on a rustic wooden table, lit by gentle morning light from a window, creating a feeling of calm reflection and personal growth for a relationship coaching business" width="600" height="400" src="/assets/image-section-journey-club-journey-image-1.webp" alt="יומן אישי, תה חם ואווירה ביתית חמימה" data-zappy-editable-image="true" loading="lazy" decoding="async" fetchpriority="low">
+        <img data-context="A warm, intimate flat-lay photo of a leather-bound journal, a steaming ceramic cup of herbal tea, a pair of reading glasses, and a soft wool throw blanket, on a rustic wooden table, lit by gentle morning light from a window, creating a feeling of calm reflection and personal growth for a relationship coaching business" width="600" height="400" src="/assets/image-section-journey-club-journey-image-1.webp" alt="יומן אישי, תה חם ואווירה ביתית חמימה" loading="lazy" decoding="async" fetchpriority="low">
         <div class="club-journey-section__image-badge">
           <span>המסע שלך</span>
         </div>
