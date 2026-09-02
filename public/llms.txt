@@ -33,6 +33,10 @@ https://liorgur.com/category/:slug
 https://liorgur.com/contact
 רוצה לדעת איך למצוא זוגיות נכונה ולהתחיל את המסע? צור קשר עם ליאור גור עכשיו לשיחת היכרות ללא עלות וגלה איזו תוכנית מתאימה בדיוק עבורך. אל תחכה!
 
+### זמינות רגשית
+https://liorgur.com/articles/how-to-recognize-emotional-availability
+מרכז מבינים זוגיות - ליאור גור - איך לזהות זמינות רגשית בתחילת קשר
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -62,11 +66,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
+  - `name` (text)
+  - `email` (email)
   - `phone` (tel)
-  - `message` (textarea, required)
-  - `privacy_consent` (checkbox, required)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox)
 
 ---
 

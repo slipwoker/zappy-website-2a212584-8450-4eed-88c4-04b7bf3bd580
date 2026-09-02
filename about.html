@@ -1511,6 +1511,66 @@
               });
             })();
           </script>
+        <style>
+      /* Dropdown sub-menu styles */
+      .nav-menu li:has(.sub-menu),
+      nav li:has(.sub-menu),
+      .navbar li:has(.sub-menu) {
+        position: relative;
+      }
+      .nav-menu .sub-menu,
+      nav .sub-menu,
+      .navbar .sub-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        padding: 8px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        list-style: none;
+        pointer-events: none;
+      }
+      .nav-menu li:hover > .sub-menu,
+      nav li:hover > .sub-menu,
+      .navbar li:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .sub-menu li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .sub-menu a {
+        display: block;
+        padding: 10px 16px;
+        color: #333;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background-color 0.2s;
+      }
+      .sub-menu a:hover {
+        background-color: #f5f5f5;
+      }
+      /* RTL dropdown positioning */
+      [dir="rtl"] .sub-menu,
+      html[lang="he"] .sub-menu,
+      html[lang="ar"] .sub-menu {
+        left: auto;
+        right: 0;
+      }
+    </style>
     <style id="zappy-critical-above-fold-css">
 html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:inherit}body{margin:0;min-width:320px;overflow-x:clip}img,svg,video{max-width:100%;height:auto}main{display:block}.container{width:min(100% - 32px,1200px);margin-inline:auto}.navbar,nav.navbar,header .navbar,header[role="banner"]{position:relative;z-index:1000;width:100%}.nav-container,.navbar .container{display:flex;align-items:center;justify-content:space-between;min-height:64px}.logo,.logo-link img{display:block;width:35px;height:35px;object-fit:contain}.nav-menu,#navMenu{list-style:none;margin:0;padding:0}.navbar a,.nav-menu a,#navMenu a,.navbar .nav-links a{color:inherit;text-decoration:none}.navbar .sub-menu,.nav-menu .sub-menu,#navMenu .sub-menu{display:none}.fa,.fas,.far,.fab,.fa-solid,.fa-regular,.fa-brands{display:inline-block;min-width:1em;text-align:center}html:not(#zappy-noop)[data-zappy-site-type="ecommerce"] .phone-header-btn,html:not(#zappy-noop) .navbar:has(.nav-ecommerce-icons)>.phone-header-btn{display:none!important;visibility:hidden!important;width:0!important;height:0!important;pointer-events:none!important}.zappy-preview-empty-store-cta{display:none!important;visibility:hidden!important;height:0!important;max-height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important}.zappy-catalog-menu{background:var(--surface-color,var(--surface,linear-gradient(135deg,#f8f9fa 0%,#fff 100%)));border-bottom:1px solid var(--border-color,#e5e7eb);padding:0;position:sticky;top:0;z-index:90}.zappy-catalog-menu[dir=rtl],.zappy-catalog-menu.rtl{direction:rtl}.zappy-catalog-menu[dir=ltr],.zappy-catalog-menu.ltr{direction:ltr}.catalog-menu-container{max-width:1440px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:10px 24px;overflow:visible}.catalog-menu-categories,.catalog-menu-list{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin:0;padding:0;list-style:none}.catalog-menu-item{display:inline-flex;align-items:center;padding:8px 16px;font-size:14px;font-weight:500;color:var(--text-color,var(--text,#374151));text-decoration:none;border-radius:20px;white-space:nowrap}.catalog-menu-all{background:var(--primary-color,var(--primary,#111));color:var(--text-light,#fff)!important}.catalog-menu-parent{position:relative;display:inline-flex;align-items:center}.catalog-menu-trigger{display:inline-flex;align-items:center;gap:6px}.catalog-menu-chevron{flex-shrink:0}.catalog-menu-parent>.sub-menu{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}.hero-section,.index-hero-section,section[class*="hero"]{position:relative;overflow:hidden}.hero-section,.index-hero-section{min-height:560px}section[data-hero-type*="fullscreen"]{min-height:100vh}.hero-bg-wrapper,.hero-bg-image,section[class*="hero"] [class*="hero-bg"]{position:absolute;inset:0;width:100%;height:100%}.hero-bg-wrapper img,.hero-bg-image img,section[class*="hero"] [data-hero-bg],section[class*="hero"] img[data-hero-background="true"]{width:100%!important;height:100%!important;object-fit:cover!important;display:block}.hero-content,section[class*="hero"] .container{position:relative;z-index:2}@media(max-width:768px){:root{--header-height:72px;--total-header-height:72px;--zappy-mobile-menu-top:72px}html[data-zappy-site-type="ecommerce"] body{padding-top:var(--total-header-height,72px)}html[data-zappy-site-type="ecommerce"] body>nav.navbar,html[data-zappy-site-type="ecommerce"] body>.navbar:not(.zappy-catalog-menu){position:fixed!important;top:0;left:0;right:0;z-index:100000;width:100%;margin-bottom:0}.zappy-catalog-menu{position:fixed;top:var(--header-height,72px);left:0;right:0;z-index:99999}.nav-container,.navbar .container{min-height:60px}.nav-menu,#navMenu{max-width:100vw;overflow-x:hidden}.hero-section,.index-hero-section,section[class*="hero"],section[data-hero-type*="fullscreen"]{min-height:100svh}.hero-bg-wrapper,.hero-bg-image,.hero-scrim{min-height:100svh}}
 :root{--nav-bg:#F6F1E8}.navbar{background-color:#F6F1E8!important}
@@ -1628,7 +1688,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <a href="/" class="logo-link">
         <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות , ליאור גור" class="logo" decoding="async" width="35" height="35">
       </a>
-    </div><ul class="nav-menu" id="navMenu"><li><a href="/club" class="nav-link">מועדון מבינים זוגיות</a></li><li><a href="/articles" class="">מאמרים</a></li><li><a href="/about">אודות</a></li></ul><div class="nav-cta-container"><li class="nav-cta-item"><a href="/contact" class="nav-cta-btn">צור קשר</a></li></div></div>
+    </div><ul class="nav-menu" id="navMenu"><li><a href="/club" class="nav-link">מועדון מבינים זוגיות</a></li><li><a href="/articles" class="">מאמרים</a><ul class="sub-menu"><li><a href="/articles/how-to-recognize-emotional-availability" class="nav-link">זמינות רגשית</a></li></ul></li><li><a href="/about">אודות</a></li></ul><div class="nav-cta-container"><li class="nav-cta-item"><a href="/contact" class="nav-cta-btn">צור קשר</a></li></div></div>
 
     
 
@@ -2080,9 +2140,9 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     <div class="about-story-text">
       <div class="about-story-label">הסיפור שלי</div>
 
-      <h1 class="about-story-h1">ליאור גור&nbsp;<br>מרכז מבינים זוגיות</h1>
+      <h1 class="about-story-h1" style="">ליאור גור&nbsp;<br>מרכז מבינים זוגיות</h1>
 
-      <p class="about-story-body">אני מאמין שכל אחד ואחת ראויים לזוגיות אמיתית, מעמיקה ומשמחת. במשך שנים אני מלווה אנשים בדרכם אל האהבה, דרך קורסים, סדנאות זוגיות, ליוויים אישיים ומפגשים קבוצתיים שמשלבים ידע פסיכולוגי, כנות מלאה ואמונה עמוקה ביכולתו של כל אדם לשנות את מציאות חייו. הגישה שלי בנויה על שלושה עמודים: הנגשה, פרקטיקה, והעצמה אישית. כי כשמבינים איך זוגיות עובדת, היא מתחילה לקרות.</p>
+      <p class="about-story-body" style="">אני מאמין שכל אחד ואחת ראויים לזוגיות אמיתית, מעמיקה ומשמחת. במשך שנים אני מלווה אנשים בדרכם אל האהבה, דרך קורסים, סדנאות זוגיות, ליוויים אישיים ומפגשים קבוצתיים שמשלבים ידע פסיכולוגי, כנות מלאה ואמונה עמוקה ביכולתו של כל אדם לשנות את מציאות חייו. הגישה שלי בנויה על שלושה עמודים: הנגשה, פרקטיקה, והעצמה אישית. כי כשמבינים איך זוגיות עובדת, היא מתחילה לקרות.</p>
 
       <div class="about-story-divider-line" aria-hidden="true"></div>
 
@@ -2116,7 +2176,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     <div class="philosophy-header">
       <p><span class="philosophy-label" style="color: rgb(46, 42, 39) !important;">הערכים שמנחים אותנו</span>
       </p><h2 class="philosophy-title">העקרונות שעומדים בלב העבודה שלנו</h2>
-      <p class="philosophy-subtitle">בכל קורס, סדנה ומפגש קבוצתי, אנחנו מחויבים לאותם עקרונות יסוד שהופכים שינוי אמיתי לאפשרי&nbsp; בזוגיות ובחיים.</p>
+      <p class="philosophy-subtitle" style="">בכל קורס, סדנה ומפגש קבוצתי, אנחנו מחויבים לאותם עקרונות יסוד שהופכים שינוי אמיתי לאפשרי&nbsp; בזוגיות ובחיים.</p>
     </div>
 
     <div class="philosophy-grid zappy-preserve-css-grid" id="zappy-auto-grid-1777837472859-ebqpv4" data-zappy-auto-grid="true" data-original-item-width="588" data-original-gap="24px" style="--zappy-grid-cols: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); display: grid; align-items: stretch !important;" data-zappy-explicit-columns="true">
@@ -2143,7 +2203,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         </div>
         <div class="card-body">
           <h3 class="card-title">אחריות אישית</h3>
-          <p class="card-text">זוגיות נכונה מתחילה בפנים. אנחנו מלמדים כיצד לקחת בעלות על הבחירות שלנו, על הדפוסים שלנו ועל הסיפורים שאנחנו מספרים לעצמנו, כי שינוי אמיתי נולד מאחריות, לא מאשמה.</p>
+          <p class="card-text" style="">זוגיות נכונה מתחילה בפנים. אנחנו מלמדים כיצד לקחת בעלות על הבחירות שלנו, על הדפוסים שלנו ועל הסיפורים שאנחנו מספרים לעצמנו, כי שינוי אמיתי נולד מאחריות, לא מאשמה.</p>
         </div>
       </article>
 
@@ -2156,7 +2216,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         </div>
         <div class="card-body">
           <h3 class="card-title">בהירות</h3>
-          <p class="card-text">בלבול בזוגיות מגיע לעיתים קרובות מחוסר בהירות פנימית. בסדנאות ובקורסים שלנו תלמדו לזהות מה אתם באמת רוצים, מה חשוב לכם, ואיך למצוא זוגיות נכונה שמתאימה לכם!, לא לסביבה.</p>
+          <p class="card-text" style="">בלבול בזוגיות מגיע לעיתים קרובות מחוסר בהירות פנימית. בסדנאות ובקורסים שלנו תלמדו לזהות מה אתם באמת רוצים, מה חשוב לכם, ואיך למצוא זוגיות נכונה שמתאימה לכם!, לא לסביבה.</p>
         </div>
       </article>
 
@@ -2168,7 +2228,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         </div>
         <div class="card-body">
           <h3 class="card-title">אומץ</h3>
-          <p class="card-text">לפתוח את הלב מחדש דורש אומץ. אנחנו יוצרים מרחב בטוח שבו אפשר להיות פגיעים, לנסות גישות חדשות ולצאת מאזורי הנוחות, כי רק מי שמעז לשנות, מצליח לבנות אהבה אמיתית.</p>
+          <p class="card-text" style="">לפתוח את הלב מחדש דורש אומץ. אנחנו יוצרים מרחב בטוח שבו אפשר להיות פגיעים, לנסות גישות חדשות ולצאת מאזורי הנוחות, כי רק מי שמעז לשנות, מצליח לבנות אהבה אמיתית.</p>
         </div>
       </article>
 
@@ -2213,11 +2273,11 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         <div class="profile-bio-content">
 <p>תמיד הייתי אדם זוגי. כזה שאוהב לאהוב, שרוצה להרגיש את הביחד בצורה הכי אמיתית שיש.</p>
 <p>אבל לאורך השנים מצאתי את עצמי שוב ושוב נפגע. קשרים שלא עבדו, פרידות, תחושת תסכול. והמחשבה שחזרה לי בראש הייתה: <em>אולי אני פשוט לא מספיק טוב.</em></p>
-<p>נכנסתי לקשר שהתדרדר. התעלפתי מלחצים, הלכתי לנוירולוגית, המצב הכלכלי קרס ואיבדתי שליטה על החיים שלי. חשבתי שחתונה תציל את זה, הייתי נשוי כמעט שנתיים, עד שלא יכולתי יותר.</p>
+<p style="">נכנסתי לקשר שהתדרדר. התעלפתי מלחצים, הלכתי לנוירולוגית, המצב הכלכלי קרס ואיבדתי שליטה על החיים שלי. חשבתי שחתונה תציל את זה, הייתי נשוי כמעט שנתיים, עד שלא יכולתי יותר.</p>
 <p>מצאתי את עצמי במקום הכי נמוך שהייתי בו. תחושת כישלון. אכזבה. למה זה צריך להיות כל כך קשה?</p>
-<p>באותו רגע הבנתי שיש לי שתי אפשרויות: להשלים עם זה, או לעצור ולהתחיל לבנות את עצמי מחדש. <strong>בחרתי לבנות.</strong></p>
-<p>התחלתי לשאול שאלות אחרות: מי באמת מתאימה לי? איך בונים זוגיות בצורה נכונה ובריאה? איך מנהלים קונפליקטים ולא בורחים מהם? לאט לאט דברים התחילו להתחבר. הבנתי שלא מדובר במזל, אלא בדרך פעולה.</p>
-<p>היום אני נשוי באושר לאישתי בטי כבר יותר מ-8 שנים. לא כי "מצאתי את האחת במקרה", אלא כי למדתי איך לבחור נכון ואיך לבנות נכון.</p>
+<p style="">באותו רגע הבנתי שיש לי שתי אפשרויות: להשלים עם זה, או לעצור ולהתחיל לבנות את עצמי מחדש. <strong>בחרתי לבנות.</strong></p>
+<p style="">התחלתי לשאול שאלות אחרות: מי באמת מתאימה לי? איך בונים זוגיות בצורה נכונה ובריאה? איך מנהלים קונפליקטים ולא בורחים מהם? לאט לאט דברים התחילו להתחבר. הבנתי שלא מדובר במזל, אלא בדרך פעולה.</p>
+<p style="">היום אני נשוי באושר לאישתי בטי כבר יותר מ-8 שנים. לא כי "מצאתי את האחת במקרה", אלא כי למדתי איך לבחור נכון ואיך לבנות נכון.</p>
 </div>
       </div>
 
@@ -2252,7 +2312,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         <svg data-element-type="icon" data-icon-type="svg" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="profile-belief-icon">
           <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z" fill="#C96F4A" opacity="0.18"></path>
         </svg>
-        <p class="profile-belief-text">אני מאמין שזוגיות היא אחת ההחלטות הכי משמעותיות בחיים, כזו שמשפיעה על כל תחום. והיא שווה את ההשקעה, את הפוקוס, ואת הדרך הנכונה. הדרך הזו חייבת להיות גם מנטאלית וגם פרקטית.</p>
+        <p class="profile-belief-text" style="">אני מאמין שזוגיות היא אחת ההחלטות הכי משמעותיות בחיים, כזו שמשפיעה על כל תחום. והיא שווה את ההשקעה, את הפוקוס, ואת הדרך הנכונה. הדרך הזו חייבת להיות גם מנטאלית וגם פרקטית.</p>
       </div>
 
       <!-- Specialties -->
@@ -2349,7 +2409,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
     <div class="about-reviews-header">
       <h2 class="about-reviews-title">מה אומרים אלה שכבר עשו את הדרך</h2>
-      <p class="about-reviews-subtitle">אנשים שהגיעו עם שאלות, ספקות, חששות ומצאו כיוון, ביטחון ואהבה אמיתית.</p>
+      <p class="about-reviews-subtitle" style="">אנשים שהגיעו עם שאלות, ספקות, חששות ומצאו כיוון, ביטחון ואהבה אמיתית.</p>
     </div>
 
     <div class="about-reviews-grid zappy-preserve-css-grid" id="zappy-auto-grid-1777839956216-8dqhr2" data-zappy-auto-grid="true" data-original-item-width="384" data-original-gap="24px" style="--zappy-grid-cols: repeat(auto-fit, minmax(min(100%, 384px), 1fr)); grid-template-columns: repeat(auto-fit, minmax(min(100%, 384px), 1fr)); display: grid; align-items: stretch !important;" data-zappy-explicit-columns="true">
@@ -2361,13 +2421,13 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           </svg>
         </div>
         <blockquote class="about-review-text">
-          <p>הגעתי לליאור אחרי שנים של תחושה שאף אחד לא ממש רואה אותי. במפגש הראשון כבר הרגשתי שונה, כאילו מישהו סוף סוף מבין אותי, שומע אותי, ורואה אותי באמת, יודע לזהות בדיוק את המקומות שאני נופלת בהן. זה לא היה רק הדרכה כללית, אלא ממש כלים פרקטיים במרחב שבו יכולתי להיות עצמי בלי לשפוט את עצמי. אני אסירת תודה על התוכנית הזאת.</p>
+          <p style="">הגעתי לליאור אחרי שנים של תחושה שאף אחד לא ממש רואה אותי. במפגש הראשון כבר הרגשתי שונה, כאילו מישהו סוף סוף מבין אותי, שומע אותי, ורואה אותי באמת, יודע לזהות בדיוק את המקומות שאני נופלת בהן. זה לא היה רק הדרכה כללית, אלא ממש כלים פרקטיים במרחב שבו יכולתי להיות עצמי בלי לשפוט את עצמי. אני אסירת תודה על התוכנית הזאת.</p>
         </blockquote>
         <footer class="about-review-author">
           <div class="about-review-avatar" aria-hidden="true">מ</div>
           <div class="about-review-author-info">
             <span class="about-review-name">מיכל, 34</span>
-            <span class="about-review-detail">השתתפה בתוכנית זוגיות</span>
+            <span class="about-review-detail" style="">השתתפה בתוכנית זוגיות</span>
           </div>
         </footer>
       </article>
@@ -2379,7 +2439,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           </svg>
         </div>
         <blockquote class="about-review-text">
-          <p>ליאור נתן לי כלים מאוד קונקרטיים, לא רק מילים יפות. הבנתי למה דפוסים מסוימים חזרו על עצמם אצלי, ואיך לשנות אותם בפועל. התוכנית הפרונטלית למציאת זוגיות נכונה, פשוט שינה את הדרך שבה אני מתייחס לעצמי ולמערכות יחסים ושינה לי את חיי הזוגיות, היום אני בזוגיות מאושרת ומלא הודיה על התהליך המדהים שעברתי ועל הקשר המדהים שיש לי היום אחרי שנים של לבד.</p>
+          <p style="">ליאור נתן לי כלים מאוד קונקרטיים, לא רק מילים יפות. הבנתי למה דפוסים מסוימים חזרו על עצמם אצלי, ואיך לשנות אותם בפועל. התוכנית הפרונטלית למציאת זוגיות נכונה, פשוט שינה את הדרך שבה אני מתייחס לעצמי ולמערכות יחסים ושינה לי את חיי הזוגיות, היום אני בזוגיות מאושרת ומלא הודיה על התהליך המדהים שעברתי ועל הקשר המדהים שיש לי היום אחרי שנים של לבד.</p>
         </blockquote>
         <footer class="about-review-author">
           <div class="about-review-avatar" aria-hidden="true">א</div>
@@ -2397,12 +2457,12 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           </svg>
         </div>
         <blockquote class="about-review-text">
-          <p>לא האמנתי שאוכל למצוא זוגיות בגיל שלי. הגעתי מלאת ספקות וערך עצמי בריצפה.. ליאור גילה לי את עצמי, עזר לי לשחרר מחשבות מורידות, לבנות ביטחון עצמי מבפנים, להפסיק עם ההשוואתיות. היום אני יודעת מה אני שווה, ואני גאה בכך. שנה אחרי התוכנית, אני בזוגיות מאושרת ומלאת משמעות, לא חלמתי להגיע לזה... אבל הנה גם לי זה סוף סוף קורה, אין מרגש מזה..</p>
+          <p style="">לא האמנתי שאוכל למצוא זוגיות בגיל שלי. הגעתי מלאת ספקות וערך עצמי בריצפה.. ליאור גילה לי את עצמי, עזר לי לשחרר מחשבות מורידות, לבנות ביטחון עצמי מבפנים, להפסיק עם ההשוואתיות. היום אני יודעת מה אני שווה, ואני גאה בכך. שנה אחרי התוכנית, אני בזוגיות מאושרת ומלאת משמעות, לא חלמתי להגיע לזה... אבל הנה גם לי זה סוף סוף קורה, אין מרגש מזה..</p>
         </blockquote>
         <footer class="about-review-author">
           <div class="about-review-avatar" aria-hidden="true">ר</div>
           <div class="about-review-author-info">
-            <span class="about-review-name">הילה, 43</span>
+            <span class="about-review-name" style="">הילה, 43</span>
             <span class="about-review-detail">מפגשי קבוצה ואימון אישי</span>
           </div>
         </footer>
@@ -2426,7 +2486,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <!-- Column 1: Company Info -->
       <div class="footer-col footer-brand">
         <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות , ליאור גור" class="logo" data-element-type="image" data-element-id="img-1777841668422-p8269wj5w" data-zappy-footer-image="true" decoding="async" width="35" height="35">
-        <p class="brand-tagline">מרכז מבינים זוגיות מציע ליווי אישי, קורסים וסדנאות לחיזוק הזוגיות, צמיחה אישית והעמקה רגשית.</p>
+        <p class="brand-tagline" style="">מרכז מבינים זוגיות מציע ליווי אישי, קורסים וסדנאות לחיזוק הזוגיות, צמיחה אישית והעמקה רגשית.</p>
         <div class="footer-social">
           <a href="https://facebook.com/gur.lior.9" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="https://instagram.com/lior.gur?igsh=MWNuM2tmaHJvMzR1OQ==" aria-label="Instagram"><i class="fab fa-instagram" data-element-type="icon" data-element-id="icon-1777841668421-0soql6nom" data-icon-type="fontawesome"></i></a>
@@ -2450,7 +2510,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         <ul class="footer-contact">
           <li>
             <span class="contact-icon"><i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1777841668421-rlmppdxyr" data-icon-type="fontawesome"></i></span>
-            <span class="contact-text"><a href="/cdn-cgi/l/email-protection#643f0611170d0a0117173b0109050d0839">
+            <span class="contact-text"><a href="/cdn-cgi/l/email-protection#643f0611170d0a0117173b0109050d0839" style="">
 
 <span>serviceliorgur@gmail.com</span>
 
@@ -2458,7 +2518,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           </li>
           <li>
             <span class="contact-icon"><i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1777841668421-bzjrl8oky" data-icon-type="fontawesome"></i></span>
-            <span class="contact-text"><a href="tel:0557223365">055-722-3365</a></span>
+            <span class="contact-text"><a href="tel:0557223365" style="">055-722-3365</a></span>
           </li>
           <li><a href="/" style="display:flex;align-items:flex-start;gap:inherit"><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
             <span class="contact-text">שנקר 1, הרצליה, ישראל</span></a></li>

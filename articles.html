@@ -735,6 +735,57 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
 </style>
     <link rel="stylesheet" href="/styles.css">
+    <script>window.ZAPPY_WEBSITE_ID = "2a212584-8450-4eed-88c4-04b7bf3bd580"; window.ZAPPY_API_BASE = "https://api.zappy5.com";</script>
+
+    <style id="zappy-dropdown-submenu-styles">
+      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
+      /* Base styles for dropdown submenus - parent must be positioned */
+      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
+      /* Submenu base - hidden by default */
+      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
+      /* CRITICAL: Desktop hover styles to show dropdown */
+      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Submenu item styling */
+      .sub-menu li { list-style: none; margin: 0; padding: 0; }
+      .sub-menu a { display: block !important; padding: 10px 16px !important; color: var(--text-dark, #333) !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
+      .sub-menu .zappy-nav-child > a { padding-left: 28px !important; font-size: 0.9em !important; opacity: 0.85 !important; }
+      [dir="rtl"] .sub-menu .zappy-nav-child > a, html[lang="he"] .sub-menu .zappy-nav-child > a, html[lang="ar"] .sub-menu .zappy-nav-child > a { padding-left: 10px !important; padding-right: 28px !important; }
+      .sub-menu .zappy-nav-parent > a { font-weight: 600 !important; }
+      .sub-menu a:hover { background-color: #f5f5f5; }
+      /* RTL (Hebrew/Arabic) dropdown positioning */
+      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
+      /* Hide empty dropdown menus (exclude catalog sub-menus that use <a> children instead of <li>) */
+      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))):not(:has(> a)), .sub-menu:not(:has(li)):not(:has(> a)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+      /* Desktop: show submenu on Menu Group hover */
+      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Menu Group title styling */
+      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
+      
+      /* ========== MOBILE SUBMENU STYLES ========== */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
+        .navbar .sub-menu.mobile-expanded, .nav-menu .sub-menu.mobile-expanded, #navMenu .sub-menu.mobile-expanded { max-height: none !important; overflow-y: visible !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
+        /* Disable hover behavior on mobile */
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; position: relative !important; min-height: 44px !important; }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; min-width: 0 !important; }
+        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; min-width: 0 !important; display: flex !important; align-items: center !important; padding: 12px 16px !important; min-height: 44px !important; line-height: 1.4 !important; font-weight: 600 !important; box-sizing: border-box !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
+        .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; }
+        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: auto !important; background: transparent !important; border: none !important; cursor: pointer !important; color: var(--text-dark) !important; position: static !important; flex-shrink: 0 !important; align-self: stretch !important; z-index: 2 !important; padding: 0 !important; margin: 0 !important; }
+        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; color: var(--text-dark) !important; white-space: normal !important; }
+        .sub-menu .zappy-nav-child > a { padding-left: 28px !important; font-size: 0.9em !important; opacity: 0.85 !important; }
+        [dir="rtl"] .sub-menu .zappy-nav-child > a, html[lang="he"] .sub-menu .zappy-nav-child > a, html[lang="ar"] .sub-menu .zappy-nav-child > a { padding-left: 0 !important; padding-right: 28px !important; }
+        .sub-menu .zappy-nav-parent > a { font-weight: 600 !important; }
+        .nav-menu.active, #navMenu.active { max-width: 100vw !important; overflow-x: hidden !important; box-sizing: border-box !important; }
+        .navbar .sub-menu li a, nav.navbar .sub-menu li a, .zappy-products-dropdown .sub-menu a { color: var(--text-dark) !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
 
     <style id="zappy-widget-visibility">
       html[dir="rtl"] .whatsapp-float { right: 20px !important; left: auto !important; }
@@ -772,450 +823,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     </style>
 </head>
 <body>
-
-          <style id="zappy-cta-mobile-style">
-            /* Hide CTA list item on desktop (tablets and up) */
-            @media (min-width: 769px) {
-              .nav-cta-item-mobile {
-                display: none !important;
-              }
-            }
-            /* Show CTA list item on mobile */
-            @media (max-width: 768px) {
-              .nav-cta-item-mobile {
-                display: list-item !important;
-              }
-            }
-          </style>
-        
-          <style id="zappy-nested-menu-style">
-            /* Desktop only: vertically center nav items */
-            @media (min-width: 769px) {
-              .nav-menu,
-              #navMenu {
-                align-items: center !important;
-              }
-            }
-            
-            /* Menu Group styling (non-clickable parent) , TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu > li > .menu-group-title,
-            #navMenu > li > .menu-group-title {
-              display: inline-block !important;
-              padding: 0.5rem 1rem !important;
-              color: var(--nav-color) !important;
-              font-weight: 500 !important;
-              line-height: 1.7 !important;
-              cursor: default !important;
-              user-select: none !important;
-              vertical-align: middle !important;
-              text-decoration: none !important;
-              margin: 0 !important;
-              transition: color 0.3s ease !important;
-            }
-            
-            .nav-menu > li > .menu-group-title:hover,
-            #navMenu > li > .menu-group-title:hover {
-              color: var(--nav-hover-color) !important;
-            }
-            
-            /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover > .sub-menu {
-              opacity: 1 !important;
-              visibility: visible !important;
-              transform: translateY(0) !important;
-              pointer-events: auto !important; /* Enable interaction when hovering */
-            }
-            
-            /* Hide menu items marked as hidden (overrides hover states) */
-            .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
-              display: none !important;
-              opacity: 0 !important;
-              visibility: hidden !important;
-              pointer-events: none !important;
-            }
-            
-            /* Keep submenu visible when hovering over the submenu itself */
-            .sub-menu:hover {
-              opacity: 1 !important;
-              visibility: visible !important;
-              pointer-events: auto !important;
-            }
-            
-            /* Nested dropdown menu styles , using more specific selectors */
-            .nav-menu .sub-menu,
-            nav .sub-menu,
-            .navbar .sub-menu {
-              display: block !important; /* Ensure submenu is in the DOM */
-              position: absolute !important;
-              top: 100%;
-              left: 0;
-              right: auto;
-              min-width: 200px;
-              background: white;
-              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-              border-radius: 8px;
-              padding: 8px 0;
-              margin-top: 0px; /* Remove gap to prevent hover loss */
-              opacity: 0 !important;
-              visibility: hidden !important;
-              transform: translateY(-10px);
-              transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-              z-index: 1000;
-              list-style: none;
-              pointer-events: none; /* Prevent interaction when hidden */
-            }
-            
-            /* RTL (Hebrew/Arabic) submenu positioning , align to right instead of left */
-            [dir="rtl"] .nav-menu .sub-menu,
-            [dir="rtl"] nav .sub-menu,
-            [dir="rtl"] .navbar .sub-menu,
-            html[lang="he"] .nav-menu .sub-menu,
-            html[lang="he"] nav .sub-menu,
-            html[lang="he"] .navbar .sub-menu,
-            html[lang="ar"] .nav-menu .sub-menu,
-            html[lang="ar"] nav .sub-menu,
-            html[lang="ar"] .navbar .sub-menu {
-              left: auto;
-              right: 0;
-            }
-            
-            /* Show submenu on parent hover , more specific selectors */
-            .nav-menu li:hover > .sub-menu,
-            nav li:hover > .sub-menu,
-            .navbar li:hover > .sub-menu {
-              opacity: 1 !important;
-              visibility: visible !important;
-              transform: translateY(0) !important;
-              pointer-events: auto !important; /* Enable interaction when visible */
-            }
-            
-            /* Parent item must be relatively positioned */
-            .nav-menu li:has(.sub-menu),
-            nav li:has(.sub-menu),
-            .navbar li:has(.sub-menu) {
-              position: relative;
-            }
-            
-            /* Style for submenu items */
-            .sub-menu li {
-              list-style: none;
-              margin: 0;
-              padding: 0;
-            }
-            
-            .sub-menu a,
-            .sub-menu .menu-group-title {
-              display: block !important;
-              padding: 10px 12px !important;
-              color: #333 !important;
-              font-weight: 600 !important;
-              text-decoration: none;
-              transition: background-color 0.2s;
-              white-space: nowrap;
-              cursor: default;
-            }
-            
-            .sub-menu a:hover {
-              background-color: #f5f5f5;
-            }
-            
-            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only , must come AFTER submenu styles */
-            .nav-menu > li > .menu-group-title,
-            #navMenu > li > .menu-group-title {
-              display: inline-block !important;
-              padding: 0.5rem 1rem !important;
-              color: var(--nav-color) !important;
-              font-weight: 500 !important;
-              line-height: 1.7 !important;
-              cursor: default !important;
-              user-select: none !important;
-              vertical-align: middle !important;
-              text-decoration: none !important;
-              margin: 0 !important;
-              transition: color 0.3s ease !important;
-            }
-            
-            .nav-menu > li > .menu-group-title:hover,
-            #navMenu > li > .menu-group-title:hover {
-              color: var(--nav-hover-color) !important;
-              background-color: transparent !important;
-            }
-            
-            /* On mobile, show nested menus as expandable accordion */
-            @media (max-width: 768px) {
-              /* Mobile submenu styling */
-              .nav-menu .sub-menu,
-              nav .sub-menu,
-              .navbar .sub-menu {
-                position: static !important;
-                transform: none !important;
-                box-shadow: none !important;
-                background: transparent !important;
-                margin-top: 0 !important;
-                max-height: 0;
-                overflow: hidden;
-                opacity: 0;
-                visibility: hidden;
-                transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
-                padding: 0 !important;
-                border-radius: 0 !important;
-              }
-              
-              /* Expanded state , no internal scroll; parent navMenu scrolls */
-              .sub-menu.mobile-expanded {
-                max-height: none !important;
-                overflow-y: visible !important;
-                opacity: 1 !important;
-                visibility: visible !important;
-                padding: 8px 0 8px 16px !important;
-              }
-              
-              /* RTL padding adjustment */
-              [dir="rtl"] .sub-menu.mobile-expanded,
-              html[lang="he"] .sub-menu.mobile-expanded,
-              html[lang="ar"] .sub-menu.mobile-expanded {
-                padding: 8px 16px 8px 0 !important;
-              }
-              
-              /* Disable hover behavior on mobile */
-              .nav-menu li:hover > .sub-menu,
-              nav li:hover > .sub-menu,
-              .navbar li:hover > .sub-menu {
-                opacity: 0;
-                visibility: hidden;
-                pointer-events: none;
-              }
-              
-              /* Enable visibility for expanded submenus */
-              .nav-menu li > .sub-menu.mobile-expanded,
-              nav li > .sub-menu.mobile-expanded,
-              .navbar li > .sub-menu.mobile-expanded {
-                opacity: 1 !important;
-                visibility: visible !important;
-                pointer-events: auto !important;
-              }
-              
-              .sub-menu a {
-                padding: 10px 0 !important;
-                display: block !important;
-                font-size: 14px !important;
-                white-space: normal !important;
-              }
-              
-              .sub-menu a:hover {
-                background-color: transparent !important;
-              }
-              
-              /* Parent item wrapper , flex layout with relative positioning for absolute toggle */
-              .nav-menu li:has(.sub-menu),
-              nav li:has(.sub-menu),
-              .navbar li:has(.sub-menu) {
-                display: flex !important;
-                flex-wrap: wrap !important;
-                align-items: center !important;
-                position: relative !important;
-                min-height: 44px !important;
-              }
-              
-              /* Parent link , takes full width since toggle is absolute (not a flex child) */
-              .nav-menu li:has(.sub-menu) > a,
-              nav li:has(.sub-menu) > a,
-              .navbar li:has(.sub-menu) > a,
-              .nav-menu > li > .menu-group-title,
-              #navMenu > li > .menu-group-title {
-                flex: 1 !important;
-                min-width: 0 !important;
-              }
-              
-              /* Normalize menu-group-title in mobile nav to match link alignment */
-              .nav-menu > li > .menu-group-title,
-              #navMenu > li > .menu-group-title {
-                padding: 0 !important;
-                line-height: inherit !important;
-              }
-              
-              /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) > .sub-menu,
-              nav li:has(.sub-menu) > .sub-menu,
-              .navbar li:has(.sub-menu) > .sub-menu {
-                flex-basis: 100% !important;
-                width: 100% !important;
-              }
-              
-              /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
-              nav li:has(.sub-menu) > a [class*="chevron"],
-              nav li:has(.sub-menu) > a [class*="arrow"],
-              #navMenu li:has(.sub-menu) > a [class*="chevron"],
-              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
-                display: none !important;
-                visibility: hidden !important;
-              }
-              
-              /* Toggle arrow button , flex child that stretches to match nav-link height */
-              .mobile-submenu-toggle {
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                width: 44px !important;
-                height: auto !important;
-                background: transparent !important;
-                border: none !important;
-                cursor: pointer !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                position: static !important;
-                flex-shrink: 0 !important;
-                align-self: stretch !important;
-                z-index: 2 !important;
-                -webkit-tap-highlight-color: transparent;
-              }
-              
-              .mobile-submenu-toggle::after {
-                content: '' !important;
-                display: block !important;
-                width: 0 !important;
-                height: 0 !important;
-                border-left: 6px solid transparent !important;
-                border-right: 6px solid transparent !important;
-                border-top: 7px solid currentColor !important;
-                transition: transform 0.3s ease !important;
-              }
-              
-              /* Rotate arrow when expanded */
-              .mobile-submenu-toggle.expanded::after {
-                transform: rotate(180deg) !important;
-              }
-            }
-            
-            /* Hide toggle button on desktop */
-            @media (min-width: 769px) {
-              .mobile-submenu-toggle {
-                display: none !important;
-              }
-            }
-          </style>
-          
-          <script id="zappy-mobile-menu-script">
-            // Mobile menu toggle for nested submenus (including Menu Groups)
-            // Uses separate toggle button , link navigates, arrow toggles submenu
-            (function() {
-              function initMobileMenuToggles() {
-                // Only run on mobile
-                if (window.innerWidth > 768) {
-                  // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
-                    menu.classList.remove('mobile-expanded');
-                  });
-                  console.log('[MOBILE MENU] Desktop mode , cleanup done');
-                  return;
-                }
-                
-                console.log('[MOBILE MENU] Initializing mobile menu toggles...');
-                
-                // Find all parent menu items (items with .sub-menu)
-                const menuItemsWithSubmenus = document.querySelectorAll(
-                  '.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)'
-                );
-                
-                console.log('[MOBILE MENU] Found', menuItemsWithSubmenus.length, 'items with submenus');
-                
-                menuItemsWithSubmenus.forEach(function(li) {
-                  // Skip if already has toggle button
-                  if (li.querySelector('.mobile-submenu-toggle')) {
-                    return;
-                  }
-                  
-                  const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
-                  
-                  if (!submenu || !parentLink) return;
-                  
-                  // Create toggle button
-                  const toggleBtn = document.createElement('button');
-                  toggleBtn.className = 'mobile-submenu-toggle';
-                  toggleBtn.setAttribute('aria-label', 'Toggle submenu');
-                  toggleBtn.setAttribute('type', 'button');
-
-                  // Insert toggle button after the link
-                  parentLink.insertAdjacentElement('afterend', toggleBtn);
-                  
-                  console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
-                  
-                  // Handle toggle button click , only toggles submenu
-                  toggleBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    const isExpanded = submenu.classList.contains('mobile-expanded');
-                    
-                    // Close all other submenus first
-                    document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
-                      if (menu !== submenu) {
-                        menu.classList.remove('mobile-expanded');
-                        const otherToggle = menu.parentElement.querySelector('.mobile-submenu-toggle');
-                        if (otherToggle) otherToggle.classList.remove('expanded');
-                      }
-                    });
-                    
-                    // Toggle this submenu
-                    submenu.classList.toggle('mobile-expanded');
-                    toggleBtn.classList.toggle('expanded');
-                    
-                    console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
-                  });
-                  
-                  // Parent link navigates normally , no preventDefault
-                });
-              }
-              
-              // Initialize on DOM load
-              if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initMobileMenuToggles);
-              } else {
-                initMobileMenuToggles();
-              }
-              
-              // Re-initialize on window resize (but use debounce to avoid too many calls)
-              let resizeTimer;
-              window.addEventListener('resize', function() {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(initMobileMenuToggles, 250);
-              });
-              
-              // Also initialize when mobile menu becomes visible
-              // This handles cases where the mobile menu is hidden initially
-              const observer = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                    const target = mutation.target;
-                    if (target.classList.contains('active') || target.style.display !== 'none') {
-                      console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
-                      setTimeout(initMobileMenuToggles, 100);
-                    }
-                  }
-                });
-              });
-              
-              // Observe mobile menu containers
-              const mobileMenus = document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu');
-              mobileMenus.forEach(function(menu) {
-                observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
-              });
-            })();
-          </script>
-        
-
-    
-  
-  
-<script>window.ZAPPY_WEBSITE_ID = "2a212584-8450-4eed-88c4-04b7bf3bd580";window.ZAPPY_API_BASE = "https://api.zappy5.com"</script>
-  <nav class="navbar" dir="rtl">
+<nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
     <svg style="display:block !important" class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
@@ -1236,7 +844,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <a href="/" class="logo-link">
         <img src="/assets/logo.webp" alt="מרכז מבינים זוגיות , ליאור גור" class="logo" decoding="async" width="35" height="35">
       </a>
-    </div><ul class="nav-menu" id="navMenu"><li><a href="/club" class="nav-link">מועדון מבינים זוגיות</a></li><li><a href="/articles" class="">מאמרים</a></li><li><a href="/about">אודות</a></li></ul><div class="nav-cta-container"><li class="nav-cta-item"><a href="/contact" class="nav-cta-btn">צור קשר</a></li></div></div>
+    </div><ul class="nav-menu" id="navMenu"><li><a href="/club" class="nav-link">מועדון מבינים זוגיות</a></li><li><a href="/articles" class="">מאמרים</a><ul class="sub-menu"><li><a href="/articles/how-to-recognize-emotional-availability" class="nav-link">זמינות רגשית</a></li></ul></li><li><a href="/about">אודות</a></li></ul><div class="nav-cta-container"><li class="nav-cta-item"><a href="/contact" class="nav-cta-btn">צור קשר</a></li></div></div>
 
     
 
@@ -1696,7 +1304,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     <div class="blog-grid">
       <article class="blog-card">
         <div class="blog-card-image-wrapper">
-          <img data-placeholder="blog-patterns-1" data-context="Abstract illustration of repetitive patterns and cycles in relationships, warm terracotta and beige tones" src="/assets/image-1787494728619-wrxgv3.webp?v=1787494728619" alt="דפוסים חוזרים בדייטים" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low">
+          <img data-context="Abstract illustration of repetitive patterns and cycles in relationships, warm terracotta and beige tones" src="/assets/business-general-section-blog-grid-card-blog-patterns-1.webp" alt="דפוסים חוזרים בדייטים" class="blog-card-image" loading="lazy" width="1024" height="1024" decoding="async" fetchpriority="low">
         </div>
         <div class="blog-card-content">
           <h3 class="blog-card-title">למה אנחנו חוזרים שוב ושוב לאותם דפוסים בדייטים?</h3>
@@ -1707,7 +1315,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <article class="blog-card">
         <div class="blog-card-image-wrapper">
-          <img data-placeholder="blog-self-love-2" data-context="Gentle illustration of self-love as daily actions, warm morning light, cozy bedroom scene" src="/assets/image-1787494749971-6eicy8.webp?v=1787494749971" alt="אהבה עצמית כפעולה" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low">
+          <img data-context="Gentle illustration of self-love as daily actions, warm morning light, cozy bedroom scene" src="/assets/business-general-section-blog-grid-card-blog-self-love-2.webp" alt="אהבה עצמית כפעולה" class="blog-card-image" loading="lazy" width="1024" height="1024" decoding="async" fetchpriority="low">
         </div>
         <div class="blog-card-content">
           <h3 class="blog-card-title">אהבה עצמית היא לא מחשבה יפה , היא פעולה</h3>
@@ -1718,7 +1326,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <article class="blog-card">
         <div class="blog-card-image-wrapper">
-          <img data-placeholder="blog-values-3" data-context="Compass illustration with inner values as directions, warm earthy colors, spiritual concept" src="/assets/image-1787494780032-xdc6i6.webp?v=1787494780032" alt="ערכים פנימיים כמצפן" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low">
+          <img data-context="Compass illustration with inner values as directions, warm earthy colors, spiritual concept" src="/assets/business-general-section-blog-grid-card-blog-values-3.webp" alt="ערכים פנימיים כמצפן" class="blog-card-image" loading="lazy" width="1024" height="1024" decoding="async" fetchpriority="low">
         </div>
         <div class="blog-card-content">
           <h3 class="blog-card-title">ערכים פנימיים , המצפן הכי חשוב בבחירת זוגיות</h3>
@@ -1729,7 +1337,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <article class="blog-card">
         <div class="blog-card-image-wrapper">
-          <img data-placeholder="blog-gap-4" data-context="Bridge illustration showing gap between knowledge and action, warm muted tones" src="/assets/image-1784474325261-ns0lzv.webp?v=1784474325261" alt="הפער בין ידע ליישום" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low">
+          <img data-context="Bridge illustration showing gap between knowledge and action, warm muted tones" src="/assets/business-general-section-blog-grid-card-blog-gap-4.webp" alt="הפער בין ידע ליישום" class="blog-card-image" loading="lazy" width="1024" height="1024" decoding="async" fetchpriority="low">
         </div>
         <div class="blog-card-content">
           <h3 class="blog-card-title">למה אני יודע מה נכון לעשות בזוגיות ועדיין לא מצליח לעשות את זה?</h3>
@@ -1740,7 +1348,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <article class="blog-card">
         <div class="blog-card-image-wrapper">
-          <img data-placeholder="blog-ego-5" data-context="Abstract illustration of ego and comparison dissolving into freedom, soft watercolor style" src="/assets/image-1787494801472-bxysds.webp?v=1787494801472" alt="השוואתיות, אגו וזוגיות" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low">
+          <img data-context="Abstract illustration of ego and comparison dissolving into freedom, soft watercolor style" src="/assets/business-general-section-blog-grid-card-blog-ego-5.webp" alt="השוואתיות, אגו וזוגיות" class="blog-card-image" loading="lazy" width="1024" height="1024" decoding="async" fetchpriority="low">
         </div>
         <div class="blog-card-content">
           <h3 class="blog-card-title">השוואתיות, אגו וזוגיות , איך הם מנהלים אותנו בלי שנשים לב?</h3>
@@ -1751,7 +1359,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <article class="blog-card">
         <div class="blog-card-image-wrapper">
-          <img data-placeholder="blog-healthy-relationship-6" data-context="Warm, intimate scene of a person sitting peacefully in sunlit room, content and whole, soft morning light, calm atmosphere, terracotta and cream tones" src="/assets/image-1784474379545-qg5ogv.webp?v=1784474379545" alt="זוגיות בריאה מתחילה באדם" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low">
+          <img data-context="Warm, intimate scene of a person sitting peacefully in sunlit room, content and whole, soft morning light, calm atmosphere, terracotta and cream tones" src="/assets/business-general-section-blog-grid-card-blog-healthy-relationship-6.webp" alt="זוגיות בריאה מתחילה באדם" class="blog-card-image" loading="lazy" width="1024" height="1024" decoding="async" fetchpriority="low">
         </div>
         <div class="blog-card-content">
           <h3 class="blog-card-title">זוגיות בריאה מתחילה באדם שאני מביא לקשר</h3>
@@ -1762,7 +1370,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <article class="blog-card">
         <div class="blog-card-image-wrapper">
-          <img data-placeholder="blog-confidence-7" data-context="A person sitting confidently in a cozy café, warm golden hour lighting, soft watercolor style, terracotta and cream tones" src="/assets/image-1784474408022-livagq.webp?v=1784474408022" alt="ביטחון עצמי בדייטים" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low">
+          <img data-context="A person sitting confidently in a cozy café, warm golden hour lighting, soft watercolor style, terracotta and cream tones" src="/assets/business-general-section-blog-grid-card-blog-confidence-7.webp" alt="ביטחון עצמי בדייטים" class="blog-card-image" loading="lazy" width="1024" height="1024" decoding="async" fetchpriority="low">
         </div>
         <div class="blog-card-content">
           <h3 class="blog-card-title">ביטחון עצמי בדייטים , למה זה לא אומר להיות בטוח בהכול?</h3>
@@ -1773,7 +1381,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <article class="blog-card">
         <div class="blog-card-image-wrapper">
-          <img data-placeholder="blog-self-discipline-8" data-context="A couple sitting on a park bench at golden hour sunset, warm and intimate atmosphere, soft watercolor style, terracotta and cream tones, self-discipline and love theme" src="/assets/image-1784474429868-axzrgw.webp?v=1784474429868" alt="משמעת עצמית ואהבה עצמית בזוגיות" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low">
+          <img data-context="A couple sitting on a park bench at golden hour sunset, warm and intimate atmosphere, soft watercolor style, terracotta and cream tones, self-discipline and love theme" src="/assets/business-general-section-blog-grid-card-blog-self-discipline-8.webp" alt="משמעת עצמית ואהבה עצמית בזוגיות" class="blog-card-image" loading="lazy" width="1024" height="1024" decoding="async" fetchpriority="low">
         </div>
         <div class="blog-card-content">
           <h3 class="blog-card-title">משמעת עצמית היא אהבה עצמית , גם בזוגיות</h3>
@@ -1784,7 +1392,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <article class="blog-card">
         <div class="blog-card-image-wrapper">
-          <img data-placeholder="blog-dating-interview-9" data-context="A person sitting in a café feeling relaxed instead of tense, soft watercolor style, warm cream and terracotta tones, dating without pressure, authentic connection" src="/assets/image-1787494822195-gpjfa3.webp?v=1787494822195" alt="למה דייטים מרגישים כמו ראיון עבודה" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low">
+          <img data-context="A person sitting in a café feeling relaxed instead of tense, soft watercolor style, warm cream and terracotta tones, dating without pressure, authentic connection" src="/assets/business-general-section-blog-grid-card-blog-dating-interview-9.webp" alt="למה דייטים מרגישים כמו ראיון עבודה" class="blog-card-image" loading="lazy" width="1024" height="1024" decoding="async" fetchpriority="low">
         </div>
         <div class="blog-card-content">
           <h3 class="blog-card-title">למה דייטים מרגישים כמו ראיון עבודה , ואיך יוצאים מזה?</h3>
@@ -1795,7 +1403,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
       <article class="blog-card">
         <div class="blog-card-image-wrapper">
-          <img data-placeholder="blog-healthy-choice-10" data-context="A warm watercolor illustration of a person looking at two paths , one with fireworks and excitement, the other calm and steady with a warm glow, representing choosing healthy love over just exciting love, terracotta and cream tones" src="/assets/image-1787494847248-glb2ee.webp?v=1787494847248" alt="איך לבחור זוגיות בריאה" class="blog-card-image" loading="lazy" decoding="async" fetchpriority="low">
+          <img data-context="A warm watercolor illustration of a person looking at two paths , one with fireworks and excitement, the other calm and steady with a warm glow, representing choosing healthy love over just exciting love, terracotta and cream tones" src="/assets/business-general-section-blog-grid-card-blog-healthy-choice-10.webp" alt="איך לבחור זוגיות בריאה" class="blog-card-image" loading="lazy" width="1024" height="1024" decoding="async" fetchpriority="low">
         </div>
         <div class="blog-card-content">
           <h3 class="blog-card-title">איך לבחור זוגיות בריאה ולא רק זוגיות מרגשת?</h3>
@@ -1803,7 +1411,16 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <a href="#healthy-choice-article" class="blog-card-link" aria-label="קרא עוד: איך לבחור זוגיות בריאה ולא רק זוגיות מרגשת?" style="color: #FFFFFF;">לקריאה</a>
         </div>
       </article>
-    </div>
+    <article class="blog-card">
+        <div class="blog-card-image-wrapper">
+          <img data-context="Warm watercolor illustration of two people sitting and talking openly, soft golden light, calm and connected atmosphere, terracotta and cream tones" src="/assets/business-general-section-blog-grid-card-blog-emotional-availability-11.webp" alt="איך לזהות זמינות רגשית בתחילת קשר" class="blog-card-image" loading="lazy" width="1024" height="1024" decoding="async" fetchpriority="low">
+        </div>
+        <div class="blog-card-content">
+          <h3 class="blog-card-title">איך לזהות זמינות רגשית בתחילת קשר</h3>
+          <p class="blog-card-excerpt">מרכז מבינים זוגיות - ליאור גור - איך לזהות זמינות רגשית בתחילת קשר</p>
+          <a href="/articles/how-to-recognize-emotional-availability" class="blog-card-link" aria-label="קרא עוד: איך לזהות זמינות רגשית בתחילת קשר" style="color: #FFFFFF;">לקריאה</a>
+        </div>
+      </article></div>
   </div>
 </section>
 
@@ -1812,7 +1429,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     
     <!-- Article Header Image -->
     <figure class="article-hero-image">
-      <img data-placeholder="article-hero-patterns" data-context="Warm abstract illustration representing relationship patterns, soft overlapping circles in terracotta and cream tones, minimalist therapy office atmosphere" src="/assets/image-1787494870424-5993kd.webp?v=1787494870424" alt="איור מופשט של דפוסים חוזרים בזוגיות" class="article-hero-img" decoding="async">
+      <img data-context="Warm abstract illustration representing relationship patterns, soft overlapping circles in terracotta and cream tones, minimalist therapy office atmosphere" src="/assets/business-general-section-blog-grid-card-article-hero-patterns.webp" alt="איור מופשט של דפוסים חוזרים בזוגיות" class="article-hero-img" width="1024" height="1024" decoding="async">
     </figure>
 
     <!-- Article Content -->
@@ -1843,7 +1460,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
         <!-- Inline Image -->
         <figure class="article-inline-image">
-          <img data-placeholder="article-journaling" data-context="Person writing in a journal with warm coffee nearby, soft natural lighting, cozy cafe atmosphere, terracotta and cream tones" src="/assets/image-1784461098916-dzcz6n.webp?v=1784461098916" alt="כתיבה ביומן אישי לזיהוי דפוסים" class="article-inline-img" loading="lazy" decoding="async" fetchpriority="low">
+          <img data-context="Person writing in a journal with warm coffee nearby, soft natural lighting, cozy cafe atmosphere, terracotta and cream tones" src="/assets/business-general-section-blog-grid-card-article-journaling.webp" alt="כתיבה ביומן אישי לזיהוי דפוסים" class="article-inline-img" width="1024" height="1024" loading="lazy" decoding="async" fetchpriority="low">
           <figcaption class="article-figcaption">כתיבה מודעת עוזרת לזהות דפוסים נסתרים</figcaption>
         </figure>
 
@@ -1882,7 +1499,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     </header>
 
     <div class="article-hero-image">
-      <img data-placeholder="self-love-hero" data-context="אישה יושבת בשקט, מחייכת לעצמה, יד על הלב, תאורה חמה ורכה, אווירה אינטימית של אהבה עצמית" src="/assets/image-1784475872615-zpf757.webp?v=1784475872615" alt="אהבה עצמית , אישה מחבקת את עצמה" class="hero-img" decoding="async">
+      <img data-context="אישה יושבת בשקט, מחייכת לעצמה, יד על הלב, תאורה חמה ורכה, אווירה אינטימית של אהבה עצמית" src="/assets/business-general-section-blog-grid-card-self-love-hero.webp" alt="אהבה עצמית , אישה מחבקת את עצמה" class="hero-img" width="1024" height="1024" decoding="async">
     </div>
 
     <div class="article-body">
@@ -1899,7 +1516,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <h3 class="card-title">הצבת גבולות</h3>
           <p class="card-description">לומר "לא" כשצריך, להפסיק קשר שמקטין, להגן על הזמן והאנרגיה שלך. גבולות בריאים הם ביטוי עמוק של כבוד עצמי.</p>
           <div class="card-image">
-            <img data-placeholder="self-love-boundaries" data-context="אישה עומדת בביטחון, יד מושטת קדימה בתנועת עצירה עדינה, רקע חם ומטושטש, הבעה רגועה אך נחושה" src="/assets/image-1784461302104-4v754y.webp?v=1784461302104" alt="הצבת גבולות" class="card-img" loading="lazy" decoding="async" fetchpriority="low">
+            <img data-context="אישה עומדת בביטחון, יד מושטת קדימה בתנועת עצירה עדינה, רקע חם ומטושטש, הבעה רגועה אך נחושה" src="/assets/business-general-section-blog-grid-card-self-love-boundaries.webp" alt="הצבת גבולות" class="card-img" width="1024" height="1024" loading="lazy" decoding="async" fetchpriority="low">
           </div>
         </div>
 
@@ -1911,7 +1528,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <h3 class="card-title">דיבור פנימי חיובי</h3>
           <p class="card-description">להחליף ביקורת פנימית בחמלה, לדבר לעצמך כמו שהיית מדברת לחברה טובה. המילים שאת אומרת לעצמך מעצבות את המציאות שלך.</p>
           <div class="card-image">
-            <img data-placeholder="self-love-positive-talk" data-context="אישה מביטה במראה בחיוך עדין, יד על הלב, תאורה רכה וחמה, הבעה של חמלה עצמית" src="/assets/image-1784461322952-n3uay8.webp?v=1784461322952" alt="דיבור פנימי חיובי" class="card-img" loading="lazy" decoding="async" fetchpriority="low">
+            <img data-context="אישה מביטה במראה בחיוך עדין, יד על הלב, תאורה רכה וחמה, הבעה של חמלה עצמית" src="/assets/business-general-section-blog-grid-card-self-love-positive-talk.webp" alt="דיבור פנימי חיובי" class="card-img" width="1024" height="1024" loading="lazy" decoding="async" fetchpriority="low">
           </div>
         </div>
 
@@ -1923,7 +1540,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <h3 class="card-title">טיפוח הגוף</h3>
           <p class="card-description">לישון מספיק, לאכול מזין, לזוז בהנאה. הגוף שלך הוא הבית הראשון שלך , לטפח אותו זו אהבה עצמית בפעולה.</p>
           <div class="card-image">
-            <img data-placeholder="self-love-body-care" data-context="אישה מתרגלת יוגה בסלון מואר, אור בוקר רך, הבעה שלווה, צמחים ירוקים ברקע" src="/assets/image-1784461345331-2jxv3q.webp?v=1784461345331" alt="טיפוח הגוף" class="card-img" loading="lazy" decoding="async" fetchpriority="low">
+            <img data-context="אישה מתרגלת יוגה בסלון מואר, אור בוקר רך, הבעה שלווה, צמחים ירוקים ברקע" src="/assets/business-general-section-blog-grid-card-self-love-body-care.webp" alt="טיפוח הגוף" class="card-img" width="1024" height="1024" loading="lazy" decoding="async" fetchpriority="low">
           </div>
         </div>
 
@@ -1935,7 +1552,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <h3 class="card-title">ניהול זמן לעצמך</h3>
           <p class="card-description">לפנות זמן למה שממלא אותך , קריאה, יצירה, שקט. הזמן שלך יקר, ולפנות אותו לעצמך זו הצהרה שאת חשובה.</p>
           <div class="card-image">
-            <img data-placeholder="self-love-time-management" data-context="אישה יושבת עם כוס תה וספר, אור חם מחלון, אווירה רגועה של זמן אישי, שמיכה נעימה" src="/assets/image-1784461371112-n6mj1g.webp?v=1784461371112" alt="ניהול זמן לעצמך" class="card-img" loading="lazy" decoding="async" fetchpriority="low">
+            <img data-context="אישה יושבת עם כוס תה וספר, אור חם מחלון, אווירה רגועה של זמן אישי, שמיכה נעימה" src="/assets/business-general-section-blog-grid-card-self-love-time-management.webp" alt="ניהול זמן לעצמך" class="card-img" width="1024" height="1024" loading="lazy" decoding="async" fetchpriority="low">
           </div>
         </div>
 
@@ -1947,7 +1564,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <h3 class="card-title">בחירת סביבה תומכת</h3>
           <p class="card-description">להקיף את עצמך באנשים שרואים אותך, שמאמינים בך, שמרימים אותך. הסביבה שלך משפיעה על הדרך שבה את רואה את עצמך.</p>
           <div class="card-image">
-            <img data-placeholder="self-love-supportive-environment" data-context="קבוצת נשים יושבות במעגל, מחייכות, אווירה תומכת וחמה, תאורה רכה, תחושת קהילה" src="/assets/image-1784461396534-jvr741.webp?v=1784461396534" alt="בחירת סביבה תומכת" class="card-img" loading="lazy" decoding="async" fetchpriority="low">
+            <img data-context="קבוצת נשים יושבות במעגל, מחייכות, אווירה תומכת וחמה, תאורה רכה, תחושת קהילה" src="/assets/business-general-section-blog-grid-card-self-love-supportive-environment.webp" alt="בחירת סביבה תומכת" class="card-img" width="1024" height="1024" loading="lazy" decoding="async" fetchpriority="low">
           </div>
         </div>
       </div>
@@ -1971,7 +1588,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     </div>
 
     <div class="values-compass-image-wrapper">
-      <img data-placeholder="values-compass-hero" data-context="זוג יושב יחד על ספסל בטבע, שקיעה חמה, אווירה רומנטית ומחוברת, מבט אל האופק, צבעים חמים וזהובים" src="/assets/image-1784475894268-hs4o4l.webp?v=1784475894268" alt="זוג מחובר בטבע בשקיעה" class="values-compass-hero-image" decoding="async">
+      <img data-context="זוג יושב יחד על ספסל בטבע, שקיעה חמה, אווירה רומנטית ומחוברת, מבט אל האופק, צבעים חמים וזהובים" src="/assets/business-general-section-blog-grid-card-values-compass-hero.webp" alt="זוג מחובר בטבע בשקיעה" class="values-compass-hero-image" width="1024" height="1024" decoding="async">
     </div>
 
     <div class="values-compass-content">
@@ -2029,7 +1646,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
     <!-- Hero Image -->
     <figure class="kg-hero-figure">
-      <img data-placeholder="article-hero-knowledge-gap" data-context="A warm, professional illustration showing a thoughtful person standing at a crossroads between a glowing path labeled 'Knowledge' and a shadowed path labeled 'Action', with a bridge forming between them. Soft warm terracotta and cream tones, modern flat illustration style." src="/assets/image-1784475916558-wcxmpa.webp?v=1784475916558" alt="איור של גשר בין ידע ליישום בזוגיות" class="kg-hero-image" decoding="async">
+      <img data-context="A warm, professional illustration showing a thoughtful person standing at a crossroads between a glowing path labeled 'Knowledge' and a shadowed path labeled 'Action', with a bridge forming between them. Soft warm terracotta and cream tones, modern flat illustration style." src="/assets/business-general-section-blog-grid-card-article-hero-knowledge-gap.webp" alt="איור של גשר בין ידע ליישום בזוגיות" class="kg-hero-image" width="1024" height="1024" decoding="async">
       <figcaption class="kg-hero-caption">הפער בין מה שאנחנו יודעים למה שאנחנו עושים הוא האתגר האמיתי</figcaption>
     </figure>
 
@@ -2060,7 +1677,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <p>כל אחד מאיתנו נושא עימו "תוכנות הפעלה" שנכתבו בילדות, במערכות יחסים קודמות, או בחוויות משמעותיות. דפוסים אלה פועלים כמו טייס אוטומטי , הם מפעילים תגובות אוטומטיות למצבים שמזכירים לנו חוויות עבר.</p>
           <p>לדוגמה: אם חוויתם נטישה בעבר, כל סימן קטן של ריחוק מבן/בת הזוג עלול להפעיל אצלכם תגובת חרדה אוטומטית. אתם "יודעים" שאין סיבה אמיתית לדאגה , אבל הגוף כבר מגיב.</p>
           <div class="kg-image-row">
-            <img data-placeholder="article-patterns-1" data-context="Abstract illustration of intertwined roots or neural pathways in warm terracotta and cream colors, representing deep-rooted behavioral patterns. Clean, modern, professional style suitable for a psychology article." src="/assets/image-1784461188304-09gjop.webp?v=1784461188304" alt="המחשה של דפוסים מושרשים" class="kg-inline-image" loading="lazy" decoding="async" fetchpriority="low">
+            <img data-context="Abstract illustration of intertwined roots or neural pathways in warm terracotta and cream colors, representing deep-rooted behavioral patterns. Clean, modern, professional style suitable for a psychology article." src="/assets/business-general-section-blog-grid-card-article-patterns-1.webp" alt="המחשה של דפוסים מושרשים" class="kg-inline-image" width="1024" height="1024" loading="lazy" decoding="async" fetchpriority="low">
           </div>
         </div>
       </section>
@@ -2121,7 +1738,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       <!-- Author Bio -->
       <aside class="kg-author-box">
         <div class="kg-author-avatar">
-          <img data-placeholder="article-author-avatar" data-context="Professional headshot of a warm, friendly relationship coach or therapist, smiling softly, against a neutral cream background. Natural lighting, approachable and trustworthy appearance." src="/assets/image-1784461233302-umdz50.webp?v=1784461233302" alt="תמונת הכותב" class="kg-author-img" loading="lazy" decoding="async" fetchpriority="low">
+          <img data-context="Professional headshot of a warm, friendly relationship coach or therapist, smiling softly, against a neutral cream background. Natural lighting, approachable and trustworthy appearance." src="/assets/business-general-section-blog-grid-card-article-author-avatar.webp" alt="תמונת הכותב" class="kg-author-img" width="1024" height="1024" loading="lazy" decoding="async" fetchpriority="low">
         </div>
         <div class="kg-author-info">
           <h4 class="kg-author-name">צוות המרכז לזוגיות בריאה</h4>
@@ -2144,7 +1761,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     </div>
 
     <div class="comparison-article__hero">
-      <img data-placeholder="article-hero-comparison" data-context="Couple sitting on a couch, one looking at phone with social media, the other looking away thoughtfully, warm lighting, emotional distance concept" src="/assets/image-1784475937754-0xywf1.webp?v=1784475937754" alt="זוגיות והשוואה , איור" class="comparison-article__hero-img" decoding="async">
+      <img data-context="Couple sitting on a couch, one looking at phone with social media, the other looking away thoughtfully, warm lighting, emotional distance concept" src="/assets/business-general-section-blog-grid-card-article-hero-comparison.webp" alt="זוגיות והשוואה , איור" class="comparison-article__hero-img" width="1024" height="1024" decoding="async">
     </div>
 
     <div class="comparison-article__content">
@@ -2193,7 +1810,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
     <div class="comparison-article__footer">
       <div class="comparison-article__author">
-        <img data-placeholder="article-author-avatar" data-context="Professional therapist or relationship coach portrait, warm smile, approachable, professional headshot style" src="/assets/image-1784461253950-sfo4xb.webp?v=1784461253950" alt="תמונת כותב" class="comparison-article__author-img" loading="lazy" decoding="async" fetchpriority="low">
+        <img data-context="Professional therapist or relationship coach portrait, warm smile, approachable, professional headshot style" src="/assets/business-general-section-blog-grid-card-article-author-avatar.webp" alt="תמונת כותב" class="comparison-article__author-img" width="1024" height="1024" loading="lazy" decoding="async" fetchpriority="low">
         <div class="comparison-article__author-info">
           <span class="comparison-article__author-name">ליאור גור</span>
           <span class="comparison-article__author-role">יועץ זוגי ומנחה סדנאות</span>
@@ -2219,7 +1836,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   <div class="article-container">
     <!-- Hero Image -->
     <div class="article-hero">
-      <img data-placeholder="article-hero-1" data-context="Warm sunrise light through window casting soft shadows on an empty armchair with a knitted throw blanket, peaceful morning atmosphere, terracotta and cream tones" src="/assets/image-1784465027698-llj1ig.webp?v=1784465027698" alt="תמונת נושא , זוגיות בריאה" class="article-hero-img" decoding="async">
+      <img data-context="Warm sunrise light through window casting soft shadows on an empty armchair with a knitted throw blanket, peaceful morning atmosphere, terracotta and cream tones" src="/assets/business-general-section-blog-grid-card-article-hero-1.webp" alt="תמונת נושא , זוגיות בריאה" class="article-hero-img" width="1024" height="1024" decoding="async">
     </div>
 
     <!-- Article Header -->
@@ -2287,7 +1904,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   <div class="article-container">
     <!-- תמונת כותרת -->
     <div class="article-hero-image">
-      <img data-placeholder="article-hero-confidence" data-context="A warm, artistic illustration of two people sitting across from each other at a small café table, engaged in deep conversation, soft bronze and cream tones, modern illustration style with gentle lighting, conveying emotional connection and vulnerability" src="/assets/image-1784464824119-4c5j2g.webp?v=1784464824119" alt="איור של שיחה עמוקה בדייט" class="article-hero-img" decoding="async">
+      <img data-context="A warm, artistic illustration of two people sitting across from each other at a small café table, engaged in deep conversation, soft bronze and cream tones, modern illustration style with gentle lighting, conveying emotional connection and vulnerability" src="/assets/business-general-section-blog-grid-card-article-hero-confidence.webp" alt="איור של שיחה עמוקה בדייט" class="article-hero-img" width="1024" height="1024" decoding="async">
     </div>
 
     <!-- תוכן המאמר -->
@@ -2348,7 +1965,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   <div class="article-container">
     <!-- תמונת כותרת -->
     <div class="article-hero-image">
-      <img data-placeholder="article-hero-1" data-context="זוג יושב על ספסל בפארק בשקיעה, מדברים בפתיחות, אור חם ורך, אווירה אינטימית ורגועה" src="/assets/image-1784465123113-k5bvow.webp?v=1784465123113" alt="תמונת כותרת למאמר , זוגיות ואהבה עצמית" class="article-hero-img" decoding="async">
+      <img data-context="זוג יושב על ספסל בפארק בשקיעה, מדברים בפתיחות, אור חם ורך, אווירה אינטימית ורגועה" src="/assets/business-general-section-blog-grid-card-article-hero-1.webp" alt="תמונת כותרת למאמר , זוגיות ואהבה עצמית" class="article-hero-img" width="1024" height="1024" decoding="async">
     </div>
 
     <!-- תאריך פרסום -->
@@ -2432,7 +2049,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 <section class="article-section" dir="rtl">
   <div class="article-container">
     <div class="article-hero">
-      <img data-placeholder="article-hero-1" data-context="זוג יושב על ספסל בפארק שקוע בשיחה אמיתית, תאורת שקיעה חמה, אווירה רומנטית ונינוחה" src="/assets/image-1784478274515-t1i9rg.webp?v=1784478274515" alt="דייט אמיתי , זוג משוחח בפארק" class="article-hero-img" decoding="async">
+      <img data-context="זוג יושב על ספסל בפארק שקוע בשיחה אמיתית, תאורת שקיעה חמה, אווירה רומנטית ונינוחה" src="/assets/business-general-section-blog-grid-card-article-hero-1.webp" alt="דייט אמיתי , זוג משוחח בפארק" class="article-hero-img" width="1024" height="1024" decoding="async">
     </div>
 
     <div class="article-meta">
@@ -2500,7 +2117,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 <section class="article-section" dir="rtl">
   <div class="article-container">
     <div class="article-hero">
-      <img data-placeholder="article-hero-1" data-context="זוג צעיר יושב על ספסל בפארק ירוק, משוחח בחיוך, תאורת שקיעה רכה וחמימה, אווירה רומנטית ואינטימית" src="/assets/image-1784478295562-v4x9xc.webp?v=1784478295562" alt="זוג יושב בפארק בשקיעה" class="article-hero-image" decoding="async">
+      <img data-context="זוג צעיר יושב על ספסל בפארק ירוק, משוחח בחיוך, תאורת שקיעה רכה וחמימה, אווירה רומנטית ואינטימית" src="/assets/business-general-section-blog-grid-card-article-hero-1.webp" alt="זוג יושב בפארק בשקיעה" class="article-hero-image" width="1024" height="1024" decoding="async">
     </div>
     
     <div class="article-meta">
