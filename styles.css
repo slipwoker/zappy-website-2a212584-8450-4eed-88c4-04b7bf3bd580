@@ -8407,6 +8407,36 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 /* zappy-self-heal */
 .club-video-section { padding: 80px 24px !important; }
 
+
+.our-products-section .product-card .product-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  padding: 14px 22px;
+  background: var(--gradient-primary, linear-gradient(180deg, #D47953 0%, var(--primary-color, var(--primary, #C96F4A)) 100%));
+  color: #fff !important;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.our-products-section .product-card:hover .product-cta {
+  box-shadow: 0 10px 22px rgba(201,111,74,0.35);
+}
+
+.our-products-section .product-card .product-cta:hover {
+  transform: translateY(-2px);
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
