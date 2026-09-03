@@ -11265,6 +11265,42 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 /* zappy-self-heal */
 .premium-cta-section__panel { backdrop-filter: blur(4px) !important; }
 
+
+.premium-video-intro .premium-video-intro__heading {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  color: var(--text-dark, var(--text-color, var(--text, var(--text-dark, #1C2770)))) !important;
+  margin: 0 0 16px !important;
+  text-align: center !important;
+}
+
+.premium-video-intro .premium-video-intro__eyebrow {
+  display: block !important;
+  font-family: 'Nunito Sans', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: var(--secondary, var(--accent-color, var(--accent, #EF6E5C))) !important;
+  margin: 0 0 10px !important;
+  text-align: center !important;
+}
+
+.premium-video-intro .premium-video-intro__subtitle {
+  font-family: 'Nunito Sans', sans-serif !important;
+  font-size: 1.125rem !important;
+  line-height: 1.7 !important;
+  color: var(--text-muted, var(--text-secondary-color, var(--text-secondary, var(--text-muted, #4A4A55)))) !important;
+  max-width: 640px !important;
+  margin: 0 auto 24px !important;
+  text-align: center !important;
+}
+
+.premium-video-intro .premium-video-intro__header {
+  margin-bottom: 32px !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
