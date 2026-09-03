@@ -150,7 +150,7 @@
   --text-dark: #1C2770;
   --text-light: #FFFFFF;
   --text-muted: #4A4A55;
-  --border-light: #8c8c8f;
+  --border-light: #EF6E5C;
   --border-dark: #6d76bf;
   --nav-bg: #F6F1E8;
   --nav-text: #2E2A27;
@@ -186,7 +186,7 @@
   --secondary-color: #EF6E5C;
   --accent-color: #EF6E5C;
   --background-color: #FFFFFF;
-  --surface-color: #F7F7F9;
+  --surface-color: #FFF6F0;
   --text-color: #1C2770;
   --text-secondary-color: #4A4A55;
 }
@@ -827,7 +827,7 @@ textarea {
   --text-dark: #1C2770;
   --text-light: #FFFFFF;
   --text-muted: #4A4A55;
-  --border-light: #8c8c8f;
+  --border-light: #EF6E5C;
   --border-dark: #6d76bf;
 }
 
@@ -1080,7 +1080,7 @@ textarea {
   --text-dark: #1C2770;
   --text-light: #FFFFFF;
   --text-muted: #4A4A55;
-  --border-light: #8c8c8f;
+  --border-light: #EF6E5C;
   --border-dark: #6d76bf;
 }
 
@@ -2233,7 +2233,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   --text-dark: #1C2770;
   --text-light: #FFFFFF;
   --text-muted: #4A4A55;
-  --border-light: #8c8c8f;
+  --border-light: #EF6E5C;
   --border-dark: #6d76bf;
 
   background-color: var(--bg-dark);
@@ -5879,7 +5879,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   width: 56px;
   height: 56px;
   border-radius: 16px;
-  background: linear-gradient(135deg, #F39082 0%, #EF705E 100%);
+  background: linear-gradient(135deg, #F39082 0%, #EF6E5C 100%);
   border: 1px solid rgba(201,111,74,0.18);
   display: flex;
   align-items: center;
@@ -8448,18 +8448,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .our-products-section .product-card .product-cta:hover {
   transform: translateY(-2px);
 }
-/* === BUTTON TEXT OVERRIDES START === */
-.btn-secondary,
-.btn--secondary,
-[class*="btn-secondary"],
-[class*="btn--secondary"] { color: #333333 !important; }
-.btn-accent,
-.btn--accent,
-[class*="btn-accent"],
-[class*="btn--accent"] { color: #333333 !important; }
-.navbar .nav-cta-btn,
-.nav-cta-btn { color: #FFFFFF !important; }
-/* === BUTTON TEXT OVERRIDES END === */
+
 
 
 .club-video-section {
@@ -8588,7 +8577,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 
 .club-hero-section__btn--primary:hover {
-  background: #E55B48;
+  background: #EF6E5C;
   transform: translateY(-2px);
 }
 
@@ -9275,7 +9264,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 
 .club-hero-section {
-  background: linear-gradient(160deg, #141a4d 0%, var(--text-color, var(--text, var(--text-dark, #1C2770))) 55%, #14205e 100%);
+  background: linear-gradient(160deg, #131B4E 0%, var(--text-color, var(--text, var(--text-dark, #1C2770))) 55%, #17205B 100%);
   padding: 100px 16px 120px;
 }
 
@@ -9339,7 +9328,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   font-size: 42px;
   font-weight: 800;
   letter-spacing: -0.5px;
-  color: #141a4d;
+  color: #1C2770;
 }
 
 .club-identify-section {
@@ -9361,7 +9350,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 
 .club-problem-change-section {
-  background: #141a4d;
+  background: #1C2770;
 }
 
 #problem-change .club-problem-change-col--surface {
@@ -9404,7 +9393,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 
 .club-opens-section {
-  background: linear-gradient(160deg, var(--text-color, var(--text, var(--text-dark, #1C2770))) 0%, #141a4d 100%);
+  background: linear-gradient(160deg, var(--text-color, var(--text, var(--text-dark, #1C2770))) 0%, #131B4E 100%);
 }
 
 #what-opens .club-opens-title {
@@ -9455,7 +9444,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 
 .club-testimonials-section {
-  background: #141a4d;
+  background: #1C2770;
 }
 
 #testimonials .club-testimonials-title {
@@ -9501,7 +9490,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 
 .club-final-cta-section {
-  background: linear-gradient(160deg, var(--accent-color, var(--accent, #EF6E5C)) 0%, #E05541 100%);
+  background: linear-gradient(160deg, var(--accent-color, var(--accent, #EF6E5C)) 0%, #EB4C36 100%);
 }
 
 #final-cta .club-final-cta-title {
@@ -9700,6 +9689,53 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 #program-details .club-video-eyebrow {
   color: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
   font-size: 14px !important;
+}
+/* === BUTTON TEXT OVERRIDES START === */
+.btn-secondary,
+.btn--secondary,
+[class*="btn-secondary"],
+[class*="btn--secondary"] { color: #333333 !important; }
+.btn-accent,
+.btn--accent,
+[class*="btn-accent"],
+[class*="btn--accent"] { color: #333333 !important; }
+.navbar .nav-cta-btn,
+.nav-cta-btn { color: #FFFFFF !important; }
+/* === BUTTON TEXT OVERRIDES END === */
+
+
+.club-hero-section__headline, #identify .club-identify-title, #what-you-get .club-value-title, #mechanism .club-mechanism-title, #what-opens .club-opens-title, #pricing .club-pricing-title, #faq .club-faq-title, #final-cta .club-final-cta-title, #testimonials .club-testimonials-title, #about-lior .club-about-title {
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+}
+
+.club-hero-section__btn--primary, #pricing .club-pricing-btn, #final-cta .club-final-cta-btn {
+  background: var(--accent-color, var(--accent, #EF6E5C)) !important;
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
+  border: none !important;
+}
+
+.club-hero-section__btn--outline {
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+  border: 1px solid var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+  background: transparent !important;
+}
+
+#what-you-get .club-value-item, #identify .club-identify-item, #fit .club-fit-col {
+  border-color: var(--accent-color, var(--accent, #EF6E5C)) !important;
+}
+
+#what-you-get .club-value-item strong {
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+}
+
+#mechanism .club-mechanism-step {
+  background: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
+}
+
+#what-you-get .club-value-bonus {
+  background: var(--accent-color, var(--accent, #EF6E5C)) !important;
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
