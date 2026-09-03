@@ -9270,6 +9270,296 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .club-hero-section { background: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important; }
 .club-hero-section__container { max-width: 860px !important; }
 
+
+.club-hero-section {
+  background: linear-gradient(160deg, #141a4d 0%, var(--text-color, var(--text, var(--text-dark, #1C2770))) 55%, #14205e 100%);
+  padding: 100px 16px 120px;
+}
+
+.club-hero-section__eyebrow {
+  color: var(--accent-color, var(--accent, #EF6E5C));
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 15px;
+}
+
+.club-hero-section__headline {
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+}
+
+.club-hero-section__subtitle {
+  color: #C9CDE8;
+  font-size: 21px;
+}
+
+.club-hero-section__btn--primary {
+  background: var(--accent-color, var(--accent, #EF6E5C));
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+  font-size: 17px;
+  font-weight: 700;
+  padding: 18px 40px;
+  box-shadow: 0 16px 38px rgba(239,110,92,0.45);
+}
+
+.club-hero-section__btn--outline {
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+  border: 2px solid var(--accent-color, var(--accent, #EF6E5C));
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.club-hero-section__btn--outline:hover {
+  background: rgba(239,110,92,0.12);
+  border-color: var(--accent-color, var(--accent, #EF6E5C));
+}
+
+.club-hero-section__reassurance {
+  color: #9AA1CC;
+}
+
+.club-video-section {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+  padding: 72px 16px 64px;
+}
+
+#program-details .club-video-heading {
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770)));
+}
+
+#identify .club-identify-title, #mechanism .club-mechanism-title, #what-opens .club-opens-title, #what-you-get .club-value-title, #testimonials .club-testimonials-title, #about-lior .club-about-title, #pricing .club-pricing-title, #faq .club-faq-title {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #141a4d;
+}
+
+.club-identify-section {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+}
+
+#identify .club-identify-item {
+  border-right: 4px solid var(--accent-color, var(--accent, #EF6E5C));
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(28,39,112,0.06);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770)));
+}
+
+#identify .club-identify-closing {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.club-problem-change-section {
+  background: #141a4d;
+}
+
+#problem-change .club-problem-change-col--surface {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+}
+
+#problem-change .club-problem-change-col--brand {
+  background: var(--accent-color, var(--accent, #EF6E5C));
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+}
+
+#problem-change .club-problem-change-col--brand .club-problem-change-heading {
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+}
+
+#problem-change .club-problem-change-col--brand .club-problem-change-list li {
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+}
+
+#problem-change .club-problem-change-statement {
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.club-mechanism-section {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+}
+
+#mechanism .club-mechanism-step {
+  background: var(--text-color, var(--text, var(--text-dark, #1C2770)));
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+  border-color: var(--text-color, var(--text, var(--text-dark, #1C2770)));
+  box-shadow: 0 10px 24px rgba(28,39,112,0.18);
+}
+
+#mechanism .club-mechanism-arrow {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.club-opens-section {
+  background: linear-gradient(160deg, var(--text-color, var(--text, var(--text-dark, #1C2770))) 0%, #141a4d 100%);
+}
+
+#what-opens .club-opens-title {
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+}
+
+#what-opens .club-opens-item {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+  border: none;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770)));
+}
+
+.club-value-section {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+}
+
+#what-you-get .club-value-item {
+  background: var(--surface-color, var(--surface, #F7F7F9));
+  border-top: 4px solid var(--accent-color, var(--accent, #EF6E5C));
+}
+
+#what-you-get .club-value-item strong {
+  font-size: 19px;
+  font-weight: 800;
+}
+
+#what-you-get .club-value-bonus {
+  background: var(--accent-color, var(--accent, #EF6E5C));
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.club-fit-section {
+  background: var(--surface-color, var(--surface, #F7F7F9));
+}
+
+#fit .club-fit-col--yes {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+  border-top: 4px solid var(--text-color, var(--text, var(--text-dark, #1C2770)));
+}
+
+#fit .club-fit-col--no {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+  border-top: 4px solid var(--accent-color, var(--accent, #EF6E5C));
+}
+
+.club-testimonials-section {
+  background: #141a4d;
+}
+
+#testimonials .club-testimonials-title {
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+}
+
+#testimonials .club-testimonial-card {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+  border-left: 4px solid var(--accent-color, var(--accent, #EF6E5C));
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+.club-about-section {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+}
+
+#about-lior .club-about-name {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.club-pricing-section {
+  background: var(--surface-color, var(--surface, #F7F7F9));
+}
+
+#pricing .club-pricing-card {
+  border-top: 6px solid var(--accent-color, var(--accent, #EF6E5C));
+  box-shadow: 0 24px 52px rgba(28,39,112,0.14);
+}
+
+#pricing .club-pricing-price {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.club-faq-section {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+}
+
+#faq .faq-question {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.club-final-cta-section {
+  background: linear-gradient(160deg, var(--accent-color, var(--accent, #EF6E5C)) 0%, #E05541 100%);
+}
+
+#final-cta .club-final-cta-title {
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+}
+
+#final-cta .club-final-cta-text {
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+  font-size: 18px;
+  opacity: 0.94;
+}
+
+#final-cta .club-final-cta-statement {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+}
+
+#final-cta .club-final-cta-btn {
+  background: var(--text-color, var(--text, var(--text-dark, #1C2770)));
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+  font-size: 19px;
+  font-weight: 800;
+  padding: 20px 52px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+}
+
+#final-cta .club-final-cta-price {
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF)));
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+.club-hero-section__headline {
+  font-size: 42px;
+}
+
+#identify .club-identify-title, #mechanism .club-mechanism-title, #what-opens .club-opens-title, #what-you-get .club-value-title, #testimonials .club-testimonials-title, #about-lior .club-about-title, #pricing .club-pricing-title, #faq .club-faq-title {
+  font-size: 30px;
+}
+
+#final-cta .club-final-cta-title {
+  font-size: 32px;
+}
+
+#problem-change .club-problem-change-statement {
+  font-size: 24px;
+}
+}
+/* zappy-self-heal */
+.club-hero-section__eyebrow { color: var(--accent-color, var(--accent, #EF6E5C)) !important; }
+.club-hero-section__eyebrow { font-weight: 700 !important; }
+.club-hero-section__eyebrow { letter-spacing: 3px !important; }
+.club-hero-section__eyebrow { font-size: 15px !important; }
+.club-hero-section__headline { color: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important; }
+.club-hero-section__headline { letter-spacing: -0.5px !important; }
+.club-hero-section__subtitle { color: #C9CDE8 !important; }
+.club-hero-section__reassurance { color: #9AA1CC !important; }
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
