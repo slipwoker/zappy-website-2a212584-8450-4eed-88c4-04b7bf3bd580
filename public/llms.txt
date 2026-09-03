@@ -14,7 +14,11 @@ https://liorgur.com
 https://liorgur.com/club
 מרכז מבינים זוגיות - ליאור גור - מועדון מבינים זוגיות - ליווי מתמשך ליציאה מתקיעות בזוגיות
 
-### המוצרים שלנו
+### הפרימיום שלנו - מרכז מבינים זוגיות
+https://liorgur.com/premium
+מרכז מבינים זוגיות - ליאור גור - הפרימיום שלנו - מרכז מבינים זוגיות
+
+### איך לזהות זמינות רגשית בתחילת קשר
 https://liorgur.com/our-products
 מרכז מבינים זוגיות - ליאור גור - איך לזהות זמינות רגשית בתחילת קשר
 
@@ -66,11 +70,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
+  - `name` (text)
+  - `email` (email)
   - `phone` (tel)
-  - `message` (textarea, required)
-  - `privacy_consent` (checkbox, required)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox)
 
 ---
 
