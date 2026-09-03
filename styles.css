@@ -8428,7 +8428,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 #program-details .club-video-eyebrow {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--primary);
@@ -8536,7 +8536,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   display: inline-block;
   font-family: 'Heebo', sans-serif;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 2px;
   color: var(--accent-color, var(--accent, #EF6E5C));
   margin-bottom: 16px;
@@ -9767,7 +9767,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 #program-details .club-video-eyebrow {
   color: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
   font-size: 14px !important;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 /* === BUTTON TEXT OVERRIDES START === */
@@ -10407,7 +10407,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 #program-details .club-video-eyebrow {
   color: var(--accent-color, var(--accent, #EF6E5C)) !important;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .club-video-section, .club-hero-section, .club-identify-section,
@@ -10431,7 +10431,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 #program-details .club-video-eyebrow {
   color: var(--accent-color, var(--accent, #EF6E5C)) !important;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -11309,6 +11309,10 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   padding-top: 80px !important;
   padding-bottom: 80px !important;
   margin-top: 0 !important;
+}
+
+#program-details .club-video-subtitle {
+  font-weight: 500 !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
