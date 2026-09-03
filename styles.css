@@ -2791,8 +2791,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   letter-spacing: 0.02em;
   line-height: 1;
   text-decoration: none;
-  color: #FFFDF9;
-  background: var(--primary);
+  color: #FFFFFF;
+  background: var(--secondary);
   padding: 14px 28px;
   border-radius: 12px;
   border: none;
@@ -3507,8 +3507,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .index-journey-section .journey-cta-btn {
   display: inline-block;
-  background: #1C2770;
-  color: #FFFDF9;
+  background: var(--secondary);
+  color: #FFFFFF;
   padding: 14px 28px;
   border-radius: 12px;
   border: none;
@@ -4103,8 +4103,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-weight: 600;
   letter-spacing: 0.02em;
   text-decoration: none;
-  background: var(--primary);
-  color: #FFFDF9;
+  background: var(--secondary);
+  color: #FFFFFF;
   padding: 14px 28px;
   border-radius: 12px;
   border: none;
