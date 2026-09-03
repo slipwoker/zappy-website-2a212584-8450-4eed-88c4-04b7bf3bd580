@@ -11301,6 +11301,12 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .premium-video-intro .premium-video-intro__header {
   margin-bottom: 32px !important;
 }
+
+.premium-video-intro {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+  margin-top: 0 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
