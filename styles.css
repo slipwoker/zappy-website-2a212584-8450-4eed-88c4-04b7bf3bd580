@@ -9633,6 +9633,43 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
     font-size: 1.375rem;
   }
 }
+
+.club-hero-section .club-hero-section__headline {
+  font-size: 58px !important;
+  line-height: 1.15 !important;
+  font-weight: 800 !important;
+}
+
+.club-identify-section .club-identify-title,
+.club-value-section .club-value-title,
+.club-opens-section .club-opens-title,
+.club-pricing-section .club-pricing-title,
+.club-mechanism-section .club-mechanism-title,
+.club-fit-section .club-fit-container,
+.club-faq-section .club-faq-title,
+.club-testimonials-section .club-testimonials-title,
+.club-final-cta-section .club-final-cta-title,
+.club-video-section .club-video-heading {
+  font-size: 40px !important;
+  line-height: 1.25 !important;
+  font-weight: 700 !important;
+}
+
+.club-identify-section,
+.club-problem-change-section,
+.club-mechanism-section,
+.club-opens-section,
+.club-value-section,
+.club-fit-section,
+.club-testimonials-section,
+.club-about-section,
+.club-pricing-section,
+.club-faq-section,
+.club-final-cta-section,
+.club-video-section {
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
