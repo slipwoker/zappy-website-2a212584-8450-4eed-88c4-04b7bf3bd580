@@ -9682,6 +9682,25 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   font-weight: 700 !important;
   line-height: 1.4 !important;
 }
+
+.club-video-section {
+  background: var(--accent-color, var(--accent, #EF6E5C)) !important;
+}
+
+#program-details .club-video-heading {
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
+}
+
+#program-details .club-video-subtitle {
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+#program-details .club-video-eyebrow {
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
+  font-size: 14px !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
