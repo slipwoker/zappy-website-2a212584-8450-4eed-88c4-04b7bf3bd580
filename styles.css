@@ -9996,6 +9996,189 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
     padding: 18px;
   }
 }
+
+.club-hero-section {
+  background: linear-gradient(180deg, var(--background-color, var(--background, var(--bg-light, #FFFFFF))) 0%, var(--surface-color, var(--surface, #FFF6F0)) 100%) !important;
+}
+
+.club-hero-section__headline {
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+}
+
+.club-hero-section__subtitle {
+  color: var(--text-secondary-color, var(--text-secondary, var(--text-muted, #4A4A55))) !important;
+}
+
+.club-hero-section__eyebrow {
+  color: var(--accent-color, var(--accent, #EF6E5C)) !important;
+}
+
+.club-hero-section__btn--outline {
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+  border-color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+}
+
+.club-features-section {
+  background-color: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
+  background-image: radial-gradient(circle at 20% 20%, rgba(28,39,112,0.08) 0, rgba(28,39,112,0) 28%), radial-gradient(circle at 80% 30%, rgba(239,110,92,0.10) 0, rgba(239,110,92,0) 24%), radial-gradient(circle at 50% 80%, rgba(28,39,112,0.05) 0, rgba(28,39,112,0) 22%) !important;
+}
+
+.club-features-section .club-features-header h2 {
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+}
+
+.club-features-section .club-features-header p {
+  color: var(--text-secondary-color, var(--text-secondary, var(--text-muted, #4A4A55))) !important;
+}
+
+.club-features-section .club-feature-card {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
+  border-color: rgba(28,39,112,0.15) !important;
+}
+
+.club-features-section .club-feature-icon {
+  color: var(--accent-color, var(--accent, #EF6E5C)) !important;
+}
+
+.club-features-section .club-feature-icon svg {
+  fill: var(--accent-color, var(--accent, #EF6E5C)) !important;
+}
+
+.club-features-section .club-feature-card h3 {
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+}
+
+.club-features-section .club-feature-card p {
+  color: var(--text-secondary-color, var(--text-secondary, var(--text-muted, #4A4A55))) !important;
+}
+
+.club-features-section .club-features-unifying-strip {
+  background: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+}
+
+.club-features-section .club-features-unifying-strip p {
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
+}
+
+.club-testimonials-section {
+  background: linear-gradient(180deg, var(--background-color, var(--background, var(--bg-light, #FFFFFF))) 0%, var(--surface-color, var(--surface, #FFF6F0)) 100%) !important;
+}
+
+.club-testimonials-section .club-testimonials-title {
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+}
+
+.club-testimonials-section .club-testimonials-subtitle {
+  color: var(--text-secondary-color, var(--text-secondary, var(--text-muted, #4A4A55))) !important;
+}
+
+.club-testimonials-section .club-testimonial-card {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
+  border-color: rgba(28,39,112,0.15) !important;
+}
+
+.club-testimonials-section .club-testimonial-text {
+  color: var(--text-secondary-color, var(--text-secondary, var(--text-muted, #4A4A55))) !important;
+}
+
+.club-testimonials-section .club-testimonial-quote-mark {
+  color: var(--accent-color, var(--accent, #EF6E5C)) !important;
+}
+
+.club-testimonials-section .club-testimonial-initial {
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+  background: var(--surface-color, var(--surface, #FFF6F0)) !important;
+}
+
+.club-testimonials-section .club-testimonial-role {
+  color: var(--text-secondary-color, var(--text-secondary, var(--text-muted, #4A4A55))) !important;
+}
+
+.club-about-section {
+  background: linear-gradient(180deg, var(--background-color, var(--background, var(--bg-light, #FFFFFF))) 0%, var(--surface-color, var(--surface, #FFF6F0)) 100%) !important;
+}
+
+.club-about-section .club-about-explanation-card {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
+  border-color: rgba(28,39,112,0.15) !important;
+}
+
+.club-about-section .club-about-heading, .club-about-section .club-about-text {
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+}
+
+.club-about-section .club-about-quote {
+  background: var(--surface-color, var(--surface, #FFF6F0)) !important;
+  border-color: rgba(239,110,92,0.3) !important;
+}
+
+.club-about-section .club-about-quote-icon, .club-about-section .club-about-quote-text {
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+}
+
+.club-about-section .club-about-card {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
+  border-color: rgba(239,110,92,0.4) !important;
+}
+
+.club-about-section .club-about-card-accent {
+  background-color: var(--accent-color, var(--accent, #EF6E5C)) !important;
+}
+
+.club-about-section .club-about-card-title, .club-about-section .club-about-card-text {
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+}
+
+.club-journey-section {
+  background-color: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
+  background-image: radial-gradient(circle at 20% 20%, rgba(28,39,112,0.08) 0, rgba(28,39,112,0) 28%), radial-gradient(circle at 80% 30%, rgba(239,110,92,0.10) 0, rgba(239,110,92,0) 24%), radial-gradient(circle at 50% 80%, rgba(28,39,112,0.05) 0, rgba(28,39,112,0) 22%) !important;
+}
+
+.club-journey-section__title, .club-journey-section__header h2, .club-journey-section__step-title {
+  color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+}
+
+.club-journey-section__subtitle, .club-journey-section__step-text, .club-journey-section__header p {
+  color: var(--text-secondary-color, var(--text-secondary, var(--text-muted, #4A4A55))) !important;
+}
+
+.club-journey-section__step {
+  background: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
+  border-color: rgba(28,39,112,0.15) !important;
+}
+
+.club-journey-section__step-number-text {
+  color: var(--accent-color, var(--accent, #EF6E5C)) !important;
+  border-color: rgba(239,110,92,0.3) !important;
+  background: rgba(239,110,92,0.08) !important;
+}
+
+.club-journey-section__step-icon {
+  color: var(--accent-color, var(--accent, #EF6E5C)) !important;
+}
+
+.club-journey-section__step::before {
+  content: '';
+  background: linear-gradient(180deg, var(--accent-color, var(--accent, #EF6E5C)) 0%, rgba(239,110,92,0.1) 100%) !important;
+}
+
+.club-journey-section__step-number {
+  background: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+}
+
+.club-cta-section {
+  background-color: var(--text-color, var(--text, var(--text-dark, #1C2770))) !important;
+  background-image: radial-gradient(ellipse at 50% 30%, rgba(239,110,92,0.25) 0%, transparent 60%), linear-gradient(175deg, #263496 0%, var(--text-color, var(--text, var(--text-dark, #1C2770))) 100%) !important;
+}
+
+.club-cta-section .club-cta-button {
+  background: var(--accent-color, var(--accent, #EF6E5C)) !important;
+  color: var(--background-color, var(--background, var(--bg-light, #FFFFFF))) !important;
+}
+
+.club-cta-section .club-cta-button:hover {
+  background: #D95C4B !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
