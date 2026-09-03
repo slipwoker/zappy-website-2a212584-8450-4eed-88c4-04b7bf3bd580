@@ -8723,6 +8723,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   line-height: 1.5;
   position: relative;
   padding-right: 26px;
+  font-family: 'Assistant', 'Heebo', sans-serif !important;
 }
 
 #problem-change .club-problem-change-col--surface .club-problem-change-list li {
